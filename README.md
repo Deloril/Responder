@@ -22,7 +22,7 @@
 `Project: Responder` is an initiative of CSIRT to up-skill Incident Responders to be pseudo Windows SMEs. This repository contains all the code required to build and configure an environment for the training. It is designed to mimic that of a small corporate network with typical workloads and network segmentation.
 
 ### `Project: Responder` Infrastructure Diagram
-![](project-responder-diagram.png)
+![](project-responder-diagram.jpeg)
 
 # Building `Project: Responder` 
 Specific instructions are provided in both the terraform/ and ansible/ directories of this repository, however a Makefile has also been provided for ease of use. Using the make file, the entire build process can be called in one command, for example `make build-apac`.
