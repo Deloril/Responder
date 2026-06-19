@@ -31,10 +31,10 @@ Copy `.env.example` to `.env` and fill in your AWS account ID, KMS key ID, S3 ba
 
 At a high level:
 
-1. Download the certs for responder from 1pass, and put them in ./terraform/certs
+1. Download the certs for responder, and put them in ./terraform/certs, or generate new ones
 2. Run the command `chmod 600 ./terraform/certs/*`
 3. cd into terraform and run `terraform init`
-4. Download the latest crowdstrike sensor installer from crowdstrike, rename it to `WindowsSensor.exe` and put it in `./ansible/windows/files/`
+4. Download the latest EDR self-contained installer, rename it to `WindowsSensor.exe` and put it in `./ansible/windows/files/`
 
 Attack scripts support **multiple C2 backends** (`metasploit`, `Sliver`, `Mythic`, `Havoc`) via `C2_FRAMEWORK`; see `scripts/attack_c2_helpers/README.txt`. Optional: `./scripts/attack_server_install_all_c2_tools.sh <region>` pre-installs tooling on the attack server.
 
