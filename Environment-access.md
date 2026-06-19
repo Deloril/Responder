@@ -41,4 +41,4 @@ SPN User:
 - Machines are behind a NAT gateway so are not directly reachable from the internet, except for the web server which can be accessed on TCP80/443 on its public IP or dns name.
 
 ### `Project: Responder` Infrastructure Diagram
-![](project-responder-diagram.jpeg)
+![](project-responder-diagram.png)

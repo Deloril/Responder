@@ -1,0 +1,152 @@
+// Project: Responder — network topology
+//
+// Render with: dot -Tpng project-responder-diagram.dot -o project-responder-diagram.png
+//
+// Reflects the v3.0 architecture: five zones in the victim VPC plus a
+// separate attacker VPC. Two stateful inner firewalls (DMZ<->Corp,
+// Corp<->Secret) and a privileged-access tier (PAWs + Guacamole) gate
+// reachability into the Restricted subnet.
+
+digraph project_responder {
+  rankdir   = TB;
+  compound  = true;
+  splines   = polyline;
+  bgcolor   = "white";
+  fontname  = "Helvetica";
+  ranksep   = 0.6;
+  nodesep   = 0.4;
+  newrank   = true;
+
+  node [fontname = "Helvetica", fontsize = 10, shape = box, style = "filled,rounded", fillcolor = "#f5f5f5", color = "#888888"];
+  edge [fontname = "Helvetica", fontsize = 9, color = "#555555"];
+
+  labelloc = "t";
+  label    = "Project: Responder — Network Topology (v3.0)";
+  fontsize = 16;
+
+  // Cluster styling
+  // (clusters are nested top-to-bottom in the order zones appear)
+
+  // External -------------------------------------------------------------
+  internet [label = "Internet", shape = ellipse, fillcolor = "#fff2cc", color = "#d6b656"];
+
+  subgraph cluster_attacker_vpc {
+    label     = "Attacker VPC (10.1.0.0/16)";
+    style     = "rounded,filled";
+    fillcolor = "#fde2e2";
+    color     = "#cc6666";
+    fontsize  = 12;
+
+    attacker [label = "attacker server\nUbuntu 22.04\nC2 / phishing", fillcolor = "#fadbd8"];
+  }
+
+  // Victim VPC -----------------------------------------------------------
+  subgraph cluster_victim_vpc {
+    label     = "Victim VPC (10.0.0.0/16) — ap-southeast-2";
+    style     = "rounded,filled";
+    fillcolor = "#eef3fb";
+    color     = "#4a86e8";
+    fontsize  = 12;
+
+    // DMZ
+    subgraph cluster_dmz {
+      label     = "DMZ — 10.0.0.0/24";
+      style     = "rounded,filled";
+      fillcolor = "#fff2cc";
+      color     = "#d6b656";
+
+      edge_fw [label = "edge firewall / router\n10.0.0.5\nNAT + port-forward"];
+      web     [label = "web server\n10.0.0.6"];
+      mail    [label = "mail server\n10.0.0.7"];
+      nat_gw  [label = "NAT gateway", shape = ellipse, fillcolor = "#ffe5b4"];
+    }
+
+    fw_dmz_corp [label = "fw-dmz-corp\nDMZ 10.0.0.250 | corp 10.0.1.250\nUbuntu + iptables", fillcolor = "#f4cccc", color = "#990000"];
+
+    // Corp
+    subgraph cluster_corp {
+      label     = "Corporate — 10.0.1.0/24";
+      style     = "rounded,filled";
+      fillcolor = "#d9ead3";
+      color     = "#6aa84f";
+
+      dc       [label = "DC01\n10.0.1.6\nAD DS / DNS / DHCP"];
+      client_1 [label = "client-1\n10.0.1.10"];
+      client_2 [label = "client-2\n10.0.1.11"];
+      client_3 [label = "client-3\n10.0.1.12"];
+    }
+
+    // PAW
+    subgraph cluster_paw {
+      label     = "Privileged Access — 10.0.4.0/24";
+      style     = "rounded,filled";
+      fillcolor = "#d9d2e9";
+      color     = "#674ea7";
+
+      guac  [label = "guac\n10.0.4.6\nApache Guacamole\nRDP broker"];
+      paw_1 [label = "paw-1\n10.0.4.10\nWin10"];
+      paw_2 [label = "paw-2\n10.0.4.11\nWin10"];
+    }
+
+    fw_corp_secret [label = "fw-corp-secret\ncorp 10.0.1.251 | secret 10.0.2.250\nUbuntu + iptables", fillcolor = "#f4cccc", color = "#990000"];
+
+    // Restricted
+    subgraph cluster_restricted {
+      label     = "Restricted — 10.0.2.0/24";
+      style     = "rounded,filled";
+      fillcolor = "#f4cccc";
+      color     = "#cc0000";
+
+      file_srv [label = "file server\n10.0.2.6\nSMB"];
+      sql_srv  [label = "sql server\n10.0.2.7\nMSSQL"];
+    }
+
+    // SecOps (sits to the side; reaches all zones)
+    subgraph cluster_secops {
+      label     = "SecOps — 10.0.3.0/24";
+      style     = "rounded,filled";
+      fillcolor = "#cfe2f3";
+      color     = "#3d85c6";
+
+      linux_bastion [label = "linux\nbastion"];
+      win_bastion   [label = "windows\nbastion"];
+    }
+  }
+
+  // North-south flow ----------------------------------------------------
+  internet -> edge_fw [label = "80/443/25"];
+  edge_fw  -> web     [label = "80/443"];
+  edge_fw  -> mail    [label = "25"];
+  edge_fw  -> nat_gw  [style = dashed, label = "egress", arrowhead = none];
+
+  // Attacker reaches the edge over the public internet
+  attacker -> internet [dir = both, style = dashed];
+
+  // DMZ <-> Corp via fw-dmz-corp
+  web         -> fw_dmz_corp [label = "AD-bound\n53/88/389/636", dir = both];
+  fw_dmz_corp -> dc          [label = "DNS / Kerberos\nLDAP(S)"];
+
+  // Corp users reach the PAW tier through Guacamole
+  client_1 -> guac [label = "HTTPS 8080"];
+  client_2 -> guac;
+  client_3 -> guac;
+
+  // Guacamole brokers RDP into the PAWs
+  guac -> paw_1 [label = "RDP 3389"];
+  guac -> paw_2 [label = "RDP 3389"];
+
+  // PAWs are the only path into Restricted (via fw-corp-secret)
+  paw_1          -> fw_corp_secret [label = "SMB / MSSQL"];
+  paw_2          -> fw_corp_secret;
+  fw_corp_secret -> file_srv       [label = "445"];
+  fw_corp_secret -> sql_srv        [label = "1433 / 1434"];
+
+  // DC replicates AD into Restricted (only AD ports allowed)
+  dc -> fw_corp_secret [label = "AD replication", style = dotted];
+
+  // SecOps reaches all zones for IR (loose dotted lines)
+  linux_bastion -> edge_fw [style = dotted, constraint = false];
+  linux_bastion -> dc      [style = dotted, constraint = false];
+  win_bastion   -> guac    [style = dotted, constraint = false];
+  win_bastion   -> dc      [style = dotted, constraint = false];
+}
