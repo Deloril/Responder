@@ -1,0 +1,219 @@
+---
+#############################################
+## Configure Web Server (nginx + PHP-FPM)
+#############################################
+
+- hosts: web_server
+  gather_facts: yes
+  become: true
+  vars:
+    mail_domain: tsg-internal.lab
+    web_root: /var/www/tsg
+    falcon_sensor_deb: ../common/files/falcon-sensor_7.07.0-16206_amd64.deb
+  tasks:
+
+  - name: Set hostname
+    hostname:
+      name: "web.{{ mail_domain }}"
+
+  - name: Install nginx, PHP, and SQLite
+    apt:
+      update_cache: yes
+      name:
+        - nginx
+        - php-fpm
+        - php-sqlite3
+        - php-cli
+        - sqlite3
+      state: present
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+
+  # --- Deploy web content ---
+
+  - name: Create web root directory
+    file:
+      path: "{{ web_root }}"
+      state: directory
+      owner: www-data
+      group: www-data
+      mode: "0755"
+
+  - name: Create uploads directory
+    file:
+      path: "{{ web_root }}/uploads"
+      state: directory
+      owner: www-data
+      group: www-data
+      mode: "0755"
+
+  - name: Create admin directory
+    file:
+      path: "{{ web_root }}/admin"
+      state: directory
+      owner: www-data
+      group: www-data
+      mode: "0755"
+
+  - name: Deploy web content files
+    copy:
+      src: "files/{{ item }}"
+      dest: "{{ web_root }}/{{ item }}"
+      owner: www-data
+      group: www-data
+      mode: "0644"
+    loop:
+      - index.php
+      - search.php
+      - login.php
+      - phpinfo.php
+      - admin/index.php
+      - admin/upload.php
+      - uploads/Q3-2025-Financial-Summary.pdf
+      - uploads/VPN-Setup-Instructions.docx
+      - uploads/Employee-Directory-2025.xlsx
+      - uploads/IT-Asset-Inventory.csv
+
+  - name: Initialize SQLite database for login
+    shell: |
+      sqlite3 {{ web_root }}/users.db "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, role TEXT);"
+      sqlite3 {{ web_root }}/users.db "INSERT OR IGNORE INTO users (id, username, password, role) VALUES (1, 'admin', 'tsg2025', 'admin');"
+      sqlite3 {{ web_root }}/users.db "INSERT OR IGNORE INTO users (id, username, password, role) VALUES (2, 'daniel.kemp', 'vault_master', 'admin');"
+      sqlite3 {{ web_root }}/users.db "INSERT OR IGNORE INTO users (id, username, password, role) VALUES (3, 'ben', 'Kia0ra2025!', 'user');"
+      chown www-data:www-data {{ web_root }}/users.db
+      chmod 666 {{ web_root }}/users.db
+
+  - name: Configure PHP upload limits
+    copy:
+      dest: /etc/php/8.1/fpm/conf.d/99-uploads.ini
+      content: |
+        upload_max_filesize = 20M
+        post_max_size = 20M
+    notify: restart php-fpm
+
+  - name: Detect PHP-FPM socket path
+    shell: "ls /var/run/php/php*-fpm.sock 2>/dev/null | head -1"
+    register: php_fpm_socket
+    changed_when: false
+
+  - name: Create htpasswd for admin area
+    copy:
+      dest: "{{ web_root }}/admin/.htpasswd"
+      content: "admin:$apr1$56HrhBnJ$/cATrNCFlfM7y1Igp5qb..\n"
+      owner: www-data
+      group: www-data
+      mode: "0644"
+
+  - name: Configure nginx site
+    copy:
+      dest: /etc/nginx/sites-available/tsg
+      content: |
+        server {
+            listen 80 default_server;
+            server_name web.tsg-internal.lab;
+            root {{ web_root }};
+            index index.php index.html;
+
+            client_max_body_size 20M;
+            server_tokens on;
+            add_header X-Powered-By "PHP/8.1 nginx/TSG-Internal";
+
+            location / {
+                try_files $uri $uri/ =404;
+            }
+
+            location /uploads/ {
+                autoindex on;
+                autoindex_exact_size on;
+                autoindex_localtime on;
+            }
+
+            location /admin/ {
+                auth_basic "TSG Admin Portal";
+                auth_basic_user_file {{ web_root }}/admin/.htpasswd;
+                try_files $uri $uri/ =404;
+                location ~ \.php$ {
+                    include snippets/fastcgi-params.conf;
+                    fastcgi_pass unix:{{ php_fpm_socket.stdout }};
+                    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                }
+            }
+
+            location ~ \.php$ {
+                include snippets/fastcgi-params.conf;
+                fastcgi_pass unix:{{ php_fpm_socket.stdout }};
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
+        }
+    notify: restart nginx
+
+  - name: Create fastcgi-params snippet if missing
+    copy:
+      dest: /etc/nginx/snippets/fastcgi-params.conf
+      content: |
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_index index.php;
+        include fastcgi_params;
+    notify: restart nginx
+
+  - name: Disable default nginx site
+    file:
+      path: /etc/nginx/sites-enabled/default
+      state: absent
+    notify: restart nginx
+
+  - name: Remove old globex nginx site (rebrand cleanup)
+    file:
+      path: "{{ item }}"
+      state: absent
+    loop:
+      - /etc/nginx/sites-enabled/globex
+      - /etc/nginx/sites-available/globex
+    notify: restart nginx
+
+  - name: Enable TSG site
+    file:
+      src: /etc/nginx/sites-available/tsg
+      dest: /etc/nginx/sites-enabled/tsg
+      state: link
+    notify: restart nginx
+
+  - name: Detect PHP-FPM service name
+    shell: "systemctl list-units --type=service --all | grep -oP 'php[\\d.]+-fpm' | head -1"
+    register: php_fpm_service
+    changed_when: false
+
+  - name: Ensure PHP-FPM is enabled and started
+    service:
+      name: "{{ php_fpm_service.stdout }}"
+      state: started
+      enabled: yes
+
+  - name: Validate nginx configuration
+    command: nginx -t
+    register: nginx_test
+    changed_when: false
+
+  - name: Ensure nginx is enabled and started
+    service:
+      name: nginx
+      state: started
+      enabled: yes
+
+  - name: Flush handlers now so nginx is fully configured before optional tasks
+    meta: flush_handlers
+
+  # --- CrowdStrike Falcon sensor ---
+
+  - include_tasks: ../common/tasks/install_falcon_sensor.yml
+
+  handlers:
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted
+
+  - name: restart php-fpm
+    service:
+      name: "{{ php_fpm_service.stdout | default('php8.1-fpm') }}"
+      state: restarted

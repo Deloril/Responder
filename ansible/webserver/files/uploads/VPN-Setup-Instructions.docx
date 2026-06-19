@@ -1,0 +1,7 @@
+The Secrets Group - VPN Setup Instructions
+Internal IT Document - Do Not Distribute
+
+VPN Server: vpn.tsg-internal.lab (10.0.3.5)
+Pre-shared Key: TSG_VPN_2025!
+Authentication: Active Directory (TSG-INTERNAL\username)
+Split Tunnel: Enabled for 10.0.0.0/8

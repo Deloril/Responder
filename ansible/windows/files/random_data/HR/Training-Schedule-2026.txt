@@ -1,0 +1,189 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TRAINING SCHEDULE 2026
+                         Annual Learning & Development Plan
+================================================================================
+                    Digital Escrow & Secret Custodianship
+                    Wellington, New Zealand | TSG-INTERNAL.LAB
+================================================================================
+
+Document: HR-TRN-2026-001
+Effective: 1 January 2026
+Owner: Kate, HR Director | Ben, L&D Coordinator
+
+--------------------------------------------------------------------------------
+MANDATORY TRAINING – ALL STAFF
+--------------------------------------------------------------------------------
+
+1. ISO 27001 INFORMATION SECURITY AWARENESS
+   -------------------------------------------------------------------------
+   Provider: Internal (Ava Phan, Security Engineer)
+   Duration: 2 hours
+   Format: In-person / Teams (recorded for remote staff)
+   Compliance: Required for all TSG employees; annual refresh
+
+   Schedule:
+   | Date       | Time     | Location    | Facilitator | Capacity |
+   |------------|----------|-------------|-------------|----------|
+   | 15-Jan-26  | 09:00    | Wellington  | Ava Phan    | 25       |
+   | 22-Jan-26  | 14:00    | Auckland    | Ava Phan    | 15       |
+   | 29-Jan-26  | 10:00    | Christchurch| Ava Phan    | 12       |
+   | 05-Feb-26  | 09:00    | Sydney      | TBC         | 10       |
+   | 12-Feb-26  | 09:00    | Melbourne   | TBC         | 8        |
+   | 19-Feb-26  | 14:00    | Singapore   | Fetu Yoon   | 8        |
+   | 15-Jul-26  | 09:00    | Wellington  | Ava Phan    | 25       |
+   | 15-Jul-26  | 14:00    | All Offices | Teams       | 50       |
+
+   Booking: Learning Hub > Mandatory > ISO 27001 Awareness 2026
+
+
+2. CYBERSECURITY AWARENESS (Phishing, Social Engineering, Passwords)
+   -------------------------------------------------------------------------
+   Provider: External (SecureMind NZ)
+   Duration: 1.5 hours
+   Format: E-learning + 30-min live Q&A
+   Compliance: Annual; new starters within 14 days
+
+   Schedule:
+   | Module Release | Due Date   | Live Q&A Session        |
+   |----------------|------------|--------------------------|
+   | 06-Jan-26      | 31-Jan-26  | 28-Jan-26 11:00 NZDT   |
+   | 01-Jul-26      | 31-Jul-26  | 25-Jul-26 11:00 NZST   |
+
+   Booking: Learning Hub > Mandatory > Cyber Awareness 2026
+
+
+3. FIRE WARDEN TRAINING
+   -------------------------------------------------------------------------
+   Provider: Fire and Emergency NZ (Wellington, Auckland, Christchurch);
+            Local providers (Sydney, Melbourne, Singapore)
+   Duration: 3 hours
+   Format: In-person
+   Compliance: All designated fire wardens; refresh every 2 years
+
+   Schedule:
+   | Date       | Time     | Location    | Provider        | Wardens |
+   |------------|----------|-------------|-----------------|---------|
+   | 20-Jan-26  | 09:00    | Wellington  | FENZ            | 8       |
+   | 27-Jan-26  | 09:00    | Auckland    | FENZ            | 4       |
+   | 03-Feb-26  | 09:00    | Christchurch| FENZ            | 3       |
+   | 10-Feb-26  | 09:00    | Sydney      | Fire Safety NSW  | 2       |
+   | 17-Feb-26  | 09:00    | Melbourne   | MFB             | 2       |
+   | 24-Feb-26  | 09:00    | Singapore   | SCDF-approved   | 2       |
+
+   Contact: Ben for warden roster and booking
+
+
+--------------------------------------------------------------------------------
+ROLE-SPECIFIC TRAINING
+--------------------------------------------------------------------------------
+
+4. VAULT SECURITY PROCEDURES (Vault Operations Staff Only)
+   -------------------------------------------------------------------------
+   Provider: Wiremu Sio, Head of Vault Operations
+   Duration: 4 hours (initial) + 2 hours (annual refresh)
+   Format: In-person at vault facility
+   Prerequisite: Security clearance confirmed
+
+   Schedule:
+   | Date       | Time     | Location    | Attendees              |
+   |------------|----------|-------------|------------------------|
+   | 08-Jan-26  | 08:00    | Wellington  | New vault staff        |
+   | 12-Feb-26  | 08:00    | Wellington  | Annual refresh – NZ    |
+   | 26-Feb-26  | 08:00    | Singapore   | Annual refresh – SGP   |
+   | 11-Jun-26  | 08:00    | Wellington  | New vault staff        |
+   | 13-Aug-26  | 08:00    | Wellington  | Annual refresh – NZ    |
+   | 12-Nov-26  | 08:00    | Wellington  | Annual refresh – NZ    |
+
+   Booking: Wiremu Sio / Karen Tavita
+
+
+5. FIRST AID (Workplace First Aid Level 1)
+   -------------------------------------------------------------------------
+   Provider: St John NZ / Red Cross (by location)
+   Duration: 1 day (8 hours)
+   Format: In-person
+   Compliance: Minimum 1 first aider per 25 staff per site; refresh every 2 years
+
+   Schedule:
+   | Date       | Location    | Provider   | Places |
+   |------------|-------------|------------|--------|
+   | 30-Jan-26  | Wellington  | St John    | 6      |
+   | 06-Feb-26  | Auckland    | St John    | 4      |
+   | 13-Feb-26  | Christchurch| St John    | 3      |
+   | 20-Feb-26  | Sydney      | Red Cross  | 2      |
+   | 27-Feb-26  | Melbourne   | Red Cross  | 2      |
+   | 06-Mar-26  | Singapore   | SFA       | 2      |
+   | 24-Jul-26  | Wellington  | St John    | 6      |
+
+   Booking: Ben, HR
+
+
+--------------------------------------------------------------------------------
+CULTURAL & PROFESSIONAL DEVELOPMENT
+--------------------------------------------------------------------------------
+
+6. TE REO MĀORI BASICS (Optional – Encouraged)
+   -------------------------------------------------------------------------
+   Provider: Te Wānanga o Aotearoa / Internal (Henry Ngata, CCO)
+   Duration: 6 x 1-hour sessions
+   Format: In-person Wellington; Teams for other NZ offices
+   Note: Singapore, Sydney, Melbourne – optional recording access
+
+   Schedule:
+   | Session | Date       | Time     | Topic                    |
+   |---------|------------|----------|--------------------------|
+   | 1       | 05-Feb-26  | 12:00    | Greetings, introductions |
+   | 2       | 12-Feb-26  | 12:00    | Workplace vocabulary     |
+   | 3       | 19-Feb-26  | 12:00    | Karakia, mihi            |
+   | 4       | 26-Feb-26  | 12:00    | Cultural context         |
+   | 5       | 05-Mar-26  | 12:00    | Practice & role-play     |
+   | 6       | 12-Mar-26  | 12:00    | Assessment & wrap-up     |
+
+   Booking: Learning Hub > Optional > Te Reo Basics 2026
+   Facilitator: Henry Ngata (Sessions 1–2, 4); Guest (Sessions 3, 5–6)
+
+
+7. ESCROW & CUSTODY COMPLIANCE REFRESHER (Legal, Finance, Client Relations)
+   -------------------------------------------------------------------------
+   Provider: Sophie Patel, Legal & Compliance
+   Duration: 2 hours
+   Format: In-person / Teams
+   Audience: Legal, Finance, Sales & Client Relations, Vault Ops leads
+
+   Schedule:
+   | Date       | Time     | Location    |
+   |------------|----------|-------------|
+   | 18-Mar-26  | 10:00    | Wellington  |
+   | 18-Mar-26  | 14:00    | Teams (APAC)|
+   | 16-Sep-26  | 10:00    | Wellington  |
+   | 16-Sep-26  | 14:00    | Teams (APAC)|
+
+
+--------------------------------------------------------------------------------
+NEW STARTER ONBOARDING TRAINING (First 30 Days)
+--------------------------------------------------------------------------------
+
+All new employees must complete within 30 days of start:
+- ISO 27001 Awareness (or next scheduled session)
+- Cybersecurity Awareness (e-learning)
+- Role-specific training as per Onboarding Checklist
+- Vault procedures (if vault access required)
+
+Contact: Ben, HR Coordinator | ben@tsg-internal.lab
+
+
+--------------------------------------------------------------------------------
+TRAINING RECORDS & COMPLIANCE
+--------------------------------------------------------------------------------
+
+All completed training is recorded in the Learning Hub. Managers can run
+compliance reports via HR Portal > Reports > Training Compliance. Non-compliance
+is escalated to Kate (HR Director) and may affect performance review outcomes.
+
+Questions: hr@tsg-internal.lab | ext. 2100
+
+
+--------------------------------------------------------------------------------
+Document Control: HR-TRN-2026-001 | Classification: Internal
+Next Review: 1 December 2026
+================================================================================

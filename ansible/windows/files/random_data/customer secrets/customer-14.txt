@@ -1,0 +1,59 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0349
+Deposit Date: 2025-03-09
+Client: Wellington City Council
+Agreement: WCC-Portal-Escrow-2024-073
+Deposit Type: Citizen Portal Source Code Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: a0f5b7c2d4e6a8f0b2c4d6e8a0f2b4c6d8e0a2f4b6c8d0e2f4a6b8c0d2e4
+Deposit Verified: 2025-03-09 16:32:55 UTC
+Custodian: S. Williams (TSG Public Sector Specialist)
+
+CITIZEN PORTAL SOURCE CODE MANIFEST
+-----------------------------------
+Project: WCC Citizen Services Portal
+Vendor: CivicTech Solutions NZ
+Total Repositories: 6
+Last Build: 2025-03-08
+
+Repository List:
+  1. wcc-portal-frontend
+     SHA-256: 6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4f6a8c0e2b4d6
+     File Count: 2,156 | Framework: React 18
+     
+  2. wcc-portal-backend
+     SHA-256: 7b9d1f3a5c7e9b1d3f5a7c9e1b3d5f7a9c1e3b5d7f9a1c3e5b7d9f1a3c5e7
+     File Count: 1,423 | Runtime: .NET 8
+     
+  3. wcc-payments-integration
+     SHA-256: 8c0e2a4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8
+     File Count: 312 | Integration: Payment Express
+     
+  4. wcc-document-services
+     SHA-256: 9d1f3b5a7c0e2d4f6a8b0c2e4d6f8a0b2c4e6d8f0a2b4c6e8d0f2a4b6c8e0
+     File Count: 534 | PDF generation, forms
+     
+  5. wcc-notifications
+     SHA-256: 0e2a4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0
+     File Count: 198 | Email/SMS services
+     
+  6. wcc-infrastructure
+     SHA-256: 1f3b5d7f9a1c3e5b7d9f1a3c5e7b9d1f3a5c7e9b1d3f5a7c9e1b3d5f7a9c1
+     File Count: 87 | Azure Bicep templates
+
+INTEGRATION POINTS
+------------------
+  - Rates & property database
+  - Building consent system
+  - Dog registration
+  - Rubbish/recycling schedules
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor failure, Council resolution, Service continuity
+Next Verification: 2025-06-09
+================================================================================

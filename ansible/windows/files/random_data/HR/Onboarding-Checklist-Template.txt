@@ -1,0 +1,138 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              NEW EMPLOYEE ONBOARDING CHECKLIST
+                    Template v3.2 | January 2025
+================================================================================
+
+Document Control:
+Classification: Internal
+Owner: HR Department
+Review: Annual
+
+--------------------------------------------------------------------------------
+PURPOSE
+--------------------------------------------------------------------------------
+This checklist ensures consistent onboarding of new staff at The Secrets Group.
+Given our role as a digital escrow and secret custodianship provider, security
+clearance and compliance requirements are mandatory. All items must be
+completed before vault or client data access is granted.
+
+--------------------------------------------------------------------------------
+PRE-START (Completed by HR before Day 1)
+--------------------------------------------------------------------------------
+[ ] Offer letter signed and returned
+[ ] Employment agreement executed
+[ ] Tax declaration (IR330) received
+[ ] Bank details for payroll confirmed
+[ ] Emergency contact form completed
+[ ] Proof of identity verified (passport/driver licence)
+[ ] Right to work verified (NZ/AU/SG as applicable)
+[ ] Background check initiated (police vetting for vault roles)
+[ ] References checked
+[ ] Desk/workspace assigned
+[ ] IT equipment ordered
+[ ] Security access request submitted
+
+--------------------------------------------------------------------------------
+DAY 1 - SECURITY & COMPLIANCE
+--------------------------------------------------------------------------------
+[ ] NDA (Non-Disclosure Agreement) signed - MANDATORY
+[ ] Confidentiality & Data Handling Policy acknowledged
+[ ] Security Policy Manual received and acknowledged
+[ ] Code of Conduct signed
+[ ] Conflict of Interest declaration completed
+[ ] Insider trading policy (if applicable) acknowledged
+[ ] Escrow Custodian Oath administered (vault roles only)
+[ ] Photo ID badge issued
+[ ] Building access card activated
+[ ] IT account created (username, password, MFA setup)
+[ ] Password policy explained
+[ ] Clean desk policy explained
+[ ] Visitor/escort procedures explained
+
+--------------------------------------------------------------------------------
+DAY 1 - IT SETUP
+--------------------------------------------------------------------------------
+[ ] Laptop/PC configured and issued
+[ ] Email account active (firstname.lastname@tsg-internal.lab)
+[ ] Microsoft 365 / productivity suite access
+[ ] VPN access configured (if remote work applicable)
+[ ] Phone/extension assigned
+[ ] Shared drive access (role-appropriate)
+[ ] Intranet access
+[ ] Helpdesk ticket system access
+[ ] Two-factor authentication enrolled on all systems
+
+--------------------------------------------------------------------------------
+DAY 1 - VAULT ACCESS (Vault Operations & authorised roles only)
+--------------------------------------------------------------------------------
+[ ] Vault Access Policy read and acknowledged
+[ ] Dual-control procedures training
+[ ] Vault physical access (if Wellington HQ)
+[ ] Digital vault platform training scheduled
+[ ] Access level assigned (Tier 1/2/3 per role matrix)
+[ ] Key/card custody procedures
+[ ] Audit logging requirements explained
+[ ] Breach reporting procedure explained
+
+--------------------------------------------------------------------------------
+WEEK 1 - COMPLIANCE TRAINING
+--------------------------------------------------------------------------------
+[ ] ISO 27001 Information Security Awareness (e-learning)
+[ ] Privacy Act 2020 training (NZ) / applicable jurisdiction
+[ ] Anti-money laundering (AML) awareness (if client-facing)
+[ ] Escrow industry regulations overview
+[ ] Incident reporting procedure
+[ ] Phishing awareness module
+[ ] Physical security procedures
+[ ] Fire warden / evacuation drill participation
+
+--------------------------------------------------------------------------------
+WEEK 1 - ROLE-SPECIFIC
+--------------------------------------------------------------------------------
+[ ] Department orientation completed
+[ ] Manager 1:1 scheduled
+[ ] Buddy/mentor assigned
+[ ] Role-specific systems training
+[ ] Key contacts list provided
+[ ] Team structure explained
+[ ] Performance expectations discussed
+[ ] Probation objectives set (90-day review)
+
+--------------------------------------------------------------------------------
+WEEK 2-4 - ONGOING
+--------------------------------------------------------------------------------
+[ ] Department-specific compliance training (Legal, Finance, etc.)
+[ ] Client relationship training (Sales/Client Relations)
+[ ] First aid certificate (designated first aiders)
+[ ] Te reo Māori basics (optional, encouraged)
+[ ] Cultural awareness module
+[ ] Health & safety representative introduction
+
+--------------------------------------------------------------------------------
+SECURITY CLEARANCE TIERS
+--------------------------------------------------------------------------------
+Tier 1 - General: Office, email, shared drives. No vault access.
+Tier 2 - Restricted: As Tier 1 + read-only vault metadata. No secret content.
+Tier 3 - Full: As Tier 2 + vault content access per client authorisation.
+Tier 4 - Custodian: Full vault + dual-control authority. Police vetting required.
+
+--------------------------------------------------------------------------------
+SIGN-OFF
+--------------------------------------------------------------------------------
+Employee Name: ___________________________  Start Date: ___________
+Department: ______________________________  Manager: _____________
+HR Representative: _______________________  Date: _________________
+
+I confirm that all mandatory items have been completed and I understand my
+obligations regarding confidentiality, security, and compliance at TSG.
+
+Employee Signature: ______________________  Date: _________________
+
+Manager Signature: _______________________  Date: _________________
+
+HR Signature: ____________________________  Date: _________________
+
+--------------------------------------------------------------------------------
+RETENTION: 7 years (Employment Relations Act 2000)
+================================================================================

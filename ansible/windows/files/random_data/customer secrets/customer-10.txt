@@ -1,0 +1,59 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0312
+Deposit Date: 2025-03-05
+Client: CoreLogic Australasia Pty Ltd
+Agreement: CLG-Property-Escrow-2024-156
+Deposit Type: Property Data Platform - Source Code Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: 7c2e4a9f1b6d8c3e5a0f2b4d6e8a1c3f5b7d9e1a3c5e7b9d1f3a5c7e9b1d4
+Deposit Verified: 2025-03-05 14:22:18 UTC
+Custodian: J. Morrison (TSG Senior Escrow Officer)
+
+SOURCE CODE MANIFEST - PROPERTY INTELLIGENCE PLATFORM
+----------------------------------------------------
+Total Repositories: 8
+Last Build Date: 2025-03-04
+Build Environment: Azure DevOps CLG-PROD-Pipeline
+
+Repository List:
+  1. corelogic-property-api
+     SHA-256: 8e4f2a1c9b7d3e5f6a0c8b2d4e6f8a0c2e4a6b8d0f2a4c6e8b0d2f4a6c8e0b2
+     File Count: 1,247 | Last Commit: 2025-03-03
+     
+  2. corelogic-valuation-engine
+     SHA-256: 9f5a3b2d0e8c7a1b4d6f9e2c5a8b1d4e7f0a3c6b9d2e5f8a1c4b7d0e3f6a9c2
+     File Count: 892 | Last Commit: 2025-03-02
+     
+  3. corelogic-data-ingestion
+     SHA-256: a0b6c4d2e8f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1
+     File Count: 534 | Last Commit: 2025-03-01
+     
+  4. corelogic-frontend-dashboard
+     SHA-256: b1c7d5e3f9a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2
+     File Count: 1,089 | Last Commit: 2025-02-28
+     
+  5. corelogic-reporting-service
+     SHA-256: c2d8e6f0a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3
+     File Count: 412 | Last Commit: 2025-02-27
+     
+  6. corelogic-avm-core
+     SHA-256: d3e9f7a1b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6
+     File Count: 678 | Last Commit: 2025-02-26
+     
+  7. corelogic-title-search
+     SHA-256: e4f0a8b2c5d7e9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7
+     File Count: 523 | Last Commit: 2025-02-25
+     
+  8. corelogic-infrastructure
+     SHA-256: f5a1b9c3d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8
+     File Count: 198 | Last Commit: 2025-02-24
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor insolvency, Material breach, Mutual agreement
+Next Verification: 2025-06-05
+================================================================================

@@ -1,0 +1,16 @@
+---
+
+- name: Add AV-Admin user for kerberoasting
+  win_domain_user:
+    name: "AV-Admin"
+    firstname: "AV"
+    surname: "Admin"
+    password: "SuperGenericPassword1!"
+
+- name: Register SPN for AV-Admin
+  win_shell: setspn -S DC01/AV-Admin.tsg-internal.lab:60111 tsg-internal\AV-Admin
+  args:
+    executable: cmd
+  register: av_spn_result
+  failed_when: av_spn_result.rc != 0 and 'Duplicate SPN found' not in av_spn_result.stderr
+  changed_when: "'Updated object' in av_spn_result.stdout"

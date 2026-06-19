@@ -1,0 +1,66 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TAX INVOICE
+================================================================================
+Domain: TSG-INTERNAL.LAB | ABN: 94 123 456 789 | GST Registered
+Level 12, 88 The Terrace, Wellington 6011, New Zealand
+Phone: +64 4 499 8200 | accounts@thesecretsgroup.co.nz
+================================================================================
+
+INVOICE NUMBER:     TSG-2025-0891
+INVOICE DATE:       28 November 2025
+DUE DATE:           28 December 2025
+CLIENT REF:         APTH-SSN-2025-11
+
+BILL TO:
+Asia-Pacific Trust Holdings Pte Ltd
+Attn: Michael Latu (IT Director - APAC)
+1 Raffles Place, #32-01
+Singapore 048616
+UEN: 201234567A
+
+--------------------------------------------------------------------------------
+SERVICE DESCRIPTION                                    AMOUNT (NZD)    GST
+--------------------------------------------------------------------------------
+
+SSN Platform Licensing - Annual License 2025/26
+  - Enterprise tier (50 concurrent users)                   $125,000.00  $18,750.00
+  - Singapore data centre deployment                         $15,000.00   $2,250.00
+  - SLA: 99.95% uptime guarantee                             Included         -
+
+Integration Consulting Services - November 2025
+  - Phase 1: Architecture review & design                   $18,500.00   $2,775.00
+  - Phase 2: API integration (SAP connector)                 $22,000.00   $3,300.00
+  - Phase 3: UAT support & go-live assistance                $12,500.00   $1,875.00
+  - Project management (Leilani Kumar)                       $8,200.00    $1,230.00
+
+Training & Documentation
+  - Administrator training (2 sessions)                     $4,500.00      $675.00
+  - Custom integration documentation                         $2,800.00      $420.00
+
+--------------------------------------------------------------------------------
+SUBTOTAL                                                     $208,500.00
+GST (15%)                                                    $31,275.00
+--------------------------------------------------------------------------------
+TOTAL DUE                                                    $239,775.00
+--------------------------------------------------------------------------------
+
+PAYMENT TERMS: Net 30 days from invoice date
+CURRENCY: New Zealand Dollars (NZD) - Client responsible for FX
+LATE PAYMENT: Interest at 2% per month on overdue amounts
+
+PAYMENT DETAILS:
+Bank: Westpac New Zealand
+Account Name: The Secrets Group Limited
+Account Number: 03-0123-0456789-00
+Swift: WPACNZ2W
+Reference: TSG-2025-0891 / APTH
+
+For international transfers, please include all bank charges in your remittance
+to ensure full invoice value is received. Contact accounts@thesecretsgroup.co.nz
+for wire instructions.
+
+================================================================================
+Authorised by: Sarah Wang, Chief Financial Officer
+Project Lead: Leilani Kumar, Senior Integration Consultant
+Generated: 28/11/2025 | Document ID: INV-0891-2025
+================================================================================

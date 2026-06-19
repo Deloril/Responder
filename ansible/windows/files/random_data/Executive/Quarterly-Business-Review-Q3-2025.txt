@@ -1,0 +1,141 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              QUARTERLY BUSINESS REVIEW - Q3 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Quarter: July - September 2025
+Prepared by: Kate Morrison, CFO
+Presented: 22 October 2025
+Reference: TSG-QBR-2025-Q3
+Classification: Confidential - Executive
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Q3 2025 delivered solid results with revenue of NZD 2.14M (up 11% YoY) and
+EBITDA of NZD 378K (17.7% margin). Singapore office opened on schedule.
+SSN Phase 2 development progressed but experienced minor scope creep.
+Key risks: talent retention, Singapore regulatory timeline, and Q4 audit
+load. Priorities for Q4: close FY2025 strong, complete SOC 2 and ISO
+surveillance, and prepare for SSN GA in Q1 2026.
+
+================================================================================
+KPI SCORECARD
+================================================================================
+
+Metric                    Target    Actual    Status    Trend
+--------------------------------------------------------------------------------
+Revenue (NZD)             2.05M     2.14M     GREEN     +11% YoY
+EBITDA Margin             17.0%     17.7%     GREEN     +0.4pp QoQ
+Client Satisfaction (NPS) 50        52        GREEN     +4 pts
+Vault Uptime              99.95%    99.98%    GREEN     Exceeded
+Incident Count            0         0         GREEN     No breaches
+Revenue per Employee      45.5K     45.5K     AMBER     Flat; hiring
+New Clients Won           4         5         GREEN     Above target
+Client Retention          93%       94%       GREEN     +1pp
+--------------------------------------------------------------------------------
+
+Client Satisfaction: Quarterly survey; 78% response rate. Top drivers:
+reliability (4.6/5), responsiveness (4.5/5). Improvement area: portal UX
+(4.1/5)—SSN Phase 2 expected to address.
+
+Vault Uptime: One planned maintenance window (2 hours, 12 August); zero
+unplanned outages. Singapore pre-production systems operational.
+
+Incident Count: No security incidents, data breaches, or escrow release
+failures. One minor process deviation (documented; corrective action
+implemented).
+
+================================================================================
+DEPARTMENT HIGHLIGHTS
+================================================================================
+
+Vault Operations (Charlotte Mata)
+  - Singapore office fit-out completed on time and budget
+  - Wellington vault utilisation 78%; expansion business case approved
+  - Key ceremony procedure v4 implemented; deputy Custodian training
+    underway
+  - Staff: 3 FTE Wellington, 2 Singapore (new)
+
+Technology (Henry Ngata)
+  - SSN Phase 2: 68% complete; API banking connectors in UAT
+  - Penetration test scheduled December; internal review clean
+  - Datacom managed services transition smooth; no disruption
+  - Staff: 8 FTE; 2 contractors (SSN)
+
+Sales & Client Success
+  - 5 new clients won (target 4); total contract value NZD 420K
+  - Pipeline: 12 prospects; weighted value NZD 1.2M
+  - Australian revenue +15% YoY; Melbourne office contributing
+  - Staff: 6 FTE across NZ and Australia
+
+Finance & Compliance (Kate Morrison, Sarah Wang)
+  - Singapore entity setup complete; MAS application submitted
+  - ISO 27001: 2 minor non-conformities from surveillance; actions in progress
+  - SOC 2 Type II fieldwork 80% complete; report expected December
+  - Staff: 5 FTE
+
+================================================================================
+RISKS AND ISSUES
+================================================================================
+
+| ID  | Risk/Issue                    | Owner       | Mitigation                    |
+|-----|-------------------------------|-------------|-------------------------------|
+| R1  | Singapore MAS approval delay   | Sarah Wang  | Engage counsel; contingency   |
+|     | (beyond Q1 2026)              |             | plan for client onboarding    |
+| R2  | SSN Phase 2 scope creep        | Henry Ngata | Freeze scope; defer Phase 3   |
+|     | impacting GA date             |             | items if needed               |
+| R3  | Talent retention—2 key        | Kate        | Retention discussions;        |
+|     | developers considering exit  |             | competitive review            |
+| R4  | Q4 audit load (ISO + SOC 2)    | Sarah Wang  | Dedicated audit coordinator;  |
+|     | may strain compliance team   |             | external support if needed    |
+| R5  | Wellington vault capacity      | Fetu Yoon   | Expansion approved; design    |
+|     | constraint by Q2 2026         |             | sign-off in progress          |
+
+================================================================================
+PRIORITIES FOR Q4 2025
+================================================================================
+
+1. Close FY2025 Strong
+   - Revenue target: NZD 2.15M (Q4); full year NZD 8.6M
+   - Focus: Convert 3 pipeline prospects (NZD 280K combined)
+   - Action: Sales review weekly; CEO involvement on top 2 deals
+
+2. Complete Audit Cycle
+   - ISO 27001: Corrective actions by 15 December
+   - SOC 2 Type II: Report issuance by 20 December
+   - Action: Sarah Wang to chair weekly audit stand-up
+
+3. SSN Phase 2 GA Readiness
+   - Target: General availability 15 January 2026
+   - Milestones: Pen test complete, UAT sign-off, documentation
+   - Action: Henry to provide weekly status to Exec
+
+4. Singapore Operationalisation
+   - MAS: Finalise application; respond to any queries within 48 hours
+   - Clients: Onboard first pilot client (pending MAS)
+   - Action: Leilani Kumar to lead; Charlotte to support
+
+5. Vault Expansion
+   - Wellington: Design sign-off by 15 December (Fetu, Kate)
+   - Singapore vault: Finalise site selection; Board paper for approval
+   - Action: Fetu Yoon to circulate design by 1 December
+
+================================================================================
+APPENDIX: REVENUE BY SEGMENT (Q3 2025)
+================================================================================
+
+Segment              Revenue (NZD)   % of Total   YoY Change
+--------------------------------------------------------------------------------
+Legal & M&A          892,000         41.7%        +8%
+Technology/Escrow    654,000         30.6%        +14%
+Financial Services   412,000         19.3%        +12%
+Government/Other     182,000          8.5%        +6%
+--------------------------------------------------------------------------------
+Total              2,140,000        100.0%        +11%
+
+Geography: NZ 72%, Australia 26%, Other 2% (pre-Singapore revenue)
+
+================================================================================
+Document Control: TSG-QBR-2025-Q3 | Confidential - Executive
+================================================================================

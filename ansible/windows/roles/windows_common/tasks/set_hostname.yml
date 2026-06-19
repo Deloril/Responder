@@ -1,0 +1,11 @@
+---
+
+- name: Change the hostname
+  win_hostname:
+    name: "{{ domain_hostname }}"
+  register: hostname_changed
+
+- name: reboot | Hostname changed
+  win_reboot:
+    reboot_timeout: 3600
+  when: hostname_changed.reboot_required

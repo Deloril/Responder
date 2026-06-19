@@ -1,0 +1,15 @@
+CREATE DATABASE [secrets]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'secrets', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2017\MSSQL\DATA\secrets.mdf' , SIZE = 1048576KB , FILEGROWTH = 262144KB )
+ LOG ON 
+( NAME = N'secrets_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2017\MSSQL\DATA\secrets_log.ldf' , SIZE = 524288KB , FILEGROWTH = 131072KB )
+GO
+ 
+USE [master]
+GO
+ALTER DATABASE [secrets] SET RECOVERY SIMPLE WITH NO_WAIT
+GO
+ 
+ALTER AUTHORIZATION ON DATABASE::[secrets] TO [sa]
+GO

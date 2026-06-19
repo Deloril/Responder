@@ -1,0 +1,27 @@
+---
+######################################
+## Build Windows domain environment ##
+######################################
+
+## PRE TASKS
+
+## TASKS
+
+# Playbook: Creation and configuration of domain controller and domain.
+# Install and configures a new domain controller, forest and domain,
+# configures users and groups
+- import_playbook: windows_dc.yml
+
+# Playbook: Join member servers and clients to the domain
+# Configures a server or client so it can be joined to the domain
+- import_playbook: windows_domain_client.yml
+
+# Playbook: Sets up the File server
+- import_playbook: windows_file_server.yml
+
+- import_playbook: windows_client_setup.yml
+
+- import_playbook: windows_sql_server.yml
+
+# Finalize: disable Windows Update services now that all features are installed
+- import_playbook: windows_finalize.yml

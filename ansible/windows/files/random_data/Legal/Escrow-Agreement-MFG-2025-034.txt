@@ -1,0 +1,156 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              DIGITAL ESCROW MASTER AGREEMENT
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Agreement Reference: MFG-2025-034
+Parties: The Secrets Group (TSG) and Meridian Financial Group Ltd (Depositor)
+Effective Date: 1 March 2025
+Prepared by: Sarah Wang, Legal Counsel
+Classification: Confidential - Client Agreement
+================================================================================
+
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+1.1 "Escrow Materials" means source code, object code, documentation, build
+    scripts, and related intellectual property deposited by the Depositor for
+    safekeeping under this Agreement.
+
+1.2 "Beneficiary" means the party or parties designated in Schedule A who shall
+    receive the Escrow Materials upon occurrence of a Release Condition.
+
+1.3 "Release Condition" means any event specified in Clause 5.1 that triggers
+    TSG's obligation to release Escrow Materials to the Beneficiary.
+
+1.4 "Vault" means TSG's secure digital custody infrastructure located in
+    Wellington, New Zealand, operated under dual-control procedures.
+
+1.5 "Verification Event" means a scheduled or ad-hoc verification that Escrow
+    Materials are complete, buildable, and match the Depositor's specifications.
+
+
+2. APPOINTMENT AND ACCEPTANCE
+--------------------------------------------------------------------------------
+2.1 Meridian Financial Group Ltd ("Depositor") appoints The Secrets Group (TSG)
+    as escrow agent for the Escrow Materials described in Schedule B.
+
+2.2 TSG accepts such appointment subject to the terms herein. TSG warrants that
+    it holds ISO 27001 and SOC 2 Type II certifications and maintains
+    appropriate insurance as specified in Clause 9.
+
+
+3. DEPOSITOR OBLIGATIONS
+--------------------------------------------------------------------------------
+3.1 The Depositor shall deposit initial Escrow Materials within 30 days of
+    execution and provide quarterly updates thereafter.
+
+3.2 All deposits must be accompanied by a Deposit Certificate signed by an
+    authorised representative. Deposits are accepted by Henry Ngata, Chief
+    Custodian Officer, or his designated delegate.
+
+3.3 The Depositor warrants that it has full right to deposit the Escrow
+    Materials and that no third-party rights are infringed.
+
+
+4. TSG OBLIGATIONS
+--------------------------------------------------------------------------------
+4.1 TSG shall store Escrow Materials in the Vault under dual-control access
+    procedures as defined in TSG's Vault Access Policy v3.2.
+
+4.2 TSG shall maintain environmental controls, encryption at rest (AES-256),
+    and access logging. All access events are retained for 7 years.
+
+4.3 TSG shall conduct annual Verification Events unless otherwise agreed.
+    Additional verifications may be requested at the Depositor's cost.
+
+
+5. RELEASE CONDITIONS
+--------------------------------------------------------------------------------
+5.1 Escrow Materials shall be released to the Beneficiary upon occurrence of
+    any of the following, evidenced by written notice or court order:
+
+    (a) Insolvency, receivership, or liquidation of the Depositor;
+    (b) Material breach of the underlying software licence by the Depositor
+        that remains unremedied for 90 days;
+    (c) Cessation of business by the Depositor for a continuous period of
+        180 days;
+    (d) Mutual written instruction from Depositor and Beneficiary;
+    (e) Court order or arbitral award directing release.
+
+5.2 TSG shall not release Escrow Materials until it has received satisfactory
+    evidence of the Release Condition and, where applicable, confirmation from
+    the Depositor or its legal representative. TSG may interplead where
+    conflicting claims exist.
+
+
+6. FEES AND PAYMENT
+--------------------------------------------------------------------------------
+6.1 Annual escrow fee: NZD 18,500 (exclusive of GST), payable in advance on
+    each anniversary. Includes one Verification Event per year.
+
+6.2 Deposit fee: NZD 450 per deposit (beyond quarterly updates). Verification
+    Event (additional): NZD 2,200.
+
+6.3 Fees are subject to 3% annual increase. Payment terms: 30 days from
+    invoice. Late payment may result in suspension of services.
+
+
+7. LIABILITY
+--------------------------------------------------------------------------------
+7.1 TSG's aggregate liability under this Agreement is limited to the lesser of:
+    (a) NZD 500,000; or (b) 12 months of fees paid in the preceding year.
+
+7.2 TSG excludes liability for: indirect, consequential, or punitive damages;
+    loss of profits; business interruption; or claims arising from the nature,
+    quality, or completeness of the Escrow Materials themselves.
+
+7.3 The liability cap does not apply to: fraud, wilful misconduct, or death or
+    personal injury caused by negligence.
+
+
+8. GOVERNING LAW AND DISPUTE RESOLUTION
+--------------------------------------------------------------------------------
+8.1 This Agreement is governed by the laws of New Zealand.
+
+8.2 Any dispute shall first be referred to mediation. If unresolved within 60
+    days, either party may refer the matter to arbitration under the
+    Arbitration Act 1996 (NZ), seated in Wellington.
+
+8.3 The courts of New Zealand shall have non-exclusive jurisdiction.
+
+
+9. TERM AND TERMINATION
+--------------------------------------------------------------------------------
+9.1 Initial term: 3 years from Effective Date. Auto-renewal for successive
+    12-month periods unless 90 days' written notice is given.
+
+9.2 Upon termination, TSG shall return or destroy Escrow Materials per the
+    Depositor's written instruction. If no instruction within 90 days, TSG may
+    destroy after 12 months from termination.
+
+
+================================================================================
+SCHEDULE A - BENEFICIARY
+--------------------------------------------------------------------------------
+Meridian Financial Group Ltd (same entity as Depositor for self-escrow;
+designated third-party beneficiaries may be added by amendment.)
+
+================================================================================
+SCHEDULE B - ESCROW MATERIALS DESCRIPTION
+--------------------------------------------------------------------------------
+- Core banking platform source code (C#, .NET 8)
+- Database schema and migration scripts
+- API documentation and integration specifications
+- Build and deployment automation (Azure DevOps pipelines)
+
+================================================================================
+SIGNATURES
+--------------------------------------------------------------------------------
+For The Secrets Group:                    For Meridian Financial Group Ltd:
+_________________________                 _________________________
+Daniel Kemp, CEO                          [Authorised Signatory]
+Date: _______________                     Date: _______________
+
+================================================================================
+Document Control: TSG-LEG-2025-034 | Version 1.0 | Next review: 1 Mar 2026
+================================================================================

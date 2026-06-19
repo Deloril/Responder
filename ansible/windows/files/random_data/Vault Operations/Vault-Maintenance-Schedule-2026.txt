@@ -1,0 +1,123 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              WELLINGTON VAULT - MAINTENANCE SCHEDULE
+                    Calendar Year 2026
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington Vault | TSG-INTERNAL.LAB
+================================================================================
+
+SCHEDULE OVERVIEW
+--------------------------------------------------------------------------------
+Owner:             Michael Huang, IT Infrastructure Manager
+Vault Ops Lead:    Tama Thomas, Senior Vault Custodian
+Review:            Quarterly schedule review
+Escalation:        Henry Ngata, CTO
+--------------------------------------------------------------------------------
+
+
+PHYSICAL INFRASTRUCTURE
+================================================================================
+
+HVAC & ENVIRONMENTAL
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Filter replacement             Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Satoshi Tuala
+Temperature/humidity cal       Quarterly    X                    X                    X                    Michael Huang
+HVAC full service              Bi-annual    X                                        X                    External
+Emergency AC test              Quarterly    X                    X                    X                    Satoshi Tuala
+--------------------------------------------------------------------------------
+
+FIRE SUPPRESSION
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Inert gas system inspection    Quarterly    X                    X                    X                    External
+Smoke detector test            Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Satoshi Tuala
+Fire panel battery test        Quarterly    X                    X                    X                    Michael Huang
+Evacuation drill               Bi-annual    X                                        X                    Charlotte Mata
+--------------------------------------------------------------------------------
+
+POWER & UPS
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+UPS load test                  Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Liam Jones
+UPS battery replacement        Annual       X                                                    X    Liam Jones
+Generator test (monthly)       Monthly      X    X    X    X    X    X    X    X    X    X    X    X    External
+Power distribution check      Quarterly    X                    X                    X                    Michael Huang
+--------------------------------------------------------------------------------
+
+ACCESS CONTROL
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Biometric reader calibration   Quarterly    X                    X                    X                    Satoshi Tuala
+Access control firmware        Semi-annual  X                                        X                    Michael Huang
+PIN pad battery replacement    Quarterly    X                    X                    X                    Satoshi Tuala
+Access log audit               Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Tama Thomas
+--------------------------------------------------------------------------------
+
+SAFE & SECURE STORAGE
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Safe combination rotation      Annual       X                                                        X    Tama Thomas
+Safe mechanism inspection     Annual       X                                                        X    External
+Key cabinet audit              Quarterly    X                    X                    X                    Wiremu Sio
+--------------------------------------------------------------------------------
+
+CCTV & SECURITY
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+CCTV recording review          Weekly       (Weekly - Tama Thomas)
+CCTV lens cleaning             Quarterly    X                    X                    X                    Satoshi Tuala
+Storage capacity check         Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Liam Jones
+NVR firmware update             Semi-annual  X                                        X                    Michael Huang
+--------------------------------------------------------------------------------
+
+
+DIGITAL INFRASTRUCTURE
+================================================================================
+
+VAULT SYSTEMS
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Vault DB integrity check       Weekly       (Liam Jones)
+Certificate renewal check      Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Kate
+SSN platform health            Daily       (svc_monitoring)
+Vault API penetration test     Semi-annual  X                                        X                    External
+--------------------------------------------------------------------------------
+
+NETWORK & FIREWALL
+--------------------------------------------------------------------------------
+Task                          Frequency    Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec   Owner
+Firewall rule review           Quarterly    X                    X                    X                    Ben
+VPN tunnel verification        Monthly      X    X    X    X    X    X    X    X    X    X    X    X    Liam Jones
+Network segmentation test     Semi-annual  X                                        X                    Michael Huang
+--------------------------------------------------------------------------------
+
+
+MAINTENANCE WINDOWS
+================================================================================
+Preferred window:  Sunday 02:00 - 06:00 NZST (low client impact)
+Emergency:         As required, CTO approval
+Notification:     72 hours for planned, 4 hours for urgent
+--------------------------------------------------------------------------------
+
+
+VENDOR CONTACTS
+================================================================================
+HVAC:            ClimateControl NZ Ltd    04-XXX-XXXX
+Fire:            FireSafe Wellington      04-XXX-XXXX
+UPS/Generator:   PowerGuard Systems       04-XXX-XXXX
+Locks/Safes:     SecurTech NZ             04-XXX-XXXX
+--------------------------------------------------------------------------------
+
+
+NOTES
+--------------------------------------------------------------------------------
+- All maintenance must be logged in TSG-MAINT-2026 register
+- Out-of-band maintenance requires Change Request (CR)
+- Safe combination rotation requires Key Ceremony procedure
+- Battery replacement (UPS): Schedule during Q1 and Q4 low-activity periods
+
+================================================================================
+Document Control: TSG-VAULT-2026-MNT-001 | Version 1.0
+================================================================================

@@ -1,0 +1,234 @@
+---
+
+- hosts: clients
+  gather_facts: no
+  vars_files: 
+    - ./vars/file_server.yml
+    - ./vars/domain_users_and_groups.yml
+  tasks:
+
+    - name: Copy a bat script to auto map the file share on clients
+      win_copy:
+        src: map_share.bat
+        dest: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\
+
+    - name: Make a directory for the anyconnect_update.exe.exe
+      win_file:
+        path: C:\Users\Administrator\AppData\Roaming\
+        state: directory
+      when: ansible_host == "10.0.1.10"
+
+    - name: Copy random.exe to anyconnect_update.exe.exe on client-1 
+      win_copy:
+        src: random.exe
+        dest: C:\Users\Administrator\AppData\Roaming\anyconnect_update.exe.exe
+      when: ansible_host == "10.0.1.10"
+
+    - name: Copy the random.exe to the host
+      win_copy:
+        src: random.exe
+        dest: C:\Tools\
+      when: ansible_host == "10.0.1.11" 
+    
+    - name: Copy the randomness script to the host
+      win_copy:
+        src: Invoke-Randomness.ps1
+        dest: C:\Tools\
+      when: ansible_host == "10.0.1.11" 
+
+    # - name: Invoke more badness
+    #   win_file:
+    #     path: C:\Data
+    #     state: directory
+    #   when: ansible_host == "10.0.1.11" 
+    
+    # - name: Trigger more badness
+    #   win_copy:
+    #     src: egg.txt
+    #     dest: C:\Data\egg.txt
+    #   when: ansible_host == "10.0.1.11" 
+
+    - name: Run randomness
+      win_shell: C:\Tools\Invoke-Randomness.ps1
+      when: ansible_host == "10.0.1.11" 
+
+    - name: Create vulnerable service directory structure
+      win_file:
+        path: C:\Program Files\TSG\Internal Tools\
+        state: directory
+
+    - name: Grant TSG-users write access to intermediate directory
+      win_shell: >
+        icacls "C:\Program Files\TSG"
+        /grant "TSG-INTERNAL\TSG-users:(OI)(CI)M"
+
+    - name: Copy service binary
+      win_copy:
+        src: random.exe
+        dest: C:\Program Files\TSG\Internal Tools\TSGUpdater.exe
+
+    - name: Create service with unquoted path (vulnerable to search order hijacking)
+      win_shell: |
+        if (Get-Service -Name TSGUpdateSvc -ErrorAction SilentlyContinue) {
+          Write-Host "Service already exists"
+        } else {
+          New-Service -Name "TSGUpdateSvc" `
+            -BinaryPathName "C:\Program Files\TSG\Internal Tools\TSGUpdater.exe" `
+            -DisplayName "TSG Automatic Update Service" `
+            -Description "Provides automatic updates for TSG internal applications" `
+            -StartupType Automatic
+        }
+
+    # --- VS Code + vault-sdk-snippets extension for client-3 (developer workstation) ---
+
+    - name: Download VS Code installer
+      win_get_url:
+        url: https://update.code.visualstudio.com/latest/win32-x64/stable
+        dest: C:\Windows\Temp\VSCodeSetup.exe
+      when: ansible_host == "10.0.1.12"
+
+    - name: Install VS Code silently
+      win_shell: >
+        Start-Process -FilePath "C:\Windows\Temp\VSCodeSetup.exe"
+        -ArgumentList "/verysilent /suppressmsgboxes /mergetasks=!runcode,addcontextmenufiles,addcontextmenufolders,associatewithfiles,addtopath"
+        -Wait
+      when: ansible_host == "10.0.1.12"
+
+    - name: Deploy vault-sdk-snippets extension to system-wide directory
+      win_copy:
+        src: vault-sdk-snippets/
+        dest: C:\ProgramData\TSG\vscode-extensions\vaulttools.vault-sdk-snippets-1.2.0\
+      when: ansible_host == "10.0.1.12"
+
+    - name: Create VS Code startup shortcut with custom extensions directory
+      win_shell: |
+        $WshShell = New-Object -ComObject WScript.Shell
+        $StartupPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+        $Shortcut = $WshShell.CreateShortcut("$StartupPath\VSCode.lnk")
+        $Shortcut.TargetPath = "C:\Program Files\Microsoft VS Code\Code.exe"
+        $Shortcut.Arguments = '--extensions-dir "C:\ProgramData\TSG\vscode-extensions"'
+        $Shortcut.Save()
+      when: ansible_host == "10.0.1.12"
+
+    # --- AlwaysInstallElevated (both clients) ---
+
+    - name: Set AlwaysInstallElevated in HKLM
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer"
+        name: AlwaysInstallElevated
+        type: dword
+        data: 1
+
+    - name: Set AlwaysInstallElevated in HKCU
+      win_regedit:
+        path: "HKCU:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer"
+        name: AlwaysInstallElevated
+        type: dword
+        data: 1
+
+    # --- Stored Autologon Credentials (svc_vault on client-1 as discoverable vuln) ---
+
+    - name: Store svc_vault credentials in registry (discoverable vuln)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\TSG\\DeploymentConfig"
+        name: "{{ item.name }}"
+        type: string
+        data: "{{ item.data }}"
+      loop:
+        - { name: ServiceAccount, data: "TSG-INTERNAL\\svc_vault" }
+        - { name: ServicePassword, data: "V4ult_Acc3ss!" }
+      when: ansible_host == "10.0.1.10"
+
+    # --- Autologon: ben on client-1, kate on client-2 ---
+
+    - name: Set autologon default domain
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultDomainName
+        type: string
+        data: TSG-INTERNAL
+
+    - name: Set autologon username (ben on client-1)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultUserName
+        type: string
+        data: ben
+      when: ansible_host == "10.0.1.10"
+
+    - name: Set autologon password (ben on client-1)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultPassword
+        type: string
+        data: "Kia0ra2025!"
+      when: ansible_host == "10.0.1.10"
+
+    - name: Set autologon username (kate on client-2)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultUserName
+        type: string
+        data: kate
+      when: ansible_host == "10.0.1.11"
+
+    - name: Set autologon password (kate on client-2)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultPassword
+        type: string
+        data: "Wellington#1"
+      when: ansible_host == "10.0.1.11"
+
+    - name: Set autologon username (sam.hewitt on client-3)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultUserName
+        type: string
+        data: sam.hewitt
+      when: ansible_host == "10.0.1.12"
+
+    - name: Set autologon password (sam.hewitt on client-3)
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: DefaultPassword
+        type: string
+        data: "DevOps2025!"
+      when: ansible_host == "10.0.1.12"
+
+    - name: Enable autologon
+      win_regedit:
+        path: "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        name: AutoAdminLogon
+        type: string
+        data: "1"
+
+    # --- Link clicker: auto-executes URLs dropped in the user's message file ---
+
+    - name: Ensure C:\ProgramData\TSG exists
+      win_file:
+        path: C:\ProgramData\TSG
+        state: directory
+
+    - name: Copy link clicker script
+      win_copy:
+        src: Invoke-LinkClicker.ps1
+        dest: C:\ProgramData\TSG\Invoke-LinkClicker.ps1
+
+    - name: Create startup shortcut to run link clicker at logon
+      win_shell: |
+        $WshShell = New-Object -ComObject WScript.Shell
+        $StartupPath = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+        $Shortcut = $WshShell.CreateShortcut("$StartupPath\TSGMessenger.lnk")
+        $Shortcut.TargetPath = "powershell.exe"
+        $Shortcut.Arguments = "-WindowStyle Hidden -ExecutionPolicy Bypass -File C:\ProgramData\TSG\Invoke-LinkClicker.ps1"
+        $Shortcut.Description = "TSG Messenger"
+        $Shortcut.Save()
+
+    - name: Disable update services on clients
+      include_tasks: tasks/disable_update_services.yml
+
+    - name: Reboot clients to activate autologon
+      win_reboot:
+        reboot_timeout: 300
+        post_reboot_delay: 30

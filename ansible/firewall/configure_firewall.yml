@@ -1,0 +1,120 @@
+---
+#############################################
+## Configure Firewall / Router (iptables NAT)
+#############################################
+
+- hosts: firewall
+  gather_facts: yes
+  become: true
+  vars:
+    web_server_ip: "{{ hostvars[inventory_hostname]['web_server_ip'] | default('10.0.0.6') }}"
+    mail_server_ip: "{{ hostvars[inventory_hostname]['mail_server_ip'] | default('10.0.0.7') }}"
+    falcon_sensor_deb: ../common/files/falcon-sensor_7.07.0-16206_amd64.deb
+  tasks:
+
+  - name: Set hostname
+    hostname:
+      name: firewall
+
+  - name: Install forensic and network tools
+    apt:
+      update_cache: yes
+      name:
+        - tcpdump
+        - tshark
+        - ngrep
+        - iftop
+        - iptables-persistent
+      state: present
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+
+  - name: Enable IP forwarding (runtime)
+    sysctl:
+      name: net.ipv4.ip_forward
+      value: "1"
+      sysctl_set: yes
+      state: present
+      reload: yes
+
+  - name: DNAT HTTP to web server
+    iptables:
+      table: nat
+      chain: PREROUTING
+      protocol: tcp
+      destination_port: "80"
+      jump: DNAT
+      to_destination: "{{ web_server_ip }}:80"
+    notify: persist iptables
+
+  - name: DNAT HTTPS to web server
+    iptables:
+      table: nat
+      chain: PREROUTING
+      protocol: tcp
+      destination_port: "443"
+      jump: DNAT
+      to_destination: "{{ web_server_ip }}:443"
+    notify: persist iptables
+
+  - name: DNAT SMTP to mail server
+    iptables:
+      table: nat
+      chain: PREROUTING
+      protocol: tcp
+      destination_port: "25"
+      jump: DNAT
+      to_destination: "{{ mail_server_ip }}:25"
+    notify: persist iptables
+
+  - name: MASQUERADE forwarded traffic
+    iptables:
+      table: nat
+      chain: POSTROUTING
+      out_interface: ens5
+      jump: MASQUERADE
+    notify: persist iptables
+
+  - name: Allow forwarded established/related traffic
+    iptables:
+      chain: FORWARD
+      ctstate:
+        - ESTABLISHED
+        - RELATED
+      jump: ACCEPT
+    notify: persist iptables
+
+  - name: Allow forwarded new traffic to web server HTTP
+    iptables:
+      chain: FORWARD
+      protocol: tcp
+      destination: "{{ web_server_ip }}"
+      destination_port: "80"
+      jump: ACCEPT
+    notify: persist iptables
+
+  - name: Allow forwarded new traffic to web server HTTPS
+    iptables:
+      chain: FORWARD
+      protocol: tcp
+      destination: "{{ web_server_ip }}"
+      destination_port: "443"
+      jump: ACCEPT
+    notify: persist iptables
+
+  - name: Allow forwarded new traffic to mail server SMTP
+    iptables:
+      chain: FORWARD
+      protocol: tcp
+      destination: "{{ mail_server_ip }}"
+      destination_port: "25"
+      jump: ACCEPT
+    notify: persist iptables
+
+  # --- CrowdStrike Falcon sensor ---
+
+  - include_tasks: ../common/tasks/install_falcon_sensor.yml
+
+  handlers:
+  - name: persist iptables
+    shell: iptables-save > /etc/iptables/rules.v4

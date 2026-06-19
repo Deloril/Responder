@@ -1,0 +1,50 @@
+---
+# Populate domain users, groups, and service accounts
+
+- name: Add domain groups
+  win_domain_group:
+    name: "{{ item }}"
+    scope: global
+    state: present
+  loop: "{{ domain_groups }}"
+
+- name: Add domain users ({{ domain_users | length }} accounts)
+  win_domain_user:
+    name: "{{ item.username }}"
+    password: "{{ item.password }}"
+    groups: "{{ item.groups }}"
+    groups_action: add
+  loop: "{{ domain_users }}"
+  loop_control:
+    label: "{{ item.username }}"
+
+- name: Add AV-Admin to Desktop-Admins group
+  win_domain_group_membership:
+    name: Desktop-Admins
+    members:
+      - AV-Admin
+
+- name: Create service accounts ({{ service_accounts | length }} accounts)
+  win_domain_user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    password_never_expires: yes
+    user_cannot_change_password: yes
+    description: "{{ item.description }}"
+    state: present
+    groups: "{{ item.groups }}"
+  loop: "{{ service_accounts }}"
+  loop_control:
+    label: "{{ item.name }}"
+
+- name: Register SPNs for kerberoastable service accounts
+  win_shell: >
+    setspn -S {{ item.spn }} {{ domain_name_short }}\{{ item.name }}
+  args:
+    executable: cmd
+  loop: "{{ service_accounts | selectattr('spn', 'ne', '') | list }}"
+  loop_control:
+    label: "{{ item.name }} -> {{ item.spn }}"
+  register: spn_result
+  failed_when: spn_result.rc != 0 and 'Duplicate SPN found' not in spn_result.stderr
+  changed_when: "'Updated object' in spn_result.stdout"

@@ -1,0 +1,20 @@
+---
+# Add ansible user and set 
+- name: Add Ansible user
+  win_user:
+    name: "{{ server_ansible_username }}"
+    password: "{{ server_ansible_password }}"
+    password_never_expires: true
+    groups:
+      - Administrators
+
+- name: Switch to Ansible user
+  set_fact:
+    ansible_user: "{{ server_ansible_username }}"
+    ansible_password: "{{ server_ansible_password }}"
+
+- name: Change password for Domain Administrator
+  win_user:
+    name: "{{ domain_admin_username }}" # Local Admin of DC is promoted to DA
+    password: "{{ domain_admin_password }}"
+    password_never_expires: true

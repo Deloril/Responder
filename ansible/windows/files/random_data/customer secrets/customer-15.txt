@@ -1,0 +1,57 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0362
+Deposit Date: 2025-03-10
+Client: Pacific Rim Banking Corp
+Agreement: PRBC-Trading-Escrow-2024-119
+Deposit Type: Trading Platform Algorithm Escrow
+================================================================================
+
+*** CLASSIFIED - EXTREMELY SENSITIVE ***
+*** PROPRIETARY TRADING ALGORITHMS - CONFIDENTIAL ***
+*** UNAUTHORIZED ACCESS PROHIBITED - LEGAL ACTION ***
+*** FMA REGULATED - INSIDER TRADING CONTROLS ***
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: b1a6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0
+Deposit Verified: 2025-03-10 08:15:00 UTC
+Custodian: Dr. A. Kumar (TSG Senior Security Officer)
+Access Level: Dual-custody required | Audit: Full chain
+
+TRADING ALGORITHM ESCROW
+------------------------
+System: PRBC Quantitative Trading Platform
+Component: Alpha generation, execution algorithms, risk models
+Classification: Trade Secret | FMA Notification: Filed
+
+DEPOSIT CONTENTS
+----------------
+  1. prbc-alpha-models
+     SHA-256: c2b7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3
+     File Count: 234 | Algorithm source (obfuscated)
+     
+  2. prbc-execution-engine
+     SHA-256: d3c8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4
+     File Count: 412 | Smart order routing
+     
+  3. prbc-risk-models
+     SHA-256: e4d9f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5
+     File Count: 156 | VaR, stress testing
+     
+  4. prbc-market-data
+     SHA-256: f5e0a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6
+     File Count: 89 | Feed adapters, normalizers
+
+RELEASE PROTOCOL
+----------------
+  Requires: Board resolution + FMA notification + TSG legal
+  Witness: Minimum 2 authorized officers
+  Documentation: Full release audit trail
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor insolvency ONLY | No unilateral release
+Next Verification: 2025-04-10 (monthly)
+================================================================================

@@ -1,0 +1,134 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              SOC 2 TYPE II READINESS ASSESSMENT - Q3 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Assessment Date: 15 September 2025
+Prepared by: Lisa Liu, Compliance Manager
+Reviewed by: Sophie Patel, Internal Audit; Sarah Wang, Legal
+External Auditor: Deloitte (scheduled Type II: Nov 2025 - Jan 2026)
+================================================================================
+
+PURPOSE
+-------
+This assessment evaluates TSG's readiness for the SOC 2 Type II audit across
+the Trust Services Criteria (TSC): Security, Availability, Confidentiality,
+and Processing Integrity. Gaps identified require remediation prior to or
+during the audit observation period.
+
+
+TRUST SERVICES CRITERIA - STATUS SUMMARY
+================================================================================
+
+Criterion                    Status      Gap Count    Remediation Target
+--------------------------------------------------------------------------------
+CC1 - Control Environment    READY      0            N/A
+CC2 - Communication         READY      0            N/A
+CC3 - Risk Assessment        READY      0            N/A
+CC4 - Monitoring             GAP        2            Oct 2025
+CC5 - Control Activities     GAP        3            Nov 2025
+CC6 - Logical Access         GAP        1            Oct 2025
+CC7 - System Operations      GAP        2            Nov 2025
+CC8 - Change Management      READY      0            N/A
+CC9 - Risk Mitigation        GAP        1            Dec 2025
+A1 - Availability           GAP        2            Nov 2025
+C1 - Confidentiality         READY      0            N/A
+PI1 - Processing Integrity   GAP        1            Nov 2025
+--------------------------------------------------------------------------------
+
+
+DETAILED GAP ANALYSIS
+================================================================================
+
+CC4 - MONITORING (2 Gaps)
+--------------------------------------------------------------------------------
+GAP-CC4-01: Continuous monitoring controls for vault access anomalies lack
+automated alerting. Current process relies on weekly manual review of logs
+by David Nair. Recommendation: Implement SIEM rules for after-hours access,
+concurrent session alerts, and failed authentication thresholds.
+Remediation: Jennifer Li (IT) | Timeline: 31 Oct 2025
+
+GAP-CC4-02: Management review of control effectiveness (quarterly) not
+formally documented with action items and follow-up. Add structured
+template and calendar reminders. Remediation: Lisa Liu | Timeline: 15 Oct 2025
+
+
+CC5 - CONTROL ACTIVITIES (3 Gaps)
+--------------------------------------------------------------------------------
+GAP-CC5-01: Segregation of duties - ben holds both vault release authority
+and backup key custodian role for Wellington. Mitigate by designating
+Priya Rangi as alternate backup custodian with formal handover procedure.
+Remediation: Henry Ngata | Timeline: 30 Nov 2025
+
+GAP-CC5-02: Vendor access (Datacom) to production SSN environment - ensure
+session recording and time-limited access tokens are implemented. Current
+RDP access lacks full audit trail. Remediation: Jennifer Li | Timeline: 15 Nov 2025
+
+GAP-CC5-03: Password policy for service accounts - 12 accounts identified
+with passwords exceeding 365-day age. Rotate and document in privileged
+access management procedure. Remediation: David Nair | Timeline: 20 Nov 2025
+
+
+CC6 - LOGICAL ACCESS (1 Gap)
+--------------------------------------------------------------------------------
+GAP-CC6-01: MFA enforcement for TSG-INTERNAL.LAB - 3 contractor accounts
+(external developers) have conditional access exemptions. Remove exemptions
+or implement hardware token requirement. Remediation: Jennifer Li | Timeline: 31 Oct 2025
+
+
+CC7 - SYSTEM OPERATIONS (2 Gaps)
+--------------------------------------------------------------------------------
+GAP-CC7-01: Incident response runbook - last update March 2025. Update to
+reflect new Singapore office contact details and Privacy Act 2020 mandatory
+breach notification timelines. Remediation: Sophie Patel | Timeline: 30 Nov 2025
+
+GAP-CC7-02: Backup encryption verification - confirm SSN platform backups
+stored in AWS S3 are encrypted at rest with KMS and key rotation is
+documented. Remediation: David Nair | Timeline: 15 Nov 2025
+
+
+CC9 - RISK MITIGATION (1 Gap)
+--------------------------------------------------------------------------------
+GAP-CC9-01: Cyber insurance policy - ensure coverage limits ($5M) are
+documented and aligned with risk register. Provide evidence of annual
+review. Remediation: Sarah Wang | Timeline: 15 Dec 2025
+
+
+A1 - AVAILABILITY (2 Gaps)
+--------------------------------------------------------------------------------
+GAP-A1-01: RTO/RPO for SSN platform - documented as 4hr/1hr but DR test
+(June 2025) achieved 6.2hr recovery. Update documentation or improve
+recovery procedures to meet stated objectives. Remediation: Jennifer Li | Timeline: 30 Nov 2025
+
+GAP-A1-02: Scheduled maintenance window communication - no formal process
+for notifying clients of planned outages. Implement 72-hour advance notice
+template and client distribution list. Remediation: Kate | Timeline: 15 Nov 2025
+
+
+PI1 - PROCESSING INTEGRITY (1 Gap)
+--------------------------------------------------------------------------------
+GAP-PI1-01: Escrow release verification - add automated checksum validation
+to release workflow to ensure deposited materials match released materials.
+Currently manual comparison. Remediation: David Nair | Timeline: 30 Nov 2025
+
+
+REMEDIATION TRACKING
+--------------------------------------------------------------------------------
+Total Gaps: 15
+Remediated (as at assessment date): 0
+In Progress: 4
+Not Started: 11
+
+Next Readiness Review: 15 October 2025
+Audit Observation Period Start: 1 November 2025
+Audit Report Expected: 31 January 2026
+
+
+APPROVAL
+--------------------------------------------------------------------------------
+Prepared by: Lisa Liu _________________________ Date: 15/09/2025
+Approved by: Daniel Kemp, CEO _________________ Date: _______________
+
+================================================================================
+Document Control: TSG-SOC2-2025-READ-001 | Confidential
+================================================================================

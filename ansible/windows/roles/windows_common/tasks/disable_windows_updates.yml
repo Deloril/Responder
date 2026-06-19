@@ -1,0 +1,28 @@
+---
+- name: Set NoAutoUpdate registry policy
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU"
+    name: NoAutoUpdate
+    type: dword
+    data: 1
+
+- name: Set AUOptions to Never Check (policy key)
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU"
+    name: AUOptions
+    type: dword
+    data: 1
+
+- name: Disable featured software notifications
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU"
+    name: EnableFeaturedSoftware
+    type: dword
+    data: 0
+
+- name: Set AUOptions to Never Check (Auto Update key)
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Auto Update"
+    name: AUOptions
+    type: dword
+    data: 1

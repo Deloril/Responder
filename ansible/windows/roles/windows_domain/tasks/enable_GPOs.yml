@@ -1,0 +1,232 @@
+---
+
+- name: Copy over ADMX templates to DC
+  win_copy:
+    src: "Administrative Templates (.admx) for Windows 10 October 2018 Update.msi"
+    dest: "C:\\Administrative Templates (.admx) for Windows 10 October 2018 Update.msi"
+
+- name: install ADMX templates
+  win_shell: msiexec /i "C:\\Administrative Templates (.admx) for Windows 10 October 2018 Update.msi" /quiet
+
+- name: Add ADMX to central policy store
+  win_shell: Copy-Item -Path "C:\\Program Files (x86)\\Microsoft Group Policy\\Windows 10 October 2018 Update (1809) v2\\PolicyDefinitions" -Destination \\tsg-internal.lab\SYSVOL\tsg-internal.lab\Policies\ -Force -Recurse
+
+- name: Copy GPO
+  win_copy:
+    src: AdvancedLoggingGPO.zip
+    dest: C:\AdvancedLoggingGPO.zip
+
+- name: make GPO backup dir
+  win_file:
+    path: C:\AdvancedLoggingGPO
+    state: directory
+
+- name: unzip GPOs
+  win_unzip:
+    src: C:\AdvancedLoggingGPO.zip
+    dest: C:\AdvancedLoggingGPO\
+    delete_archive: yes
+
+- name: Import GPOs
+  win_shell: Import-Gpo -BackupGpoName AdvancedLoggingGPO -TargetName AdvancedLoggingGPO -Path C:\AdvancedLoggingGPO -CreateIfNeeded
+
+- name: Link GPOs
+  win_shell: New-GPLink -Name AdvancedLoggingGPO -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes
+
+- name: Set Permissions on AdvancedLogging GPO
+  win_shell: Set-GPPermission -Name AdvancedLoggingGPO -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+- name: Copy WindowsDefenderDisable1809 GPO
+  win_copy:
+    src: WindowsDefenderDisable1809.zip
+    dest: C:\WindowsDefenderDisable1809.zip
+
+- name: make WindowsDefenderDisable1809 GPO backup dir
+  win_file:
+    path: C:\WindowsDefenderDisable1809
+    state: directory
+
+- name: unzip WindowsDefenderDisable1809 GPOs
+  win_unzip:
+    src: C:\WindowsDefenderDisable1809.zip
+    dest: C:\WindowsDefenderDisable1809\
+    delete_archive: yes
+
+- name: Import WindowsDefenderDisable1809 GPOs
+  win_shell: Import-Gpo -BackupGpoName WindowsDefenderDisable1809 -TargetName WindowsDefenderDisable1809 -Path C:\WindowsDefenderDisable1809 -CreateIfNeeded
+
+- name: Link WindowsDefenderDisable1809 GPOs
+  win_shell: New-GPLink -Name WindowsDefenderDisable1809 -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes
+
+- name: Set Permissions on WindowsDefenderDisable1809 GPO
+  win_shell: Set-GPPermission -Name WindowsDefenderDisable1809 -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+- name: Copy WindowsDefenderDisable GPO
+  win_copy:
+    src: WindowsDefenderDisable.zip
+    dest: C:\WindowsDefenderDisable.zip
+
+- name: make WindowsDefenderDisable GPO backup dir
+  win_file:
+    path: C:\WindowsDefenderDisable
+    state: directory
+
+- name: unzip WindowsDefenderDisable GPOs
+  win_unzip:
+    src: C:\WindowsDefenderDisable.zip
+    dest: C:\WindowsDefenderDisable\
+    delete_archive: yes
+
+- name: Import WindowsDefenderDisable GPOs
+  win_shell: Import-Gpo -BackupGpoName WindowsDefenderDisable -TargetName WindowsDefenderDisable -Path C:\WindowsDefenderDisable -CreateIfNeeded
+
+- name: Link WindowsDefenderDisable GPOs
+  win_shell: New-GPLink -Name WindowsDefenderDisable -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes
+
+- name: Set Permissions on WindowsDefenderDisable GPO
+  win_shell: Set-GPPermission -Name WindowsDefenderDisable -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+- name: Copy GPO
+  win_copy:
+    src: UACDisable.zip
+    dest: C:\UACDisable.zip
+
+- name: make GPO backup dir
+  win_file:
+    path: C:\UACDisable
+    state: directory
+
+- name: unzip GPOs
+  win_unzip:
+    src: C:\UACDisable.zip
+    dest: C:\UACDisable\
+    delete_archive: yes
+
+- name: Import GPOs
+  win_shell: Import-Gpo -BackupGpoName UACDisable -TargetName UACDisable -Path C:\UACDisable -CreateIfNeeded
+
+- name: Link GPOs
+  win_shell: New-GPLink -Name UACDisable -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes
+
+- name: Set Permissions on UACDisable GPO
+  win_shell: Set-GPPermission -Name UACDisable -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+- name: Create DisableWindowsUpdate GPO
+  win_shell: New-GPO -Name "DisableWindowsUpdate" -ErrorAction SilentlyContinue
+
+- name: Set NoAutoUpdate in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableWindowsUpdate" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -ValueName "NoAutoUpdate" -Type DWord -Value 1
+
+- name: Set AUOptions to Never Check in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableWindowsUpdate" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -ValueName "AUOptions" -Type DWord -Value 1
+
+- name: Disable Windows Update access in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableWindowsUpdate" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -ValueName "DisableWindowsUpdateAccess" -Type DWord -Value 1
+
+- name: Disable featured software notifications in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableWindowsUpdate" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -ValueName "EnableFeaturedSoftware" -Type DWord -Value 0
+
+- name: Link DisableWindowsUpdate GPO
+  win_shell: New-GPLink -Name "DisableWindowsUpdate" -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes -ErrorAction SilentlyContinue
+
+- name: Set Permissions on DisableWindowsUpdate GPO
+  win_shell: Set-GPPermission -Name "DisableWindowsUpdate" -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+- name: Create DisableDefenderRealtime GPO
+  win_shell: New-GPO -Name "DisableDefenderRealtime" -ErrorAction SilentlyContinue
+
+- name: Set DisableAntiSpyware in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableDefenderRealtime" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" -ValueName "DisableAntiSpyware" -Type DWord -Value 1
+
+- name: Set DisableRealtimeMonitoring in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableDefenderRealtime" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -ValueName "DisableRealtimeMonitoring" -Type DWord -Value 1
+
+- name: Set DisableBehaviorMonitoring in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableDefenderRealtime" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -ValueName "DisableBehaviorMonitoring" -Type DWord -Value 1
+
+- name: Set DisableOnAccessProtection in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableDefenderRealtime" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -ValueName "DisableOnAccessProtection" -Type DWord -Value 1
+
+- name: Set DisableScanOnRealtimeEnable in GPO
+  win_shell: Set-GPRegistryValue -Name "DisableDefenderRealtime" -Key "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection" -ValueName "DisableScanOnRealtimeEnable" -Type DWord -Value 1
+
+- name: Link DisableDefenderRealtime GPO
+  win_shell: New-GPLink -Name "DisableDefenderRealtime" -Target "dc=tsg-internal,dc=lab" -LinkEnabled Yes -ErrorAction SilentlyContinue
+
+- name: Set Permissions on DisableDefenderRealtime GPO
+  win_shell: Set-GPPermission -Name "DisableDefenderRealtime" -TargetName "Domain Computers" -TargetType Group -PermissionLevel GpoApply
+
+# --- GPP Password in SYSVOL (cpassword vulnerability) ---
+
+- name: Create fake GPO directory structure for legacy deployment GPP
+  win_shell: |
+    $GpoId = "{7E3F4B2A-1C9D-4A8E-B5F6-2D3E4F5A6B7C}"
+    $BasePath = "C:\Windows\SYSVOL\domain\Policies\$GpoId\Machine\Preferences\Groups"
+    New-Item -Path $BasePath -ItemType Directory -Force | Out-Null
+
+    $AESKey = [byte[]](0x4e,0x99,0x06,0xe8,0xfc,0xb6,0x6c,0xc9,0xfa,0xf4,0x93,0x10,0x62,0x0f,0xfe,0xe8,0xf4,0x96,0xe8,0x06,0xcc,0x05,0x79,0x90,0x20,0x9b,0x09,0xa4,0x33,0xb6,0x6c,0x1b)
+    $AES = New-Object System.Security.Cryptography.AesCryptoServiceProvider
+    $AES.Mode = [System.Security.Cryptography.CipherMode]::CBC
+    $AES.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
+    $AES.BlockSize = 128
+    $AES.KeySize = 256
+    $AES.Key = $AESKey
+    $AES.IV = New-Object byte[] 16
+    $Encryptor = $AES.CreateEncryptor()
+    $Bytes = [System.Text.Encoding]::Unicode.GetBytes("V4ult_Acc3ss!")
+    $EncBytes = $Encryptor.TransformFinalBlock($Bytes, 0, $Bytes.Length)
+    $CPassword = [Convert]::ToBase64String($EncBytes)
+
+    $Xml = @"
+    <?xml version="1.0" encoding="utf-8"?>
+    <Groups clsid="{3125E937-EB16-4b4c-9934-544FC6D24D26}">
+      <User clsid="{DF5F1855-51E5-4d24-8B1A-D9BDE98BA1D1}" name="svc_vault" image="2" changed="2025-08-14 11:32:07" uid="{A3F2B8C1-4D5E-6F7A-8B9C-0D1E2F3A4B5C}">
+        <Properties action="U" newName="" fullName="Vault Service Account" description="Automated vault operations account" cpassword="$CPassword" changeLogon="0" noChange="1" neverExpires="1" acctDisabled="0" userName="TSG-INTERNAL\svc_vault"/>
+      </User>
+    </Groups>
+    "@
+
+    Set-Content -Path "$BasePath\Groups.xml" -Value $Xml -Encoding UTF8
+
+# --- DNS records for internal services ---
+
+- name: Add A record for web server in tsg-internal.lab DNS zone
+  win_shell: >
+    Add-DnsServerResourceRecordA
+    -Name "web"
+    -ZoneName "tsg-internal.lab"
+    -IPv4Address "10.0.0.6"
+    -ErrorAction SilentlyContinue
+  ignore_errors: yes
+
+- name: Add A record for mail server in tsg-internal.lab DNS zone
+  win_shell: >
+    Add-DnsServerResourceRecordA
+    -Name "mail"
+    -ZoneName "tsg-internal.lab"
+    -IPv4Address "10.0.0.7"
+    -ErrorAction SilentlyContinue
+  ignore_errors: yes
+
+- name: Add MX record for tsg-internal.lab pointing to mail server
+  win_shell: >
+    Add-DnsServerResourceRecordMX
+    -Name "."
+    -ZoneName "tsg-internal.lab"
+    -MailExchange "mail.tsg-internal.lab"
+    -Preference 10
+    -ErrorAction SilentlyContinue
+  ignore_errors: yes
+
+# --- DNS zone for vaulttools.io (dangling domain -- extension supply chain attack) ---
+
+- name: Create primary forward lookup zone for vaulttools.io
+  win_shell: >
+    Add-DnsServerPrimaryZone
+    -Name "vaulttools.io"
+    -ReplicationScope Domain
+    -ErrorAction SilentlyContinue
+  ignore_errors: yes
+
+- name: Update GPOs
+  win_shell: gpupdate /Force

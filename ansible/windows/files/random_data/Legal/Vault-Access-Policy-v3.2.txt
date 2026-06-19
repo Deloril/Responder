@@ -1,0 +1,130 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              VAULT ACCESS POLICY - VERSION 3.2
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Policy Reference: TSG-POL-VAULT-3.2
+Effective Date: 15 February 2025
+Owner: Henry Ngata, Chief Custodian Officer
+Approved by: Daniel Kemp, CEO
+Classification: Internal - Confidential
+================================================================================
+
+1. PURPOSE AND SCOPE
+--------------------------------------------------------------------------------
+This policy defines who may authorise vault access, dual-control requirements,
+logging, and emergency procedures for TSG's digital escrow vaults. It supports
+compliance with ISO 27001 Annex A controls (A.5.24, A.5.25, A.8.5) and SOC 2
+Trust Services Criteria for Security and Availability.
+
+
+2. AUTHORISATION
+--------------------------------------------------------------------------------
+2.1 Primary Authoriser: The Chief Custodian Officer (CCO), Henry Ngata, is
+    the sole authority for routine vault access authorisation. No access may
+    occur without CCO approval except under Emergency Access (Clause 6).
+
+2.2 Delegation: The CCO may delegate authorisation authority in writing to one
+    designated deputy (currently: Sophie Patel). Delegation is limited to
+    specific access types and must be documented. Delegation lapses automatically
+    if the CCO is unavailable for more than 14 consecutive days without prior
+    written extension.
+
+2.3 Client-Initiated Access: Release of escrow materials to a Beneficiary
+    requires: (a) verified Release Condition per the escrow agreement;
+    (b) written instruction from authorised client representatives; and
+    (c) CCO approval. Dual-control applies to all releases.
+
+
+3. DUAL-CONTROL REQUIREMENTS
+--------------------------------------------------------------------------------
+3.1 All vault access (read, write, or release) requires the presence and
+    concurrent action of two authorised individuals:
+
+    - Custodian 1: CCO or designated deputy (authoriser)
+    - Custodian 2: A second approved custodian from the roster (Ben, Lisa Liu,
+      David Nair, or Priya Rangi)
+
+3.2 No single individual may complete a vault transaction. Both custodians must
+    authenticate independently (MFA + biometric or hardware token) and log the
+    access event.
+
+3.3 The custodian roster is maintained by the CCO and reviewed quarterly.
+    Custodians must complete annual security training and pass background
+    checks per HR policy.
+
+
+4. LOGGING AND MONITORING
+--------------------------------------------------------------------------------
+4.1 All vault access events are logged with: timestamp, user identity, action
+    type, asset identifier, and outcome. Logs are retained for 7 years.
+
+4.2 Logs are stored in a segregated SIEM (TSG-INTERNAL.LAB\vault-audit) with
+    restricted access. Jennifer Li (IT Security) reviews access logs weekly for
+    anomalies.
+
+4.3 Unauthorised access attempts trigger immediate alert to CCO and IT Security.
+    Three failed authentication attempts within 15 minutes results in temporary
+    account lockout and manual review.
+
+
+5. REVIEW CYCLES
+--------------------------------------------------------------------------------
+5.1 Access Rights Review: Quarterly review of all individuals with vault access
+    rights. Removed promptly upon role change or termination.
+
+5.2 Policy Review: This policy is reviewed annually by the CCO and Legal
+    (Sarah Wang). Changes require CEO approval.
+
+5.3 Control Testing: Internal Audit (or external auditor) tests dual-control
+    and logging effectiveness annually as part of ISO 27001 surveillance.
+
+
+6. EMERGENCY ACCESS PROCEDURES
+--------------------------------------------------------------------------------
+6.1 Emergency access is permitted only when: (a) the CCO is incapacitated or
+    unreachable; (b) a court order or regulatory directive requires immediate
+    action; or (c) a critical client Release Condition has occurred and delay
+    would cause material harm.
+
+6.2 Emergency authorisation chain: CEO (Daniel Kemp) > COO (Kate) > Legal
+    (Sarah Wang). The authorising executive must document the emergency and
+    notify the CCO as soon as practicable.
+
+6.3 Emergency access still requires dual-control. The authorising executive
+    may designate the second custodian if the usual roster is unavailable.
+
+6.4 All emergency access is logged and reported to the Audit Committee at the
+    next meeting. Post-incident review is mandatory.
+
+
+7. PHYSICAL AND LOGICAL SECURITY
+--------------------------------------------------------------------------------
+7.1 Vault infrastructure is housed in a Tier III data centre with 24/7
+    monitoring. Logical access is protected by AES-256 encryption at rest,
+    TLS 1.3 in transit, and hardware security modules (HSMs) for key management.
+
+7.2 Vault keys are split using Shamir's Secret Sharing. No single individual
+    holds a complete key. Recovery procedures are documented in a separate
+    Business Continuity Plan.
+
+
+8. RELATED DOCUMENTS
+--------------------------------------------------------------------------------
+- ISO 27001:2022 Annex A.5.24 (Information security in project management)
+- ISO 27001:2022 Annex A.5.25 (Segregation of duties)
+- ISO 27001:2022 Annex A.8.5 (Secure authentication)
+- SOC 2 Trust Services Criteria: CC6.1 (Logical and physical access controls)
+- TSG Incident Response Plan v2.1
+- TSG Escrow Agreement templates
+
+
+================================================================================
+APPROVAL RECORD
+--------------------------------------------------------------------------------
+Approved by: Daniel Kemp, CEO _________________________ Date: 15/02/2025
+Acknowledged by: Henry Ngata, CCO _____________________ Date: 15/02/2025
+
+================================================================================
+Document Control: TSG-POL-VAULT-3.2 | Version 3.2 | Next review: 15 Feb 2026
+================================================================================

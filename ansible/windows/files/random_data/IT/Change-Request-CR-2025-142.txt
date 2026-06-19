@@ -1,0 +1,109 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              CHANGE REQUEST - CR-2025-142
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Title: Migrate SSN Platform Database from On-Prem SQL Server to Azure SQL
+Submitted: 18 November 2025
+Status: Approved - Pending Implementation
+================================================================================
+
+1. CHANGE SUMMARY
+--------------------------------------------------------------------------------
+Migrate the Secret Storage Network (SSN) platform database from the on-premises
+SQL Server (sql.tsg-internal.lab / 10.0.2.7) to Azure SQL Database. This
+supports the broader cloud strategy and improves disaster recovery capabilities.
+
+
+2. BUSINESS JUSTIFICATION
+--------------------------------------------------------------------------------
+- Reduce dependency on single on-prem SQL instance
+- Improve geo-redundancy for vault metadata and escrow records
+- Align with TSG cloud-first roadmap (Phase 2)
+- Reduce physical infrastructure maintenance burden
+- Enable future SSN platform scaling without hardware procurement
+
+
+3. SCOPE
+--------------------------------------------------------------------------------
+In Scope:
+  - SSN_Core database (vault metadata, client references, audit logs)
+  - SSN_Ingestion database (secret ingestion queue, staging tables)
+  - Service account migration: sql_svc, svc_ssn
+  - Application connection string updates (web server 10.0.0.6)
+  - Backup/restore validation
+
+Out of Scope:
+  - Legacy vault file metadata (remains on file server 10.0.2.6)
+  - Mail server databases
+  - This change does not affect Wellington Vault physical/digital storage
+
+
+4. RISK ASSESSMENT
+--------------------------------------------------------------------------------
+Risk ID  Description                    Likelihood  Impact   Mitigation
+--------------------------------------------------------------------------------
+R1       Data loss during migration     Low         Critical Full backup pre-migration; parallel run
+R2       Extended downtime              Medium     High     Weekend window; 4-hour max; rollback plan
+R3       Connection/performance issues  Medium     Medium   Load testing; connection pooling tuning
+R4       Azure outage during cutover    Low        High     Schedule during low-risk window; rollback
+R5       Service account credential     Low        High     Managed identity where possible; secure
+         exposure                                              credential rotation post-migration
+
+
+5. IMPLEMENTATION STEPS
+--------------------------------------------------------------------------------
+Phase 1 - Preparation (Week 1):
+  1.1 Provision Azure SQL Database (Standard S2, geo-redundant)
+  1.2 Configure firewall rules for web server and admin IPs
+  1.3 Create sql_svc equivalent in Azure (contained user or AAD)
+  1.4 Full backup of SSN_Core and SSN_Ingestion to secure location
+  1.5 Document current schema and dependencies (Liam Jones)
+
+Phase 2 - Migration (Weekend Window):
+  2.1 Put SSN application in maintenance mode (Kate)
+  2.2 Final transaction log backup
+  2.3 Restore databases to Azure SQL (Li-Hoon Jones)
+  2.4 Update connection strings on web (10.0.0.6)
+  2.5 Validate connectivity from svc_web, svc_ssn
+  2.6 Run data integrity checks
+  2.7 Remove maintenance mode; smoke test
+
+Phase 3 - Validation (Week 2):
+  3.1 Parallel run: log compare on-prem vs Azure for 48 hours
+  3.2 Performance baseline comparison
+  3.3 User acceptance testing (Tama Thomas, Wiremu Sio)
+  3.4 Decommission on-prem SQL databases (retain backup 90 days)
+
+
+6. ROLLBACK PLAN
+--------------------------------------------------------------------------------
+If critical issues detected within 72 hours post-migration:
+  1. Revert connection strings on web server to on-prem SQL (10.0.2.7)
+  2. Restore from pre-migration backup if data corruption suspected
+  3. Notify stakeholders; post-incident review
+  4. Rollback window: 30 minutes (connection string change + app restart)
+
+
+7. APPROVAL CHAIN
+--------------------------------------------------------------------------------
+Submitted by:     Michael Huang, IT Infrastructure Manager    18-Nov-2025
+Technical Review: Liam Jones, Senior Systems Engineer         19-Nov-2025  Approved
+Security Review:  Henry Ngata, CTO                           20-Nov-2025  Approved
+Change Advisory:  Kate Foster, DevOps Lead                    21-Nov-2025  Approved
+Final Approval:   Charlotte Mata, COO                        22-Nov-2025  Approved
+
+Implementation Window: 7-8 December 2025, 02:00-06:00 NZDT
+
+
+8. SUCCESS CRITERIA
+--------------------------------------------------------------------------------
+- Zero data loss; checksum validation passed
+- SSN portal fully functional post-migration
+- RTO for SSN platform maintained at 4 hours
+- No increase in P95 response time > 10%
+
+
+================================================================================
+Document Control: TSG-IT-CR-2025-142 | Version 1.0
+================================================================================

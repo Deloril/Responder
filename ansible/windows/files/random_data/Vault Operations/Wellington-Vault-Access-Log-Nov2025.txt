@@ -1,0 +1,72 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              WELLINGTON VAULT - ACCESS LOG
+                    November 2025
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington Vault | TSG-INTERNAL.LAB
+================================================================================
+
+LOG SUMMARY
+--------------------------------------------------------------------------------
+Reporting Period:     01 November 2025 - 30 November 2025
+Total Access Events:  27
+Physical Access:      14
+Digital Vault Access: 13
+--------------------------------------------------------------------------------
+
+
+PHYSICAL VAULT ACCESS
+================================================================================
+
+Date/Time              Person          Auth Ref      Items Accessed/Deposited              Witness
+--------------------------------------------------------------------------------
+01-Nov-2025 08:42     Tama Thomas      AUTH-2511-001  Deposit: Source code escrow PTL-2024-07  Charlotte Mata
+01-Nov-2025 09:15     Wiremu Sio       AUTH-2511-002  Access: Encryption key retrieval K-8923  Tama Thomas
+01-Nov-2025 14:22     Hemi Tama        AUTH-2511-003  Deposit: Sealed legal documents MRL-112  Oliver Anderson
+02-Nov-2025 10:08     Satoshi Tuala    AUTH-2511-004  Maintenance: Biometric reader calibration  Michael Huang
+03-Nov-2025 11:30     Tama Thomas      AUTH-2511-005  Access: Digital media retrieval DM-4451  Wiremu Sio
+04-Nov-2025 08:55     Charlotte Mata  AUTH-2511-006  Audit: Quarterly inventory verification  Henry Ngata
+05-Nov-2025 09:42     Wiremu Sio       AUTH-2511-007  Deposit: Source code escrow NCF-2025-03  Kaimana Zhang
+05-Nov-2025 15:18     Lucas Kang       AUTH-2511-008  Access: Key ceremony materials prep  Tama Thomas
+06-Nov-2025 10:25     Hemi Tama        AUTH-2511-009  Deposit: Encryption keys (dual custody)  Charlotte Mata
+08-Nov-2025 11:00     Tama Thomas      AUTH-2511-010  Access: ERR-2025-019 release materials  Wiremu Sio
+09-Nov-2025 14:35     Satoshi Tuala    AUTH-2511-011  Maintenance: HVAC inspection escort  Michael Huang
+11-Nov-2025 09:20     Oliver Anderson  AUTH-2511-012  Deposit: Client sealed envelope APT-889  Tama Thomas
+12-Nov-2025 10:45     Wiremu Sio       AUTH-2511-013  Access: Source code retrieval DCM-2023-11  Hemi Tama
+15-Nov-2025 08:30     Tama Thomas      AUTH-2511-014  Key ceremony: New master key generation  Charlotte Mata, Henry Ngata
+--------------------------------------------------------------------------------
+
+
+DIGITAL VAULT ACCESS (Wellington Vault Portal)
+================================================================================
+
+Date/Time              Person          Auth Ref      Items Accessed/Deposited              System
+--------------------------------------------------------------------------------
+02-Nov-2025 09:12     Ben             AUTH-2511-101  SSN platform: Secret ingestion batch 192  svc_ssn
+03-Nov-2025 11:45     Kate             AUTH-2511-102  Vault API: Key retrieval for backup job  svc_backup
+04-Nov-2025 08:30     Henry Ngata     AUTH-2511-103  Admin: Certificate rotation verification  svc_vault
+05-Nov-2025 14:22     Michael Huang   AUTH-2511-104  SQL backup verification - vault DB  svc_backup
+06-Nov-2025 10:15     Liam Jones      AUTH-2511-105  Monitoring: Health check escalation  svc_monitoring
+07-Nov-2025 09:00     Li-Hoon Jones   AUTH-2511-106  DFS replication sync verification  svc_dfs
+08-Nov-2025 16:45     Jack Zhou       AUTH-2511-107  SSN: Client deposit verification PTL  svc_ssn
+10-Nov-2025 11:30     Kaimana Zhang   AUTH-2511-108  Vault: Escrow package metadata update  svc_vault
+11-Nov-2025 13:20     Ben             AUTH-2511-109  Web portal: Client access audit export  svc_web
+13-Nov-2025 10:00     Kate             AUTH-2511-110  SSN platform: Bulk ingestion job 445  svc_ssn
+14-Nov-2025 15:30     Michael Huang   AUTH-2511-111  SQL: Vault database integrity check  sql_svc
+18-Nov-2025 09:45     Liam Jones      AUTH-2511-112  Backup: Offsite replication trigger  svc_backup
+20-Nov-2025 11:15     Tama Thomas     AUTH-2511-113  Vault: ERR-2025-019 digital release  svc_vault
+--------------------------------------------------------------------------------
+
+
+ACCESS CONTROL NOTES
+--------------------------------------------------------------------------------
+- All physical access requires dual authorization (custodian + witness)
+- Digital access logged via svc_vault, svc_ssn, svc_backup service accounts
+- Biometric + PIN required for physical vault entry
+- Key ceremony (15-Nov) followed Key-Ceremony-Procedure-v4
+- ERR-2025-019 release authorised per Escrow-Release-Request-ERR-2025-019
+
+================================================================================
+Document Control: TSG-VAULT-2025-ACC-011 | Confidential
+================================================================================

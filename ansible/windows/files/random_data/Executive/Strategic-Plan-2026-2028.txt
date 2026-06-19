@@ -1,0 +1,186 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+            THREE-YEAR STRATEGIC PLAN 2026-2028
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Version: 1.0 | Effective: 1 January 2026
+Owner: Daniel Kemp, CEO
+Approved by: Board of Directors, 16 December 2025
+Reference: TSG-STRAT-2026-001
+Classification: Confidential - Executive
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This strategic plan positions The Secrets Group for sustained growth across
+the Asia-Pacific region, transitioning from a New Zealand-centric escrow
+and custodianship provider to a regional leader in digital secret management.
+Key pillars: market expansion, platform evolution, vault network growth,
+regulatory readiness, and technology modernisation.
+
+================================================================================
+PILLAR 1: MARKET EXPANSION (APAC)
+================================================================================
+
+Vision: Establish TSG as the preferred digital escrow and secret custodianship
+provider across Australia, New Zealand, and Southeast Asia.
+
+FY2026 Initiatives:
+  - Singapore: Achieve MAS approval; onboard first 6 paying clients; revenue
+    target NZD 380K
+  - Australia: Expand Sydney and Melbourne sales presence; target 15% revenue
+    growth from Australian clients
+  - New Zealand: Defend market position; target enterprise segment (legal,
+    M&A, tech) for 20% new client growth
+
+FY2027 Initiatives:
+  - Singapore: Scale to 20+ clients; evaluate Hong Kong or Kuala Lumpur
+  - Australia: Assess local entity (Pty Ltd) if revenue exceeds NZD 1.2M
+  - Regional partnerships: Explore referral arrangements with Big Four
+    advisory firms
+
+FY2028 Initiatives:
+  - Second Southeast Asian market (Hong Kong or KL) if Singapore profitable
+  - APAC revenue target: 45% of total group revenue (from 28% in FY2025)
+
+================================================================================
+PILLAR 2: SSN PLATFORM - SAAS MODEL
+================================================================================
+
+Vision: Transform Secret Storage Network (SSN) from internal tool to
+revenue-generating SaaS offering for mid-market and enterprise clients.
+
+FY2026:
+  - Q1: SSN Phase 2 GA (API, multi-vault, audit logging)
+  - Q2: Pilot with 3 existing clients; gather feedback
+  - Q3: SaaS pricing model design; self-service provisioning beta
+  - Q4: Commercial launch; target 5 paying SaaS clients
+
+FY2027:
+  - White-label capability for financial institutions
+  - Tiered pricing: Starter (NZD 2K/mo), Professional (NZD 8K/mo),
+    Enterprise (custom)
+  - Target: 15 SaaS clients; NZD 420K ARR from platform
+
+FY2028:
+  - Platform revenue 15% of total group revenue
+  - API marketplace for third-party integrations (legal, M&A, property)
+  - SOC 2 and ISO 27001 certification for platform as standalone product
+
+================================================================================
+PILLAR 3: VAULT NETWORK EXPANSION
+================================================================================
+
+Vision: Operate a distributed vault network across APAC to serve local
+data residency requirements and reduce single-point-of-failure risk.
+
+Singapore Vault (FY2026):
+  - Location: Secure facility, Changi area
+  - Capacity: 200 escrow slots; dual-key custody
+  - Investment: NZD 185K fit-out; operational Q2 2026
+  - Rationale: MAS preference for Singapore-domiciled assets; client demand
+
+Sydney Vault (FY2027):
+  - Location: TBD (Sydney CBD or North Sydney)
+  - Capacity: 150 escrow slots
+  - Investment: NZD 220K (est.)
+  - Rationale: Australian enterprise clients; data sovereignty requirements
+
+Wellington & Auckland (Existing):
+  - Wellington: Expansion approved (Board Nov 2025); +40% capacity by Q3 2026
+  - Auckland: DR and overflow; maintain current footprint
+
+================================================================================
+PILLAR 4: REGULATORY READINESS
+================================================================================
+
+Vision: Proactively meet and exceed regulatory requirements across all
+jurisdictions; position for potential licensing or accreditation advantages.
+
+FY2026:
+  - Singapore: MAS registration; PDPA compliance; local legal retainer
+  - NZ: FMA engagement; Privacy Act 2020 alignment
+  - Australia: AUSTRAC AML/CFT if Australian entity established
+
+FY2027:
+  - SOC 2 Type II (annual); ISO 27001 recertification
+  - Singapore: MAS ongoing compliance; consider MAS Digital Asset licence
+    if crypto/blockchain escrow pursued
+
+FY2028:
+  - APAC regulatory map: Consolidated view of requirements across NZ, AU, SG
+  - Evaluate industry certifications (e.g., PCI DSS if payment data escrow)
+
+================================================================================
+PILLAR 5: TECHNOLOGY MODERNISATION
+================================================================================
+
+Vision: Modernise infrastructure and security posture to support scale,
+compliance, and platform growth.
+
+FY2026:
+  - SSN Phase 2 & 3; zero-trust network architecture
+  - SIEM enhancement; 24-month log retention
+  - Endpoint detection (EDR) rollout to all offices
+
+FY2027:
+  - Cloud-native vault metadata (encrypted); physical vault for keys only
+  - DevSecOps pipeline for SSN; automated security scanning
+  - Business continuity: Multi-region DR; tested RTO < 4 hours
+
+FY2028:
+  - Evaluate HSM upgrade; quantum-resistant crypto roadmap
+  - AI/ML for anomaly detection (vault access, release patterns)
+
+================================================================================
+REVENUE TARGETS (NZD)
+================================================================================
+
+                    FY2025      FY2026      FY2027      FY2028
+                    (Actual)    (Target)    (Target)    (Target)
+--------------------------------------------------------------------------------
+NZ Revenue          6.02M       6.80M       7.50M       8.20M
+Australia Revenue   1.58M       1.95M       2.40M       2.90M
+Singapore Revenue       -       0.38M       0.95M       1.60M
+Platform (SaaS)         -       0.05M       0.42M       1.10M
+--------------------------------------------------------------------------------
+Total Revenue       8.60M       9.18M      11.27M      13.80M
+YoY Growth             -         6.7%       22.8%       22.4%
+--------------------------------------------------------------------------------
+EBITDA Margin       17.7%       18.0%       19.0%       20.0%
+
+================================================================================
+STAFFING GROWTH PROJECTIONS
+================================================================================
+
+                    FY2025      FY2026      FY2027      FY2028
+--------------------------------------------------------------------------------
+Wellington           22          24          26          28
+Auckland              8           9          10          11
+Christchurch          5           5           6           6
+Sydney                6           7           9          11
+Melbourne             4           5           6           7
+Singapore             2           4           6           8
+--------------------------------------------------------------------------------
+Total FTE            47          54          63          71
+--------------------------------------------------------------------------------
+
+Key hires: Singapore (2), Sydney (1), SSN platform (2 devs), Compliance (1)
+
+================================================================================
+SUCCESS METRICS & GOVERNANCE
+================================================================================
+
+Quarterly Board reporting:
+  - Revenue vs plan (by geography and product)
+  - Client count; retention rate; NPS
+  - Vault utilisation; incident count
+  - Platform: SaaS clients; ARR
+  - Regulatory: Audit status; compliance incidents
+
+Annual strategic review: December Board meeting; plan refresh for
+following year.
+
+================================================================================
+Document Control: TSG-STRAT-2026-001 | Confidential - Executive
+================================================================================

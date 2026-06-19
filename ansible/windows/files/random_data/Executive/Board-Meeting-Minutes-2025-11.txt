@@ -1,0 +1,144 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              BOARD OF DIRECTORS - MEETING MINUTES
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Meeting Date: 18 November 2025
+Meeting Time: 09:00 - 12:15 NZDT
+Location: Wellington HQ, Board Room Level 3
+Reference: TSG-BOD-2025-11-018
+Classification: Confidential - Board Only
+================================================================================
+
+ATTENDEES
+---------
+Board Members:
+  - James Whitfield (Chair, Independent Director)
+  - Patricia Chen (Deputy Chair, Independent Director)
+  - Daniel Kemp (CEO, Executive Director)
+  - Marcus Webb (Non-Executive Director)
+  - Elena Vasquez (Non-Executive Director)
+  - Robert Te Koha (Non-Executive Director, Maori Advisory)
+
+In Attendance (by invitation):
+  - Charlotte Mata (COO)
+  - Henry Ngata (CTO)
+  - Fetu Yoon (Chief Custodian Officer)
+  - Kate Morrison (CFO)
+  - Sarah Wang (Finance Director)
+
+Apologies: None
+
+Minutes Taker: Jennifer Li, Company Secretary
+
+================================================================================
+AGENDA AND PROCEEDINGS
+================================================================================
+
+1. WELCOME AND APOLOGIES
+   Chair James Whitfield opened the meeting at 09:02. Quorum confirmed.
+   No apologies received.
+
+2. CONFIRMATION OF PREVIOUS MINUTES (14 August 2025)
+   Motion: That the minutes of the Board meeting held 14 August 2025 be
+   confirmed as a true and correct record.
+   Moved: Patricia Chen | Seconded: Elena Vasquez
+   Vote: Carried unanimously
+
+3. CEO REPORT (Daniel Kemp)
+   - Q3 revenue NZD 2.14M, up 11% YoY; on track for FY2025 target
+   - Singapore office opened 1 October; MAS registration pending final approval
+   - SSN platform Phase 2 development 68% complete; target GA Q1 2026
+   - Client retention 94%; NPS score 52 (up from 48)
+   - Staff headcount 47 FTE across five offices
+   Board noted strong execution. Robert Te Koha asked about cultural
+   integration for Singapore team; CEO confirmed local hire Leilani Kumar
+   leading with Wellington support.
+
+4. FINANCIAL PERFORMANCE (Kate Morrison)
+   - YTD revenue NZD 6.42M; EBITDA margin 18.2%
+   - Singapore ramp-up costs NZD 208K YTD as budgeted
+   - Cash position NZD 1.82M; no debt
+   - FY2025 forecast: revenue NZD 8.6M, EBITDA NZD 1.52M
+   Patricia Chen requested sensitivity analysis on Singapore revenue
+   assumptions; CFO to circulate by 25 November.
+
+5. SINGAPORE OFFICE UPDATE (Charlotte Mata)
+   - Office fit-out complete; 2 local staff onboarded
+   - MAS application submitted; expected approval Q1 2026
+   - Pipeline: 4 prospects in advanced discussions
+   - Risk: PDPA compliance mapping ongoing; external counsel engaged
+   Board expressed support. Marcus Webb asked about competitive landscape;
+   COO noted SecureVault Pacific and regional banks as key competitors.
+
+6. SSN PLATFORM ROADMAP (Henry Ngata)
+   - Phase 2: API banking connectors, multi-vault support, audit logging
+   - Phase 3 (2026): SaaS model, self-service provisioning, white-label
+   - Security: Penetration test scheduled December; no critical findings
+     in internal review
+   - Budget request: Additional NZD 85K for Phase 3 architecture design
+   Motion: That the Board approve NZD 85,000 for SSN Phase 3 architecture
+   design, to be expended in Q1 2026.
+   Moved: Elena Vasquez | Seconded: Robert Te Koha
+   Vote: Carried unanimously
+
+7. RISK COMMITTEE REPORT (Patricia Chen)
+   - Risk Register reviewed; 5 Critical, 6 High risks unchanged
+   - Key person dependency (R003): Deputy Custodian designation in progress
+   - Singapore regulatory (R016): Mitigation on track
+   - New risk R018: M&A integration (preliminary; see item 9)
+   Board noted. James Whitfield requested quarterly risk trend reporting.
+
+8. COMPLIANCE UPDATE (Sarah Wang)
+   - ISO 27001 surveillance audit: 2 minor non-conformities; corrective
+     actions due 15 December
+   - SOC 2 Type II: Fieldwork complete; report expected 20 December
+   - FMA engagement: No regulatory concerns raised
+   - AML/CFT: Annual review completed; procedures updated
+   Board acknowledged. No questions.
+
+9. CAPITAL EXPENDITURE - VAULT EXPANSION
+   CFO presented business case for Wellington vault expansion:
+   - Capacity constraint: Current vault 78% utilised; growth projection
+     requires 40% additional capacity by Q3 2026
+   - Proposal: Expand adjacent secure zone; total capex NZD 420,000
+   - Payback: 3.2 years based on incremental revenue assumptions
+   - Funding: Operating cash flow; no debt required
+   Motion: That the Board approve capital expenditure of NZD 420,000 for
+   Wellington vault expansion, subject to final design sign-off by Chief
+   Custodian Officer and CFO.
+   Moved: Marcus Webb | Seconded: Patricia Chen
+   Vote: Carried unanimously (6-0)
+   Action: Fetu Yoon and Kate Morrison to provide design sign-off by
+   15 December 2025.
+
+10. OTHER BUSINESS
+    - M&A preliminary assessment: Chair advised that a confidential
+      paper would be circulated to Board only; discussion deferred to
+      December meeting.
+    - Next meeting: 16 December 2025, 09:00, Wellington HQ
+
+================================================================================
+ACTION ITEMS
+================================================================================
+| # | Action                                      | Owner        | Due        |
+|---|---------------------------------------------|--------------|------------|
+| 1 | Circulate Singapore revenue sensitivity     | Kate Morrison| 25 Nov 25  |
+| 2 | Design sign-off for vault expansion         | Fetu Yoon,   | 15 Dec 25  |
+|   |                                             | Kate Morrison|            |
+| 3 | Quarterly risk trend report format          | Patricia Chen| 16 Dec 25  |
+| 4 | M&A confidential paper to Board             | Daniel Kemp  | 2 Dec 25   |
+| 5 | ISO 27001 corrective actions               | Sarah Wang   | 15 Dec 25  |
+
+================================================================================
+MEETING CLOSED
+--------------------------------------------------------------------------------
+Meeting adjourned at 12:14. Next Board meeting: 16 December 2025.
+
+Approved as accurate:
+James Whitfield, Chair _________________________ Date: _______________
+Daniel Kemp, CEO ______________________________ Date: _______________
+
+================================================================================
+Document Control: TSG-BOD-2025-11-018 | Confidential - Board Only
+================================================================================

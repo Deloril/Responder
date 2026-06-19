@@ -1,0 +1,29 @@
+---
+###############################
+## Configure Windows Bastion ##
+###############################
+
+- hosts: windows_bastion
+  gather_facts: yes
+  tasks:
+
+  - name: Disable single session per user
+    win_shell: 'Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -Name "fSingleSessionPerUser" -Value 0'
+
+  - name: Change RDP session limit
+    win_shell: 'Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" -Name "MaxInstanceCount" -Value 8'
+
+  - name: Create Tools directory
+    win_file:
+      path: C:\Tools
+      state: directory
+
+  - name: Download TightVNC (full install with viewer)
+    win_get_url:
+      url: https://www.tightvnc.com/download/2.8.85/tightvnc-2.8.85-gpl-setup-64bit.msi
+      dest: C:\Tools\tightvnc.msi
+
+  - name: Install TightVNC viewer on bastion
+    win_shell: >
+      msiexec /i C:\Tools\tightvnc.msi /quiet /norestart
+      ADDLOCAL="Viewer"

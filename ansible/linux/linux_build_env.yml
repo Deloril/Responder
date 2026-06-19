@@ -1,0 +1,42 @@
+---
+######################################
+## Build Linux environment ##
+######################################
+
+- hosts: ubuntu
+  gather_facts: yes
+  become: no
+  tasks:
+
+  - name: Install zip
+    apt:
+      name: zip
+    become: yes
+
+  - name: Install unzip
+    apt:
+      name: unzip
+    become: yes
+
+  - name: Transfer Sensor
+    copy:
+      src: falcon-sensor_7.07.0-16206_amd64.deb
+      dest: /tmp
+  
+  - name: Install CrowdStrike
+    command: sudo dpkg -i /tmp/falcon-sensor_7.07.0-16206_amd64.deb
+    ignore_errors: true
+
+  - name: Install missing packages
+    command: sudo apt-get -f install -y
+    ignore_errors: true
+  
+  - name: Configure CrowdStrike
+    command: sudo /opt/CrowdStrike/falconctl -s -f --cid="E2A34F96E2D4440FBB3BB6F89B035F5A-92" --tags="project-responder"
+
+  - name: Start CrowdStrike Service
+    service:
+      name: falcon-sensor
+      state: started
+      enabled: yes
+    become: yes

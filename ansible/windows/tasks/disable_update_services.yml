@@ -1,0 +1,21 @@
+---
+- name: Stop and disable Windows Update service
+  ignore_errors: yes
+  win_service:
+    name: wuauserv
+    state: stopped
+    start_mode: disabled
+
+- name: Stop and disable Windows Update Medic Service
+  ignore_errors: yes
+  win_service:
+    name: WaaSMedicSvc
+    state: stopped
+    start_mode: disabled
+
+- name: Stop and disable Update Orchestrator Service
+  ignore_errors: yes
+  win_service:
+    name: UsoSvc
+    state: stopped
+    start_mode: disabled

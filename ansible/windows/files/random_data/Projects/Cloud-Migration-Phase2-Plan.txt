@@ -1,0 +1,98 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+CLOUD MIGRATION PHASE 2 PLAN
+Document Owner: Henry Ngata (CTO)
+Technical Lead: Wiremu Sio, Kaimana Zhang
+Version: 1.2 | Date: 8 February 2026
+================================================================================
+
+PROGRAMME OVERVIEW
+------------------
+Phase 1 of TSG's cloud migration (completed Q4 2025) successfully migrated the
+SSN web portal and customer-facing APIs to Microsoft Azure. Phase 2 extends
+migration to secondary systems: email, collaboration, and development
+environments.
+
+PHASE 1 COMPLETED (Q4 2025)
+---------------------------
+- SSN Web Portal: Azure App Service (Wellington region)
+- Customer API Gateway: Azure API Management
+- Static assets: Azure Blob Storage + CDN
+- DNS: Azure DNS for public-facing domains
+
+PHASE 2 SCOPE
+-------------
+
+Workstream 1: Email Migration
+- Current: On-premises Exchange 2019 (Wellington)
+- Target: Microsoft 365 Exchange Online
+- Mailboxes: 85 users across all offices
+- Timeline: Weeks 1-4
+- Owner: Wiremu Sio
+
+Workstream 2: Collaboration
+- Current: On-premises SharePoint 2019, file servers
+- Target: SharePoint Online, OneDrive for Business
+- Content: 2.4 TB documents, project files
+- Timeline: Weeks 3-8
+- Owner: Hana Wang
+
+Workstream 3: Development Environments
+- Current: VMware on-prem (dev, staging)
+- Target: Azure DevOps + Azure DevTest Labs
+- Environments: 12 dev, 4 staging
+- Timeline: Weeks 5-10
+- Owner: Lucas Kang, Jack Zhou
+
+TIMELINE (GANTT SUMMARY)
+-----------------------
+| Week   | 1-2   | 3-4   | 5-6   | 7-8   | 9-10  |
+|--------|-------|-------|-------|-------|-------|
+| Email  | [====]| [====]|       |       |       |
+| Collab |       | [========]| [========]| [==]|       |
+| Dev    |       |       | [========]| [========]| [==]|
+| Cutover|       |       |       |       | Week 10|
+
+Go-Live: Week of 16 March 2026
+
+COST PROJECTIONS (NZD)
+----------------------
+| Item                          | One-time | Annual Recurring |
+|--------------------------------|----------|------------------|
+| M365 E3 licences (85 users)    | -        | 68,000           |
+| SharePoint migration tools     | 12,000   | -                |
+| Azure DevTest Labs             | 8,000    | 45,000           |
+| Migration consultancy          | 35,000   | -                |
+| Training & change management   | 15,000   | -                |
+| Contingency (10%)              | 7,000    | 11,300           |
+| TOTAL Phase 2                  | 77,000   | 124,300          |
+
+SECURITY ARCHITECTURE
+--------------------
+- Conditional Access: MFA required for all cloud services
+- Azure AD Connect: Hybrid identity (TSG-INTERNAL.LAB sync)
+- DLP policies: Prevent external sharing of "Confidential" classified docs
+- Encryption: Data at rest (AES-256), in transit (TLS 1.3)
+- Audit logging: All admin actions to Azure Log Analytics
+- Vault systems: REMAIN ON-PREMISES (out of scope for Phase 2)
+
+COMPLIANCE MAPPING
+------------------
+| Requirement      | Phase 2 Control                          |
+|------------------|------------------------------------------|
+| ISO 27001 A.12.3 | Azure backup, geo-redundant storage       |
+| SOC 2 CC6.1      | Azure AD access controls, MFA            |
+| SOC 2 CC6.6      | Log Analytics, 90-day retention          |
+| PDPA/NZ Privacy  | Data processing agreement with Microsoft |
+| PCI DSS (if appl)| Card data excluded from cloud scope     |
+
+RISKS & MITIGATIONS
+-------------------
+- Email downtime: Staged migration, weekend cutover, rollback plan
+- SharePoint large files: Pilot with IT team first; throttle migration
+- Dev environment drift: Infrastructure as Code (Bicep) for consistency
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

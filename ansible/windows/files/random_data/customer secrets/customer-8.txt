@@ -1,0 +1,56 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0235
+Deposit Date: 2025-03-02
+Client: Aotearoa Digital Services
+Agreement: ADS-Cloud-Escrow-2024-088
+Deposit Type: Cloud Infrastructure Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: a9d4e8b2c6f0a4d8e2b6c0f4a8d2e6b0c4f8a2d6e0b4c8f2a6d0e4b8c2f6a0
+Deposit Verified: 2025-03-02 10:18:55 UTC
+Custodian: T. Ngata (TSG Cloud Specialist)
+
+AWS ACCOUNT REFERENCES
+----------------------
+  Production: 482917364521
+  Staging: 582917364522
+  Development: 682917364523
+  Region: ap-southeast-2 (Sydney)
+
+TERRAFORM STATE REFERENCES
+--------------------------
+  State Bucket: s3://ads-terraform-state-prod
+  State Key: prod/terraform.tfstate
+  Lock Table: ads-terraform-locks
+  Backend: S3 + DynamoDB
+
+RESOURCE MANIFEST (Critical Infrastructure)
+-------------------------------------------
+  VPC: vpc-0a1b2c3d4e5f6g7h8
+  EKS Cluster: ads-prod-eks-2024
+  RDS Primary: ads-prod-db-aurora
+  S3 Buckets: ads-data-*, ads-backups-*
+  IAM Roles: ads-*-role (documented in manifest)
+  Lambda Functions: 47 (listed in resource manifest)
+
+INFRASTRUCTURE AS CODE
+----------------------
+  Repository: ads-infrastructure (private)
+  Terraform Version: 1.6.4
+  Last Applied: 2025-02-28
+  Modules: 12 core + 8 application-specific
+
+RECOVERY DEPENDENCIES
+---------------------
+  - Terraform state backup (encrypted)
+  - Variable files (sensitive - separate vault)
+  - Provider credentials (AWS SSO documented)
+
+--------------------------------------------------------------------------------
+Release Conditions: Cloud provider failure, Acquisition, Disaster recovery
+Next State Backup Verification: 2025-04-02
+================================================================================

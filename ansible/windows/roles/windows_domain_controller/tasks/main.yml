@@ -1,0 +1,6 @@
+---
+# From splunk attack_range
+
+- include_tasks: set_ansible_user.yml
+- include_tasks: install_domain_controller.yml
+- include_tasks: install_spn_user.yml

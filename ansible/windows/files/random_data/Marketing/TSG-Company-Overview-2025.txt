@@ -1,0 +1,80 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    COMPANY OVERVIEW & CAPABILITY STATEMENT
+                              2025 Edition
+================================================================================
+
+ABOUT THE SECRETS GROUP
+-----------------------
+The Secrets Group is the Asia-Pacific region's leading provider of digital escrow
+and secret custodianship services. Founded in Wellington, New Zealand in 2012,
+TSG has grown from a boutique operation serving local software vendors to a
+multi-jurisdiction enterprise trusted by financial institutions, government
+agencies, and technology companies across Australasia and Southeast Asia.
+
+Headquarters: Wellington, New Zealand
+Domain: TSG-INTERNAL.LAB
+Founded: 2012
+
+OFFICE LOCATIONS
+----------------
+• Wellington (HQ) - Level 8, 88 The Terrace, Wellington 6011, New Zealand
+• Auckland - 151 Queen Street, Auckland 1010, New Zealand
+• Christchurch - 159 Hereford Street, Christchurch 8011, New Zealand
+• Sydney - 100 William Street, Woolloomooloo NSW 2011, Australia
+• Melbourne - 120 Collins Street, Melbourne VIC 3000, Australia
+• Singapore - 1 Raffles Place, #28-01 One Raffles Place, Singapore 048616
+
+CORE SERVICES
+-------------
+• Source Code Escrow - Secure custody of software source code for licensees
+• Digital Asset Custody - Cryptographic key management and digital asset escrow
+• Document Escrow - Confidential document storage and release management
+• Compliance Escrow - Regulatory compliance documentation custody
+• Software-as-a-Service Escrow - Cloud application continuity arrangements
+
+CERTIFICATIONS & STANDARDS
+--------------------------
+• ISO 27001:2022 (Information Security Management)
+• SOC 2 Type II (Service Organization Controls)
+• PCI DSS Level 1 (Payment Card Industry)
+• NZ Government Security Clearance (up to Secret)
+• Australian Signals Directorate (ASD) Essential Eight aligned
+
+KEY DIFFERENTIATORS
+-------------------
+• Multi-jurisdiction presence with local regulatory expertise
+• Proprietary SSN (Secure Secret Notation) platform for audit-grade custody
+• 24/7 incident response and release procedures
+• Independent verification and third-party audits
+• No conflicts of interest - we do not develop software or provide legal advice
+
+INDUSTRY RECOGNITION
+--------------------
+• NZ Technology Industry Awards - Best Security Solution 2023
+• FinTech NZ - Excellence in Financial Technology 2022
+• AISA - Finalist, Security Company of the Year 2024
+
+CLIENT TESTIMONIALS
+------------------
+"TSG's escrow arrangement gave our board the confidence to proceed with a
+critical vendor. Their professionalism and attention to compliance detail
+exceeded our expectations." - Chief Risk Officer, ASX-listed Financial Services
+
+"The multi-region capability was essential for our expansion. TSG understood
+our regulatory requirements across NZ, Australia, and Singapore from day one."
+- CTO, Enterprise Software Vendor
+
+"We evaluated five escrow providers. TSG's technical depth and transparent
+pricing made the decision straightforward." - Legal Counsel, Government Agency
+
+CONTACT
+-------
+General Enquiries: info@thesecretsgroup.co.nz
+Sales: sales@thesecretsgroup.co.nz
+Support: support@thesecretsgroup.co.nz
+Website: www.thesecretsgroup.co.nz
+
+================================================================================
+                    CONFIDENTIAL - FOR AUTHORISED RECIPIENTS ONLY
+================================================================================

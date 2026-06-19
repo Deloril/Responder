@@ -1,0 +1,13 @@
+---
+
+- hosts: dc
+  gather_facts: yes
+  vars_files:
+    - ./vars/domain_users_and_groups.yml
+    - ./vars/domain.yml
+  roles:
+    - windows_common
+    - windows_dns
+    - windows_domain_controller
+    - windows_domain
+    - windows_crowdstrike

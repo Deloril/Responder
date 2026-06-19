@@ -1,0 +1,120 @@
+================================================================================
+THE SECRETS GROUP (TSG)
+CLIENT RISK ASSESSMENT TEMPLATE
+================================================================================
+
+Client Name: _________________________________
+Assessment Date: _____________________________
+Assessor: ____________________________________
+Review Date: _________________________________
+
+--------------------------------------------------------------------------------
+INSTRUCTIONS
+--------------------------------------------------------------------------------
+
+Complete each section below. Rate each factor 1-5 (1=Low Risk, 5=High Risk).
+Overall risk rating is calculated as weighted average. All clients with 
+overall rating ≥4.0 require Compliance Committee approval.
+
+--------------------------------------------------------------------------------
+1. INDUSTRY RISK
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: Established financial services, regulated entities
+[ ] 2 - Low-Medium: Professional services, technology
+[ ] 3 - Medium: Import/export, manufacturing
+[ ] 4 - Medium-High: Cryptocurrency, high-value goods
+[ ] 5 - High: Unregulated sectors, emerging industries
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+2. JURISDICTION RISK
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: NZ, Australia, Singapore (FATF compliant)
+[ ] 2 - Low-Medium: UK, EU, Japan, Canada
+[ ] 3 - Medium: Other OECD jurisdictions
+[ ] 4 - Medium-High: Grey list jurisdictions
+[ ] 5 - High: High-risk/black list jurisdictions
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+3. COMPLEXITY OF ESCROW ARRANGEMENTS
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: Single depositor, standard release conditions
+[ ] 2 - Low-Medium: Multiple parties, defined triggers
+[ ] 3 - Medium: Multi-jurisdiction, conditional releases
+[ ] 4 - Medium-High: Complex release logic, third-party verification
+[ ] 5 - High: Custom arrangements, disputed release scenarios
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+4. VOLUME OF MATERIALS
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: <10 GB, infrequent deposits
+[ ] 2 - Low-Medium: 10-100 GB, quarterly deposits
+[ ] 3 - Medium: 100-500 GB, monthly deposits
+[ ] 4 - Medium-High: 500 GB - 2 TB, frequent deposits
+[ ] 5 - High: >2 TB, continuous/real-time deposits
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+5. REGULATORY EXPOSURE
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: Minimal regulatory requirements
+[ ] 2 - Low-Medium: Standard AML/CFT obligations
+[ ] 3 - Medium: Sector-specific regulation (financial services)
+[ ] 4 - Medium-High: Multi-jurisdictional compliance
+[ ] 5 - High: Regulated industry, ongoing reporting obligations
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+6. BENEFICIAL OWNERSHIP & STRUCTURE
+--------------------------------------------------------------------------------
+
+[ ] 1 - Low: Transparent corporate structure, known UBOs
+[ ] 2 - Low-Medium: Standard holding structure
+[ ] 3 - Medium: Multiple entities, some complexity
+[ ] 4 - Medium-High: Trust structures, nominee arrangements
+[ ] 5 - High: Opaque ownership, offshore structures
+
+Score: _____  Notes: _________________________________________________
+
+--------------------------------------------------------------------------------
+OVERALL RISK CALCULATION
+--------------------------------------------------------------------------------
+
+Weighted Average: (Industry×1.2 + Jurisdiction×1.5 + Complexity×1.3 + 
+                   Volume×0.8 + Regulatory×1.2 + Ownership×1.0) / 7.0
+
+Calculated Score: _____
+Overall Risk Rating: [ ] Low (1.0-2.0)  [ ] Medium (2.1-3.0)  
+                     [ ] Medium-High (3.1-4.0)  [ ] High (4.1-5.0)
+
+--------------------------------------------------------------------------------
+MITIGATING CONTROLS (if applicable)
+--------------------------------------------------------------------------------
+
+_______________________________________________________________________________
+_______________________________________________________________________________
+_______________________________________________________________________________
+
+--------------------------------------------------------------------------------
+APPROVAL
+--------------------------------------------------------------------------------
+
+Assessor Signature: _________________________  Date: _______________
+Compliance Sign-off (if required): _____________  Date: _______________
+
+--------------------------------------------------------------------------------
+Document Classification: Confidential
+Domain: TSG-INTERNAL.LAB | Template Version: 2025.1
+================================================================================

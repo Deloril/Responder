@@ -1,0 +1,103 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    SOCIAL MEDIA CONTENT CALENDAR - Q1 2026
+================================================================================
+Platforms: LinkedIn (primary), Twitter/X (secondary)
+Document Owner: Jennifer Li
+Review Cycle: Weekly
+================================================================================
+
+CONTENT PILLARS
+---------------
+1. Thought Leadership - Digital escrow, compliance, vendor risk
+2. Company Updates - Office openings, certifications, team growth
+3. Industry Insights - Regulatory changes, standards updates
+4. Team & Culture - Staff spotlights, office life, events
+5. Conference & Events - Speaking slots, booth highlights
+
+JANUARY 2026
+------------
+Week 1 (6-10 Jan)
+  Mon 6:  "5 New Year Resolutions for Vendor Risk Managers" - Blog link
+  Responsible: Sophie Patel
+  Thu 9:  Team Spotlight - Henry Ngata (CTO) on 2026 technology priorities
+  Responsible: Jennifer Li
+
+Week 2 (13-17 Jan)
+  Tue 14: ISO 27001:2022 - What changed for escrow providers
+  Responsible: Satoshi Tuala
+  Fri 17: Singapore office update - Fit-out progress photos
+  Responsible: Kaimana Zhang
+
+Week 3 (20-24 Jan)
+  Wed 22: Client testimonial graphic - Meridian case study highlight
+  Responsible: Ava Phan
+  Thu 23: RSA Conference countdown - Henry & Wiremu attending
+  Responsible: Jennifer Li
+
+Week 4 (27-31 Jan)
+  Mon 27: Compliance tip - RBNZ outsourcing guidelines summary
+  Responsible: Hana Wang
+  Fri 31: Month in review - January achievements
+  Responsible: Jennifer Li
+
+FEBRUARY 2026
+-------------
+Week 1 (3-7 Feb)
+  Tue 4: RSA Conference - Live updates from San Francisco
+  Responsible: Henry Ngata / Wiremu Sio
+  Thu 6: "Why Financial Services Choose TSG" - Infographic
+  Responsible: Sophie Patel
+
+Week 2 (10-14 Feb)
+  Mon 10: Post-RSA insights - Key takeaways from conference
+  Responsible: Henry Ngata
+  Wed 12: Team Spotlight - Michael Huang on Australian market
+  Responsible: Jennifer Li
+
+Week 3 (17-21 Feb)
+  Tue 18: NZ Cyber Security Summit - Speaker announcement
+  Responsible: Jennifer Li
+  Fri 21: Source code escrow 101 - Educational carousel
+  Responsible: Lucas Kang
+
+Week 4 (24-28 Feb)
+  Wed 26: GovTech Singapore - Speaking submission update
+  Responsible: Kaimana Zhang
+  Thu 27: Q1 client wins - New escrow arrangements (anonymised)
+  Responsible: Ava Phan
+
+MARCH 2026
+----------
+Week 1 (2-6 Mar)
+  Mon 2: NZ Cyber Security Summit - One week to go
+  Responsible: Jennifer Li
+  Thu 5: Compliance tip - AFSL considerations for escrow
+  Responsible: Hana Wang
+
+Week 2 (9-13 Mar)
+  Tue 10: Summit day 1 - Live coverage, booth photos
+  Responsible: Sophie Patel
+  Wed 11: Summit day 2 - Henry's presentation highlights
+  Responsible: Lucas Kang
+
+Week 3 (16-20 Mar)
+  Mon 16: Post-Summit - Key themes and connections
+  Responsible: Henry Ngata
+  Fri 20: Team Spotlight - Oliver Anderson, Singapore expansion
+  Responsible: Jennifer Li
+
+Week 4 (23-27 Mar)
+  Tue 24: Q1 wrap - Platform updates, office milestones
+  Responsible: Jennifer Li
+  Thu 26: Q2 preview - AISA Melbourne, GovTech Singapore
+  Responsible: Sophie Patel
+
+POSTING GUIDELINES
+------------------
+• LinkedIn: 2-3 posts per week, optimal times 8-10am NZST
+• Twitter: 3-5 posts per week, conference days increased frequency
+• Hashtags: #DigitalEscrow #VendorRisk #CyberSecurity #FinTech #Compliance
+• Response SLA: All comments/messages within 4 business hours
+
+================================================================================

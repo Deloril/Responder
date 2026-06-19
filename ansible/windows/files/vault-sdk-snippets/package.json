@@ -1,0 +1,43 @@
+{
+    "name": "vault-sdk-snippets",
+    "displayName": "Vault SDK Snippets",
+    "description": "Hashicorp Vault SDK code completions, snippets, and inline documentation for popular languages",
+    "version": "1.2.0",
+    "publisher": "vaulttools",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mwebb-dev/vault-sdk-snippets"
+    },
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Snippets",
+        "Programming Languages",
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vaultSdk.lookup",
+                "title": "Vault SDK: Lookup Secret"
+            },
+            {
+                "command": "vaultSdk.listSecrets",
+                "title": "Vault SDK: List Secrets"
+            }
+        ]
+    },
+    "keywords": [
+        "vault",
+        "hashicorp",
+        "secrets",
+        "sdk",
+        "snippets"
+    ]
+}

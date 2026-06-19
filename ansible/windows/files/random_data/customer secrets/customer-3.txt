@@ -1,0 +1,58 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0192
+Deposit Date: 2025-02-19
+Client: Kiwi Insurance Partners
+Agreement: KIP-DB-Escrow-2024-067
+Deposit Type: Database Schema Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: c5f0a4e2b8d6c1f3a9e7b5d0c8f2a6e4b1d9c7f3a5e0b8d6c2f4a9e7b5d1c8
+Deposit Verified: 2025-02-19 11:15:33 UTC
+Custodian: M. Patel (TSG Technical Escrow Officer)
+
+SCHEMA VERSION
+--------------
+Database: Microsoft SQL Server 2022
+Schema Version: 4.7.2
+Export Date: 2025-02-18
+Export Tool: KIP-SchemaExporter v2.1
+
+TABLE LISTINGS (Core Schema)
+---------------------------
+  dbo.PolicyHolders          | 47 columns | 2.3M rows
+  dbo.Policies               | 38 columns | 4.1M rows
+  dbo.Claims                 | 52 columns | 892K rows
+  dbo.Premiums               | 24 columns | 18.2M rows
+  dbo.Beneficiaries          | 18 columns | 6.7M rows
+  dbo.Agents                 | 31 columns | 12K rows
+  dbo.UnderwritingRules      | 28 columns | 456 rows
+  dbo.ClaimsAssessments      | 41 columns | 891K rows
+  dbo.PaymentSchedules       | 19 columns | 24.1M rows
+  dbo.AuditLog               | 15 columns | 45.2M rows
+
+STORED PROCEDURES (Escrowed)
+----------------------------
+  usp_CalculatePremium
+  usp_ProcessClaim
+  usp_GeneratePolicyDocument
+  usp_ValidateUnderwriting
+  usp_CalculatePayout
+  usp_MergePolicyHolder
+  usp_ArchiveExpiredPolicies
+  fn_GetRiskScore
+  fn_CalculateCommission
+
+SCHEMA DEPENDENCIES
+-------------------
+  - KIP.ReferenceData (lookup tables)
+  - KIP.Reporting (analytics views)
+  - KIP.Audit (compliance tracking)
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor failure, Schema recovery, Regulatory requirement
+Next Schema Sync: 2025-05-19
+================================================================================

@@ -1,0 +1,24 @@
+---
+
+- name: Allow network discovery on windows firewall
+  win_shell: Set-NetFirewallRule -DisplayGroup "Network Discovery" -Profile Any -Enabled True
+  when: ansible_distribution == "Microsoft Windows Server 2016 Datacenter" or
+        ansible_distribution == "Microsoft Windows Server 2019 Datacenter"
+
+- name: Allow WMI on windows firewall
+  win_shell: Set-NetFirewallRule -DisplayGroup "Windows Management Instrumentation (WMI)" -Profile Any -Enabled True
+  when: ansible_distribution == "Microsoft Windows Server 2016 Datacenter" or
+        ansible_distribution == "Microsoft Windows Server 2019 Datacenter"
+
+- name: Allow file and printer sharing (SMB) on windows firewall
+  win_shell: Set-NetFirewallRule -DisplayGroup "File and Printer Sharing" -Profile Any -Enabled True
+  when: ansible_distribution == "Microsoft Windows Server 2016 Datacenter" or
+        ansible_distribution == "Microsoft Windows Server 2019 Datacenter"
+
+- name: Enable Domain firewall profile on Windows 10 endpoints
+  win_shell: Set-NetFirewallProfile -Name Domain -Enabled True
+  when: ansible_distribution == "Microsoft Windows 10 Pro"
+
+- name: Enable SMB on Domain firewall profile on Windows 10 endpoints
+  win_shell: Get-NetFirewallRule | where {($_.DisplayName -Like "*(SMB*" -and $_.Profile -Like "Domain") } | Set-NetFirewallRule -Enabled True
+  when: ansible_distribution == "Microsoft Windows 10 Pro"

@@ -1,0 +1,161 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                 ANNUAL REVENUE REPORT - FY 2024
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Prepared by: Sarah Wang, Finance Director | Lisa Liu, Revenue Analyst
+Date: 28 February 2025
+Classification: Internal - Board Distribution
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+The Secrets Group achieved total revenue of NZD 4,847,320 in FY2024, representing
+a 23.4% year-over-year increase from FY2023 (NZD 3,927,180). Growth was driven
+by SSN platform adoption, expansion of vault custodianship in Australia, and
+strong performance in our core escrow services.
+
+
+REVENUE BY STREAM - FY2024
+================================================================================
+
+1. ESCROW SERVICES
+--------------------------------------------------------------------------------
+Description: Transaction-based fees for digital asset escrow, release-on-
+             condition services, and M&A escrow arrangements.
+
+FY2024 Revenue:     NZD 2,184,290
+FY2023 Revenue:     NZD 1,892,450
+YoY Growth:         +15.4%
+% of Total:         45.1%
+
+Key drivers: 47 new escrow arrangements closed; average deal size increased
+12% following enterprise sales focus (Oliver Anderson, Ben). Renewal rate
+among existing clients: 94%.
+
+
+2. VAULT CUSTODIANSHIP
+--------------------------------------------------------------------------------
+Description: Recurring fees for secure storage of digital credentials, keys,
+             legal documents, and high-value digital assets.
+
+FY2024 Revenue:     NZD 1,456,820
+FY2023 Revenue:     NZD 1,098,600
+YoY Growth:         +32.6%
+% of Total:         30.1%
+
+Key drivers: 23 new vault clients; expansion of enterprise tier (Michael Latu
+account management). Strong uptake from legal and financial services sectors.
+Average contract value: NZD 58,200/year.
+
+
+3. SSN PLATFORM LICENSING
+--------------------------------------------------------------------------------
+Description: Software-as-a-Service licensing for Secure Secret Network
+             platform - API access, integration fees, per-seat licensing.
+
+FY2024 Revenue:     NZD 847,150
+FY2023 Revenue:     NZD 612,400
+YoY Growth:         +38.4%
+% of Total:         17.5%
+
+Key drivers: Platform launched Q2 2023; 34 production deployments by FYE.
+Asia-Pacific Trust Holdings, Meridian Financial Group among top licensees.
+Hemi Tama leading platform sales.
+
+
+4. CONSULTING & PROFESSIONAL SERVICES
+--------------------------------------------------------------------------------
+Description: Implementation consulting, integration support, custody
+             architecture design, compliance advisory.
+
+FY2024 Revenue:     NZD 359,060
+FY2023 Revenue:     NZD 323,730
+YoY Growth:         +10.9%
+% of Total:         7.4%
+
+Key drivers: SSN implementation projects; pre-vault readiness assessments.
+Leilani Kumar leading APAC consulting delivery.
+
+
+================================================================================
+REVENUE BY REGION - FY2024
+================================================================================
+
+NEW ZEALAND (Wellington, Auckland, Christchurch)
+--------------------------------------------------------------------------------
+Escrow Services:              NZD 1,284,500
+Vault Custodianship:          NZD 892,400
+SSN Licensing:                NZD 312,800
+Consulting:                   NZD 198,200
+--------------------------------------------------------------------------------
+NZ Total:                     NZD 2,687,900    (55.4% of total)
+FY2023 NZ Total:              NZD 2,245,100
+YoY Growth:                   +19.7%
+
+
+AUSTRALIA (Sydney, Melbourne)
+--------------------------------------------------------------------------------
+Escrow Services:              NZD 624,300
+Vault Custodianship:          NZD 412,500
+SSN Licensing:                NZD 387,200
+Consulting:                   NZD 124,800
+--------------------------------------------------------------------------------
+AU Total:                     NZD 1,548,800    (32.0% of total)
+FY2023 AU Total:              NZD 1,198,400
+YoY Growth:                   +29.2%
+
+
+ASIA-PACIFIC (ex-AU/NZ - Singapore, regional)
+--------------------------------------------------------------------------------
+Escrow Services:              NZD 275,490
+Vault Custodianship:          NZD 151,920
+SSN Licensing:                NZD 147,150
+Consulting:                   NZD 36,060
+--------------------------------------------------------------------------------
+APAC Total:                   NZD 610,620    (12.6% of total)
+FY2023 APAC Total:            NZD 483,680
+YoY Growth:                   +26.2%
+
+Note: Singapore office operational from August 2024. Full APAC ramp in FY2025.
+
+
+================================================================================
+QUARTERLY REVENUE TREND - FY2024
+================================================================================
+
+                    Q1        Q2        Q3        Q4       Total
+                    (NZD)     (NZD)     (NZD)     (NZD)     (NZD)
+--------------------------------------------------------------------------------
+Escrow            498,200   542,100   581,400   562,590  2,184,290
+Vault             332,100   358,400   382,100   384,220  1,456,820
+SSN Licensing    178,200   198,500   228,400   242,050    847,150
+Consulting         78,500    89,200    92,100    99,260    359,060
+--------------------------------------------------------------------------------
+Total           1,087,000 1,188,200 1,284,000 1,288,120  4,847,320
+
+
+================================================================================
+KEY METRICS & BENCHMARKS
+================================================================================
+
+Metric                              FY2024      FY2023      Change
+--------------------------------------------------------------------------------
+Total Revenue (NZD)                4,847,320   3,927,180   +23.4%
+Gross Margin                        68.2%       65.8%      +2.4pp
+Active Escrow Clients (YE)                89          72      +23.6%
+Active Vault Clients (YE)                  67          48      +39.6%
+SSN Platform Licenses (YE)                  34          18      +88.9%
+Average Revenue Per Client (NZD)      54,465      54,544      -0.1%
+
+
+================================================================================
+APPROVALS
+--------------------------------------------------------------------------------
+Prepared by: Sarah Wang _________________________ Date: 28/02/2025
+Reviewed by: Henry Ngata (CEO) ___________________ Date: _______________
+Approved by: Kate (CFO) _________________________ Date: _______________
+
+================================================================================
+Document Control: TSG-FIN-2024-REV-001 | Version 1.0 | IRD filing reference: Pending
+================================================================================

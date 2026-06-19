@@ -1,0 +1,90 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    CONFERENCE ATTENDANCE PLAN 2026
+================================================================================
+Document Owner: Jennifer Li (Marketing Manager)
+Last Updated: 15 December 2025
+Status: Approved - Budget Allocated
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This plan outlines TSG's strategy for conference attendance and sponsorship
+across the Asia-Pacific region in 2026. Objectives: brand visibility, lead
+generation, thought leadership positioning, and partner recruitment.
+
+CONFERENCE SCHEDULE
+------------------
+
+1. NZ CYBER SECURITY SUMMIT
+   Date: 18-19 March 2026
+   Location: Wellington, New Zealand
+   Format: Gold Sponsor (SGD 25,000 equivalent)
+   Attendees: Henry Ngata (CTO), Sophie Patel, Lucas Kang
+   Speaking: Henry Ngata - "Escrow in the Zero-Trust Era" (confirmed)
+   Booth: 6m stand, demo station
+   Lead target: 80 qualified contacts
+
+2. AISA MELBOURNE CONFERENCE
+   Date: 12-14 May 2026
+   Location: Melbourne Convention Centre, Australia
+   Format: Silver Sponsor (SGD 18,000 equivalent)
+   Attendees: Michael Huang, Ava Phan, Jack Zhou
+   Speaking: Michael Huang - Panel: "Vendor Risk Management" (invited)
+   Booth: 3m stand
+   Lead target: 120 qualified contacts
+
+3. GOVTECH SINGAPORE
+   Date: 1-3 June 2026
+   Location: Suntec Singapore Convention Centre
+   Format: Exhibitor (SGD 12,000 equivalent)
+   Attendees: Kaimana Zhang, Hana Wang, Oliver Anderson
+   Speaking: Kaimana Zhang - "Digital Sovereignty and Escrow" (submitted)
+   Booth: Shared pavilion with NZTE
+   Lead target: 60 qualified contacts (government focus)
+
+4. RSA CONFERENCE
+   Date: 24-27 February 2026
+   Location: San Francisco, USA
+   Format: Attendee only (no booth)
+   Attendees: Henry Ngata, Wiremu Sio
+   Purpose: Market intelligence, vendor meetings, trend research
+   Budget: SGD 15,000 (travel, registration, accommodation)
+
+5. ISO STANDARDS EVENTS
+   Date: Various (Q2-Q3 2026)
+   Location: Wellington, Auckland, Sydney (rotating)
+   Format: Member attendance
+   Attendees: Henry Ngata, Satoshi Tuala
+   Purpose: Standards development participation, ISO 27001/27701 updates
+   Budget: SGD 8,000
+
+BUDGET SUMMARY
+--------------
+Total Conference Budget 2026: SGD 78,000
+- Sponsorship fees: SGD 55,000
+- Travel & accommodation: SGD 15,000
+- Collateral & booth materials: SGD 5,000
+- Contingency (10%): SGD 3,000
+
+PRE-EVENT ACTIVITIES
+--------------------
+• Social media campaign 2 weeks prior to each event
+• Email nurture to existing database with conference codes
+• Partner coordination for joint activities (NZTE, Austrade)
+• Press release for speaking confirmations
+
+POST-EVENT FOLLOW-UP
+--------------------
+• Lead qualification within 48 hours
+• CRM entry and assignment to sales within 5 business days
+• Content repurposing (videos, blog posts) within 2 weeks
+
+SUCCESS METRICS
+---------------
+• Total qualified leads: 260+
+• Cost per lead: < SGD 300
+• Speaking slots secured: 3 minimum
+• Media mentions: 5+
+
+================================================================================

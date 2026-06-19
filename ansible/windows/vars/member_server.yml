@@ -1,0 +1,4 @@
+---
+# Member Server vars
+#hostname: win-ms
+private_ip_dc: 10.0.1.6

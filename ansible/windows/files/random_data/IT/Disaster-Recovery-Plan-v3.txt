@@ -1,0 +1,156 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              DISASTER RECOVERY PLAN - VERSION 3
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document: TSG-DRP-001
+Version: 3.0
+Effective: 1 January 2026
+Classification: Confidential - Internal
+Owner: Michael Huang, IT Infrastructure Manager
+================================================================================
+
+1. PURPOSE & SCOPE
+--------------------------------------------------------------------------------
+This plan defines recovery procedures for The Secrets Group in the event of a
+major disaster affecting Wellington operations. Primary scenario: Wellington
+earthquake (7.0+ magnitude) rendering the Wellington data centre and vault
+facility inaccessible or damaged.
+
+Scope: All TSG-INTERNAL.LAB systems, vault data, SSN platform, and supporting
+infrastructure for APAC region (Auckland, Christchurch, Sydney, Melbourne,
+Singapore).
+
+
+2. RECOVERY SITES
+--------------------------------------------------------------------------------
+Primary (Wellington):  Lambton Quay data centre - current production
+Secondary (Auckland):   Colocation facility - AKL-DC-01
+                       Pre-provisioned: 2 hosts (standby), network connectivity
+                       Activation time: 24-48 hours (hardware ready)
+Tertiary (Cloud):       Azure - for SSN database (post CR-2025-142), file restore
+                       Activation: 4-8 hours (restore from Azure Blob)
+
+
+3. PRIORITY SYSTEMS & RTO
+--------------------------------------------------------------------------------
+Priority  System                    RTO      Recovery Method
+--------------------------------------------------------------------------------
+P1       Wellington Vault access     4 hrs    Physical: Auckland vault backup
+         (client escrow retrieval)            Digital: Restore from Azure Blob
+P1       SSN platform (ingestion)   4 hrs    Restore SQL to Azure SQL; point web
+P2       File server (vault data)   4 hrs    Restore from Veeam to Auckland host
+P2       Client portal (web)        8 hrs    Deploy to Azure/IIS; DNS failover
+P3       Email                      8 hrs    Exchange DAG or cloud failover
+P3       Domain Controller          8 hrs    Promote Auckland DC; or restore
+P4       Workstations               24 hrs   VPN to Auckland; OneDrive sync
+P4       Internal file shares       24 hrs   Restore from backup
+--------------------------------------------------------------------------------
+
+
+4. WELLINGTON EARTHQUAKE SCENARIO
+--------------------------------------------------------------------------------
+4.1 Immediate (0-2 hours)
+   - Ensure staff safety; evacuate if required
+   - Activate crisis team: Henry Ngata (CTO), Charlotte Mata (COO), Michael Huang
+   - Assess Wellington site accessibility
+   - Notify clients via status page (if internet available from alternate location)
+   - Begin communication plan (Section 6)
+
+4.2 Short-term (2-8 hours)
+   - If Wellington inaccessible: Declare disaster; activate Auckland recovery site
+   - Restore vault data from Azure Blob to Auckland file server
+   - Restore SSN database to Azure SQL (or Auckland SQL if Azure unavailable)
+   - Update DNS to point to Auckland/web failover
+   - Verify vault access for critical client requests (Tama Thomas, Wiremu Sio)
+
+4.3 Medium-term (8-48 hours)
+   - Full system validation at Auckland
+   - Staff relocation: key personnel to Auckland (ben, kate, henry.ngata, michael.huang)
+   - Singapore office (lucas.kang, jack.zhou) as backup operations
+   - Client communications: escrow release delays, alternative procedures
+
+4.4 Long-term (48+ hours)
+   - Assess Wellington facility repair timeline
+   - Plan repatriation or permanent relocation
+   - Post-incident review; update DR plan
+
+
+5. COMMUNICATION PLAN
+--------------------------------------------------------------------------------
+Internal:
+  - Crisis team: Microsoft Teams group "TSG-DR-Crisis"
+  - Phone tree: Henry Ngata -> Charlotte Mata -> Michael Huang -> Liam Jones
+  - Alternate: Personal mobile numbers (stored in secure location)
+
+External:
+  - Client notification: Email template DR-COM-001; status page tsg-status.com
+  - Regulators: FMA notification within 48 hours if client impact
+  - Vendors: Veeam, Microsoft, CrowdStrike - support tickets for priority
+
+Key Contacts:
+  - Henry Ngata (CTO): Primary technical
+  - Charlotte Mata (COO): Business continuity, client relations
+  - Michael Huang: Infrastructure recovery
+  - Tama Thomas: Vault operations lead
+
+
+6. RECOVERY PROCEDURES (SUMMARY)
+--------------------------------------------------------------------------------
+6.1 Vault Data
+   - Source: Azure Blob (Veeam copy job)
+   - Restore to: Auckland file server or Azure Files
+   - Validation: Checksum; Tama Thomas sign-off
+   - Procedure ref: Backup-Recovery-Procedures.txt
+
+6.2 SSN Database
+   - Source: Azure SQL (post migration) or backup in Azure Blob
+   - Restore: Point-in-time to last transaction
+   - Web config: Update connection string to recovered DB
+
+6.3 Domain Services
+   - If DC01 lost: Promote Auckland DC from replica (if pre-staged)
+   - Or: Restore DC from System State backup to new VM
+   - DNS: Update to point to recovered services
+
+6.4 Web Portal
+   - Deploy IIS on Azure VM or Auckland host
+   - Restore app files; configure SSL; update DNS
+   - Test: SSN login, vault metadata display
+
+
+7. ANNUAL TESTING SCHEDULE
+--------------------------------------------------------------------------------
+Test Type              Schedule      Last Run      Next Due
+--------------------------------------------------------------------------------
+Tabletop exercise      Annual        Mar 2025      Mar 2026
+Full DR drill          Annual        Mar 2025      Mar 2026
+Backup restore test    Quarterly     Sep 2025      Dec 2025
+Communication test     Semi-annual   Jun 2025      Dec 2025
+--------------------------------------------------------------------------------
+Full DR drill: Simulate Wellington outage; recover to Auckland; validate all P1/P2
+systems within RTO. Participants: IT team, Vault Ops (Tama Thomas, Wiremu Sio),
+Executive (Charlotte Mata).
+
+
+8. PLAN MAINTENANCE
+--------------------------------------------------------------------------------
+- Review: Quarterly or after significant infrastructure change
+- Update triggers: New systems, CR-2025-142 (Azure migration), office moves
+- Version history: v1 (2023), v2 (2024), v3 (2026)
+- Next review: April 2026
+
+
+9. APPENDICES
+--------------------------------------------------------------------------------
+Appendix A: Auckland recovery site network diagram
+Appendix B: Contact list (confidential)
+Appendix C: Client notification templates
+Appendix D: Vendor escalation contacts
+Appendix E: Insurance and legal (General Counsel)
+
+
+================================================================================
+Document Control: TSG-DRP-001 | Version 3.0
+Approved by: Charlotte Mata, COO - 15 December 2025
+================================================================================

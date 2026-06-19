@@ -1,0 +1,137 @@
+================================================================================
+THE SECRETS GROUP (TSG)
+CLIENT OFFBOARDING PROCEDURE
+================================================================================
+
+Effective Date: 1 January 2025
+Version: 2025.1
+Owner: Client Services & Compliance, Wellington HQ
+
+--------------------------------------------------------------------------------
+1. SCOPE AND APPLICABILITY
+--------------------------------------------------------------------------------
+
+This procedure applies to all client account closures at The Secrets Group 
+(TSG), including voluntary termination, contract non-renewal, and regulatory 
+mandated closure. All offboarding activities must be completed within 90 days 
+of notice receipt unless exceptional circumstances apply.
+
+--------------------------------------------------------------------------------
+2. NOTICE PERIOD
+--------------------------------------------------------------------------------
+
+2.1 Standard Notice: 60 calendar days written notice required for voluntary 
+    termination. Notice must be received in writing (signed letter or 
+    authorised email from designated signatory).
+
+2.2 Shortened Notice: May be negotiated for regulatory or force majeure 
+    circumstances. Requires Director approval.
+
+2.3 Notice Acknowledgment: Client Services must acknowledge receipt within 
+    2 business days and assign offboarding coordinator.
+
+--------------------------------------------------------------------------------
+3. MATERIAL RETURN AND DESTRUCTION
+--------------------------------------------------------------------------------
+
+3.1 Inventory: Within 5 business days of notice, generate complete vault 
+    inventory for client verification. Client has 10 business days to 
+    confirm or dispute.
+
+3.2 Return Options:
+    a) Physical return of media (encrypted drives) - courier arranged, 
+       chain of custody documentation required
+    b) Secure digital transfer to designated recipient system
+    c) Certified destruction with certificate of destruction
+
+3.3 Destruction: If client elects destruction, materials are degaussed and 
+    physically destroyed per NZS 5838. Certificate issued within 5 business 
+    days of completion.
+
+3.4 Disputed Materials: Any materials subject to release conditions or 
+    disputes must be segregated. Escrow agreement terms govern resolution.
+
+--------------------------------------------------------------------------------
+4. ACCOUNT CLOSURE
+--------------------------------------------------------------------------------
+
+4.1 Portal Access: Revoked within 24 hours of final material disposition 
+    confirmation.
+
+4.2 Vault Access: Physical access credentials invalidated upon notice 
+    acknowledgment. No new deposits accepted after notice date.
+
+4.3 API/Integration: Third-party integrations disabled within 5 business 
+    days of notice.
+
+--------------------------------------------------------------------------------
+5. FINAL BILLING
+--------------------------------------------------------------------------------
+
+5.1 Prorated Charges: Final invoice covers services through last day of 
+    notice period. No refunds for pre-paid periods.
+
+5.2 Outstanding Balances: Must be settled before material release or 
+    destruction. Payment terms: 14 days from invoice date.
+
+5.3 Disputed Invoices: Escrow materials held until billing dispute resolved. 
+    Standard dispute resolution process applies.
+
+--------------------------------------------------------------------------------
+6. DATA DELETION CERTIFICATION
+--------------------------------------------------------------------------------
+
+6.1 Retention Exceptions: The following may be retained for regulatory 
+    compliance (minimum 7 years per AML/CFT Act 2009):
+    - KYC/AML documentation
+    - Transaction records
+    - Correspondence relating to escrow arrangements
+    - Audit trail of material handling
+
+6.2 Deletion Scope: All client-specific operational data, portal credentials, 
+    and non-mandatory records deleted within 30 days of account closure.
+
+6.3 Certification: Client receives Data Deletion Certificate within 45 days 
+    of closure, specifying retained records and retention period.
+
+--------------------------------------------------------------------------------
+7. REGULATORY REPORTING REQUIREMENTS
+--------------------------------------------------------------------------------
+
+7.1 AML/CFT: Closure reported to Compliance within 5 business days. 
+    Suspicious matter reporting obligations remain.
+
+7.2 Privacy: Data processing cessation documented. Privacy Act 2020 
+    requirements observed for NZ clients.
+
+7.3 Cross-Border: For clients in Australia, Singapore, or other jurisdictions, 
+    applicable regulatory notification requirements completed.
+
+--------------------------------------------------------------------------------
+8. OFFBOARDING CHECKLIST
+--------------------------------------------------------------------------------
+
+[ ] Notice received and acknowledged
+[ ] Offboarding coordinator assigned
+[ ] Vault inventory generated and confirmed
+[ ] Material disposition method agreed (return/destruction)
+[ ] Materials transferred or destroyed
+[ ] Final invoice issued and paid
+[ ] Portal and API access revoked
+[ ] Data deletion completed (except retained records)
+[ ] Data Deletion Certificate issued
+[ ] Regulatory notifications completed
+[ ] Client file archived
+
+--------------------------------------------------------------------------------
+9. CONTACTS
+--------------------------------------------------------------------------------
+
+Offboarding Inquiries: offboarding@tsg-internal.lab
+Compliance: compliance@tsg-internal.lab
+Wellington HQ: +64 4 499 2800
+
+--------------------------------------------------------------------------------
+Document Classification: Internal Procedure
+Domain: TSG-INTERNAL.LAB
+================================================================================

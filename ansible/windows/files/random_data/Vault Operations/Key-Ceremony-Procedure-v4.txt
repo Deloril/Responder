@@ -1,0 +1,177 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              CRYPTOGRAPHIC KEY CEREMONY PROCEDURE
+                    Version 4.0 | Effective 01 July 2025
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington Vault | TSG-INTERNAL.LAB
+================================================================================
+
+DOCUMENT CONTROL
+--------------------------------------------------------------------------------
+Version:           4.0
+Effective Date:    01 July 2025
+Supersedes:        Key-Ceremony-Procedure-v3 (15 Jan 2024)
+Owner:             Henry Ngata, CTO
+Approver:          Charlotte Mata, COO
+Review Cycle:      Annual
+Compliance:        FIPS 140-2 Level 2, ISO 27001:2022
+--------------------------------------------------------------------------------
+
+
+1. PURPOSE AND SCOPE
+================================================================================
+This procedure defines the requirements for generating, splitting, distributing,
+and storing cryptographic keys used within TSG vault operations. All key
+ceremonies for master keys, HSM backup keys, and database encryption keys
+MUST follow this procedure.
+
+Applies to: Wellington Vault, SSN platform, backup infrastructure.
+Reference: FIPS 140-2 Security Requirements for Cryptographic Modules.
+--------------------------------------------------------------------------------
+
+
+2. PARTICIPANTS REQUIRED
+================================================================================
+
+2.1 MANDATORY ROLES (minimum 4 persons)
+--------------------------------------------------------------------------------
+- Key Custodian (Primary):     Authorised vault custodian (Tama Thomas, Wiremu Sio)
+- Key Custodian (Secondary):   Different authorised custodian
+- Witness:                     COO or CTO (Charlotte Mata, Henry Ngata)
+- Technical Lead:              IT Infrastructure Manager (Michael Huang, Liam Jones)
+
+2.2 OPTIONAL ROLES
+--------------------------------------------------------------------------------
+- Auditor:                     External or internal audit observer
+- Legal/Compliance:            For high-sensitivity ceremonies
+
+2.3 EXCLUSION
+--------------------------------------------------------------------------------
+No single person may hold more than one mandatory role. Key Custodian Primary
+and Secondary must be different individuals. Witness cannot be a Key Custodian.
+--------------------------------------------------------------------------------
+
+
+3. PRE-CEREMONY REQUIREMENTS
+================================================================================
+
+3.1 SCHEDULING
+--------------------------------------------------------------------------------
+- Ceremony must be scheduled at least 5 business days in advance
+- All participants must confirm availability
+- Venue: Wellington Vault secure room or designated ceremony room
+- Duration: Allow 2-4 hours
+
+3.2 ENVIRONMENT
+--------------------------------------------------------------------------------
+- No electronic devices (phones, smartwatches) in ceremony room
+- No network connectivity in ceremony area
+- CCTV recording (retained 7 years)
+- Clean desk policy - no prior materials
+
+3.3 MATERIALS
+--------------------------------------------------------------------------------
+- FIPS 140-2 validated HSM or key generation device
+- Split key storage containers (tamper-evident)
+- Ceremony log template
+- Witness attestation forms
+- Sealed envelopes for key shares
+--------------------------------------------------------------------------------
+
+
+4. KEY GENERATION STEPS
+================================================================================
+
+4.1 OPENING (Witness-led)
+--------------------------------------------------------------------------------
+Step 1: Witness verifies identity of all participants
+Step 2: Participants sign attendance register
+Step 3: Witness confirms no conflicts of interest
+Step 4: Technical Lead confirms HSM/device integrity (power-on self-test)
+Step 5: Witness declares ceremony open, notes start time
+
+4.2 KEY GENERATION
+--------------------------------------------------------------------------------
+Step 6: Technical Lead initialises key generation (FIPS 140-2 approved RNG)
+Step 7: Key generated within HSM - never exported in plaintext
+Step 8: Technical Lead verifies key generation success (device display)
+Step 9: Witness observes and attests to generation
+
+4.3 KEY SPLITTING (if applicable)
+--------------------------------------------------------------------------------
+Step 10: For split-key schemes: minimum 3-of-5 or 2-of-3
+Step 11: Each share generated independently within HSM
+Step 12: Shares distributed to Key Custodians per distribution matrix
+Step 13: No single participant receives all shares
+Step 14: Each custodian signs receipt for their share(s)
+
+4.4 STORAGE
+--------------------------------------------------------------------------------
+Step 15: Each key share placed in tamper-evident container
+Step 16: Container sealed, custodian initials on seal
+Step 17: Containers placed in vault safe (different physical locations)
+Step 18: Technical Lead records storage locations in register
+Step 19: Witness verifies all shares secured
+
+4.5 DOCUMENTATION
+--------------------------------------------------------------------------------
+Step 20: Ceremony log completed (all participants sign)
+Step 21: Key identifier, generation date, split scheme recorded
+Step 22: Storage locations documented (separate secure register)
+Step 23: Witness attestation form signed
+Step 24: Copies to Legal/Compliance within 24 hours
+--------------------------------------------------------------------------------
+
+
+5. POST-CEREMONY
+================================================================================
+
+5.1 VERIFICATION
+--------------------------------------------------------------------------------
+- Within 48 hours: Test key material (encrypt/decrypt verification)
+- Technical Lead confirms key operational
+- Results documented in Key Register
+
+5.2 RECORDS RETENTION
+--------------------------------------------------------------------------------
+- Ceremony log: 10 years
+- Witness attestation: 10 years
+- CCTV recording: 7 years
+- Key register entries: Indefinite (until key destruction)
+--------------------------------------------------------------------------------
+
+
+6. EMERGENCY PROCEDURES
+================================================================================
+
+6.1 CEREMONY ABORT
+--------------------------------------------------------------------------------
+If any participant has concern: STOP. Witness decides. Document reason.
+Reschedule. Destroy any partial materials.
+
+6.2 KEY COMPROMISE
+--------------------------------------------------------------------------------
+If key suspected compromised: Immediate revocation. New ceremony within 72 hours.
+Incident report. Legal/Compliance notification.
+--------------------------------------------------------------------------------
+
+
+7. FIPS 140-2 COMPLIANCE NOTES
+================================================================================
+- Key generation: Use FIPS-approved RNG (SP 800-90A)
+- Key storage: FIPS-approved encryption for key material at rest
+- Access control: Role-based, dual control
+- Audit: All steps logged, tamper-evident
+--------------------------------------------------------------------------------
+
+
+8. APPROVAL
+================================================================================
+Approved by: Charlotte Mata, COO                    Date: 28 June 2025
+Reviewed by: Henry Ngata, CTO                       Date: 28 June 2025
+Compliance:  Leilani Kumar, Compliance Manager     Date: 27 June 2025
+
+================================================================================
+Document Control: TSG-SEC-2025-KEY-004 | Confidential
+================================================================================

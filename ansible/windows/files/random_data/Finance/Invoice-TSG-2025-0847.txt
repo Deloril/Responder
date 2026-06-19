@@ -1,0 +1,62 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TAX INVOICE
+================================================================================
+Domain: TSG-INTERNAL.LAB | ABN: 94 123 456 789 | GST Registered
+Level 12, 88 The Terrace, Wellington 6011, New Zealand
+Phone: +64 4 499 8200 | accounts@thesecretsgroup.co.nz
+================================================================================
+
+INVOICE NUMBER:     TSG-2025-0847
+INVOICE DATE:       15 November 2025
+DUE DATE:           15 December 2025
+CLIENT REF:         MFG-ESC-2025-Q4
+
+BILL TO:
+Meridian Financial Group
+Attn: Charlotte Mata (Finance Director)
+Level 5, 45 Queen Street
+Auckland 1010, New Zealand
+GST No: 123-456-789-00
+
+--------------------------------------------------------------------------------
+SERVICE DESCRIPTION                                    AMOUNT (NZD)    GST
+--------------------------------------------------------------------------------
+
+Digital Escrow Services - Q4 2025
+  - Transaction escrow processing (47 transactions)         $18,450.00   $2,767.50
+  - Secure document custody (12 active vaults)               $8,400.00    $1,260.00
+  - API integration support (monthly retainer)              $2,250.00      $337.50
+
+Vault Access Fees - November 2025
+  - Primary vault access (24/7)                              $1,200.00      $180.00
+  - Secondary vault (backup)                                 $600.00        $90.00
+  - Audit log exports (2 requests)                           $350.00        $52.50
+
+Annual Custodianship Retainer - FY2025/26
+  - Full custodianship package (includes compliance review)  $45,000.00   $6,750.00
+  - Quarterly compliance attestation                         $3,500.00      $525.00
+
+--------------------------------------------------------------------------------
+SUBTOTAL                                                      $80,150.00
+GST (15%)                                                     $11,962.50
+--------------------------------------------------------------------------------
+TOTAL DUE                                                     $92,112.50
+--------------------------------------------------------------------------------
+
+PAYMENT TERMS: Net 30 days from invoice date
+LATE PAYMENT: Interest at 2% per month on overdue amounts
+DISPUTES: Notify in writing within 7 days of invoice date
+
+PAYMENT DETAILS:
+Bank: Westpac New Zealand
+Account Name: The Secrets Group Limited
+Account Number: 03-0123-0456789-00
+Reference: TSG-2025-0847 / MFG
+
+For electronic payment, please include invoice number in payment reference.
+IRD requires tax invoices to be retained for 7 years.
+
+================================================================================
+Authorised by: Sarah Wang, Chief Financial Officer
+Generated: 15/11/2025 | Document ID: INV-0847-2025
+================================================================================

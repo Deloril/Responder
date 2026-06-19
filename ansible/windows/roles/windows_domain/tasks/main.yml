@@ -1,0 +1,3 @@
+---
+- include_tasks: add_domain_users_and_groups.yml
+- include_tasks: enable_GPOs.yml

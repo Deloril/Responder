@@ -1,0 +1,57 @@
+---
+
+- hosts: file
+  gather_facts: no
+  vars_files: 
+    - ./vars/file_server.yml
+    - ./vars/domain_users_and_groups.yml
+    - ./vars/domain.yml
+  tasks:
+  
+  - name: Make a directory for the CIF share
+    win_file:
+      path: "{{ file_server_CIF_path }}\\"
+      state: directory
+
+  - name: Create the CIF location on the file server
+    win_share:
+      name: super_secret_files
+      description: File store with all of our super secret files
+      path: "{{ file_server_CIF_path }}"
+      full: Administrators,TSG-users
+  
+  - name: Add random data to the CIF
+    win_copy:
+      src: random_data/
+      dest: "{{ file_server_CIF_path }}\\"
+
+  # --- Scheduled task with user-writable maintenance script ---
+
+  - name: Create maintenance scripts directory
+    win_file:
+      path: C:\Maintenance\Scripts
+      state: directory
+
+  - name: Create maintenance logs directory
+    win_file:
+      path: C:\Maintenance\Logs
+      state: directory
+
+  - name: Copy maintenance script
+    win_copy:
+      src: Invoke-Maintenance.ps1
+      dest: C:\Maintenance\Scripts\Invoke-Maintenance.ps1
+
+  - name: Grant TSG-users modify access to maintenance directory
+    win_shell: >
+      icacls "C:\Maintenance" /grant "TSG-INTERNAL\TSG-users:(OI)(CI)M"
+
+  - name: Create scheduled task running maintenance script as SYSTEM
+    win_shell: |
+      $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NonInteractive -ExecutionPolicy Bypass -File C:\Maintenance\Scripts\Invoke-Maintenance.ps1"
+      $Trigger = New-ScheduledTaskTrigger -Once -At 3am -RepetitionInterval (New-TimeSpan -Minutes 15) -RepetitionDuration (New-TimeSpan -Days 9999)
+      $Principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -RunLevel Highest -LogonType ServiceAccount
+      Register-ScheduledTask -TaskName "TSGMaintenance" -Action $Action -Trigger $Trigger -Principal $Principal -Description "TSG automated server maintenance" -Force
+
+  - name: Disable update services on file server
+    include_tasks: tasks/disable_update_services.yml

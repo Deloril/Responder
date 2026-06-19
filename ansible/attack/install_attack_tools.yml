@@ -1,0 +1,100 @@
+---
+#############################################
+## Install Attack tooling on Attack Server ##
+#############################################
+
+- hosts: attacker_server
+  gather_facts: yes
+  become: true
+  tasks:
+
+  - name: Download installer
+    get_url:
+      url: https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
+      dest: /tmp/msfinstall
+      mode: 0755
+    register: metasploit
+
+  - name: Install Metasploit
+    when: metasploit.changed
+    command: /tmp/msfinstall
+
+  - name: Install packages via apt
+    apt:
+      update_cache: yes
+      name:
+        - zip
+        - unzip
+        - hashcat
+        - nmap
+        - swaks
+        - tmux
+        - curl
+        - wget
+        - git
+        - jq
+        - build-essential
+        - cmake
+        - pkg-config
+        - python3
+        - python3-pip
+        - docker.io
+        - golang-go
+        - nodejs
+        - npm
+        - mingw-w64
+
+  - name: Fetch rockyou.txt
+    get_url:
+      url: https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+      dest: /home/ubuntu/rockyou.txt
+    ignore_errors: yes
+
+  - name: add password to rockyou.txt
+    lineinfile:
+      path: /home/ubuntu/rockyou.txt
+      line: SuperGenericPassword1!
+      insertbefore: BOF
+    ignore_errors: yes
+
+  # --- Additional C2 frameworks (Sliver, Mythic, Havoc) ---
+
+  - name: Add ubuntu user to docker group
+    user:
+      name: ubuntu
+      groups: docker
+      append: yes
+
+  - name: Ensure docker is enabled and running
+    systemd:
+      name: docker
+      enabled: yes
+      state: started
+    ignore_errors: yes
+
+  - name: Check for sliver-client
+    command: which sliver-client
+    register: sliver_check
+    failed_when: false
+    changed_when: false
+
+  - name: Install Sliver via official installer
+    shell: curl -fsSL https://sliver.sh/install | bash
+    when: sliver_check.rc != 0
+    ignore_errors: yes
+
+  - name: Clone Mythic C2 repo
+    git:
+      repo: https://github.com/its-a-feature/Mythic.git
+      dest: /opt/Mythic
+      depth: 1
+      update: no
+    ignore_errors: yes
+
+  - name: Clone Havoc C2 repo
+    git:
+      repo: https://github.com/HavocFramework/Havoc.git
+      dest: /opt/Havoc
+      depth: 1
+      update: no
+    ignore_errors: yes

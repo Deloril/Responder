@@ -1,0 +1,9 @@
+Asset ID,Hostname,IP Address,OS,Role,Location
+TSG-DC01,DC,10.0.1.6,Windows Server 2016,Domain Controller,Corp Subnet
+TSG-FS01,YOURFILES,10.0.2.7,Windows Server 2016,File Server,Vault Subnet
+TSG-SQL01,SQL,10.0.2.6,Windows Server 2016,SQL Server,Vault Subnet
+TSG-WEB01,web,10.0.0.6,Ubuntu 22.04,Web Server,Public Subnet
+TSG-MAIL01,mail,10.0.0.7,Ubuntu 22.04,Mail Server,Public Subnet
+TSG-FW01,firewall,10.0.0.5,Ubuntu 22.04,Firewall/Router,Public Subnet
+TSG-PC01,CLIENT1,10.0.1.10,Windows 10,Workstation,Corp Subnet
+TSG-PC02,CLIENT2,10.0.1.11,Windows 10,Workstation,Corp Subnet

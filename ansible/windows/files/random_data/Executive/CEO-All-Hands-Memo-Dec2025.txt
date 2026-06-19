@@ -1,0 +1,123 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    INTERNAL MEMORANDUM
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+To: All Staff
+From: Daniel Kemp, Chief Executive Officer
+Date: 5 December 2025
+Re: End of Year Update, Achievements & 2026 Outlook
+Reference: TSG-CEO-2025-012
+Classification: Internal
+================================================================================
+
+Kia ora team,
+
+As we approach the end of 2025, I want to take a moment to reflect on what
+we've accomplished together and to share our outlook for the year ahead.
+This has been a transformative year for The Secrets Group, and your
+dedication has been instrumental to our success.
+
+--------------------------------------------------------------------------------
+Q4 & FULL-YEAR ACHIEVEMENTS
+--------------------------------------------------------------------------------
+
+Financial Performance
+  - Q4 revenue is tracking ahead of forecast; we expect to close FY2025 at
+    approximately NZD 8.6M, representing 11% growth over FY2024
+  - Client retention remains strong at 94%; our NPS score has improved to 52
+  - We have maintained a healthy cash position with no debt, giving us
+    flexibility for strategic investment
+
+Singapore Office
+  - I'm delighted to confirm that our Singapore office officially opened on
+    1 October. This marks a significant milestone in our APAC expansion
+  - Leilani Kumar and her team have done outstanding work establishing our
+    presence. MAS registration is progressing and we expect final approval
+    in Q1 2026
+  - We already have four prospects in advanced discussions—a testament to
+    the market opportunity and our team's efforts
+
+SSN Platform
+  - Henry and the technology team have delivered SSN Phase 2 to 68%
+    completion. We remain on track for general availability in Q1 2026
+  - The new API capabilities and multi-vault support will unlock significant
+    value for our clients and position us for our SaaS evolution
+
+Operational Excellence
+  - Vault uptime: 99.97% year-to-date
+  - Zero client-impacting security incidents
+  - ISO 27001 surveillance and SOC 2 Type II audits completed successfully
+
+--------------------------------------------------------------------------------
+EMPLOYEE RECOGNITION
+--------------------------------------------------------------------------------
+
+I would like to acknowledge several individuals and teams who have gone
+above and beyond this year:
+
+  - Charlotte Mata (COO) and the Vault Operations team for the flawless
+    execution of our Wellington expansion planning and Singapore setup
+  - Henry Ngata (CTO) and the SSN development team for maintaining momentum
+    despite scope evolution
+  - Fetu Yoon (Chief Custodian Officer) for her leadership in custody
+    procedures and deputy designation work
+  - Leilani Kumar and the Singapore team for building our presence from
+    the ground up
+  - Sarah Wang and the Finance team for managing the complexity of
+    multi-entity reporting and Singapore ramp-up costs
+  - Our Melbourne and Sydney colleagues for driving Australian revenue
+    growth and client satisfaction
+
+Thank you to every one of you. Your commitment to our clients and to each
+other is what makes TSG special.
+
+--------------------------------------------------------------------------------
+HOLIDAY SHUTDOWN DATES
+--------------------------------------------------------------------------------
+
+Our offices will close for the holiday period as follows:
+
+  Wellington, Auckland, Christchurch:  Close 24 December, reopen 6 January
+  Sydney, Melbourne:                   Close 24 December, reopen 6 January
+  Singapore:                           Close 24 December, reopen 2 January
+
+Essential vault and security operations will maintain skeleton coverage.
+Charlotte will circulate the holiday roster separately. Please ensure your
+out-of-office messages are set and handovers are complete before you leave.
+
+--------------------------------------------------------------------------------
+OUTLOOK FOR 2026
+--------------------------------------------------------------------------------
+
+The Board has approved our Strategic Plan for 2026-2028. Key themes for
+next year:
+
+  - Singapore: Scale our presence; target first 6 paying clients
+  - SSN Platform: Launch Phase 2; pilot SaaS model with select clients
+  - Vault Expansion: Wellington vault expansion approved; Singapore vault
+    fit-out to commence Q1
+  - People: We plan to grow to 54 FTE; opportunities in Singapore,
+    Sydney, and platform development
+
+We will hold our annual All-Hands in late January to present the full plan
+and answer your questions. In the meantime, please reach out to your
+manager or to me if you have any questions or feedback.
+
+--------------------------------------------------------------------------------
+CLOSING
+--------------------------------------------------------------------------------
+
+Thank you for an exceptional year. I am proud of what we have built
+together and excited about our future. Please take time to rest and
+reconnect with family and friends over the break.
+
+Ngā mihi o te wā (season's greetings),
+
+Daniel Kemp
+Chief Executive Officer
+The Secrets Group
+
+================================================================================
+Document Control: TSG-CEO-2025-012 | Internal
+================================================================================

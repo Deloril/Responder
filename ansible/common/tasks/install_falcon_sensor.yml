@@ -1,0 +1,30 @@
+---
+- name: Check if Falcon sensor is already installed
+  stat:
+    path: /opt/CrowdStrike/falconctl
+  register: falcon_installed
+
+- name: Transfer Falcon sensor
+  copy:
+    src: "{{ falcon_sensor_deb }}"
+    dest: /tmp/falcon-sensor.deb
+  when: not falcon_installed.stat.exists
+
+- name: Install Falcon sensor
+  apt:
+    deb: /tmp/falcon-sensor.deb
+  when: not falcon_installed.stat.exists
+
+- name: Configure Falcon sensor
+  command: /opt/CrowdStrike/falconctl -s -f --cid="E2A34F96E2D4440FBB3BB6F89B035F5A-92" --tags="project-responder"
+
+- name: Start Falcon sensor service
+  service:
+    name: falcon-sensor
+    state: started
+    enabled: yes
+
+- name: Clean up installer
+  file:
+    path: /tmp/falcon-sensor.deb
+    state: absent

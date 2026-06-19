@@ -1,0 +1,180 @@
+---
+###################################################
+## Configure Inner Firewalls (Linux NVAs, iptables)
+###################################################
+#
+# Two firewalls run between the existing tiers:
+#   fw-dmz-corp:    DMZ <-> corp boundary
+#   fw-corp-secret: corp <-> secret-storage boundary
+#
+# These are real Linux hosts with iptables rules and packet logging so
+# incident responders can investigate firewall artifacts (configs, logs,
+# packet captures, conntrack).
+#
+# Note on AWS routing: in a single VPC the local route always wins, so
+# segmentation is *enforced* at the AWS security-group layer. The firewall
+# hosts give IR the realistic on-host artifacts (rules, logs, conntrack)
+# without forcing east-west traffic through them.
+
+- hosts: inner_firewalls
+  gather_facts: yes
+  become: true
+  vars:
+    falcon_sensor_deb: ../common/files/falcon-sensor_7.07.0-16206_amd64.deb
+  tasks:
+
+    - name: Set hostname based on inventory group
+      hostname:
+        name: "{{ 'fw-dmz-corp' if inventory_hostname in groups['fw_dmz_corp'] else 'fw-corp-secret' }}"
+
+    - name: Install firewall + forensic packages
+      apt:
+        update_cache: yes
+        name:
+          - iptables
+          - iptables-persistent
+          - conntrack
+          - tcpdump
+          - tshark
+          - ngrep
+          - iftop
+          - rsyslog
+        state: present
+      environment:
+        DEBIAN_FRONTEND: noninteractive
+      register: fw_apt_install
+      until: fw_apt_install is succeeded
+      retries: 5
+      delay: 15
+
+    - name: Enable IP forwarding
+      sysctl:
+        name: net.ipv4.ip_forward
+        value: "1"
+        sysctl_set: yes
+        state: present
+        reload: yes
+
+    # --- Default policies: log + drop all forwarded traffic, accept return paths ---
+
+    - name: FORWARD chain default policy DROP
+      iptables:
+        chain: FORWARD
+        policy: DROP
+      notify: persist iptables
+
+    - name: Allow ESTABLISHED/RELATED forwarded traffic
+      iptables:
+        chain: FORWARD
+        ctstate:
+          - ESTABLISHED
+          - RELATED
+        jump: ACCEPT
+      notify: persist iptables
+
+  # --- fw-dmz-corp specific rules ---
+
+    - name: (dmz-corp) Allow corp clients to reach DMZ web/mail
+      iptables:
+        chain: FORWARD
+        protocol: tcp
+        source: "{{ corp_subnet_cidr | default('10.0.1.0/24') }}"
+        destination_port: "{{ item }}"
+        jump: ACCEPT
+      loop:
+        - "80"
+        - "443"
+        - "25"
+        - "587"
+        - "993"
+        - "143"
+      when: inventory_hostname in groups['fw_dmz_corp']
+      notify: persist iptables
+
+    - name: (dmz-corp) Allow DMZ to reach corp DC for AD-bound web/mail
+      iptables:
+        chain: FORWARD
+        protocol: tcp
+        source: "10.0.0.0/24"
+        destination_port: "{{ item }}"
+        jump: ACCEPT
+      loop:
+        - "53"   # DNS
+        - "88"   # Kerberos
+        - "389"  # LDAP
+        - "636"  # LDAPS
+      when: inventory_hostname in groups['fw_dmz_corp']
+      notify: persist iptables
+
+    - name: (dmz-corp) LOG dropped forwarded packets (rate-limited)
+      iptables:
+        chain: FORWARD
+        jump: LOG
+        log_prefix: "FW-DMZ-CORP DROP: "
+        limit: "5/minute"
+      when: inventory_hostname in groups['fw_dmz_corp']
+      notify: persist iptables
+
+  # --- fw-corp-secret specific rules ---
+
+    - name: (corp-secret) Allow PAW subnet to reach SMB on file server
+      iptables:
+        chain: FORWARD
+        protocol: tcp
+        source: "{{ paw_subnet_cidr | default('10.0.4.0/24') }}"
+        destination: "{{ file_server_ip | default('10.0.2.6') }}"
+        destination_port: "445"
+        jump: ACCEPT
+      when: inventory_hostname in groups['fw_corp_secret']
+      notify: persist iptables
+
+    - name: (corp-secret) Allow PAW subnet to reach MSSQL on sql server
+      iptables:
+        chain: FORWARD
+        protocol: tcp
+        source: "{{ paw_subnet_cidr | default('10.0.4.0/24') }}"
+        destination: "{{ sql_server_ip | default('10.0.2.7') }}"
+        destination_port: "1433"
+        jump: ACCEPT
+      when: inventory_hostname in groups['fw_corp_secret']
+      notify: persist iptables
+
+    - name: (corp-secret) Allow AD replication corp -> secret (DC -> file/sql)
+      iptables:
+        chain: FORWARD
+        protocol: tcp
+        source: "10.0.1.0/24"
+        destination: "10.0.2.0/24"
+        destination_port: "{{ item }}"
+        jump: ACCEPT
+      loop:
+        - "53"
+        - "88"
+        - "135"
+        - "389"
+        - "445"
+        - "464"
+        - "636"
+        - "3268"
+        - "3269"
+        - "5985"
+        - "5986"
+      when: inventory_hostname in groups['fw_corp_secret']
+      notify: persist iptables
+
+    - name: (corp-secret) LOG dropped forwarded packets (rate-limited)
+      iptables:
+        chain: FORWARD
+        jump: LOG
+        log_prefix: "FW-CORP-SECRET DROP: "
+        limit: "5/minute"
+      when: inventory_hostname in groups['fw_corp_secret']
+      notify: persist iptables
+
+  # --- CrowdStrike Falcon sensor (matches the rest of the lab) ---
+
+    - include_tasks: ../common/tasks/install_falcon_sensor.yml
+
+  handlers:
+    - name: persist iptables
+      shell: iptables-save > /etc/iptables/rules.v4

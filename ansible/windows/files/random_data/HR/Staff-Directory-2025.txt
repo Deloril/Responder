@@ -1,0 +1,87 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - STAFF DIRECTORY
+                         As at 31 December 2025
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington | Auckland | Christchurch | Sydney | Melbourne | Singapore
+================================================================================
+
+EXECUTIVE
+--------------------------------------------------------------------------------
+Daniel Kemp              Chief Executive Officer        Wellington     ext. 100   daniel.kemp@tsg-internal.lab
+Henry Ngata              Chief Technology Officer       Wellington     ext. 101   henry.ngata@tsg-internal.lab
+Charlotte Mata           Chief Operating Officer        Wellington     ext. 102   charlotte.mata@tsg-internal.lab
+Fetu Yoon                Chief Custodian Officer        Wellington     ext. 103   fetu.yoon@tsg-internal.lab
+David Nair               Chief Financial Officer        Wellington     ext. 104   david.nair@tsg-internal.lab
+
+VAULT OPERATIONS
+--------------------------------------------------------------------------------
+Michael Latu             Head of Vault Operations        Wellington     ext. 210   michael.latu@tsg-internal.lab
+Tama Thomas              Senior Vault Custodian         Wellington     ext. 211   tama.thomas@tsg-internal.lab
+Wiremu Sio               Vault Custodian                Wellington     ext. 212   wiremu.sio@tsg-internal.lab
+Hemi Tama                Vault Custodian                Wellington     ext. 213   hemi.tama@tsg-internal.lab
+Satoshi Tuala            Vault Technician               Wellington     ext. 214   satoshi.tuala@tsg-internal.lab
+Kaimana Zhang            Vault Technician               Auckland       ext. 215   kaimana.zhang@tsg-internal.lab
+Oliver Anderson          Vault Custodian                Auckland       ext. 216   oliver.anderson@tsg-internal.lab
+Arjun Jones              Vault Technician               Christchurch   ext. 217   arjun.jones@tsg-internal.lab
+Priya Rangi              Senior Vault Custodian         Singapore      ext. 218   priya.rangi@tsg-internal.lab
+Lucas Kang               Vault Technician               Singapore      ext. 219   lucas.kang@tsg-internal.lab
+Jennifer Li              Vault Custodian                Singapore      ext. 220   jennifer.li@tsg-internal.lab
+Jack Zhou                Vault Technician               Singapore      ext. 221   jack.zhou@tsg-internal.lab
+Leilani Kumar            Vault Operations Coordinator   Wellington     ext. 222   leilani.kumar@tsg-internal.lab
+Karen Tavita             Vault Coordinator              Wellington     ext. 223   karen.tavita@tsg-internal.lab
+
+IT & INFRASTRUCTURE
+--------------------------------------------------------------------------------
+Michael Huang            IT Infrastructure Manager       Wellington     ext. 310   michael.huang@tsg-internal.lab
+Liam Jones               Senior Systems Engineer        Wellington     ext. 311   liam.jones@tsg-internal.lab
+Ava Phan                 Cloud Security Engineer       Wellington     ext. 312   ava.phan@tsg-internal.lab
+Ji-hoon Jones            Systems Administrator          Wellington     ext. 313   ji-hoon.jones@tsg-internal.lab
+Ben                      Network Engineer               Wellington     ext. 314   ben@tsg-internal.lab
+Kate                     DevOps Engineer                Auckland       ext. 315   kate@tsg-internal.lab
+Lisa Liu                 Security Analyst               Wellington     ext. 316   lisa.liu@tsg-internal.lab
+Sophie Patel             Junior Developer (SSN)         Wellington     ext. 317   sophie.patel@tsg-internal.lab
+Hana Wang                IT Support Specialist          Wellington     ext. 318   hana.wang@tsg-internal.lab
+
+LEGAL & COMPLIANCE
+--------------------------------------------------------------------------------
+Sarah Wang               General Counsel                Wellington     ext. 410   sarah.wang@tsg-internal.lab
+Emma Chen                Compliance Manager             Wellington     ext. 411   emma.chen@tsg-internal.lab
+Wei Tan                  Compliance Analyst             Wellington     ext. 412   wei.tan@tsg-internal.lab
+Rebecca O'Brien          Legal Counsel                 Wellington     ext. 413   rebecca.obrien@tsg-internal.lab
+
+SALES & CLIENT RELATIONS
+--------------------------------------------------------------------------------
+Marcus Wilson            Head of Sales & Client Relations Wellington    ext. 510   marcus.wilson@tsg-internal.lab
+Natalie Singh            Client Relationship Manager   Sydney         ext. 511   natalie.singh@tsg-internal.lab
+James Lee                Client Relationship Manager   Melbourne      ext. 512   james.lee@tsg-internal.lab
+Fiona Macdonald          Client Onboarding Specialist   Wellington     ext. 513   fiona.macdonald@tsg-internal.lab
+Ryan Patel               Business Development Manager   Auckland       ext. 514   ryan.patel@tsg-internal.lab
+Mei Lin Koh              Client Services Coordinator    Singapore      ext. 515   meilin.koh@tsg-internal.lab
+
+FINANCE
+--------------------------------------------------------------------------------
+Connor Reid              Finance Manager                Wellington     ext. 610   connor.reid@tsg-internal.lab
+Emma Chen                Senior Accountant              Wellington     ext. 611   emma.chen@tsg-internal.lab
+Wei Tan                  Accounts Payable               Auckland       ext. 612   wei.tan@tsg-internal.lab
+Mei Lin Koh              Financial Analyst              Singapore      ext. 613   meilin.koh@tsg-internal.lab
+
+HUMAN RESOURCES
+--------------------------------------------------------------------------------
+Kate Williams            HR Director                    Wellington     ext. 710   kate.williams@tsg-internal.lab
+Ben Thompson             HR Business Partner           Wellington     ext. 711   ben.thompson@tsg-internal.lab
+Siobhan Murphy           HR Coordinator                 Wellington     ext. 712   siobhan.murphy@tsg-internal.lab
+
+SINGAPORE OFFICE
+--------------------------------------------------------------------------------
+Priya Rangi              Singapore Office Manager       Singapore      ext. 801   priya.rangi@tsg-internal.lab
+Lucas Kang               Senior Vault Technician         Singapore      ext. 802   lucas.kang@tsg-internal.lab
+Jennifer Li              Client Relationship Manager    Singapore      ext. 803   jennifer.li@tsg-internal.lab
+Jack Zhou                Vault Technician               Singapore      ext. 804   jack.zhou@tsg-internal.lab
+Hemi Tama                Compliance Liaison             Singapore      ext. 805   hemi.tama@tsg-internal.lab
+
+================================================================================
+Total Headcount: 44 employees
+Last Updated: 31 December 2025
+For internal use only - TSG-INTERNAL.LAB
+================================================================================

@@ -1,0 +1,126 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    INTERNAL MEMORANDUM
+================================================================================
+
+To:     All Staff
+From:   Leilani Kumar, HR Manager
+        Daniel Kemp, CEO
+Date:   15 October 2025
+Re:     Performance Review Cycle 2025 - Timeline and Process
+Ref:    HR-POL-042
+
+--------------------------------------------------------------------------------
+1. PURPOSE
+--------------------------------------------------------------------------------
+This memo outlines the 2025 annual performance review cycle for The Secrets
+Group. Performance reviews align individual contributions with TSG's strategic
+goals, support professional development, and inform remuneration decisions.
+
+--------------------------------------------------------------------------------
+2. TIMELINE
+--------------------------------------------------------------------------------
+Phase 1 - Self-Assessment:           2 Nov - 15 Nov 2025
+Phase 2 - Manager Review:            16 Nov - 6 Dec 2025
+Phase 3 - Calibration (Heads):       9 Dec - 13 Dec 2025
+Phase 4 - 1:1 Meetings:              16 Dec - 20 Dec 2025
+Phase 5 - Documentation Finalised:   6 Jan - 10 Jan 2026
+Phase 6 - Remuneration Adjustments:  Effective 1 Feb 2026
+
+--------------------------------------------------------------------------------
+3. WHO REVIEWS WHOM
+--------------------------------------------------------------------------------
+All staff receive a review from their direct line manager. The following
+reporting structure applies for review purposes:
+
+Daniel Kemp (CEO) reviews:
+  - Tama Thomas (COO)
+  - [CTO]
+  - [Chief Custodian Officer]
+  - Leilani Kumar (HR)
+
+Tama Thomas (COO) reviews:
+  - Henry Ngata (Vault Operations)
+  - Sophie Patel (Legal & Compliance)
+  - Liam Jones (Sales & Client Relations)
+  - David Nair (Finance)
+  - Singapore Office Lead
+
+Department Heads review their direct reports (Team Leads and individual
+contributors). Full org structure in Organisation-Chart-2025.txt.
+
+--------------------------------------------------------------------------------
+4. RATING SCALE
+--------------------------------------------------------------------------------
+1 - Exceptional:    Far exceeds expectations. Role model. <10% of staff.
+2 - Exceeds:       Consistently exceeds expectations. 15-20% of staff.
+3 - Meets:         Meets all expectations. Majority of staff.
+4 - Partially:     Meets some expectations; improvement needed.
+5 - Does Not Meet: Significant improvement required. PIP may apply.
+
+--------------------------------------------------------------------------------
+5. KPI CATEGORIES (Relevant to Escrow/Custodianship)
+--------------------------------------------------------------------------------
+
+VAULT OPERATIONS:
+  - Custody accuracy (zero discrepancies)
+  - Audit compliance (100% procedural adherence)
+  - Response time to authorised requests
+  - Incident reports (target: zero)
+  - Dual-control protocol adherence
+
+IT & INFRASTRUCTURE:
+  - System availability (99.95% SLA)
+  - Security patch compliance
+  - Incident response time
+  - Project delivery (SSN platform, etc.)
+
+LEGAL & COMPLIANCE:
+  - Regulatory filing deadlines met
+  - Audit findings (internal/external)
+  - Policy update cycle
+  - Client contract review turnaround
+
+SALES & CLIENT RELATIONS:
+  - Client retention rate
+  - NPS (Net Promoter Score)
+  - Revenue per client
+  - Escrow transaction volume
+
+FINANCE:
+  - Reporting accuracy and timeliness
+  - Budget variance
+  - Audit readiness
+  - Cash flow forecasting accuracy
+
+HR:
+  - Onboarding completion rate
+  - Training compliance
+  - Turnover rate
+  - Employee engagement score
+
+--------------------------------------------------------------------------------
+6. DOCUMENTATION
+--------------------------------------------------------------------------------
+- Self-assessment: Complete in Workday (or HR form if system unavailable)
+- Manager assessment: Same platform
+- Goals for 2026: Agreed in 1:1, documented
+- Development plan: At least one development objective per staff member
+- Sign-off: Employee and manager both acknowledge
+
+--------------------------------------------------------------------------------
+7. CONFIDENTIALITY
+--------------------------------------------------------------------------------
+Performance reviews are confidential. Ratings and feedback are shared only
+with the reviewer, reviewee, and HR. Aggregated data (without names) may be
+used for calibration and remuneration planning.
+
+--------------------------------------------------------------------------------
+8. QUESTIONS
+--------------------------------------------------------------------------------
+Contact Leilani Kumar (leilani.kumar@tsg-internal.lab) or Priya Rangi
+(priya.rangi@tsg-internal.lab) for process questions.
+
+================================================================================
+                    END OF MEMORANDUM
+================================================================================

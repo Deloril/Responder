@@ -1,0 +1,92 @@
+================================================================================
+        THE SECRETS GROUP (TSG) - ACCOUNTS PAYABLE AGING REPORT
+================================================================================
+Domain: TSG-INTERNAL.LAB
+Report Date: 31 December 2025
+Prepared by: Ben (Accounts Payable)
+Approved: Sarah Wang, CFO
+================================================================================
+
+VENDOR AGING SUMMARY - Outstanding Payables as at 31/12/2025
+All amounts in NZD (excluding GST where applicable)
+
+--------------------------------------------------------------------------------
+VENDOR                    INVOICE #    INVOICE DATE    0-30 DAYS   31-60 DAYS
+--------------------------------------------------------------------------------
+
+INFRASTRUCTURE & CLOUD
+--------------------------------------------------------------------------------
+AWS New Zealand            AWS-2025-11234   15 Nov 2025   $12,450.00         -
+AWS New Zealand            AWS-2025-11892   15 Dec 2025   $14,220.00         -
+Microsoft NZ Ltd           MSFT-NZ-8847     01 Dec 2025   $8,950.00          -
+Microsoft NZ Ltd           MSFT-NZ-8821     01 Nov 2025         -     $7,230.00
+Datacom Group Ltd          DCM-2025-4456    20 Nov 2025   $22,100.00         -
+Datacom Group Ltd          DCM-2025-4389    20 Oct 2025         -    $18,500.00
+Spark New Zealand          SPK-INV-99234    01 Dec 2025   $4,200.00          -
+Spark New Zealand          SPK-INV-98912    01 Nov 2025         -     $3,890.00
+
+--------------------------------------------------------------------------------
+VENDOR                    61-90 DAYS   90+ DAYS    TOTAL OWING    DUE DATE
+--------------------------------------------------------------------------------
+
+INFRASTRUCTURE & CLOUD (cont.)
+--------------------------------------------------------------------------------
+AWS New Zealand                  -          -     $26,670.00    15 Jan 2026
+Microsoft NZ Ltd                 -          -     $16,180.00    01 Jan 2026
+Datacom Group Ltd                -          -     $40,600.00    20 Jan 2026
+Spark New Zealand                -          -      $8,090.00    01 Jan 2026
+
+PROFESSIONAL SERVICES
+--------------------------------------------------------------------------------
+PwC New Zealand            PWC-2025-3344    10 Nov 2025         -     $45,000.00
+Russell McVeagh            RMV-2025-1122    05 Oct 2025         -          -   $28,500.00
+Deloitte NZ                 DEL-APAC-667    15 Dec 2025   $12,000.00         -
+BDO Wellington              BDO-2025-889    20 Nov 2025         -     $8,200.00
+
+--------------------------------------------------------------------------------
+PwC New Zealand                  -          -     $45,000.00    10 Dec 2025
+Russell McVeagh                 -          -     $28,500.00    05 Nov 2025
+Deloitte NZ                     -          -     $12,000.00    15 Jan 2026
+BDO Wellington                  -          -      $8,200.00    20 Dec 2025
+
+OFFICE & FACILITIES
+--------------------------------------------------------------------------------
+JLL Property Management    JLL-WLG-1122    01 Dec 2025   $15,400.00         -
+Colliers Wellington        COL-WLG-556     15 Nov 2025         -     $9,200.00
+OfficeMax NZ                OMX-2025-7788   28 Nov 2025         -     $2,340.00
+
+--------------------------------------------------------------------------------
+JLL Property Management          -          -     $15,400.00    01 Jan 2026
+Colliers Wellington             -          -      $9,200.00    15 Dec 2025
+OfficeMax NZ                    -          -      $2,340.00    28 Dec 2025
+
+SOFTWARE & LICENSING
+--------------------------------------------------------------------------------
+ServiceNow NZ               SN-2025-4455    01 Dec 2025   $18,500.00         -
+Salesforce ANZ              SF-APAC-2233    15 Nov 2025         -    $12,400.00
+CrowdStrike NZ              CS-2025-8899    01 Dec 2025    $6,200.00         -
+
+--------------------------------------------------------------------------------
+ServiceNow NZ                    -          -     $18,500.00    01 Jan 2026
+Salesforce ANZ                   -          -     $12,400.00    15 Dec 2025
+CrowdStrike NZ                   -          -      $6,200.00    01 Jan 2026
+
+================================================================================
+TOTALS BY AGING BUCKET
+================================================================================
+0-30 Days:     $113,020.00
+31-60 Days:    $104,760.00
+61-90 Days:     $28,500.00
+90+ Days:             $0.00
+--------------------------------------------------------------------------------
+TOTAL PAYABLES:        $246,280.00
+================================================================================
+
+NOTES:
+- Russell McVeagh (legal) - Payment pending final engagement letter sign-off
+- PwC - Audit fees; payment scheduled for 5 Jan 2026
+- All amounts exclude GST; GST to be claimed on next BAS return
+- Report excludes employee reimbursements and payroll
+
+Next review: 7 January 2026
+================================================================================

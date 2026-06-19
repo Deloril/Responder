@@ -1,0 +1,104 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TSG-INTERNAL.LAB
+                    WELCOME PACK - PACIFICA TRUST HOLDINGS
+                    Digital Escrow & Secret Custodianship Services
+================================================================================
+
+Document Control: CLIENT CONFIDENTIAL
+Account Opened: 22 October 2025 | Account Reference: TSG-PTH-2025-028
+
+--------------------------------------------------------------------------------
+WELCOME TO THE SECRETS GROUP
+--------------------------------------------------------------------------------
+
+Dear Pacifica Trust Holdings,
+
+On behalf of The Secrets Group, we extend a warm welcome to you as our client.
+As a Sydney-based trust company with cross-border operations, we have tailored
+our service delivery to meet your specific Australian regulatory requirements.
+
+--------------------------------------------------------------------------------
+YOUR ACCOUNT MANAGEMENT TEAM
+--------------------------------------------------------------------------------
+
+Account Manager: Michael Latu
+Email: michael.latu@tsg-internal.lab
+Direct Line: +64 4 499 2912
+Office: Wellington Headquarters (APAC Client Coverage)
+
+Michael specialises in Australian and cross-Tasman client relationships. He will
+coordinate with our Sydney office for any in-person requirements you may have.
+
+--------------------------------------------------------------------------------
+AUSTRALIAN REGULATORY REQUIREMENTS - NOTED
+--------------------------------------------------------------------------------
+
+The following have been documented in your client file and will govern our
+service delivery:
+
+• Australian Privacy Principles (APPs) - Data handling compliance
+• Corporations Act 2001 - Trust company obligations
+• AUSTRAC reporting - Cross-border transaction monitoring
+• Australian Financial Services Licence considerations for escrow services
+• Data localisation: Option for Sydney vault storage documented
+
+Your materials may be stored in our Sydney facility upon request. Current
+arrangement: Wellington primary with Sydney backup replication.
+
+--------------------------------------------------------------------------------
+CROSS-BORDER DATA TRANSFER PROCEDURES
+--------------------------------------------------------------------------------
+
+As your operations span Australia and New Zealand, the following procedures
+apply:
+
+1. Data Transfer Mechanism: NZ-Australia data flows covered under mutual
+   recognition arrangements. Privacy Impact Assessment completed.
+
+2. Transfer Documentation: Data Processing Agreement and Standard Contractual
+   Clauses on file for NZ-AU transfers.
+
+3. Storage Location: Primary - Wellington, NZ | Backup - Sydney, AU
+   Client may request Sydney-primary for Australian regulatory preference.
+
+4. Access from Australia: Authorized signatories may access via Sydney office
+   by prior arrangement. Same identification and audit requirements apply.
+
+5. Breach Notification: 72-hour notification to relevant privacy regulators
+   (OAIC and OPC) per respective requirements.
+
+--------------------------------------------------------------------------------
+VAULT ACCESS & EMERGENCY CONTACTS
+--------------------------------------------------------------------------------
+
+Sydney Office (for in-person arrangements):  +61 2 8234 5600
+Michael Latu (Account Manager):             +64 4 499 2912
+TSG Client Services (24/7):                +64 800 882 474
+Security Incident Hotline:                  +64 4 499 2899
+
+--------------------------------------------------------------------------------
+PORTAL & DOCUMENTATION
+--------------------------------------------------------------------------------
+
+Portal URL: https://portal.tsg-internal.lab/pacifica-trust
+
+All regulatory documentation, data transfer agreements, and Australian-specific
+addenda are available in your client portal under "Regulatory Documents".
+
+--------------------------------------------------------------------------------
+NEXT STEPS
+--------------------------------------------------------------------------------
+
+Michael will schedule a call within the next 5 business days to:
+• Walk through the portal and answer any questions
+• Confirm your preferred data storage configuration
+• Discuss your first deposit timeline
+
+We look forward to a long and successful partnership.
+
+The Secrets Group
+Wellington, New Zealand | Sydney, Australia
+
+================================================================================
+                    END OF DOCUMENT
+================================================================================

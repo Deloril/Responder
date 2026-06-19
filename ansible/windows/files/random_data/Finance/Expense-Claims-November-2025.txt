@@ -1,0 +1,124 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              EXPENSE CLAIMS - NOVEMBER 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Processed by: Sarah Wang, Finance
+Submission cutoff: 25 November 2025
+Payment run: 5 December 2025
+================================================================================
+
+CLAIM SUMMARY
+--------------------------------------------------------------------------------
+Total claims submitted:     18
+Total amount (excl. GST):   NZD 24,847.50
+Total GST:                  NZD 3,727.13
+Total (incl. GST):          NZD 28,574.63
+--------------------------------------------------------------------------------
+
+
+DETAILED CLAIM REGISTER
+================================================================================
+
+Claim #   Staff Member      Date        Category              Amount (NZD)   Status
+--------------------------------------------------------------------------------
+EC-2511-001  Henry Ngata    04-Nov-25   Travel - Wellington-Auckland    312.00   Approved
+          Return flights WLG-AKL for Meridian Financial Group board presentation.
+          Accommodation: Cordis Auckland (1 night). Meals: client dinner.
+
+EC-2511-002  Oliver Anderson 05-Nov-25  Client Entertainment            485.50   Approved
+          Lunch with Asia-Pacific Trust Holdings (2 clients). Logan Brown.
+          Purpose: SSN licensing renewal discussion.
+
+EC-2511-003  Leilani Kumar  06-Nov-25   Conference - ISO 27001          1,245.00 Approved
+          ISO 27001 Lead Auditor Conference, Wellington. 3-day attendance.
+          Includes conference fee, materials, catering.
+
+EC-2511-004  Ben            07-Nov-25   Travel - Sydney                  892.00   Approved
+          Return flights WLG-SYD for client workshops. 2 nights Novotel.
+          Purpose: Meridian AU subsidiary - vault migration project.
+
+EC-2511-005  Charlotte Mata 08-Nov-25   Equipment - Vault Operations     156.00   Approved
+          Replacement biometric reader unit. Supplier: SecurTech NZ.
+          Receipt attached. Replaces faulty unit #V-2047.
+
+EC-2511-006  Michael Latu   10-Nov-25   Client Entertainment            324.00   Approved
+          Dinner - Datacom account review (2 attendees). The Botanist.
+          Quarterly relationship meeting.
+
+EC-2511-007  Kate           11-Nov-25   Travel - Wellington-Auckland     278.00   Approved
+          Day trip AKL for CFO roundtable (Financial Services Council).
+          Flight only - same day return.
+
+EC-2511-008  Hemi Tama      12-Nov-25   Travel - Singapore              2,847.00 Approved
+          Return WLG-SIN. 4 nights. Singapore office setup + client meetings.
+          Clients: Asia-Pacific Trust Holdings, 2 prospects. Marina Bay Sands.
+
+EC-2511-009  Lisa Liu       13-Nov-25   Professional Development        445.00   Approved
+          CAANZ Excel Advanced course (online). CPD for finance team.
+          Certificate of completion on file.
+
+EC-2511-010  Sarah Wang     14-Nov-25   Conference - FMA Industry       890.00   Approved
+          FMA Financial Services Industry Forum, Wellington. 1 day.
+          Registration + materials. Compliance update session.
+
+EC-2511-011  Oliver Anderson 15-Nov-25  Travel - Melbourne               1,156.00 Approved
+          Return WLG-MEL. 2 nights. Client: new vault prospect (legal firm).
+          Accommodation: Crown Towers. Flights: Air NZ.
+
+EC-2511-012  Ben            16-Nov-25   Client Entertainment            412.00   Approved
+          Lunch - Spark NZ enterprise team. Purpose: connectivity SLA review.
+          Ortolana. 3 attendees.
+
+EC-2511-013  Michael Latu   18-Nov-25   Equipment - Sales                189.00   Approved
+          Presentation laptop stand (portable). JB Hi-Fi. For client demos.
+          Receipt #JB-88472.
+
+EC-2511-014  Charlotte Mata 19-Nov-25   Travel - Christchurch           198.00   Approved
+          Return WLG-CHC. Day trip. Vault audit - Christchurch facility.
+          Flight only. Internal compliance review.
+
+EC-2511-015  Leilani Kumar  20-Nov-25   Client Entertainment            567.00   Approved
+          Dinner - Deloitte Singapore (2). Marina Bay. APAC expansion follow-up.
+          Part of Singapore trip (EC-2511-008 related).
+
+EC-2511-016  Hemi Tama      21-Nov-25   Equipment - IT                   234.00   Pending
+          USB-C docking station. PB Tech. For Singapore office setup.
+          Awaiting receipt.
+
+EC-2511-017  Lisa Liu       22-Nov-25   Office Supplies                 87.50    Approved
+          Stationery - finance team. Paper, folders, labels. Warehouse Stationery.
+          Monthly replenishment.
+
+EC-2511-018  Oliver Anderson 24-Nov-25  Client Entertainment            298.00   Approved
+          Coffee meeting - 2 prospects. Pre-sales discovery. Flight Coffee.
+          _________________________________________________________________
+
+
+================================================================================
+BREAKDOWN BY CATEGORY
+================================================================================
+
+Category                    Claim Count    Amount (excl GST)    % of Total
+--------------------------------------------------------------------------------
+Travel - Domestic                   4            1,086.00           4.4%
+Travel - International              3            4,995.00          20.1%
+Client Entertainment                6            2,571.50          10.4%
+Conference Fees                     2            2,135.00           8.6%
+Equipment Purchases                 3              579.00           2.3%
+Professional Development            1              445.00           1.8%
+Office Supplies                     1               87.50           0.4%
+--------------------------------------------------------------------------------
+
+
+================================================================================
+POLICY COMPLIANCE NOTES
+--------------------------------------------------------------------------------
+- All claims over NZD 500 require manager approval (Henry Ngata/Kate)
+- International travel pre-approved via travel request TR-2025-089
+- Client entertainment within policy (max NZD 150/head for lunch, NZD 250 dinner)
+- EC-2511-016 pending: receipt required per policy 4.2.1
+
+================================================================================
+Document Control: TSG-FIN-2025-EXP-011 | Version 1.0
+================================================================================

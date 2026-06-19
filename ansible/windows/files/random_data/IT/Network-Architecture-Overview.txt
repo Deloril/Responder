@@ -1,0 +1,225 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              NETWORK ARCHITECTURE OVERVIEW
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document: TSG-IT-NET-001
+Version: 3.0
+Last Updated: 03 June 2026
+Classification: Internal - Confidential
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+The Secrets Group operates a five-zone segmented network architecture designed
+to isolate the Strongroom Trust custody and SSN escrow infrastructure from
+general corporate systems. The architecture follows defence-in-depth principles
+and was redesigned in Q2 2026 (driven by the Renske de Vries CISO programme)
+to introduce two stateful inner firewalls and a dedicated privileged-access
+workstation tier in front of the Restricted Network.
+
+Zones (innermost listed last):
+  1. DMZ                       (10.0.0.0/24)
+  2. Inner Firewall: DMZ<->Corp
+  3. Corporate Network          (10.0.1.0/24)
+  4. Inner Firewall: Corp<->Secret
+  5. Privileged Access (PAW)    (10.0.4.0/24)
+  6. Restricted Network         (10.0.2.0/24)
+  7. SecOps                     (10.0.3.0/24)
+
+
+2. NETWORK ZONES
+--------------------------------------------------------------------------------
+
+2.1 DMZ (Demilitarized Zone) - 10.0.0.0/24
+--------------------------------------------------------------------------------
+Purpose: Internet-facing services requiring controlled external access.
+
+Components:
+  - Edge Firewall/Router: 10.0.0.5 (NAT, port forwarding from internet)
+  - Web Server:           web.tsg-internal.lab  10.0.0.6
+                          Hosts: SSN portal (HTTPS), public website, client portal
+                          Inbound: 80/TCP, 443/TCP forwarded from edge firewall
+  - Mail Server:          mail.tsg-internal.lab 10.0.0.7
+                          Hosts: Exchange/mail relay for TSG-INTERNAL.LAB
+                          Inbound: 25/TCP (SMTP) forwarded from edge firewall
+
+External Access:
+  - Edge firewall public IP: 203.0.113.5 (AWS EC2)
+  - NAT Gateway: 203.0.113.10 (outbound internet for internal hosts)
+
+
+2.2 INNER FIREWALL: DMZ <-> CORP - fw-dmz-corp
+--------------------------------------------------------------------------------
+Purpose: Stateful boundary between the public-facing DMZ and the corporate AD.
+        Required by the Strongroom incident-response playbook 4.1 (segmentation
+        between internet-exposed services and authenticated corporate users).
+
+Components:
+  - fw-dmz-corp.tsg-internal.lab
+      DMZ-side ENI:   10.0.0.250
+      Corp-side ENI:  10.0.1.250
+      Platform:       Ubuntu 22.04 + iptables (logged via rsyslog)
+      Allow lists:    corp -> DMZ (HTTP/S, SMTP/SUBMISSION/IMAPS)
+                      DMZ  -> corp (DNS, Kerberos, LDAP/S for AD-bound web/mail)
+      Default policy: FORWARD DROP, with rate-limited LOG of denied flows
+
+
+2.3 CORPORATE NETWORK - 10.0.1.0/24
+--------------------------------------------------------------------------------
+Purpose: General business operations, Active Directory, user workstations.
+
+Components:
+  - Domain Controller:    DC01.tsg-internal.lab  10.0.1.6
+                          AD DS, DNS, DHCP, Group Policy for TSG-INTERNAL.LAB
+  - Client Workstation 1: client-1.tsg-internal.lab  10.0.1.10
+  - Client Workstation 2: client-2.tsg-internal.lab  10.0.1.11
+  - Client Workstation 3: client-3.tsg-internal.lab  10.0.1.12
+
+Access Pattern Note (NEW in v3.0):
+  Corporate clients NO LONGER have a direct path to the Restricted Network.
+  Vault and SQL access is performed exclusively via the Privileged Access
+  tier (see 2.4) -- corp users connect to Apache Guacamole at
+  https://guac.tsg-internal.lab:8080 and broker an RDP session into a PAW.
+
+
+2.4 PRIVILEGED ACCESS (PAW) - 10.0.4.0/24
+--------------------------------------------------------------------------------
+Purpose: Hardened, audited access tier between Corporate and Restricted.
+        Models the Strongroom Trust custody access pattern: every interaction
+        with HNW vault data must occur from a managed, observed terminal.
+
+Components:
+  - Guacamole Gateway:   guac.tsg-internal.lab  10.0.4.6
+                         Apache Guacamole 1.5.5 (Docker compose: guacd +
+                         guacamole + Postgres). Brokers RDP from corp users
+                         into paw-1 / paw-2.
+                         Inbound: 8080/TCP (HTTPS) from corp + secops only.
+  - PAW 1:               paw-1.tsg-internal.lab  10.0.4.10
+                         Domain-joined Windows 10. RDP allowed only from
+                         10.0.4.6 (Guacamole gateway). All other RDP blocked
+                         by host firewall.
+  - PAW 2:               paw-2.tsg-internal.lab  10.0.4.11
+                         Domain-joined Windows 10. Same hardening as PAW 1.
+
+Access Audit:
+  - Guacamole logs every session start/end with user, source IP, target, duration.
+  - Windows event logs (Security 4624/4634/4648) on PAWs forwarded to SecOps.
+
+
+2.5 INNER FIREWALL: CORP <-> SECRET - fw-corp-secret
+--------------------------------------------------------------------------------
+Purpose: Stateful boundary between the corporate domain and the Restricted
+        vault data tier. Compliance: aligns with PCI-DSS req 1.2 segmentation
+        principles even though the regulated PCI estate lives in TSG Payments.
+
+Components:
+  - fw-corp-secret.tsg-internal.lab
+      Corp-side ENI:    10.0.1.251
+      Secret-side ENI:  10.0.2.250
+      Platform:         Ubuntu 22.04 + iptables (logged via rsyslog)
+      Allow lists:      PAW subnet (10.0.4.0/24) -> file server SMB (445)
+                        PAW subnet (10.0.4.0/24) -> sql server MSSQL (1433)
+                        DC (10.0.1.6) -> secret subnet (AD replication ports)
+      Default policy:   FORWARD DROP, with rate-limited LOG of denied flows
+
+
+2.6 RESTRICTED NETWORK (Secret Subnet) - 10.0.2.0/24
+--------------------------------------------------------------------------------
+Purpose: Vault data, escrow packages, SQL databases, sensitive file shares.
+        Highest security classification. Reachable from PAW tier only.
+
+Components:
+  - File Server:  file.tsg-internal.lab  10.0.2.6
+                  SMB shares: \\file\VaultData, \\file\Escrow
+                  DFS namespace root for vault replication
+                  Service accounts: svc_dfs, svc_vault
+  - SQL Server:   sql.tsg-internal.lab   10.0.2.7
+                  SSN platform database, vault metadata, audit logs
+                  Service accounts: sql_svc, sql_agt
+                  Instance: MSSQLSERVER (default)
+
+Access Control:
+  - No direct internet access
+  - Access ONLY from Privileged Access subnet (10.0.4.0/24) via fw-corp-secret
+  - DC replication to/from corp subnet is allowed for AD ports only
+  - All access logged on the host AND on fw-corp-secret
+
+
+2.7 SECOPS - 10.0.3.0/24
+--------------------------------------------------------------------------------
+Purpose: SOC investigation jump hosts (Linux + Windows bastions). Reaches all
+        zones by policy for incident-response work.
+
+
+3. FIREWALL RULES SUMMARY (consolidated)
+--------------------------------------------------------------------------------
+
+3.1 Edge firewall (10.0.0.5):
+  - Internet:80   -> web (10.0.0.6:80)
+  - Internet:443  -> web (10.0.0.6:443)
+  - Internet:25   -> mail (10.0.0.7:25)
+
+3.2 fw-dmz-corp (DMZ <-> Corp):
+  - corp -> DMZ:    80, 443, 25, 587, 993, 143
+  - DMZ  -> corp:   53, 88, 389, 636 (AD-bound web/mail integration)
+
+3.3 fw-corp-secret (Corp <-> Secret):
+  - PAW (10.0.4.0/24) -> file (10.0.2.6:445)
+  - PAW (10.0.4.0/24) -> sql  (10.0.2.7:1433, 1434/UDP)
+  - DC  (10.0.1.6)    -> secret (53, 88, 135, 389, 445, 464, 636, 3268, 3269, 5985-6)
+
+Blocked at fw-corp-secret:
+  - corp clients (10.0.1.10-12)  -> file/sql  (must use PAW via Guacamole)
+  - DMZ web (10.0.0.6)           -> sql       (legacy backend connection
+                                                 retired Q2 2026)
+
+
+4. VPN ACCESS
+--------------------------------------------------------------------------------
+- Site-to-site VPN: Wellington HQ to APAC regional deployment
+- Client VPN: Remote staff (ben, kate, henry.ngata, michael.huang) for admin
+- VPN endpoint: 10.0.0.5 (edge firewall)
+- Authentication: Certificate + AD credentials
+- Split tunnel: Corporate (10.0.1.0/24) only -- Restricted is reachable only
+  via PAW + Guacamole even from VPN.
+
+
+5. DNS & NAME RESOLUTION
+--------------------------------------------------------------------------------
+- Internal DNS hosted on DC01 (10.0.1.6)
+- Zone: tsg-internal.lab
+- All internal hosts resolve via AD-integrated DNS
+
+
+6. DIAGRAM (TEXT)
+--------------------------------------------------------------------------------
+                    [Internet]
+                         |
+                  [Edge Firewall 10.0.0.5]
+                    /              \
+            [DMZ 10.0.0.0/24]    [NAT 203.0.113.10]
+            web .6  mail .7
+                    |
+                    | (fw-dmz-corp 10.0.0.250 / 10.0.1.250)
+                    |
+            [Corporate 10.0.1.0/24]
+            DC .6   clients .10 .11 .12
+                    |
+                    | corp users open https://guac:8080
+                    v
+            [Privileged Access 10.0.4.0/24]
+            paw-1 .10   paw-2 .11   guac .6
+                    |
+                    | (fw-corp-secret 10.0.1.251 / 10.0.2.250)
+                    | PAW->SMB/MSSQL only
+                    v
+            [Restricted 10.0.2.0/24]
+            file .6   sql .7
+
+================================================================================
+Document Control: TSG-IT-NET-001 | Version 3.0
+Prepared by: Michael Huang, IT Infrastructure Manager
+Reviewed by: Renske de Vries, CISO
+Approved by: Henry Ngata, CTO
+================================================================================

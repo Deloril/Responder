@@ -1,0 +1,49 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0358
+Deposit Date: 2025-03-28
+Client: Asia-Pacific Trust Holdings
+Agreement: APTH-SSN-Escrow-2024-091
+Deposit Type: SSN Platform Configuration & Keys
+Classification: HIGHLY CONFIDENTIAL - Trust Infrastructure
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: b5c0d6e2f8a4b0c6d2e8f4a0b6c2d8e4f0a6b2c8d4e0f6a2b8c4d0e6f2
+Deposit Verified: 2025-03-28 09:15:33 NZDT
+Custodian: Dr. A. Kumar (TSG Senior Security Officer)
+
+SSN PLATFORM (Secure Storage Network)
+-------------------------------------
+Purpose: Multi-tenant secure document storage
+Compliance: SOC 2 Type II, ISO 27001
+Regions: NZ, AU, SG
+
+CONFIGURATION ESCROW
+--------------------
+  - SSN core platform configuration
+  - Tenant isolation key mappings
+  - Encryption key hierarchy (KEK/DEK)
+  - HSM partition assignments
+  - Access control policy definitions
+
+KEY MATERIAL (Wrapped)
+----------------------
+  APTH-SSN-MASTER-KEK   | AES-256 | Root key
+  APTH-SSN-TENANT-KEKs  | Per-tenant | 47 active
+  APTH-SSN-SIG-KEY      | RSA-4096 | Platform signing
+  APTH-SSN-AUDIT-KEY    | HMAC-SHA256 | Audit integrity
+
+CONFIGURATION FILES (Encrypted)
+-------------------------------
+  ssn-platform.yml      | SHA-256: 7c3e9a1f5b8d2e6a0c4f8b2d6e0a4c8f2b6
+  ssn-tenant-mapping   | SHA-256: 8d4f0b2a6c9e3b7d1f5a9c3e7b1d5f9a3
+  ssn-hsm-config       | SHA-256: 9e5a1c3b7d0f4a8e2c6b0d4f8a2e6c0b4
+
+--------------------------------------------------------------------------------
+Release Conditions: Key compromise, Platform failure, Regulatory requirement
+Compliance: APTH Trust Framework, Reserve Bank guidelines
+Next Key Audit: 2025-06-28
+================================================================================

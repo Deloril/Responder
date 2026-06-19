@@ -1,0 +1,52 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0328
+Deposit Date: 2025-03-06
+Client: Skyline Aviation NZ Ltd
+Agreement: SANZ-Flight-Escrow-2024-091
+Deposit Type: Flight Management System Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: 8d3f5b0c2e7a9d1f4b6c8e0a2d4f6b8c0e2a4d6f8b0c2e4a6d8f0b2c4e6a8
+Deposit Verified: 2025-03-06 11:45:33 UTC
+Custodian: R. Chen (TSG Aviation Specialist)
+Classification: SENSITIVE - Aviation Safety Critical
+
+FLIGHT MANAGEMENT SYSTEM DEPOSIT
+--------------------------------
+System: Skyline FMS v4.2
+Vendor: AeroSoft Solutions (escrow beneficiary)
+Last Release: 2025-02-15
+Build: SANZ-FMS-2025.02.4521
+
+SOURCE REPOSITORIES
+-------------------
+  1. skyline-fms-core
+     SHA-256: 2a4c6e8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4
+     File Count: 3,421 | Purpose: Core FMS logic
+     
+  2. skyline-nav-database
+     SHA-256: 3b5d7f9a1c3e5b7d9f1a3c5e7b9d1f3a5c7e9b1d3f5a7c9e1b3d5f7a9c1e3b5
+     File Count: 892 | Purpose: Navigation waypoint processor
+     
+  3. skyline-weight-balance
+     SHA-256: 4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4
+     File Count: 567 | Purpose: W&B calculations
+     
+  4. skyline-flight-planning
+     SHA-256: 5d7f9b1d3f5a7c9e1b3d5f7a9c1e3b5d7f9a1c3e5b7d9f1a3c5e7b9d1f3a5
+     File Count: 1,234 | Purpose: Route planning engine
+
+CERTIFICATION RECORDS
+--------------------
+  CAA NZ Type Certificate: Pending validation
+  DO-178C Design Assurance: Level C
+  Last Safety Audit: 2025-01-20
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor failure, Safety certification lapse, Mutual agreement
+Next Verification: 2025-06-06
+================================================================================

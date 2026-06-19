@@ -1,0 +1,103 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+SINGAPORE OFFICE SETUP PROJECT PLAN
+Project Sponsor: Henry Ngata (CTO)
+Project Manager: Jennifer Li
+Version: 2.1 | Date: 3 February 2026
+================================================================================
+
+PROJECT OVERVIEW
+----------------
+Establishment of The Secrets Group's first Asia-Pacific hub office in Singapore
+to serve growing demand from regional financial services and technology clients.
+The office will provide sales, client services, and technical support for the
+SSN platform across Singapore, Malaysia, Indonesia, and Hong Kong markets.
+
+BUDGET: SGD 850,000
+TIMELINE: January 2026 - June 2026 (6 months)
+
+MILESTONES & TIMELINE
+---------------------
+
+M1: Lease Signed (Target: 31 Jan 2026) - COMPLETED
+- Location: Marina Bay Financial Centre, Tower 2, Level 18
+- Floor area: 420 sqm
+- Lease term: 5 years with 2-year break option
+- Responsible: Jennifer Li, Hemi Tama
+
+M2: Fit-Out & Build (Target: 28 Feb 2026)
+- Interior design and contractor selection
+- Partitioning: 4 meeting rooms, 1 boardroom, open plan for 25 workstations
+- Secure storage room for physical escrow materials
+- Responsible: Jennifer Li
+- Budget: SGD 280,000
+
+M3: IT Infrastructure (Target: 15 Mar 2026)
+- Network connectivity: dual fibre, 1Gbps committed
+- Domain: TSG-INTERNAL.LAB (Singapore site)
+- VoIP integration with Wellington HQ
+- Secure vault access infrastructure
+- Responsible: Michael Huang, Wiremu Sio
+- Budget: SGD 95,000
+
+M4: Staff Recruitment (Target: 30 Apr 2026)
+- Country Manager (1)
+- Client Success Managers (2)
+- Technical Support Engineers (2)
+- Office Administrator (1)
+- Responsible: Sophie Patel (HR), Ava Phan (Technical screening)
+
+M5: Regulatory Approvals (Target: 31 May 2026)
+- Monetary Authority of Singapore (MAS) notification
+- Personal Data Protection Act (PDPA) compliance review
+- Escrow service licensing verification
+- Responsible: Jennifer Li, Sophie Patel
+
+M6: Soft Launch (Target: 15 Jun 2026)
+- Office operational
+- Client onboarding for Singapore-based clients
+- Marketing launch event
+- Responsible: Jennifer Li, Henry Ngata
+
+BUDGET BREAKDOWN
+----------------
+| Category              | Amount (SGD) | Notes                    |
+|-----------------------|--------------|--------------------------|
+| Lease (6 months)       | 185,000      | Pro-rated first period   |
+| Fit-out               | 280,000      | Includes secure room     |
+| IT Infrastructure     | 95,000       | Network, hardware        |
+| Furniture & FF&E      | 120,000      | Workstations, meeting    |
+| Legal & Regulatory    | 45,000       | MAS, PDPA, contracts     |
+| Recruitment           | 85,000       | Agency, relocation       |
+| Contingency (10%)     | 40,000       |                          |
+| TOTAL                 | 850,000      |                          |
+
+RESPONSIBLE PERSONS
+-------------------
+- Project Sponsor: Henry Ngata (CTO)
+- Project Manager: Jennifer Li
+- IT Lead: Michael Huang
+- HR/Recruitment: Sophie Patel
+- Legal/Compliance: Sophie Patel
+- Finance: Liam Jones
+
+RISK REGISTER
+-------------
+| ID  | Risk                          | Probability | Impact | Mitigation                    |
+|-----|-------------------------------|-------------|--------|-------------------------------|
+| R1  | Lease negotiation delays      | Low         | High   | Alternative sites identified  |
+| R2  | MAS approval timeline          | Medium      | High   | Early engagement, legal support|
+| R3  | Recruitment market competition | Medium     | Medium | Competitive packages, NZ secondment|
+| R4  | Fit-out cost overrun           | Medium      | Medium | Fixed-price contract, 10% contingency|
+| R5  | Supply chain (IT equipment)    | Low         | Medium | Order 8 weeks ahead of need   |
+
+COMMUNICATION PLAN
+------------------
+- Weekly project status to Henry Ngata
+- Fortnightly steering committee (Henry, Jennifer, Liam)
+- Monthly update to TSG Board
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

@@ -1,0 +1,114 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TSG-INTERNAL.LAB
+                    WELCOME PACK - MERIDIAN FINANCIAL GROUP LTD
+                    Digital Escrow & Secret Custodianship Services
+================================================================================
+
+Document Control: CLIENT CONFIDENTIAL
+Account Opened: 15 November 2025 | Account Reference: TSG-MFG-2025-034
+
+--------------------------------------------------------------------------------
+WELCOME TO THE SECRETS GROUP
+--------------------------------------------------------------------------------
+
+Dear Meridian Financial Group Ltd,
+
+On behalf of The Secrets Group, we are delighted to welcome you as a valued
+client. We look forward to supporting your escrow and custodianship requirements
+with the highest standards of security and service.
+
+--------------------------------------------------------------------------------
+YOUR ACCOUNT MANAGEMENT TEAM
+--------------------------------------------------------------------------------
+
+Account Manager: Leilani Kumar
+Email: leilani.kumar@tsg-internal.lab
+Direct Line: +64 4 499 2847
+Office: Wellington Headquarters, Level 12, 88 The Terrace
+
+Leilani will be your primary point of contact for all account matters, including
+deposits, releases, billing enquiries, and service modifications. She is available
+Monday to Friday, 8:30 AM - 5:30 PM NZST.
+
+--------------------------------------------------------------------------------
+VAULT ACCESS PROCEDURES
+--------------------------------------------------------------------------------
+
+Your materials will be held in our Wellington Tier III certified vault facility.
+
+Standard Access Hours: Monday - Friday, 9:00 AM - 4:30 PM NZST
+(Excluding NZ public holidays)
+
+Access Request Process:
+1. Submit access request via secure portal (minimum 24 hours notice for physical)
+2. Or contact Leilani Kumar for expedited arrangements
+3. Authorized signatories must present government-issued photo ID
+4. All access is logged and audit trail maintained for 7 years
+
+Remote Access: Full portal access available 24/7 for digital materials.
+
+--------------------------------------------------------------------------------
+EMERGENCY CONTACT NUMBERS
+--------------------------------------------------------------------------------
+
+Account Manager (Leilani Kumar):     +64 4 499 2847
+TSG Client Services (24/7):         +64 800 882 474
+Wellington Vault Facility:           +64 4 499 2800
+Security Incident Hotline:           +64 4 499 2899
+
+--------------------------------------------------------------------------------
+PORTAL LOGIN DETAILS
+--------------------------------------------------------------------------------
+
+Portal URL: https://portal.tsg-internal.lab/meridian-financial
+
+Your temporary credentials have been sent via separate secure channel.
+Username: [Sent separately]
+Temporary Password: [Sent separately]
+
+IMPORTANT: You must change your password on first login. Multi-factor
+authentication is required - please configure within 7 days of first access.
+
+--------------------------------------------------------------------------------
+SERVICE LEVEL AGREEMENT SUMMARY
+--------------------------------------------------------------------------------
+
+Deposit Processing:        Within 2 business days of receipt
+Release Processing:        Within 5 business days (standard) / 24 hours (expedited)
+Portal Availability:       99.5% uptime (excluding scheduled maintenance)
+Support Response:          Within 4 business hours (Priority 1)
+Billing Cycle:             Monthly in arrears
+
+Full SLA document attached separately. Service credits apply for breaches.
+
+--------------------------------------------------------------------------------
+FIRST DEPOSIT SCHEDULED
+--------------------------------------------------------------------------------
+
+Your first deposit has been scheduled for: 2 December 2025
+
+Deposit Type: Source code escrow - Meridian Core Banking Platform v4.2
+Estimated Volume: 2.4 TB (encrypted)
+Delivery Method: Secure courier / Encrypted upload
+
+Leilani will contact you one week prior to confirm arrangements and provide
+deposit instructions.
+
+--------------------------------------------------------------------------------
+ADDITIONAL INFORMATION
+--------------------------------------------------------------------------------
+
+Our offices: Wellington (HQ), Auckland, Christchurch, Sydney, Melbourne, Singapore
+Client portal support: support@tsg-internal.lab
+Documentation: All terms, policies, and procedures available in client portal
+
+Should you have any questions, please do not hesitate to contact Leilani.
+
+Welcome aboard.
+
+The Secrets Group
+Wellington, New Zealand
+
+================================================================================
+                    END OF DOCUMENT
+================================================================================

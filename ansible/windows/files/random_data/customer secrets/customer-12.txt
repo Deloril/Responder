@@ -1,0 +1,47 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0335
+Deposit Date: 2025-03-07
+Client: Greenstone Energy Ltd
+Agreement: GEL-SCADA-Escrow-2024-087
+Deposit Type: SCADA System Credentials & Firmware Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: 9e4a6c1d3f8b0e2a5c7d9f1b3e5a7c9d1f3b5e7a9c1d3f5b7e9a1c3d5f7b9
+Deposit Verified: 2025-03-07 09:18:42 UTC
+Custodian: M. Patel (TSG Industrial Systems Specialist)
+Classification: CRITICAL - Critical Infrastructure
+
+SCADA SYSTEM CREDENTIALS
+------------------------
+System: Greenstone Grid Control v3.8
+Vendor: PowerGrid Solutions
+Environment: Production (Geothermal + Wind assets)
+
+CREDENTIAL VAULT (Encrypted)
+----------------------------
+  SCADA Admin: ************************ (rotated quarterly)
+  Historian DB: gel_historian_prod (connection string in vault)
+  RTU Master: 192.168.100.10 | Credential ID: GEL-RTU-001
+  HMI Access: GEL-HMI-ADMIN-2025
+  VPN Gateway: Greenstone-SiteVPN | Pre-shared key escrowed
+
+FIRMWARE ESCROW
+---------------
+  RTU Firmware: GEL-RTU-FW-3.2.1.bin | SHA-256: a7f2c4e91b3d5f7a9c0e2b4d6f8a1c3e
+  PLC Images: 12 units | Manifest in GEL-PLC-Manifest-2025.pdf
+  HMI Runtime: GEL-HMI-Runtime-3.8.4 | Build: 2025-01-12
+
+SITE REFERENCES
+---------------
+  Kawerau Geothermal: Site A | 47 RTUs
+  Tararua Wind Farm: Site B | 23 RTUs
+  Manapouri Hydro: Monitoring only | 12 RTUs
+
+--------------------------------------------------------------------------------
+Release Conditions: Vendor insolvency, System failure, Emergency recovery
+Next Credential Rotation: 2025-06-07
+================================================================================

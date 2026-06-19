@@ -1,0 +1,86 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+SSN PLATFORM PRODUCT ROADMAP 2026
+Document Owner: Henry Ngata (CTO)
+Version: 1.0 | Date: 15 January 2026
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This roadmap outlines the strategic direction for the Secure Secret Notation (SSN)
+platform throughout 2026. The SSN platform is TSG's core digital escrow and
+custodianship technology, serving clients across New Zealand, Australia, and
+the Asia-Pacific region.
+
+CURRENT STATE (Q4 2025)
+-----------------------
+- SSN Platform v2.4 in production across all regions
+- Single-region architecture with Wellington primary data centre
+- Web portal and API v2 (REST) serving 340+ enterprise clients
+- Manual compliance reporting processes
+- Audit logging to on-premises SIEM
+- Mobile access via responsive web only (no native app)
+
+PLANNED FEATURES & TIMELINE
+---------------------------
+
+Q1 2026: API v3 Development
+- RESTful API v3 with OpenAPI 3.0 specification
+- GraphQL endpoint for flexible querying
+- Backward compatibility layer for API v2 clients (18-month deprecation)
+- Owner: Lucas Kang, Jack Zhou
+
+Q2 2026: Multi-Region Replication
+- Active-active replication between Wellington and Sydney
+- Sub-100ms cross-region sync for critical vault metadata
+- Disaster recovery RTO: 4 hours, RPO: 15 minutes
+- Owner: Kaimana Zhang, Michael Huang
+
+Q2 2026: Audit Dashboard
+- Real-time audit event visualisation
+- Role-based access to audit data
+- Export to CSV/JSON for compliance submissions
+- Owner: Hana Wang, Ava Phan
+
+Q3 2026: Mobile Client (iOS & Android)
+- Native mobile apps for vault access and release requests
+- Biometric authentication support
+- Offline viewing of cached release documentation
+- Owner: Oliver Anderson, Satoshi Tuala
+
+Q3 2026: Automated Compliance Reporting
+- Automated generation of SOC 2, ISO 27001 evidence packs
+- Scheduled compliance report delivery to clients
+- Integration with regulatory submission portals
+- Owner: Sophie Patel, Jennifer Li
+
+Q4 2026: Platform Consolidation & Optimisation
+- Performance tuning based on Q1-Q3 metrics
+- Technical debt reduction
+- Documentation and training materials update
+
+RESOURCE REQUIREMENTS
+---------------------
+- Development: 4 FTE (2 backend, 1 frontend, 1 mobile) - Lucas, Jack, Oliver, Satoshi
+- DevOps/Infrastructure: 1.5 FTE - Kaimana, Michael (shared)
+- QA: 1 FTE - Hemi Tama
+- Product/Compliance: 0.5 FTE - Sophie Patel
+
+DEPENDENCIES
+------------
+- Cloud Migration Phase 2 completion (Azure) by end Q1 2026
+- Data centre refresh approval and procurement (see Data-Centre-Refresh-RFP-2026)
+- Singapore office operational for Asia-Pacific support (target: June 2026)
+
+RISK REGISTER
+-------------
+| Risk                    | Mitigation                              |
+|-------------------------|-----------------------------------------|
+| API v3 adoption lag     | Extended v2 support, migration tooling  |
+| Replication latency     | POC in Q1, fallback to async if needed  |
+| Mobile app store delays | Early submission, compliance pre-check  |
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

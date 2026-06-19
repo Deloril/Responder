@@ -1,0 +1,140 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              WELLINGTON VAULT - INVENTORY REGISTER
+                    Calendar Year 2025
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington Vault | TSG-INTERNAL.LAB
+================================================================================
+
+INVENTORY SUMMARY
+--------------------------------------------------------------------------------
+Total Items Held:       34
+Source Code Escrow:     12
+Encryption Keys:        8
+Sealed Documents:       7
+Digital Media:          5
+Other:                  2
+--------------------------------------------------------------------------------
+
+
+SOURCE CODE ESCROW PACKAGES
+================================================================================
+
+Client Ref      Deposit Date   Description                              Retention
+--------------------------------------------------------------------------------
+PTL-2024-07     15-Jan-2025   Pacific Technologies Ltd - Meridian Core  10 years
+                              Full source, build scripts, documentation
+                              Version 4.2.1 | Vendor: Meridian Software
+
+NCF-2025-03     05-Nov-2025   Northern Capital Finance - Trading Engine  7 years
+                              C#/.NET platform, SQL schemas
+                              Version 2.0 | Vendor: FinTech Solutions AU
+
+DCM-2023-11     22-Mar-2024   Datacom - Customer Management System      5 years
+                              Java/Spring, Oracle backend
+                              Version 8.4 | Vendor: DCM Holdings
+
+APT-2024-09     12-Sep-2024   Asia-Pacific Trust - Wealth Platform      10 years
+                              Python/Django, PostgreSQL
+                              Version 3.1 | Vendor: APT Digital
+
+SPK-2025-01     18-Feb-2025   Spark NZ - Network Provisioning Suite      7 years
+                              Go microservices, Kubernetes manifests
+                              Version 1.5 | Vendor: Spark Internal
+
+MRL-2024-12     03-Nov-2025   Meridian Energy - Billing Integration      5 years
+                              C#, Azure Functions, Cosmos DB
+                              Version 2.2 | Vendor: EnergySoft Ltd
+
+XERO-2023-08    14-Aug-2023   Xero - Payroll Module Extension            5 years
+                              PHP/Laravel, MySQL
+                              Version 1.9 | Vendor: PayTech NZ
+
+FMA-2024-06     20-Jun-2024   FMA - Regulatory Reporting Engine          10 years
+                              Python, Pandas, secure enclave
+                              Version 4.0 | Vendor: RegTech Partners
+
+VOD-2025-02     28-Jan-2025   Vodafone NZ - CRM Integration Layer        7 years
+                              Node.js, MongoDB
+                              Version 1.2 | Vendor: Vodafone Internal
+
+ANZ-2024-11     11-Nov-2024   ANZ - Mobile Banking SDK                   7 years
+                              Swift/Kotlin, API specs
+                              Version 3.4 | Vendor: ANZ Digital
+
+WGT-2025-04     22-Apr-2025   Wellington City Council - Rates System     5 years
+                              .NET Core, SQL Server
+                              Version 2.1 | Vendor: CivicTech Ltd
+
+CHC-2024-05     15-May-2024   Christchurch Airport - Baggage System      7 years
+                              C++, legacy integration
+                              Version 6.2 | Vendor: Airport Systems Inc
+--------------------------------------------------------------------------------
+
+
+ENCRYPTION KEYS & CRYPTOGRAPHIC MATERIALS
+================================================================================
+
+Client Ref      Deposit Date   Description                              Retention
+--------------------------------------------------------------------------------
+K-8923          01-Nov-2025    Master encryption key - Vault at-rest      Indefinite
+K-8847          12-Mar-2024    SSN platform HSM backup key               Indefinite
+K-9012          18-Jun-2025    Client key escrow - Pacific Technologies  Release event
+K-9156          22-Aug-2025    TLS certificate private key - web portal  2 years
+K-9201          05-Sep-2025    Database encryption key - vault DB        Indefinite
+K-9288          10-Oct-2025    Backup encryption key - offsite           Indefinite
+K-9302          28-Oct-2025    Key ceremony split #1 (of 5)              Indefinite
+K-9303          28-Oct-2025    Key ceremony split #2 (of 5)              Indefinite
+--------------------------------------------------------------------------------
+
+
+SEALED DOCUMENTS
+================================================================================
+
+Client Ref      Deposit Date   Description                              Retention
+--------------------------------------------------------------------------------
+MRL-112         01-Nov-2025    Meridian - Board resolution (sealed)      7 years
+APT-889         11-Nov-2025    Asia-Pacific Trust - Shareholder agreement 10 years
+LEG-2024-44     14-Apr-2024    Legal - M&A due diligence package        7 years
+FMA-2023-19     09-Sep-2023    FMA - Compliance attestation             5 years
+PTL-ERR-019     08-Nov-2025    Pacific Technologies - Release authority  Permanent
+WGT-2025-11     15-Nov-2025    Wellington Council - Tender documents     3 years
+SPK-2024-88     22-Oct-2024    Spark - Vendor contract (confidential)    7 years
+--------------------------------------------------------------------------------
+
+
+DIGITAL MEDIA
+================================================================================
+
+Client Ref      Deposit Date   Description                              Retention
+--------------------------------------------------------------------------------
+DM-4451          03-Nov-2025   Encrypted USB - Financial models         5 years
+DM-4522          17-Jul-2025   HDD - Legacy system migration backup     3 years
+DM-4601          08-Sep-2025   SSD - Source code archive (pre-escrow)    7 years
+DM-4615          01-Oct-2025   Tape - Annual compliance snapshot        5 years
+DM-4628          20-Oct-2025   Encrypted USB - Key ceremony recordings   Indefinite
+--------------------------------------------------------------------------------
+
+
+OTHER ITEMS
+================================================================================
+
+Client Ref      Deposit Date   Description                              Retention
+--------------------------------------------------------------------------------
+KEY-CEREMONY-04 15-Nov-2025    Key ceremony procedure documentation      Permanent
+AUDIT-2025-Q3   30-Sep-2025    Q3 2025 external audit working papers    7 years
+--------------------------------------------------------------------------------
+
+
+RETENTION POLICY NOTES
+--------------------------------------------------------------------------------
+- Source code escrow: Per client contract (typically 5-10 years post-termination)
+- Encryption keys: Indefinite until release event or key rotation
+- Sealed documents: Per document type (legal requirement)
+- Digital media: Per client agreement
+- All items subject to TSG Retention Policy v2.1
+
+================================================================================
+Document Control: TSG-VAULT-2025-INV-001 | Confidential
+================================================================================

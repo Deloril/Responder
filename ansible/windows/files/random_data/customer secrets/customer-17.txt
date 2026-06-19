@@ -1,0 +1,46 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0378
+Deposit Date: 2025-03-12
+Client: NovaTech Solutions Pte Ltd (Singapore)
+Agreement: NTS-MultiRegion-Escrow-2024-102
+Deposit Type: Multi-Region Deployment Credentials
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: c2b7e9d1f3a5c7e9b1d3f5a7c9e1b3d5f7a9c1e3b5d7f9a1c3e5b7d9f1
+Deposit Verified: 2025-03-12 13:45:22 UTC
+Custodian: T. Ngata (TSG Cloud Specialist)
+
+MULTI-REGION CREDENTIAL VAULT
+-----------------------------
+Deployment: NovaTech Global Platform
+Regions: APAC (Primary) | EU (GDPR) | US (FedRAMP)
+
+AWS CREDENTIALS (Per Region)
+----------------------------
+  ap-southeast-1 (Singapore): NTS-SG-PROD-ROLE | Account: 391827465432
+  ap-southeast-2 (Sydney):   NTS-AU-PROD-ROLE | Account: 492817364521
+  eu-west-1 (Ireland):      NTS-EU-PROD-ROLE | Account: 593827465630
+  us-east-1 (Virginia):     NTS-US-PROD-ROLE | Account: 694827465741
+
+AZURE CREDENTIALS
+-----------------
+  Tenant: novatech-solutions.onmicrosoft.com
+  Subscription SG: NTS-SG-AZURE-PROD
+  Subscription EU: NTS-EU-AZURE-PROD (GDPR boundary)
+  Service Principal: nts-deploy-sp (secret in vault)
+
+CROSS-REGION SECRETS
+--------------------
+  Database Encryption Keys: Per-region KEK (3 keys escrowed)
+  API Gateway Certs: *.novatech.sg, *.novatech.com.au
+  CDN Tokens: CloudFront signed URLs, Azure CDN
+  Inter-region Sync: Redis/Aurora Global credentials
+
+--------------------------------------------------------------------------------
+Release Conditions: Regional failure, DR activation, Acquisition
+Next Credential Audit: 2025-06-12
+================================================================================

@@ -1,0 +1,101 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              CLIENT PIPELINE REPORT - Q4 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Report Ref: TSG-SALES-2025-Q4-002
+Prepared by: Sales Operations
+Date: 28 November 2025
+Period: 1 October - 30 November 2025
+Classification: Commercial in Confidence
+================================================================================
+
+
+PIPELINE SUMMARY
+--------------------------------------------------------------------------------
+Stage                  Count    Total Value (NZD)    Weighted Value
+--------------------------------------------------------------------------------
+Initial Contact            3           420,000            42,000
+Proposal Sent              4           890,000           356,000
+Negotiation                3           680,000           476,000
+Verbal Commitment          2           485,000           436,000
+--------------------------------------------------------------------------------
+TOTAL                     12         2,475,000         1,310,000
+
+
+DETAILED PIPELINE
+--------------------------------------------------------------------------------
+
+INITIAL CONTACT (Probability: 10%)
+--------------------------------------------------------------------------------
+Company                    Est. Value   Expected Close   Relationship Manager
+--------------------------------------------------------------------------------
+Auckland FinTech Ventures    120,000    Jan 2026        James Chen
+Meridian Capital Partners    180,000    Feb 2026        Sarah Mitchell
+Pacific Legal Holdings      120,000    Mar 2026        James Chen
+--------------------------------------------------------------------------------
+
+
+PROPOSAL SENT (Probability: 40%)
+--------------------------------------------------------------------------------
+Company                    Est. Value   Expected Close   Relationship Manager
+--------------------------------------------------------------------------------
+Wellington Software Co      245,000    Dec 2025        Sarah Mitchell
+Canterbury AgriTech Ltd     195,000    Jan 2026        James Chen
+Trans-Tasman Logistics      220,000    Jan 2026        Sarah Mitchell
+Southern Cross Ventures     230,000    Feb 2026        James Chen
+--------------------------------------------------------------------------------
+
+
+NEGOTIATION (Probability: 70%)
+--------------------------------------------------------------------------------
+Company                    Est. Value   Expected Close   Relationship Manager
+--------------------------------------------------------------------------------
+NZ Government Digital       320,000    Dec 2025        Sarah Mitchell
+ASX FinServ Solutions      240,000    Jan 2026        Leilani Kumar (SG)
+DataVault Holdings         120,000    Dec 2025        James Chen
+--------------------------------------------------------------------------------
+
+
+VERBAL COMMITMENT (Probability: 90%)
+--------------------------------------------------------------------------------
+Company                    Est. Value   Expected Close   Relationship Manager
+--------------------------------------------------------------------------------
+Wellington Software Co      245,000    Dec 2025        Sarah Mitchell
+NZ Government Digital       240,000    Dec 2025        Sarah Mitchell
+--------------------------------------------------------------------------------
+Note: Wellington Software Co and NZ Government Digital have both indicated
+verbal commitment; contracts in legal review. Expected to close before 31 Dec.
+
+
+PIPELINE NOTES
+--------------------------------------------------------------------------------
+- NZ Government Digital: RFP won; contract with DIA in final sign-off. Fetu
+  Yoon leading on custody requirements. High confidence for December close.
+
+- ASX FinServ Solutions: First AU enterprise prospect. Leilani driving from
+  Singapore. Requires MAS-compliant vault option; Henry confirming capability.
+
+- Wellington Software Co: Escrow for M&A transaction. Legal due diligence
+  complete; awaiting counterparty execution.
+
+- Southern Cross Ventures: VC fund requiring escrow for portfolio company
+  acquisitions. Multi-year commitment under discussion.
+
+
+RELATIONSHIP MANAGER ALLOCATION
+--------------------------------------------------------------------------------
+Sarah Mitchell (Wellington):     6 prospects    NZD 1,460,000 weighted
+James Chen (Auckland):           4 prospects    NZD   565,000 weighted
+Leilani Kumar (Singapore):       2 prospects    NZD   285,000 weighted
+
+
+QUARTERLY TARGETS
+--------------------------------------------------------------------------------
+Q4 2025 New Business Target:    NZD 800,000
+Pipeline Weighted Value:        NZD 1,310,000
+Conversion Required:            61% (to meet target)
+
+================================================================================
+Document Control: TSG-SALES-2025-Q4-002 | Next Report: 31 December 2025
+================================================================================

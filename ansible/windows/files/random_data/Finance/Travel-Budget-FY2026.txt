@@ -1,0 +1,106 @@
+================================================================================
+        THE SECRETS GROUP (TSG) - TRAVEL BUDGET FY2026
+================================================================================
+Domain: TSG-INTERNAL.LAB
+Financial Year: 1 April 2026 - 31 March 2027
+Prepared by: Oliver Anderson, Operations
+Approved: Henry Ngata, CEO | Sarah Wang, CFO
+Budget approved: 15 December 2025
+================================================================================
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+Total Travel Budget FY2026: $285,000 NZD
+Primary drivers: Singapore office setup, client relationship management,
+regional expansion, compliance & industry conferences.
+
+--------------------------------------------------------------------------------
+BUDGET ALLOCATION BY DEPARTMENT
+--------------------------------------------------------------------------------
+Department                  Budget (NZD)    % of Total    Key Activities
+--------------------------------------------------------------------------------
+Executive                   $65,000         22.8%         Board, investor, strategic
+Sales & Client Relations    $72,000         25.3%         Client visits, demos
+Vault Operations            $18,000          6.3%         Site audits, training
+IT & Infrastructure         $28,000          9.8%         Vendor, security events
+Legal & Compliance          $35,000         12.3%         Regulatory, audits
+Singapore Office Setup      $67,000         23.5%         Office launch, staffing
+--------------------------------------------------------------------------------
+TOTAL                       $285,000        100.0%
+--------------------------------------------------------------------------------
+
+REGIONAL BREAKDOWN
+--------------------------------------------------------------------------------
+Domestic (NZ)               $95,000         33.3%
+  - Wellington-Auckland: Primary corridor ($45,000)
+  - Wellington-Christchurch: Quarterly ($18,000)
+  - Other domestic: Client sites ($32,000)
+
+Australia                   $58,000         20.4%
+  - Sydney: Client visits, Meridian, APAC Trust ($28,000)
+  - Melbourne: Client visits, partner meetings ($22,000)
+  - Brisbane: Potential client ($8,000)
+
+Singapore & APAC            $92,000         32.3%
+  - Singapore office: Setup, launch, staffing ($67,000)
+  - Hong Kong: Prospective clients ($15,000)
+  - Regional conferences ($10,000)
+
+International (Other)       $40,000         14.0%
+  - ISO 27001 recertification (UK auditor) ($12,000)
+  - Industry conferences (US/UK) ($18,000)
+  - Strategic partner visits ($10,000)
+--------------------------------------------------------------------------------
+
+SINGAPORE OFFICE SETUP - DETAILED BUDGET
+--------------------------------------------------------------------------------
+Item                                    Budget      Notes
+--------------------------------------------------------------------------------
+Leadership travel (Henry, Sarah)        $22,000     4 trips for setup/launch
+Staff relocation (2 positions)          $18,000     Hemi Tama, Kate - relocation
+Client launch event                     $12,000     December 2026 target
+Regulatory meetings (MAS, ACRA)          $8,000      Compliance requirements
+Office fit-out oversight                $4,000      Oliver Anderson visits
+Contingency                             $3,000      5% buffer
+--------------------------------------------------------------------------------
+Subtotal                                $67,000
+--------------------------------------------------------------------------------
+
+QUARTERLY TRAVEL ALLOCATION
+--------------------------------------------------------------------------------
+Q1 (Apr-Jun)     Q2 (Jul-Sep)     Q3 (Oct-Dec)     Q4 (Jan-Mar)
+$68,000          $72,000          $78,000          $67,000
+
+Note: Q3 elevated due to Singapore office launch and year-end client visits.
+--------------------------------------------------------------------------------
+
+KEY TRIP CATEGORIES & POLICY
+--------------------------------------------------------------------------------
+1. Client Entertainment: Max $150/person for client meals; pre-approval required
+2. Conference Attendance: ISO 27001, FINTECH NZ, SIBOS - budgeted
+3. Economy class for domestic; Business for flights >6 hours
+4. Accommodation: Cap $350/night NZ, $400 AU, $450 Singapore
+5. Kate (EA) coordinates all executive travel; Oliver for operations
+--------------------------------------------------------------------------------
+
+APPROVED TRAVELERS & DELEGATIONS
+--------------------------------------------------------------------------------
+Unlimited (with CEO approval): Henry Ngata, Sarah Wang
+$5,000/trip: Charlotte Mata, Michael Latu, Leilani Kumar
+$3,000/trip: Department heads
+$2,000/trip: All other staff
+--------------------------------------------------------------------------------
+
+NOTES
+--------------------------------------------------------------------------------
+- Budget assumes 4% YoY travel cost inflation
+- Singapore expansion is strategic priority; budget may be supplemented
+- Client visit ROI tracked by Sales; target 3:1 return on travel spend
+- Carbon offset: $5,000 allocated for international flight offsets
+- Travel policy review: Due March 2026
+--------------------------------------------------------------------------------
+
+================================================================================
+Document version: 1.0 | Last updated: 15/12/2025
+Contact: oliver.anderson@tsg-internal.lab for travel bookings
+================================================================================

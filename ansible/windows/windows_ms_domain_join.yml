@@ -1,0 +1,15 @@
+---
+# Domain join + CrowdStrike for member servers.
+# Used by bastion_deploy_ansible_playbooks.sh after windows_ms_common.yml has already run
+# windows_common on these hosts in the background.
+
+- hosts: ms
+  gather_facts: yes
+  strategy: free
+  vars_files:
+    - ./vars/member_server.yml
+    - ./vars/domain.yml
+    - ./vars/domain_users_and_groups.yml
+  roles:
+    - windows_domain_member
+    - windows_crowdstrike

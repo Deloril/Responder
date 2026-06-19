@@ -1,0 +1,4 @@
+---
+# From Splunk attack_range
+
+- include_tasks: install_windows_dns.yml

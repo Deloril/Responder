@@ -1,0 +1,121 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              CLIENT TERMS OF SERVICE - 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Effective Date: 1 January 2025
+Version: 2025.1
+Classification: Client-Facing
+================================================================================
+
+These Terms of Service ("Terms") govern the use of digital escrow, custodianship,
+and related services ("Services") provided by The Secrets Group (TSG) Limited, a
+company incorporated in New Zealand with registered office at 42 Lambton Quay,
+Wellington 6011. By engaging TSG, you agree to these Terms.
+
+================================================================================
+1. SERVICE DESCRIPTION
+================================================================================
+
+TSG provides secure digital escrow and custodianship services including but not
+limited to: source code escrow, digital asset custody, confidential document
+storage, and release management. Services are delivered through TSG's certified
+vault infrastructure (ISO 27001, SOC 2 Type II) across offices in Wellington,
+Auckland, Christchurch, Sydney, Melbourne, and Singapore.
+
+================================================================================
+2. SERVICE LEVEL AGREEMENTS (SLAs)
+================================================================================
+
+2.1 Availability
+   - Platform availability: 99.9% uptime measured monthly (excluding scheduled
+     maintenance communicated 72 hours in advance)
+   - Vault access request response: Within 4 business hours during NZ business
+     hours (08:00-18:00 NZST, Monday-Friday)
+   - Release processing: Commenced within 2 business days of valid release
+     authorisation
+
+2.2 Service Credits
+   - Availability below 99.9%: 10% monthly fee credit per 0.1% below target
+   - Maximum service credit: 50% of applicable monthly fees
+   - Claims must be submitted within 30 days of the month in question
+
+================================================================================
+3. DATA RETENTION
+================================================================================
+
+3.1 Active Escrow: Retained for the duration of the escrow agreement plus 7
+    years following termination or release, unless shorter retention is
+    contractually agreed.
+
+3.2 Custodial Assets: Retained per client instructions; minimum 7 years for
+    regulated industries (financial services, healthcare).
+
+3.3 Audit Logs: Access logs, release authorisations, and security events
+    retained for 10 years for compliance and dispute resolution.
+
+================================================================================
+4. DESTRUCTION PROCEDURES
+================================================================================
+
+4.1 Upon expiry of retention period or upon client written instruction, TSG
+    shall destroy escrowed materials using NZS 5835:2015 compliant methods:
+    - Digital media: Cryptographic erasure (NIST SP 800-88) or physical
+      destruction (degaussing, shredding)
+    - Physical media: Cross-cut shredding or certified destruction facility
+    - Certificate of destruction provided within 14 days
+
+4.2 Emergency destruction may be performed upon court order, regulatory
+    directive, or mutual agreement. Documentation retained per Section 3.3.
+
+================================================================================
+5. INSURANCE
+================================================================================
+
+TSG maintains the following coverage (minimum limits):
+- Professional indemnity: NZD 5,000,000
+- Cyber liability: NZD 3,000,000
+- Crime/fidelity: NZD 2,000,000
+- General liability: NZD 2,000,000
+
+Evidence of insurance available upon written request. Clients may require
+additional insured status for specific engagements (additional fees apply).
+
+================================================================================
+6. INDEMNIFICATION
+================================================================================
+
+6.1 Client Indemnity: Client shall indemnify TSG against claims arising from:
+    (a) Client's breach of these Terms; (b) Client-provided materials containing
+    infringing or unlawful content; (c) Client's instructions for release or
+    destruction; (d) Client's use of released materials.
+
+6.2 TSG Indemnity: TSG shall indemnify Client against claims arising from:
+    (a) TSG's gross negligence or wilful misconduct; (b) Unauthorised access
+    to or release of escrowed materials due to TSG's failure to follow
+    documented procedures; (c) Breach of confidentiality by TSG personnel.
+
+6.3 Liability Cap: Except for fraud, wilful misconduct, or breaches of
+    confidentiality, each party's aggregate liability shall not exceed the
+    fees paid by Client in the 12 months preceding the claim, or NZD 500,000,
+    whichever is greater.
+
+================================================================================
+7. FEES AND PAYMENT
+================================================================================
+
+Fees as per executed Statement of Work. Invoicing monthly in arrears. Payment
+terms: 14 days from invoice date. Late payment: 1.5% per month or maximum
+rate permitted by law. TSG may suspend services after 30 days overdue.
+
+================================================================================
+8. GOVERNING LAW AND DISPUTES
+================================================================================
+
+These Terms are governed by the laws of New Zealand. Disputes shall be resolved
+by arbitration under the Arbitration Act 1996 (NZ), seated in Wellington.
+Contact: legal@tsg.co.nz | Sarah Wang, General Counsel
+
+================================================================================
+Document Control: TSG-LEGAL-2025-TOS-001 | Approved: Daniel Kemp, CEO
+================================================================================

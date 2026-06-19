@@ -1,0 +1,41 @@
+---
+# Pre-download SQL Server installation media.
+# Run this in the background during Phase B (domain join) so that
+# the ~1.5 GB CAB download completes before windows_sql_server.yml starts.
+
+- hosts: sql
+  gather_facts: no
+  vars:
+    mssql_installation_source: https://go.microsoft.com/fwlink/?linkid=853016
+    mssql_installation_path: C:\SQLInstall
+    mssql_temp_download_path: C:\Temp
+  tasks:
+
+  - name: Ensure temp directory is present
+    win_file:
+      path: "{{ mssql_temp_download_path }}"
+      state: directory
+
+  - name: Ensure install directory is present
+    win_file:
+      path: "{{ mssql_installation_path }}"
+      state: directory
+
+  - name: Check if SQL media already extracted
+    win_stat:
+      path: "{{ mssql_installation_path }}\\Media\\SETUP.EXE"
+    register: sql_media_ready
+
+  - name: Fetch SQL Media Downloader
+    win_get_url:
+      url: "{{ mssql_installation_source }}"
+      dest: "{{ mssql_temp_download_path }}\\SQLServer2017-SSEI-Dev.exe"
+    when: not sql_media_ready.stat.exists
+
+  - name: Download SQL Installation CABs (~1.5 GB)
+    win_shell: "{{ mssql_temp_download_path }}\\SQLServer2017-SSEI-Dev.exe /Action=Download /MediaPath={{ mssql_installation_path }} /MediaType=CAB /Quiet"
+    when: not sql_media_ready.stat.exists
+
+  - name: Extract installation media
+    win_shell: "{{ mssql_installation_path }}\\SQLServer2017-DEV-x64-ENU.exe /X:{{ mssql_installation_path }}\\Media /Q"
+    when: not sql_media_ready.stat.exists

@@ -1,0 +1,123 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              NON-DISCLOSURE AGREEMENT - TEMPLATE
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Template Reference: NDA-2025
+Effective: 1 January 2025
+Prepared by: Sarah Wang, Legal Counsel
+Classification: Internal Template - Confidential
+================================================================================
+
+NON-DISCLOSURE AGREEMENT
+
+This Non-Disclosure Agreement ("Agreement") is entered into between The Secrets
+Group (TSG) and the undersigned Recipient (employee, contractor, or consultant)
+in connection with the Recipient's engagement with TSG.
+
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+--------------------------------------------------------------------------------
+"Confidential Information" includes, but is not limited to:
+
+(a) All contents of TSG vaults, including escrow materials, source code,
+    cryptographic keys, and client-deposited assets;
+
+(b) Client data, client identities, contract terms, and business arrangements;
+
+(c) SSN Platform data, architecture, API specifications, and operational
+    procedures;
+
+(d) Internal policies, procedures, audit reports, and compliance documentation;
+
+(e) Financial information, pricing, and strategic plans;
+
+(f) Any information marked "Confidential" or which a reasonable person would
+    understand to be confidential given its nature and context.
+
+
+2. OBLIGATIONS OF RECIPIENT
+--------------------------------------------------------------------------------
+2.1 The Recipient shall hold all Confidential Information in strict confidence
+    and shall not disclose, reproduce, or use such information except as
+    necessary to perform duties for TSG.
+
+2.2 The Recipient shall use at least the same degree of care to protect
+    Confidential Information as the Recipient uses for their own confidential
+    information of like kind, but in no event less than reasonable care.
+
+2.3 Access to vault contents requires explicit authorisation from the Chief
+    Custodian Officer (Henry Ngata) or designated delegate. Unauthorised
+    access or attempted access is a material breach.
+
+
+3. EXCLUSIONS
+--------------------------------------------------------------------------------
+Confidential Information does not include information that:
+
+(a) Is or becomes publicly available through no fault of the Recipient;
+(b) Was rightfully in the Recipient's possession prior to disclosure;
+(c) Is independently developed without use of Confidential Information;
+(d) Is rightfully received from a third party without restriction.
+
+
+4. RETURN AND DESTRUCTION
+--------------------------------------------------------------------------------
+Upon termination of engagement or upon TSG's request, the Recipient shall
+promptly return or destroy all Confidential Information and certify in writing
+that such action has been completed. No copies may be retained.
+
+
+5. PENALTIES FOR BREACH
+--------------------------------------------------------------------------------
+5.1 Breach of this Agreement may result in:
+
+    (a) Immediate termination of employment or engagement;
+    (b) Disciplinary action up to and including dismissal;
+    (c) Civil liability for damages, including consequential losses;
+    (d) Injunctive relief to prevent further disclosure;
+    (e) Reporting to relevant authorities where the breach involves criminal
+        conduct (e.g., theft of trade secrets, unauthorised computer access).
+
+5.2 The Recipient acknowledges that breach may cause irreparable harm and that
+    TSG shall be entitled to seek equitable relief without proof of actual
+    damages.
+
+5.3 Breach involving vault contents or client data may trigger notification
+    obligations under the Privacy Act 2020 (NZ) and contractual obligations to
+    affected clients.
+
+
+6. TERM
+--------------------------------------------------------------------------------
+This Agreement remains in effect for the duration of the Recipient's engagement
+and for a period of five (5) years following termination. Obligations regarding
+trade secrets survive indefinitely until such information ceases to be a trade
+secret.
+
+
+7. GOVERNING LAW
+--------------------------------------------------------------------------------
+This Agreement is governed by the laws of New Zealand. Any disputes shall be
+subject to the exclusive jurisdiction of the courts of New Zealand.
+
+
+8. ACKNOWLEDGMENT
+--------------------------------------------------------------------------------
+By signing below, the Recipient acknowledges that they have read, understood,
+and agree to be bound by this Agreement. The Recipient further acknowledges
+receipt of TSG's Vault Access Policy, Code of Conduct, and relevant compliance
+policies.
+
+
+RECIPIENT SIGNATURE
+--------------------------------------------------------------------------------
+Name: _________________________________
+Role: _________________________________
+Date: _________________________________
+TSG Manager (witness): _________________
+
+
+================================================================================
+Document Control: TSG-LEG-NDA-2025 | Version 1.0 | Next review: 1 Jan 2026
+================================================================================

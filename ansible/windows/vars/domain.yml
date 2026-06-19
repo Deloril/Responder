@@ -1,0 +1,5 @@
+---
+# Domain variables
+domain_name: TSG-INTERNAL.LAB
+domain_name_short: TSG-INTERNAL
+domain_safe_mode_password: TSG_Int3rnal_

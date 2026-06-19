@@ -1,0 +1,49 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0341
+Deposit Date: 2025-03-22
+Client: Oceanic Telecommunications Ltd
+Agreement: OTL-Network-Escrow-2024-072
+Deposit Type: Network Management Platform Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: a4b9c5e1f7a3b9d5e1f7a3b9c5e1f7a3b9d5e1f7a3b9c5e1f7a3b9d5
+Deposit Verified: 2025-03-22 14:38:44 NZDT
+Custodian: S. Williams (TSG Infrastructure Specialist)
+
+NETWORK MANAGEMENT PLATFORM
+--------------------------
+System: OTL NetOps - NOC Management & Monitoring
+Vendor Integration: Cisco, Juniper, Nokia
+Coverage: NZ + Pacific Islands backbone
+
+ESCROWED ASSETS
+---------------
+  - NetOps core application source (5 repos)
+  - Network device configuration templates
+  - SNMP/NetFlow collector credentials
+  - BGP/peering configuration documentation
+  - NOC dashboard customization code
+  - Alert escalation rule definitions
+
+REPOSITORY MANIFEST
+-------------------
+  otl-netops-core         | SHA-256: 8e2f5a1c4b7d0e3f6a9c2e5b8d1f4a7c0e3
+  otl-config-templates    | SHA-256: 9f3a6b2d5e8c1f4a7d0e3b6c9f2a5d8e1b4
+  otl-collectors          | SHA-256: a0b4c8e2f6a0b4c8e2f6a0b4c8e2f6a0b4
+  otl-noc-dashboard      | SHA-256: b1c5d9f3a7b1c5d9f3a7b1c5d9f3a7b1c5
+  otl-alert-rules        | SHA-256: c2d6e0a4b8c2d6e0a4b8c2d6e0a4b8c2d6
+
+CREDENTIAL REFERENCES
+---------------------
+  NetFlow Collector API: nfc_******************************2xJ9
+  Device Management: tacacs+ credentials in separate vault
+  Grafana/Prometheus: Documented in ops runbook
+
+--------------------------------------------------------------------------------
+Release Conditions: Platform failure, Acquisition, Critical outage
+Next Deposit Update: 2025-06-22
+================================================================================

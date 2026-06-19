@@ -1,0 +1,11 @@
+---
+
+- include_tasks: disable_windows_defender.yml
+- include_tasks: disable_smartscreen.yml
+- include_tasks: disable_windows_updates.yml
+- include_tasks: ../../tasks/disable_update_services.yml
+- include_tasks: configure_windows_firewall.yml
+- include_tasks: download_sysinternals.yml
+- include_tasks: install_sysmon.yml
+- include_tasks: install_tightvnc.yml
+- include_tasks: set_hostname.yml

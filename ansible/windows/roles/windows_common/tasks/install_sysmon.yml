@@ -1,0 +1,12 @@
+---
+
+# - name: Copy sysmon config file
+#   win_copy:
+#     src: config.xml
+#     dest: C:\Tools\SysTools\config.xml
+
+# - name: Install Sysmon
+#   win_shell: C:\Tools\SysTools\Sysmon64.exe -accepteula -i C:\Tools\SysTools\config.xml
+
+- name: Add LocalAccountTokenFilterPolicy
+  win_shell: reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f

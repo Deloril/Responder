@@ -1,0 +1,55 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0201
+Deposit Date: 2025-02-22
+Client: Trans-Tasman Logistics Group
+Agreement: TTLG-API-Escrow-2024-094
+Deposit Type: API Documentation & Credentials Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: d6a1b5f3c9e7d2b0a4f8c6e3d1b9a7f5c3e1d9b7a5f3c1e9d7b5a3f1c9e7d5
+Deposit Verified: 2025-02-22 16:28:44 UTC
+Custodian: S. Williams (TSG Integration Specialist)
+
+API CREDENTIALS (Encrypted at Rest)
+----------------------------------
+Environment: Production
+API Base URL: https://api.ttlg.co.nz/v2
+API Key (Redacted): ttlg_live_******************************7xK9
+Webhook Secret: whsec_4f8a2c6e0b1d5f9a3c7e1b4d8f2a6c0e4b8d
+Client ID: ttlg_prod_8f3a2c6e1b5d9f0a4c8e2b6d0f4a8c2e6b
+
+SANDBOX/STAGING (Development)
+-----------------------------
+API Base: https://sandbox.ttlg.co.nz/v2
+API Key: ttlg_test_******************************2mP4
+
+INTEGRATION ENDPOINTS
+---------------------
+  POST /shipments          - Create shipment
+  GET  /shipments/{id}     - Retrieve shipment status
+  POST /tracking/bulk      - Bulk tracking lookup
+  GET  /rates/quote        - Get shipping rates
+  POST /labels/generate    - Generate shipping labels
+  GET  /warehouses         - Warehouse inventory sync
+
+AUTHENTICATION
+--------------
+  Method: Bearer Token + API Key header
+  Header: X-TTLG-API-Key
+  OAuth2: Supported for partner integrations
+  Rate Limit: 1000 req/min (production)
+
+DOCUMENTATION REFERENCE
+----------------------
+  OpenAPI Spec: ttlg-api-v2-openapi.yaml (included)
+  Postman Collection: TTLG-Integration-Collection.json
+  Integration Guide: TTLG-Integration-Guide-v2.4.pdf
+
+--------------------------------------------------------------------------------
+Release Conditions: Service disruption, Partner onboarding, Disaster recovery
+Credentials Rotated: Quarterly
+================================================================================

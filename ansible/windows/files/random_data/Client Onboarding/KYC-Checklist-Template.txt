@@ -1,0 +1,133 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - TSG-INTERNAL.LAB
+                    KNOW YOUR CUSTOMER (KYC) CHECKLIST - TEMPLATE
+                    Compliance with NZ AML/CFT Act 2009
+================================================================================
+
+Document Control: CONFIDENTIAL - Compliance Use Only
+Version: 3.1 | Effective Date: January 2025 | Regulatory Reference: AML/CFT Act 2009
+
+--------------------------------------------------------------------------------
+CLIENT INFORMATION
+--------------------------------------------------------------------------------
+
+Client Name: _____________________________  Reference: __________________________
+
+Date of Assessment: _______________________  Assessed By: ________________________
+
+--------------------------------------------------------------------------------
+1. COMPANY REGISTRATION VERIFICATION
+--------------------------------------------------------------------------------
+
+[ ] Certificate of Incorporation obtained and verified
+[ ] Company extract from Companies Office (or equivalent registry) obtained
+[ ] Registration details match client-provided information
+[ ] Company status confirmed as active/good standing
+[ ] Registered office address verified
+
+Registry Used: ___________________________  Verification Date: __________________
+
+Notes: _________________________________________________________________________
+________________________________________________________________________________
+
+--------------------------------------------------------------------------------
+2. DIRECTOR IDENTIFICATION
+--------------------------------------------------------------------------------
+
+[ ] Full legal names of all directors obtained
+[ ] Date of birth verified for each director
+[ ] Residential address verified (utility bill/bank statement within 3 months)
+[ ] Government-issued photo ID verified (passport/driver licence)
+[ ] Director registry search completed - no disqualifications noted
+
+Director 1: _____________________________  Verified: □ Yes  □ No  □ N/A
+Director 2: _____________________________  Verified: □ Yes  □ No  □ N/A
+Director 3: _____________________________  Verified: □ Yes  □ No  □ N/A
+
+--------------------------------------------------------------------------------
+3. BENEFICIAL OWNERSHIP
+--------------------------------------------------------------------------------
+
+[ ] Beneficial ownership structure documented (ownership >25%)
+[ ] Ultimate beneficial owners identified
+[ ] Ownership chain traced to natural persons
+[ ] No complex ownership structures requiring enhanced due diligence
+[ ] PEP/sanctions status checked for all beneficial owners
+
+Beneficial Owner 1: _____________________  % Ownership: _____  Verified: □
+Beneficial Owner 2: _____________________  % Ownership: _____  Verified: □
+
+--------------------------------------------------------------------------------
+4. AML/CFT SCREENING
+--------------------------------------------------------------------------------
+
+[ ] Client screened against AML/CFT databases
+[ ] Adverse media search completed (last 12 months)
+[ ] No matches or false positives adequately resolved
+[ ] Screening tool used: _______________________________________________________
+[ ] Screening date: _____________________  Next review due: ____________________
+
+Screening Result: □ Clear  □ Match - Escalated  □ Pending Review
+
+--------------------------------------------------------------------------------
+5. POLITICALLY EXPOSED PERSON (PEP) CHECK
+--------------------------------------------------------------------------------
+
+[ ] PEP screening completed for all directors and beneficial owners
+[ ] No PEPs identified, OR
+[ ] PEP identified - senior management approval obtained
+[ ] Enhanced due diligence completed for PEP relationships
+
+PEP Status: □ No PEPs  □ PEP Identified - Approved  □ PEP - Declined
+
+--------------------------------------------------------------------------------
+6. SANCTIONS SCREENING
+--------------------------------------------------------------------------------
+
+[ ] Sanctions list screening completed (UN, OFAC, NZ, AU, EU)
+[ ] No sanctions matches
+[ ] Screening covers company, directors, beneficial owners, authorized signatories
+
+Sanctions Result: □ Clear  □ Match - Escalated
+
+--------------------------------------------------------------------------------
+7. SOURCE OF FUNDS
+--------------------------------------------------------------------------------
+
+[ ] Source of funds declaration obtained
+[ ] Expected transaction volumes documented
+[ ] Business activity consistent with stated source of funds
+[ ] No concerns regarding origin of funds
+
+Declaration Summary: ___________________________________________________________
+________________________________________________________________________________
+
+--------------------------------------------------------------------------------
+8. ONGOING MONITORING REQUIREMENTS
+--------------------------------------------------------------------------------
+
+[ ] Risk rating assigned: □ Low  □ Medium  □ High
+[ ] Review frequency established per AML/CFT Act 2009:
+    Low risk: Every 3 years | Medium: Every 18 months | High: Every 12 months
+[ ] Transaction monitoring parameters set
+[ ] Trigger events for re-verification documented
+
+Next KYC Review Date: ____________________  Assigned MLRO: _______________________
+
+--------------------------------------------------------------------------------
+COMPLIANCE SIGN-OFF
+--------------------------------------------------------------------------------
+
+I confirm that all required KYC checks have been completed in accordance with
+The Secrets Group's AML/CFT Programme and the Anti-Money Laundering and
+Countering Financing of Terrorism Act 2009 (New Zealand).
+
+Client Approved for Onboarding: □ Yes  □ No  □ Conditional
+
+Compliance Officer: ______________________  Date: ______________________________
+
+MLRO Acknowledgment (if escalated): _______________  Date: ______________________
+
+================================================================================
+                    END OF DOCUMENT
+================================================================================

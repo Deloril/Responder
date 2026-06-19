@@ -1,0 +1,284 @@
+---
+#
+# Install SQL Developer Edition
+#
+
+# Server 2016 ships with PowerShellGet 1.0.0.1, which doesn't understand
+# -AcceptLicense. The ansible win_psmodule action passes -AcceptLicense
+# unconditionally on newer-licensed modules (SQLServerDsc 16+), so without
+# this bootstrap every win_psmodule call below fails with
+# "A parameter cannot be found that matches parameter name 'AcceptLicense'".
+- name: Powershell | Bootstrap NuGet + PowerShellGet for win_psmodule -AcceptLicense
+  win_shell: |
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force -Scope AllUsers | Out-Null
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+    Install-Module -Name PowerShellGet -MinimumVersion 2.2.5 -Force -AllowClobber -Scope AllUsers
+  args:
+    creates: 'C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\2.2.5'
+
+# Load required powershell modules
+- name: Powershell | Check for SQLServer DSC Powershell module
+  win_psmodule:
+    name: SQLServerDsc
+    state: present
+
+- name: Powershell | Check for Storage DSC Powershell module
+  win_psmodule:
+    name: StorageDsc
+    state: present
+
+# - name: Powershell | Check for ServerManager Powershell module
+#   win_psmodule:
+#     name: SqlServer
+#     state: present
+
+- name: Powershell | Ensure that DBA Tools module is present
+  win_psmodule:
+    name: dbatools
+    state: present
+
+- name: Powershell | Check for xNetworking Powershell module
+  win_psmodule:
+    name: xNetworking
+    state: present
+
+- name: Windows | Install .NET Framework Core
+  win_feature:
+    name: NET-Framework-Core
+    state: present
+
+# Setup SQL Server Pre-Reqs
+- name: Windows | Install .NET Framework 3.5
+  win_feature:
+    name: NET-Framework-Features
+    state: present
+
+- name: Windows | Install .NET Framework 4.5 Features
+  win_feature:
+    name: NET-Framework-45-Features
+    state: present
+    include_sub_features: True
+
+- name: Windows | Install Windows Process Activation Service
+  win_feature:
+    name: WAS
+    state: present
+    include_sub_features: True
+
+# # Setup service accounts
+# #
+# # We delegate this process to our domain controller since the required AD services are there for
+# # win_domain_user to interact with. 
+# - name: Active Directory | Ensure SQL Service account is present
+#   win_domain_user:
+#     name: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
+#     firstname: "{{ mssql_instance_name }}"
+#     surname: SQLSvc
+#     password: "{{ mssql_sqlsvc_account_pass }}"
+#     password_never_expires: yes
+#     user_cannot_change_password: yes
+#     description: "SQL Service account for {{ domain_hostname }}\\{{ mssql_instance_name }}"
+#     state: present
+#     groups:
+#       - Domain Users
+#   tags: service_account
+#   delegate_to: "{{ private_ip_dc }}"
+
+# - name: Active Directory | Ensure SQL Agent Service account is present
+#   win_domain_user:
+#     name: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
+#     firstname: "{{ mssql_instance_name }}"
+#     surname: AgentSvc
+#     password: "{{ mssql_agentsvc_account_pass }}"
+#     password_never_expires: yes
+#     user_cannot_change_password: yes
+#     description: "SQL Agent service account for {{ domain_hostname }}\\{{ mssql_instance_name }}"
+#     state: present
+#     groups:
+#       - Domain Users
+#   delegate_to: "{{ private_ip_dc }}"
+#   tags: service_account
+
+
+- name: Ensure temp directory is present
+  win_file:
+    path: "{{ mssql_temp_download_path }}"
+    state: directory
+
+- name: Check if SQL media already extracted
+  win_stat:
+    path: "{{ mssql_installation_path }}\\Media\\SETUP.EXE"
+  register: sql_media_ready
+
+- name: Fetch SQL Media Downloader
+  win_get_url:
+    url: "{{ mssql_installation_source }}"
+    dest: "{{ mssql_temp_download_path }}\\SQLServer2017-SSEI-Dev.exe"
+  when: not sql_media_ready.stat.exists
+
+- name: Use Media Downloader to fetch SQL Installation CABs to {{ mssql_installation_path }}
+  win_shell: "{{ mssql_temp_download_path }}\\SQLServer2017-SSEI-Dev.exe /Action=Download /MediaPath={{ mssql_installation_path }} /MediaType=CAB /Quiet"
+  when: not sql_media_ready.stat.exists
+
+- name: Ensure installation media extraction path is empty
+  win_file:
+    path: "{{ mssql_installation_path }}\\Media"
+    state: absent
+  when: not sql_media_ready.stat.exists
+
+- name: Extract installation media
+  win_shell: "{{ mssql_installation_path }}\\SQLServer2017-DEV-x64-ENU.exe /X:{{ mssql_installation_path }}\\Media /Q"
+  when: not sql_media_ready.stat.exists
+
+## C:\SQLInstall\Media\SETUP.EXE /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="TSG-INTERNAL\Domain Admins"
+
+# If this step fails, logs are in C:\Program Files\Microsoft SQL Server\...\Setup Bootstrap\Log
+# it will often contain the actual error.  If it shows everything passing, the issue is within the DSC logs.
+# 
+# This module also typically throws this error fpr all failure conditions:
+# PowerShell DSC resource MSFT_SqlSetup  failed to execute Set-TargetResource functionality with error message: 
+# System.Exception: Test-TargetResource returned false after calling Set-TargetResource.
+#
+#
+# This document can also be useful to troubleshoot issues with DSC modules
+# https://docs.microsoft.com/en-us/powershell/dsc/troubleshooting 
+#
+# In particular completing these steps:
+# https://docs.microsoft.com/en-us/powershell/dsc/troubleshooting#gathering-events-from-a-single-dsc-operation
+# then re-running a failing PowershellDSC job can help you find the source of your error
+- name: Install SQL Server
+  win_dsc:
+    resource_name: SQLSetup
+    Action: Install
+    UpdateEnabled: True
+    SourcePath: "{{ mssql_installation_path }}\\Media"
+    InstanceName: "{{ mssql_instance_name }}"
+    InstallSharedDir: "{{ mssql_installshared_path }}"
+    InstallSharedwowDir: "{{ mssql_installsharedwow_path }}"
+    InstanceDir: "{{ mssql_instance_path }}"
+    InstallSQLDataDir: "{{ mssql_sqlinstalldata_path }}"
+    SQLUserDBDir: "{{ mssql_sqluserdata_path }}"
+    SQLUserDBLogDir: "{{ mssql_sqluserlog_path }}"
+    SQLTempDBDir: "{{ mssql_sqltempDB_path }}"
+    SQLTempDBLogDir: "{{ mssql_sqltempDBlog_path }}"
+    Features: "{{ mssql_features }}"
+    SQLCollation: "{{ mssql_collation }}"
+    BrowserSvcStartupType: "{{ mssql_browsersvc_mode }}"
+    SuppressReboot: "{{ mssql_suppress_reboot }}"
+    # Service Accounts
+    #
+    # If the type of the DSC resource option is a PSCredential then 
+    # there needs to be 2 options set in the Ansible task definition 
+    # suffixed with _username and _password. So we will be providing 
+    # two options for these normally single option items.
+
+    # SQL Service Account
+    # SQLSvcAccount_username: "{{ mssql_sqlsvc_account }}"
+    # SQLSvcAccount_password: "{{ mssql_sqlsvc_account_pass }}"
+    # # SQL Agent Service Account
+    # AgtSvcAccount_username: "{{ mssql_agentsvc_account }}"
+    # AgtSvcAccount_password: "{{ mssql_agentsvc_account_pass }}"
+    # # SQL Analysis Services Account
+    # ASSvcAccount_username: "{{ mssql_assvc_account }}"
+    # ASSvcAccount_password: "{{ mssql_assvc_account_pass }}"
+
+    # Used when installing on a network path, comment out 
+    # SourceCredential_username: "{{ ansible_user }}"
+    # SourceCredential_password: "{{ ansible_password }}"
+
+    # System Admins 
+    SQLSysAdminAccounts: "{{ mssql_sysadmin_accounts }}"
+    # Analysis Services Admins (if installed)
+    # ASSysAdminAccounts: "{{ mssql_asadmin_accounts }}"
+  tags: install_sql
+
+# End of win_dsc for SQL Server
+
+# Firewall configuration
+- name: Firewall | Allow Database Engine for instance
+  win_dsc:
+    resource_name: xFirewall
+    Name: "SQL Server Database Engine instance {{ mssql_instance_name }}"
+    Program: sqlservr.exe 
+    Ensure: present
+    Enabled: True
+    Profile: "Domain"
+    Direction: "Inbound"
+    Action: Allow
+    Description: "Allows the Database Engine to access the network"  
+  tags: configure_firewall
+
+- name: Firewall | Allow SQLBrowser for instance
+  win_dsc:
+    resource_name: xFirewall
+    Name: "SQL Server Browser instance {{ mssql_instance_name }}"
+    Service: SQLBrowser
+    Ensure: present
+    Enabled: True
+    Profile: "Domain"
+    Direction: "Inbound"
+    Action: Allow
+    Description: "Allows the SQL Server Browser to access the network"  
+  tags: configure_firewall
+
+# Begin SQL Server configuration
+- name: Enable TCP Connectivity
+  win_dsc:
+    resource_name: SqlServerNetwork
+    InstanceName: "{{ mssql_instance_name }}"
+    ProtocolName: tcp
+    TcpPort: "{{ mssql_port }}"
+    IsEnabled: True
+    RestartService: True
+  tags: configure_sql
+
+# - name: Adjust Max Server Memory to {{ mssql_max_server_memory }}
+#   when: mssql_max_server_memory is defined
+#   win_dsc:
+#     resource_name: SqlServerConfiguration 
+#     InstanceName: "{{ mssql_instance_name }}"
+#     ServerName: "{{ ansible_hostname }}"
+#     OptionName: max server memory (MB)
+#     OptionValue: "{{ mssql_max_server_memory }}"
+#     RestartService: False
+#   tags: configure_sql
+
+# - name: Adjust Min Server Memory to {{ mssql_min_server_memory }}
+#   when: mssql_min_server_memory is defined
+#   win_dsc:
+#     resource_name: SqlServerConfiguration 
+#     ServerName: "{{ ansible_hostname }}"
+#     InstanceName: "{{ mssql_instance_name }}"
+#     OptionName: min server memory (MB)
+#     OptionValue: "{{ mssql_min_server_memory }}"
+#   tags: configure_sql
+
+# - name: Adjust Max Degree of Parallelism
+#   when: mssql_max_degree_of_parallelism is defined
+#   win_dsc:
+#     resource_name: SqlServerConfiguration 
+#     ServerName: "{{ ansible_hostname }}"
+#     InstanceName: "{{ mssql_instance_name }}"
+#     OptionName: max degree of parallelism
+#     OptionValue: "{{ mssql_max_degree_of_parallelism }}"
+#   tags: configure_sql
+
+
+- name: create secret database
+  win_shell: |
+    New-DbaDatabase -SqlInstance {{ domain_hostname }}\{{ mssql_instance_name }} -Name {{ mssql_database_name }}
+    $sql = "CREATE TABLE [secret] (
+      [secretID] INTEGER NOT NULL IDENTITY(1, 1),
+      [name] VARCHAR(255) NULL,
+      [address] VARCHAR(255) NULL,
+      [cc] VARCHAR(255) NULL,
+      [pin] VARCHAR(255) NULL,
+      PRIMARY KEY ([secretID])
+      );
+      GO
+
+      INSERT INTO secret([name],[address],[cc],[pin]) VALUES('Julian','893-3332 Morbi Rd.','731','8399'),('Wyoming','P.O. Box 396, 2728 Enim, Road','142','6501'),('Fuller','Ap 693-8996 Nullam St.','407','3550'),('Caldwell','6731 Pede St.','290','9064'),('Stella','P.O. Box 397, 5578 Fusce Road','811','9601'),('Nigel','Ap 549-8667 In, Avenue','255','3941'),('Juliet','718-7457 Amet St.','916','8879'),('Dylan','874 Sapien. Ave','272','8555'),('Hiram','P.O. Box 135, 3122 Metus St.','129','4622'),('Yvette','P.O. Box 633, 106 At St.','628','9596'),('Xenos','7270 Nulla St.','217','2418'),('Katell','P.O. Box 871, 8679 Morbi Ave','978','3099'),('Ivan','4133 Feugiat Avenue','885','1381'),('Natalie','958-7386 Velit Avenue','456','6290'),('Karleigh','8265 Urna. Road','225','5153'),('Sydnee','4085 Pharetra Avenue','326','8487'),('Clinton','6924 Hendrerit Rd.','233','6043'),('Aurora','P.O. Box 707, 1938 Mauris Road','230','7050'),('Clare','119-5755 Curabitur Ave','403','4591'),('Yoko','3010 Nascetur Rd.','723','2862'),('Alexis','P.O. Box 102, 5960 Convallis, Road','646','5909'),('Shafira','P.O. Box 593, 2313 Eget Rd.','637','1163'),('Rudyard','Ap 397-8632 Vitae Rd.','140','2262'),('Chester','5575 Lectus St.','877','2182'),('Kennan','325-6961 Aenean Ave','733','1432'),('Amaya','P.O. Box 905, 8727 Nam Ave','559','8319'),('Victor','185-5370 Ornare Avenue','230','6055'),('Orson','P.O. Box 424, 4349 Purus Avenue','407','7160'),('Bruno','288-4914 Ante Avenue','923','1252'),('Lani','4072 Praesent Rd.','332','5837'),('Ava','P.O. Box 793, 8022 Dis Rd.','951','7173'),('Damian','Ap 145-1850 Ut, Street','937','6501'),('Emmanuel','6840 Ac Road','286','2277'),('Tiger','P.O. Box 382, 7272 Auctor Av.','655','5886'),('Chloe','939-6414 Vulputate, Rd.','833','5711'),('Jana','2037 Orci St.','182','3376'),('Jin','955-6210 Mi St.','803','9674'),('Sheila','5613 Aliquam St.','273','8158'),('Iola','704-1714 Sed St.','124','7846'),('Raya','Ap 951-5448 Lorem, St.','253','4472'),('Flynn','Ap 583-3884 Ornare, Av.','190','7111'),('Summer','593-1900 Consequat, St.','727','6823'),('Laith','1754 Proin Rd.','349','5787'),('Peter','3350 Orci. Road','673','1656'),('Brennan','Ap 898-6229 Magna. Rd.','552','4255'),('Louis','Ap 531-5539 Donec Road','690','1611'),('Stacey','P.O. Box 728, 8015 Ac Rd.','677','6771'),('Robin','573-6615 Nunc Road','268','7603'),('Kirsten','Ap 421-3749 Mauris St.','527','9479'),('Brody','6643 Ullamcorper Rd.','972','6377');
+      INSERT INTO secret([name],[address],[cc],[pin]) VALUES('Shana','P.O. Box 193, 5956 Lobortis Avenue','880','4630'),('Paloma','7582 Sed Road','731','6090'),('Kamal','724-329 Ad Av.','358','9847'),('Kato','737-3412 Ridiculus Ave','467','5082'),('Dylan','P.O. Box 858, 3131 Ut Ave','125','6687'),('Adara','560-4718 Nascetur Avenue','856','2659'),('Amal','179-543 Est. St.','742','1879'),('Tanner','P.O. Box 891, 4943 Molestie Ave','615','9124'),('Gareth','P.O. Box 439, 8665 Cursus, Street','237','5681'),('Thane','P.O. Box 627, 1536 Elit, Avenue','875','2616'),('Edan','Ap 974-6552 Non, Rd.','605','1706'),('Tad','6248 Ipsum St.','113','4657'),('Alyssa','2170 Et Road','987','3725'),('Lyle','Ap 650-8009 Metus Road','521','1945'),('Scott','5290 Eu Av.','689','9415'),('Gisela','627-8775 Enim. St.','114','3815'),('Allegra','P.O. Box 388, 9146 Mi Street','880','2856'),('Imelda','563-2167 Et Avenue','805','9204'),('Aquila','929-1356 Imperdiet Rd.','746','7036'),('Steel','956-7836 Scelerisque Rd.','608','7072'),('Dale','356-3320 Dui, Rd.','449','2835'),('Barry','Ap 456-8235 Dolor. St.','945','6088'),('Patrick','P.O. Box 372, 6280 Tincidunt Road','918','2209'),('Richard','7152 Arcu St.','644','3504'),('Valentine','462 Et St.','667','7009'),('Yolanda','P.O. Box 855, 8549 Orci Ave','198','8609'),('TaShya','7789 Mattis. Street','859','4167'),('Regan','P.O. Box 136, 4323 Suspendisse Rd.','266','1885'),('Charlotte','942-6056 Mi. Rd.','392','6707'),('Kelly','Ap 743-9019 Integer Av.','160','4144'),('Quynn','5206 Malesuada St.','619','4479'),('Murphy','Ap 126-7635 Felis Rd.','398','1413'),('Daniel','493-8544 Dolor Rd.','691','8328'),('Gay','863-2103 Ligula. St.','152','1758'),('Tad','Ap 830-3345 Lobortis Road','351','5118'),('Hedley','Ap 658-9568 Quisque St.','142','9843'),('Caleb','Ap 872-4916 Amet, Street','198','6620'),('Leroy','7686 Ac Rd.','673','3304'),('Cyrus','186-1575 Quisque Rd.','703','5387'),('Hadassah','390-6296 Nam Avenue','580','8941'),('Byron','797-776 Vitae St.','437','9113'),('Callie','705-6729 Justo St.','175','7056'),('Yoshi','Ap 932-9840 Phasellus Ave','862','7116'),('Jerome','8104 Mauris Street','747','3210'),('Jakeem','177-7012 Dolor St.','956','9624'),('Dakota','P.O. Box 871, 3020 At, Road','751','9104'),('Demetrius','P.O. Box 200, 8058 Feugiat. Ave','840','6978'),('Chava','8796 Id, Rd.','975','8425'),('Abbot','P.O. Box 875, 3147 Nunc St.','517','4478'),('Maxine','622-665 Nibh. St.','589','4230');"
+    Invoke-DbaQuery -Query $sql -SqlInstance {{ domain_hostname }}\{{ mssql_instance_name }} -Database {{ mssql_database_name }}
+

@@ -1,0 +1,54 @@
+---
+
+- name: Check if TightVNC is already installed
+  win_stat:
+    path: C:\Program Files\TightVNC\tvnserver.exe
+  register: vnc_installed
+
+- name: Download TightVNC from bastion cache
+  win_get_url:
+    url: "http://{{ hostvars[inventory_hostname]['bastion_ip'] | default('10.0.3.8') }}:8888/tightvnc.msi"
+    dest: C:\Tools\tightvnc.msi
+  register: vnc_cached
+  ignore_errors: yes
+  when: not vnc_installed.stat.exists
+
+- name: Download TightVNC from internet (fallback)
+  win_get_url:
+    url: https://www.tightvnc.com/download/2.8.85/tightvnc-2.8.85-gpl-setup-64bit.msi
+    dest: C:\Tools\tightvnc.msi
+  when: not vnc_installed.stat.exists and (vnc_cached is failed)
+
+- name: Install TightVNC in silent mode (server only, no viewer)
+  win_shell: >
+    msiexec /i C:\Tools\tightvnc.msi /quiet /norestart
+    ADDLOCAL="Server"
+    SET_USEVNCAUTHENTICATION=1
+    VALUE_OF_USEVNCAUTHENTICATION=1
+    SET_PASSWORD=1
+    VALUE_OF_PASSWORD=tsg_vnc_2025
+    SET_USECONTROLAUTHENTICATION=1
+    VALUE_OF_USECONTROLAUTHENTICATION=1
+    SET_CONTROLPASSWORD=1
+    VALUE_OF_CONTROLPASSWORD=tsg_vnc_2025
+    SET_ALLOWLOOPBACK=1
+    VALUE_OF_ALLOWLOOPBACK=1
+    SET_ACCEPTHTTPCONNECTIONS=0
+    VALUE_OF_ACCEPTHTTPCONNECTIONS=0
+  when: not vnc_installed.stat.exists
+
+- name: Ensure TightVNC service is running
+  win_service:
+    name: tvnserver
+    state: started
+    start_mode: auto
+
+- name: Allow VNC through Windows Firewall
+  win_firewall_rule:
+    name: TightVNC Server
+    localport: 5900
+    action: allow
+    direction: in
+    protocol: tcp
+    state: present
+    enabled: yes

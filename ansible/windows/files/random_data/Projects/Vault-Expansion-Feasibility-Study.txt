@@ -1,0 +1,110 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+VAULT EXPANSION FEASIBILITY STUDY
+Prepared by: Kaimana Zhang, Michael Huang
+Reviewed by: Henry Ngata (CTO)
+Version: 1.0 | Date: 22 January 2026
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+This feasibility study evaluates two options for expanding TSG's secure vault
+capacity to meet projected growth through 2028: (A) Wellington vault upgrade
+and (B) new vault establishment in Sydney. Based on cost analysis, regulatory
+considerations, and capacity projections, we recommend Option B - Sydney new
+vault - as the preferred approach.
+
+BUSINESS CONTEXT
+----------------
+Current vault utilisation: 78% (Wellington primary)
+Projected growth: 22% CAGR based on pipeline and market analysis
+Peak capacity required: 2028 - 2.4x current capacity
+
+OPTION A: WELLINGTON VAULT UPGRADE
+----------------------------------
+
+Description:
+- Expansion of existing Wellington data centre vault facility
+- Additional 120 rack units, upgraded cooling, expanded secure storage
+- Same site, enhanced physical security perimeter
+
+Cost Analysis (NZD):
+| Item                    | Amount      |
+|-------------------------|-------------|
+| Physical expansion      | 420,000     |
+| Cooling upgrade         | 185,000     |
+| Security enhancements   | 95,000      |
+| Network infrastructure  | 65,000      |
+| Contingency (15%)       | 115,000     |
+| TOTAL                   | 880,000     |
+
+Capacity: +85% over current
+Timeline: 4-5 months
+Regulatory: No new approvals required (existing certifications apply)
+
+OPTION B: SYDNEY NEW VAULT
+--------------------------
+
+Description:
+- Greenfield vault establishment in Sydney CBD or North Sydney
+- Purpose-built facility, 200 rack units initial capacity
+- Designed for Australian Financial Services (AFS) compliance from outset
+
+Cost Analysis (AUD):
+| Item                    | Amount      |
+|-------------------------|-------------|
+| Site fit-out            | 680,000     |
+| Security (ASIO T4 equiv) | 220,000     |
+| Network (redundant)      | 95,000      |
+| Regulatory/legal         | 85,000      |
+| Contingency (15%)        | 162,000     |
+| TOTAL                   | 1,242,000   |
+| (NZD equivalent ~1.35M)  |             |
+
+Capacity: New 200 RU + Wellington retained = 2.2x total capacity
+Timeline: 6-7 months
+Regulatory: AFS licence considerations (see below)
+
+REGULATORY CONSIDERATIONS - AUSTRALIAN FINANCIAL SERVICES
+---------------------------------------------------------
+- Escrow services may require AFSL if deemed "financial product" - legal
+  opinion sought: low risk for pure custodianship, but documentation required
+- APRA-regulated clients may require Australian domicile for data
+- Privacy Act 1988 (Cth) - Australian Privacy Principles apply
+- Data sovereignty: Australian client data must remain in Australia
+- Recommendation: Engage Australian legal counsel (SGD office project) for
+  definitive AFS requirements; budget AUD 25K for compliance review
+
+CAPACITY PROJECTIONS
+--------------------
+| Year  | Wellington Only | Wellington + Sydney |
+|-------|-----------------|---------------------|
+| 2026  | 92%             | 65% / 45%           |
+| 2027  | 118% (exceeded) | 78% / 62%           |
+| 2028  | 145% (exceeded) | 88% / 75%           |
+
+Wellington upgrade alone reaches capacity by mid-2027. Sydney option provides
+headroom through 2029 and enables Australian market expansion.
+
+RECOMMENDATION
+--------------
+Option B (Sydney new vault) is recommended for the following reasons:
+
+1. Strategic: Aligns with Singapore office expansion; creates Asia-Pacific
+   hub (Sydney + Singapore) for redundancy and client preference
+2. Regulatory: Proactively addresses Australian data sovereignty requirements
+   from financial services clients
+3. Capacity: Superior long-term capacity; Wellington upgrade is stopgap
+4. Risk: Geographic diversification reduces single-point-of-failure
+5. Cost: Higher upfront but better unit economics at scale; Wellington
+   upgrade would require Sydney investment within 18-24 months regardless
+
+CONDITIONAL APPROVAL SOUGHT
+---------------------------
+- Proceed with Option B subject to: (a) AFS legal clearance, (b) Board
+  approval of AUD 1.24M budget, (c) Sydney site selection by 28 Feb 2026
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

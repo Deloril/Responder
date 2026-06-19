@@ -1,0 +1,122 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+REQUEST FOR PROPOSAL
+DATA CENTRE EQUIPMENT REFRESH 2026
+RFP Reference: TSG-DC-RFP-2026-001
+Issue Date: 20 January 2026
+Document Owner: Michael Huang (Infrastructure Lead)
+================================================================================
+
+1. INTRODUCTION
+---------------
+The Secrets Group (TSG) invites proposals from qualified vendors for the
+supply and installation of data centre equipment to refresh our Wellington
+primary facility. This refresh supports the SSN platform roadmap, cloud
+migration Phase 2, and vault expansion initiatives.
+
+2. CURRENT INVENTORY (Wellington Data Centre)
+----------------------------------------------
+| Category    | Current Spec                    | Age  | EOL    |
+|-------------|----------------------------------|------|--------|
+| Compute     | 12x Dell R640 (2U, 2x Xeon)     | 4y   | 2026   |
+| Storage     | 2x NetApp FAS2720 (180TB raw)    | 5y   | 2025   |
+| Networking  | 2x Cisco Nexus 93180YC-EX        | 4y   | 2027   |
+| Backup      | 1x Dell Data Domain 4400         | 6y   | 2024   |
+| UPS         | 2x APC Symmetra 80kVA            | 5y   | 2026   |
+| Cooling     | In-row cooling (2 units)        | 5y   | 2026   |
+
+3. REQUIREMENTS
+---------------
+
+3.1 COMPUTE
+- Minimum 16 physical hosts (2U preferred)
+- 2x CPUs per host, 16+ cores each
+- 256GB RAM minimum per host
+- 4x 25GbE NICs per host
+- Redundant PSUs
+- 5-year warranty with 4-hour response
+- Compatibility: VMware vSphere 8.x, Windows Server 2022, RHEL 9
+
+3.2 STORAGE
+- Primary: All-flash array, minimum 200TB usable (after RAID)
+- Secondary: Hybrid or HDD for backup target, 300TB usable
+- Replication capability for Sydney vault (future)
+- Snapshots, thin provisioning
+- 5-year warranty, same-day parts
+
+3.3 NETWORKING
+- 2x spine switches (redundant), 100GbE capable
+- 2x leaf switches for server connectivity
+- 25GbE server-facing ports
+- BGP/OSPF support for future multi-site
+- NX-OS or equivalent enterprise OS
+
+3.4 BACKUP
+- Deduplication appliance, 100TB usable
+- Integration with Veeam Backup & Replication
+- Replication to secondary site (Wellington to Auckland DR)
+- 5-year warranty
+
+4. EVALUATION CRITERIA
+----------------------
+| Criterion              | Weight | Description                          |
+|------------------------|--------|--------------------------------------|
+| Technical compliance   | 25%    | Meets all mandatory requirements     |
+| Total cost of ownership| 25%    | 5-year TCO (capex + opex)            |
+| Vendor support         | 20%    | NZ-based support, SLAs               |
+| Implementation timeline| 15%    | Ability to deliver by Jun 2026       |
+| Reference clients      | 10%    | Similar financial/escrow deployments |
+| Innovation/future-proof| 5%     | Scalability, cloud integration        |
+
+5. SUBMISSION REQUIREMENTS
+--------------------------
+- Proposal document (max 50 pages)
+- Detailed pricing schedule (NZD, ex GST)
+- Implementation plan with milestones
+- Reference contacts (2 minimum)
+- Vendor company profile and certifications
+- Response to each requirement (compliant/non-compliant/alternative)
+
+6. TIMELINE
+-----------
+| Milestone                    | Date                |
+|-----------------------------|---------------------|
+| RFP issued                  | 20 January 2026     |
+| Vendor briefing (optional)   | 28 January 2026     |
+| Clarification deadline      | 10 February 2026    |
+| Proposal submission deadline| 28 February 2026    |
+| Shortlist notification      | 15 March 2026       |
+| Presentations/demos         | 25-27 March 2026    |
+| Contract award              | 10 April 2026       |
+| Delivery commencement       | May 2026            |
+
+7. SUBMISSION PROCESS
+---------------------
+- Email proposals to: procurement@tsg-internal.lab
+- Subject line: TSG-DC-RFP-2026-001 - [Vendor Name]
+- Format: PDF (main document) + Excel (pricing)
+- Maximum file size: 25MB total
+
+8. SELECTION PROCESS
+--------------------
+- Evaluation panel: Michael Huang, Kaimana Zhang, Henry Ngata, Liam Jones
+- Scoring against criteria; top 3 shortlisted for presentation
+- Preferred vendor negotiation; contract execution
+- Unsuccessful vendors notified with debrief available on request
+
+9. CONFIDENTIALITY
+------------------
+All information in this RFP is confidential. Vendors must not disclose to
+third parties without TSG written consent. Proposals remain TSG property.
+
+10. CONTACT
+-----------
+Michael Huang, Infrastructure Lead
+The Secrets Group
+michael.huang@tsg-internal.lab
++64 4 XXX XXXX
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

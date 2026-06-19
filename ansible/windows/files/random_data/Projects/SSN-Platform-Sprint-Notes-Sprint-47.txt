@@ -1,0 +1,87 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+SSN PLATFORM SPRINT NOTES - SPRINT 47
+Sprint Dates: 27 January 2026 - 9 February 2026
+Scrum Master: Hemi Tama
+Product Owner: Henry Ngata (CTO)
+Version: Final | Date: 10 February 2026
+================================================================================
+
+SPRINT GOAL
+-----------
+Deliver API v3 foundation and audit log enhancements to support Q2 2026
+multi-region replication and compliance dashboard requirements.
+
+TEAM CAPACITY
+-------------
+- Lucas Kang (Backend): 100%
+- Jack Zhou (Backend): 100%
+- Oliver Anderson (Frontend): 100%
+- Satoshi Tuala (Full-stack): 80% (shared with mobile POC)
+- Hemi Tama (QA): 100%
+- Kaimana Zhang (DevOps): 50% (shared with infrastructure)
+
+COMMITTED STORIES - COMPLETED (8)
+---------------------------------
+1. [SSN-412] API v3 OpenAPI specification draft - Jack Zhou
+2. [SSN-415] Audit log schema extension for cross-region - Lucas Kang
+3. [SSN-418] Audit event timestamp precision (microsecond) - Lucas Kang
+4. [SSN-421] API v3 authentication middleware - Jack Zhou
+5. [SSN-424] Audit log export endpoint (JSON) - Jack Zhou
+6. [SSN-427] Frontend: Audit filter by date range - Oliver Anderson
+7. [SSN-430] Database migration for audit schema - Kaimana Zhang
+8. [SSN-433] Unit tests for API v3 auth - Satoshi Tuala
+
+CARRIED OVER (2)
+----------------
+1. [SSN-436] API v3 rate limiting implementation - Jack Zhou
+   - Blocked: Awaiting infrastructure team for Redis cluster
+2. [SSN-439] Audit dashboard wireframes - Oliver Anderson
+   - Partial: Designs 70% complete; PO feedback pending
+
+BUGS FIXED (5)
+--------------
+- [SSN-501] Audit log pagination returning duplicates - Lucas Kang
+- [SSN-502] API v2 timeout on large vault listing - Jack Zhou
+- [SSN-503] Frontend: Date picker timezone bug - Oliver Anderson
+- [SSN-504] Staging env deployment failure - Kaimana Zhang
+- [SSN-505] Unit test flakiness in audit service - Satoshi Tuala
+
+VELOCITY CHART DATA
+-------------------
+| Sprint  | Committed | Completed | Carried | Velocity (adj) |
+|---------|-----------|-----------|---------|----------------|
+| 45      | 12        | 10        | 2       | 10             |
+| 46      | 11        | 9         | 2       | 9              |
+| 47      | 10        | 8         | 2       | 8              |
+
+3-sprint average: 9.0 points
+
+RETROSPECTIVE NOTES
+-------------------
+What went well:
+- Clear API v3 spec reduced rework; Jack and Lucas pair-programmed effectively
+- Hemi's exploratory testing caught SSN-501 before production
+- Good collaboration with Kaimana on schema migration
+
+What could improve:
+- Redis dependency blocked SSN-436; earlier infra engagement needed
+- Oliver waiting on PO feedback; consider async design review process
+- Sprint 47 velocity dip due to Satoshi's shared allocation
+
+Action items:
+- Hemi: Schedule infra sync for Sprint 48 dependencies
+- Henry: Review audit dashboard wireframes by Wed 12 Feb
+- Team: Discuss reducing WIP in Sprint 48 planning
+
+NEXT SPRINT PLANNING (Sprint 48)
+--------------------------------
+- Dates: 10 Feb - 23 Feb 2026
+- Focus: API v3 rate limiting, audit dashboard MVP, replication POC prep
+- Proposed stories: SSN-436, SSN-439, SSN-442 (replication schema), SSN-445
+- Capacity: Satoshi 100% (mobile POC deferred)
+
+================================================================================
+Document Classification: Internal - Projects
+Distribution: TSG-INTERNAL.LAB\Projects
+================================================================================

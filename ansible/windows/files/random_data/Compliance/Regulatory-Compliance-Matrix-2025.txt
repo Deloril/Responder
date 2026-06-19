@@ -1,0 +1,146 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+            REGULATORY COMPLIANCE MATRIX - 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document: REG-MATRIX-2025-001
+Prepared by: Sophie Patel (Compliance Lead), Sarah Wang (Legal)
+Date: 22 September 2025
+Classification: Internal - Confidential
+================================================================================
+
+PURPOSE
+-------
+This matrix maps applicable regulations across TSG's operating jurisdictions
+(New Zealand, Australia, Singapore) and documents compliance status, responsible
+owners, and audit evidence. TSG holds ISO 27001 and SOC 2 Type II certifications.
+
+
+1. NEW ZEALAND REGULATIONS
+================================================================================
+
+Regulation              Applicability    Status      Owner         Evidence
+--------------------------------------------------------------------------------
+Privacy Act 2020        All NZ ops       Compliant   David Nair    PIA-SSN-2025
+                        Client data                 Priya Rangi   Privacy Notice
+--------------------------------------------------------------------------------
+AML/CFT Act 2009        Escrow >$10k     Compliant   Sarah Wang    AML policy v4.2
+                        High-value                   Henry Ngata   FMA registration
+                        custodianship
+--------------------------------------------------------------------------------
+Companies Act 1993      Entity governance Compliant  Kate (COO)    Board minutes
+                        Director duties              Daniel Kemp   Annual return
+--------------------------------------------------------------------------------
+Contract and            Escrow agreements Compliant  Sarah Wang    MFG-2025-034
+Commercial Law Act                          Legal review
+--------------------------------------------------------------------------------
+Electronic Transactions Act 2002  Digital signatures Compliant  Lisa Liu   DocuSign
+--------------------------------------------------------------------------------
+Reserve Bank (FMA)      Reporting         Compliant   Sophie Patel  Quarterly returns
+Obligations
+--------------------------------------------------------------------------------
+
+
+2. AUSTRALIAN REGULATIONS
+================================================================================
+
+Regulation              Applicability    Status      Owner         Evidence
+--------------------------------------------------------------------------------
+Privacy Act 1988        Sydney, Melbourne Compliant  David Nair    AU Privacy Policy
+(Cth)                   offices                      Jennifer Li   APP compliance
+--------------------------------------------------------------------------------
+Australian Privacy      Cross-border     Compliant   Sarah Wang    DPA with clients
+Principles (APPs)       data flows
+--------------------------------------------------------------------------------
+Corporations Act 2001   AU subsidiary    Compliant  Kate (COO)    ASIC registration
+                        governance
+--------------------------------------------------------------------------------
+AML/CTF Act 2006        AU escrow        Compliant   Sophie Patel  AUSTRAC reporting
+                        transactions
+--------------------------------------------------------------------------------
+Notifiable Data         Breach reporting Compliant   David Nair    IRP v2.1
+Breaches Scheme         (72 hours)
+--------------------------------------------------------------------------------
+
+
+3. SINGAPORE REGULATIONS
+================================================================================
+
+Regulation              Applicability    Status      Owner         Evidence
+--------------------------------------------------------------------------------
+Personal Data           Singapore office Compliant   Lisa Liu      PDPA policy
+Protection Act (PDPA)   Client data                  Priya Rangi   Consent mechanisms
+--------------------------------------------------------------------------------
+MAS Technology Risk     If regulated     N/A         -             Not applicable
+Management (TRM)        activities                   (escrow not
+                                                     MAS-regulated)
+--------------------------------------------------------------------------------
+Companies Act           SG entity        Compliant   Kate (COO)    ACRA filing
+(Singapore)
+--------------------------------------------------------------------------------
+
+
+4. CROSS-JURISDICTIONAL
+================================================================================
+
+Regulation              Applicability    Status      Owner         Evidence
+--------------------------------------------------------------------------------
+ISO 27001:2022          All operations   Certified   Ben           Cert #NZ-2024-0892
+                        ISMS
+--------------------------------------------------------------------------------
+SOC 2 Type II           Trust Services   Certified   Sophie Patel  KPMG report
+                        Criteria
+--------------------------------------------------------------------------------
+GDPR (if EU clients)    EU data subjects Minimal     Sarah Wang    DPA clauses
+                        (rare)           exposure
+--------------------------------------------------------------------------------
+
+
+5. COMPLIANCE GAPS & REMEDIATION
+--------------------------------------------------------------------------------
+Gap ID    Regulation      Description              Target Date    Owner
+--------------------------------------------------------------------------------
+GAP-01    PDPA           Singapore DPO not yet   31 Dec 2025    Lisa Liu
+                          formally designated
+GAP-02    Privacy Act    PIA for Phase 3           Q2 2026        David Nair
+                          (biometric) pending
+GAP-03    AML/CFT        Enhanced CDD for          Q1 2026        Henry Ngata
+                          Singapore clients
+--------------------------------------------------------------------------------
+
+
+6. AUDIT SCHEDULE 2025-2026
+--------------------------------------------------------------------------------
+Audit/Review           Frequency    Next Due      Responsible
+--------------------------------------------------------------------------------
+ISO 27001 surveillance  Annual       Nov 2025      Ben
+SOC 2 Type II           Annual       Dec 2025      Sophie Patel
+Privacy Act review      Annual       Aug 2026      David Nair
+AML/CFT independent    Annual       Mar 2026      External
+FMA reporting           Quarterly    Ongoing       Sophie Patel
+--------------------------------------------------------------------------------
+
+
+7. REGULATORY CONTACTS
+--------------------------------------------------------------------------------
+Authority               Contact Purpose           Primary Contact
+--------------------------------------------------------------------------------
+Office of the Privacy   Privacy Act queries       David Nair
+Commissioner (NZ)
+FMA (NZ)                AML/CFT, reporting        Sophie Patel
+ASIC (AU)               AU entity matters         Kate (COO)
+OAIC (AU)               Privacy complaints        David Nair
+PDPC (Singapore)        PDPA matters              Lisa Liu
+--------------------------------------------------------------------------------
+
+
+================================================================================
+APPROVALS
+--------------------------------------------------------------------------------
+Prepared by: Sophie Patel ______________________ Date: 22/09/2025
+             Sarah Wang _______________________ Date: 22/09/2025
+Reviewed by: Daniel Kemp (CEO) ________________ Date: _______________
+
+================================================================================
+Document Control: REG-MATRIX-2025-001 | Version 1.0 | Next review: Sep 2026
+================================================================================

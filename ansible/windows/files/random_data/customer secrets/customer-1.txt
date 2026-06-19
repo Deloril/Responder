@@ -1,0 +1,75 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0147
+Deposit Date: 2025-02-14
+Client: Meridian Financial Group
+Agreement: MFG-Source-Escrow-2024-089
+Deposit Type: Source Code Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: a3f8c2e1b9d4f7a6e0c8b5d2f1a9e7c4b6d8f0a2e5c7b9d1f3a5e7c9b0d2f4a6
+Deposit Verified: 2025-02-14 09:23:47 UTC
+Custodian: J. Morrison (TSG Senior Escrow Officer)
+
+SOURCE CODE REPOSITORY MANIFEST
+-------------------------------
+Total Repositories: 12
+Last Build Date: 2025-02-13
+Build Environment: Azure DevOps Pipeline MFG-PROD-2024
+
+Repository List:
+  1. mfg-core-banking-platform
+     SHA-256: 7b2e4a9c1f6d8e3b5a0c7d9f2e4a6b8c1d3e5f7a9b0c2d4e6f8a0b2c4d6e8f0a2
+     File Count: 2,847 | Last Commit: 2025-02-12
+
+  2. mfg-transaction-engine
+     SHA-256: 9d1f3b5a7c0e2d4f6a8b0c2e4d6f8a0b2c4e6d8f0a2b4c6e8d0f2a4b6c8e0d2f4
+     File Count: 1,923 | Last Commit: 2025-02-11
+
+  3. mfg-compliance-module
+     SHA-256: 2e4a6c8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6
+     File Count: 892 | Last Commit: 2025-02-10
+
+  4. mfg-api-gateway
+     SHA-256: 4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4f6a8
+     File Count: 456 | Last Commit: 2025-02-09
+
+  5. mfg-reporting-service
+     SHA-256: 6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4f6a8c0e2b4d6f8a0
+     File Count: 1,234 | Last Commit: 2025-02-08
+
+  6. mfg-auth-identity
+     SHA-256: 8c0e2a4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2
+     File Count: 312 | Last Commit: 2025-02-07
+
+  7. mfg-data-migration
+     SHA-256: 0a2c4e6f8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4
+     File Count: 678 | Last Commit: 2025-02-06
+
+  8. mfg-integration-hub
+     SHA-256: 2c4e6a8b0d2f4a6c8e0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6
+     File Count: 534 | Last Commit: 2025-02-05
+
+  9. mfg-frontend-portal
+     SHA-256: 4e6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4f6a8c0e2b4d6f8
+     File Count: 2,156 | Last Commit: 2025-02-04
+
+  10. mfg-mobile-app-core
+      SHA-256: 6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4f6a8c0e2b4d6f8a0
+      File Count: 1,445 | Last Commit: 2025-02-03
+
+  11. mfg-test-automation
+      SHA-256: 8c0e2a4c6e8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2
+      File Count: 723 | Last Commit: 2025-02-02
+
+  12. mfg-infrastructure-iac
+      SHA-256: 0a2c4e6f8a0b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6d8b0f2a4d6c8e0b2d4
+      File Count: 234 | Last Commit: 2025-02-01
+
+--------------------------------------------------------------------------------
+Release Conditions: Bankruptcy, Acquisition, Material Breach, Mutual Agreement
+Next Verification: 2025-05-14
+================================================================================

@@ -1,0 +1,154 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              ESCROW RELEASE REQUEST
+                    ERR-2025-019
+================================================================================
+                    Digital Escrow & Secret Custodianship
+              Wellington Vault | TSG-INTERNAL.LAB
+================================================================================
+
+REQUEST SUMMARY
+--------------------------------------------------------------------------------
+Request ID:          ERR-2025-019
+Client:              Pacific Technologies Ltd (PTL)
+Escrow Reference:    PTL-2024-07 (Meridian Core - Source Code)
+Request Date:        04 November 2025
+Trigger Event:       Vendor insolvency (Meridian Software Ltd)
+Status:              RELEASED (08 November 2025)
+--------------------------------------------------------------------------------
+
+
+1. CLIENT & ESCROW DETAILS
+================================================================================
+Client Name:         Pacific Technologies Ltd
+Client Contact:      David Chen, CTO (david.chen@pacifictech.co.nz)
+Escrow Agreement:    EA-2024-007 (signed 15 January 2024)
+Beneficiary:         Pacific Technologies Ltd
+Vendor:              Meridian Software Ltd (INSOLVENT)
+Escrow Contents:     Meridian Core v4.2.1 - Full source, build scripts, docs
+Deposit Date:        15 January 2025
+--------------------------------------------------------------------------------
+
+
+2. RELEASE TRIGGER
+================================================================================
+Event:               Vendor insolvency
+Date of Event:       28 October 2025
+Supporting Evidence: - Meridian Software Ltd - Administrators appointed
+                     - ASIC notice of voluntary administration
+                     - Letter from PTL legal counsel (MinterEllison)
+                     - Confirmation vendor unable to fulfil support obligations
+
+Release Condition:   Clause 4.2(b) - Vendor insolvency triggers release to
+                     beneficiary upon verification.
+--------------------------------------------------------------------------------
+
+
+3. VERIFICATION STEPS COMPLETED
+================================================================================
+
+Step 1: Trigger Verification
+--------------------------------------------------------------------------------
+Completed: 29 October 2025
+Performed by: Leilani Kumar, Compliance Manager
+Result: Vendor insolvency confirmed. Administrators appointed. Release
+        condition met under escrow agreement Clause 4.2(b).
+--------------------------------------------------------------------------------
+
+Step 2: Client Identity Verification
+--------------------------------------------------------------------------------
+Completed: 01 November 2025
+Performed by: Charlotte Mata, COO
+Result: David Chen identity verified. Authorised signatory per PTL board
+        resolution BR-2025-089. Company registration verified.
+--------------------------------------------------------------------------------
+
+Step 3: Escrow Package Integrity
+--------------------------------------------------------------------------------
+Completed: 02 November 2025
+Performed by: Tama Thomas, Wiremu Sio (dual custody)
+Result: Package PTL-2024-07 intact. Checksum verified. Seals unbroken.
+        Contents match deposit manifest.
+--------------------------------------------------------------------------------
+
+Step 4: Legal Review
+--------------------------------------------------------------------------------
+Completed: 05 November 2025
+Performed by: Sarah Wang, General Counsel
+Result: No conflicting claims. Release authorised under agreement.
+        Recommend release with standard release documentation.
+--------------------------------------------------------------------------------
+
+Step 5: Dual Authorization
+--------------------------------------------------------------------------------
+Completed: 06 November 2025
+Authorisers: Charlotte Mata (COO), Henry Ngata (CTO)
+Result: Both authorised signatories approved release. Signatures on file.
+--------------------------------------------------------------------------------
+
+
+4. RELEASE DECISION
+================================================================================
+Decision:            RELEASE APPROVED
+Decision Date:       06 November 2025
+Release Date:        08 November 2025
+
+Rationale: All verification steps completed successfully. Vendor insolvency
+           confirmed. Client identity verified. Escrow package integrity
+           confirmed. Legal review favourable. Dual authorization obtained.
+--------------------------------------------------------------------------------
+
+
+5. RELEASE EXECUTION
+================================================================================
+Physical Release:    08 November 2025, 11:00 NZST
+Location:            Wellington Vault - Secure handover room
+Custodians:          Tama Thomas (primary), Wiremu Sio (witness)
+Recipient:           David Chen (PTL), James Wong (PTL Legal)
+
+Handover Documentation:
+- Signed release certificate
+- Chain of custody log
+- Checksum verification report
+- Copy of escrow agreement (marked RELEASED)
+
+Digital Materials:    Encrypted USB + download from secure portal
+                     (credentials provided to David Chen)
+--------------------------------------------------------------------------------
+
+
+6. POST-RELEASE
+================================================================================
+- Package PTL-2024-07 marked RELEASED in Vault Inventory Register
+- Client access revoked from SSN platform for this escrow
+- Retention: Release documentation retained 10 years per policy
+- Notification: Meridian administrators notified (no objection period)
+--------------------------------------------------------------------------------
+
+
+7. APPROVAL CHAIN
+================================================================================
+Compliance Verification:  Leilani Kumar    29-Oct-2025
+Client Verification:      Charlotte Mata  01-Nov-2025
+Integrity Verification:   Tama Thomas     02-Nov-2025
+Legal Review:             Sarah Wang     05-Nov-2025
+Dual Authorization:       Charlotte Mata 06-Nov-2025
+                          Henry Ngata    06-Nov-2025
+Release Execution:        Tama Thomas    08-Nov-2025
+--------------------------------------------------------------------------------
+
+
+8. DOCUMENTS ON FILE
+================================================================================
+- ERR-2025-019 (this document)
+- EA-2024-007 (Escrow Agreement)
+- Vendor insolvency notice
+- PTL board resolution BR-2025-089
+- Release certificate (signed)
+- Chain of custody log
+- Checksum verification report
+--------------------------------------------------------------------------------
+
+================================================================================
+Document Control: TSG-LEGAL-2025-ERR-019 | Confidential
+================================================================================

@@ -1,0 +1,64 @@
+---
+####################################
+## Privileged Access Workstations
+####################################
+#
+# paw-1 / paw-2 are domain-joined Windows hosts that act as the only RDP
+# targets allowed to reach the secret-storage tier. Users hit them via
+# Apache Guacamole. These boxes are hardened relative to corp clients:
+#   - RDP is the only inbound surface (no autologon, no shared autostart links)
+#   - File-share mapping points at the secret-storage file server
+#   - SQL Server Management Studio is pre-installed for SQL DBA work
+#
+# In TSG canon these are the Strongroom Trust HNW custody PAWs --
+# break-glass terminals for accessing the regulated vault data.
+
+- hosts: paws
+  gather_facts: no
+  vars_files:
+    - ./vars/file_server.yml
+    - ./vars/domain_users_and_groups.yml
+  tasks:
+
+    - name: Ensure RDP is enabled
+      win_regedit:
+        path: "HKLM:\\System\\CurrentControlSet\\Control\\Terminal Server"
+        name: fDenyTSConnections
+        type: dword
+        data: 0
+
+    - name: Restrict inbound RDP to Guacamole gateway only
+      win_shell: |
+        $rule = Get-NetFirewallRule -DisplayName "PAW-RDP-Guacamole-Only" -ErrorAction SilentlyContinue
+        if (-not $rule) {
+          New-NetFirewallRule -DisplayName "PAW-RDP-Guacamole-Only" `
+            -Direction Inbound -Protocol TCP -LocalPort 3389 `
+            -RemoteAddress 10.0.4.6 -Action Allow
+          # Block other RDP -- Guacamole is the only legitimate caller
+          New-NetFirewallRule -DisplayName "PAW-RDP-Block-Other" `
+            -Direction Inbound -Protocol TCP -LocalPort 3389 `
+            -RemoteAddress Any -Action Block -Profile Any
+        }
+
+    - name: Map file-server share at logon (points at secret-tier file server)
+      win_copy:
+        src: map_share.bat
+        dest: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\
+
+    # --- Place a TSG Strongroom-specific marker file so IR can confirm tier ---
+
+    - name: Ensure C:\ProgramData\TSG exists
+      win_file:
+        path: C:\ProgramData\TSG
+        state: directory
+
+    - name: Create privileged-access marker
+      win_copy:
+        dest: C:\ProgramData\TSG\PAW-MARKER.txt
+        content: |
+          This host is a Privileged Access Workstation in the Strongroom
+          Trust custody access tier. RDP only via Apache Guacamole at
+          https://10.0.4.6:8080/. Direct connections will be blocked.
+
+          Owner: Strongroom Trust Group / TSG Custody & Escrow
+          Classification: Restricted - Vault Operations Only

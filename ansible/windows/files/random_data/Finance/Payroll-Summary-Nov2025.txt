@@ -1,0 +1,100 @@
+================================================================================
+        THE SECRETS GROUP (TSG) - PAYROLL SUMMARY REPORT
+================================================================================
+Domain: TSG-INTERNAL.LAB
+Pay Period: November 2025 (Pay run: 25 Nov 2025)
+Prepared by: Lisa Liu, HR & Payroll
+Approved: Sarah Wang, CFO | Henry Ngata, CEO
+Confidential - Internal Use Only
+================================================================================
+
+DEPARTMENTAL PAYROLL SUMMARY - November 2025
+All figures in NZD. Individual salaries not disclosed per privacy policy.
+
+--------------------------------------------------------------------------------
+DEPARTMENT              HEADCOUNT    GROSS WAGES    TAX (PAYE)    NET PAY
+--------------------------------------------------------------------------------
+
+Vault Operations              12       $98,400.00    $28,536.00   $69,864.00
+  - Vault custodians (8)
+  - Shift supervisors (3)
+  - Operations manager (1)
+
+IT & Infrastructure           8       $89,200.00    $25,868.00   $63,332.00
+  - Systems engineers (4)
+  - Security specialists (2)
+  - IT manager (1)
+  - DevOps (1)
+
+Legal & Compliance            4       $52,800.00    $15,312.00   $37,488.00
+  - Compliance officers (2)
+  - Legal counsel (1)
+  - Compliance manager (1)
+
+Sales & Client Relations      6       $72,600.00    $21,054.00   $51,546.00
+  - Account managers (4)
+  - Business development (1)
+  - Sales director (1)
+
+Executive                     4       $68,000.00    $19,720.00   $48,280.00
+  - CEO, CFO, COO, CTO
+
+Singapore Office              5       $62,400.00    $18,096.00   $44,304.00
+  - Regional manager (1)
+  - Client relations (2)
+  - Operations support (2)
+
+--------------------------------------------------------------------------------
+TOTALS                       39    $443,400.00   $128,586.00  $314,814.00
+--------------------------------------------------------------------------------
+
+EMPLOYER CONTRIBUTIONS & ON-COSTS
+--------------------------------------------------------------------------------
+KiwiSaver (Employer match 4%)                              $17,736.00
+Superannuation - Defined contribution (AU staff)            $3,120.00
+ACC Levies (workplace injury)                               $1,772.00
+Employer superannuation (Singapore - CPF equivalent)        $5,616.00
+--------------------------------------------------------------------------------
+Total Employer On-Costs                                    $28,244.00
+--------------------------------------------------------------------------------
+
+LEAVE LIABILITIES (Accrued as at 30 Nov 2025)
+--------------------------------------------------------------------------------
+Annual Leave                                                 $89,200.00
+Sick Leave                                                   $12,400.00
+Long Service Leave                                           $8,900.00
+--------------------------------------------------------------------------------
+Total Leave Liability                                      $110,500.00
+--------------------------------------------------------------------------------
+
+PAYROLL TAX & DEDUCTIONS SUMMARY
+--------------------------------------------------------------------------------
+PAYE (Pay As You Earn)                                     $128,586.00
+Student Loan deductions                                      $2,340.00
+KiwiSaver (Employee contributions)                          $17,736.00
+Child Support deductions                                       $420.00
+--------------------------------------------------------------------------------
+Total Deductions                                           $149,082.00
+--------------------------------------------------------------------------------
+
+PAYROLL PROCESSING NOTES
+--------------------------------------------------------------------------------
+- Pay frequency: Monthly (last working day)
+- Payment method: Direct credit to employee bank accounts
+- Payroll system: Xero Payroll
+- IRD filing: EMS submitted 26 Nov 2025
+- KiwiSaver: All NZ employees enrolled; default 4% employee / 4% employer
+- Singapore staff: Paid in SGD, converted at mid-month rate for reporting
+- Overtime: $3,200 included in Vault Operations (shift allowances)
+- Bonuses: Nil for November (annual bonus paid in March)
+
+RECONCILIATION
+--------------------------------------------------------------------------------
+Gross wages + Employer on-costs = Total labour cost
+$443,400 + $28,244 = $471,644 (November 2025)
+--------------------------------------------------------------------------------
+
+================================================================================
+Report generated: 26/11/2025 | Next pay run: 20/12/2025
+For questions: lisa.liu@tsg-internal.lab
+================================================================================

@@ -1,0 +1,14 @@
+---
+
+- name: Make a directory for the sys tools
+  win_file:
+    path: C:\Tools\SysTools
+    state: directory
+
+- name: Copy crowdstrike agent binary to host
+  win_copy:
+    src: WindowsSensor.exe
+    dest: C:\Tools\SysTools\WindowsSensor.exe
+
+- name: Install Crowdstrike 
+  win_shell: C:\Tools\SysTools\WindowsSensor.exe /install /quiet /norestart CID=E2A34F96E2D4440FBB3BB6F89B035F5A-92 VDI=1 GROUPING_TAGS="project-responder"

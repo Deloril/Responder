@@ -1,0 +1,98 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              IT ASSET REGISTER - 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document: TSG-IT-ASSET-2025
+As at: 30 November 2025
+Maintained by: Li-Hoon Jones, Systems Administrator
+================================================================================
+
+1. SERVERS
+--------------------------------------------------------------------------------
+Asset Tag    Hostname                    IP Address   Role              Location      Warranty
+--------------------------------------------------------------------------------
+SRV-001      DC01.tsg-internal.lab  10.0.1.6    Domain Controller  Wellington    2027-03
+SRV-002      file.tsg-internal.lab  10.0.2.6    File Server        Wellington    2027-06
+SRV-003      sql.tsg-internal.lab   10.0.2.7    SQL Server         Wellington    2027-06
+SRV-004      web.tsg-internal.lab   10.0.0.6    Web Server         Wellington    2026-09
+SRV-005      mail.tsg-internal.lab  10.0.0.7    Mail Server        Wellington    2026-09
+SRV-006      fw-dmz-corp.tsg-internal.lab 10.0.0.250 / 10.0.1.250  Inner Firewall (DMZ<->Corp)  Wellington 2027-12
+SRV-007      fw-corp-secret.tsg-internal.lab 10.0.1.251 / 10.0.2.250 Inner Firewall (Corp<->Secret) Wellington 2027-12
+SRV-008      guac.tsg-internal.lab  10.0.4.6    Guacamole RDP Gateway  Wellington 2027-04
+--------------------------------------------------------------------------------
+Notes: SRV-002, SRV-003 in restricted subnet (PAW-only access).
+       SRV-004, SRV-005 in DMZ. SRV-006, SRV-007 are inner firewall NVAs
+       deployed Q2 2026 (CR-2026-051). SRV-008 brokers RDP into the new
+       privileged-access workstation tier.
+
+
+2. WORKSTATIONS
+--------------------------------------------------------------------------------
+Asset Tag    Hostname                     IP Address   User              Location      Warranty
+--------------------------------------------------------------------------------
+WS-101       client-1.tsg-internal.lab 10.0.1.10  ben              Wellington    2026-01
+WS-102       client-2.tsg-internal.lab 10.0.1.11  kate             Wellington    2026-01
+WS-103       (spare)                       DHCP        -                Wellington    2025-12
+WS-201       WS-AKL-001                    DHCP        henry.ngata      Auckland      2026-04
+WS-202       WS-AKL-002                    DHCP        oliver.anderson  Auckland      2026-04
+WS-301       WS-CHC-001                    DHCP        tama.thomas      Christchurch  2026-02
+WS-401       WS-SIN-001                    DHCP        lucas.kang       Singapore     2026-08
+WS-402       WS-SIN-002                    DHCP        jack.zhou        Singapore     2026-08
+WS-901       paw-1.tsg-internal.lab         10.0.4.10   (custody team -- shared)  Wellington  2027-04
+WS-902       paw-2.tsg-internal.lab         10.0.4.11   (custody team -- shared)  Wellington  2027-04
+--------------------------------------------------------------------------------
+Notes: WS-901/WS-902 are the new Privileged Access Workstations. Both are
+       hardened, RDP-only-via-Guacamole, and the only hosts permitted to
+       talk SMB/MSSQL into the secret/restricted subnet (10.0.2.0/24).
+       Strongroom Trust custody operations only -- bookings via Charlotte Mata
+       (Group COO) until self-service in Service-Now is rolled out.
+
+
+3. NETWORK EQUIPMENT
+--------------------------------------------------------------------------------
+Asset Tag    Device Type    Location      Model              Warranty
+--------------------------------------------------------------------------------
+NW-001       Firewall       Wellington    FortiGate 60F      2026-11
+NW-002       Switch (Corp)  Wellington    Cisco 2960X        2026-05
+NW-003       Switch (DMZ)   Wellington    Cisco 2960X        2026-05
+NW-004       Switch (Secret) Wellington   Cisco 2960X        2026-05
+NW-005       UPS (Server)   Wellington    APC Smart-UPS 3000 2025-12
+NW-006       UPS (Vault)   Wellington    APC Smart-UPS 5000 2026-03
+--------------------------------------------------------------------------------
+
+
+4. SOFTWARE LICENCES
+--------------------------------------------------------------------------------
+Product              Type        Quantity   Expiry      Notes
+--------------------------------------------------------------------------------
+Microsoft Windows Server 2022   OEM        5            Perpetual   Per server
+Microsoft SQL Server 2022       CAL        25           2026-06     Per-user CAL
+Microsoft 365 E3                 Subscription 45       2026-03     Per-user
+Microsoft Azure                  Pay-as-go   -          Ongoing     SSN migration
+Veeam Backup & Replication      Subscription 1         2026-02     Per-socket
+CrowdStrike Falcon Pro          Subscription 50        2026-04     Endpoint
+Sophos XG Firewall              Subscription 1         2026-01     FortiGate alt
+--------------------------------------------------------------------------------
+
+
+5. LOCATION SUMMARY
+--------------------------------------------------------------------------------
+Wellington:  DC, File, SQL, Web, Mail, 2 workstations, all network gear
+Auckland:    2 workstations (henry.ngata, oliver.anderson)
+Christchurch: 1 workstation (tama.thomas)
+Singapore:   2 workstations (lucas.kang, jack.zhou)
+Sydney/Melbourne: No dedicated assets; VPN to Wellington
+
+
+6. PENDING ACTIONS
+--------------------------------------------------------------------------------
+- WS-103 warranty expires Dec 2025; schedule replacement
+- NW-005 UPS battery replacement due (see Vault-Maintenance-Schedule-2026)
+- SQL Server migration to Azure (CR-2025-142) may affect SRV-003 asset status
+
+
+================================================================================
+Document Control: TSG-IT-ASSET-2025 | Version 1.2
+Last audit: 30 November 2025
+================================================================================

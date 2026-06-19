@@ -1,0 +1,53 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0214
+Deposit Date: 2025-02-25
+Client: Harbour City Capital
+Agreement: HCC-Cert-Escrow-2024-078
+Deposit Type: Digital Certificate Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: e7b2c6a0d4f8e1b5c9d3a7f1e5b9c3d7a1f5e9b3c7d1a5f9e3b7c1d5a9f3e7
+Deposit Verified: 2025-02-25 09:41:22 UTC
+Custodian: L. Thompson (TSG Security Officer)
+
+CERTIFICATE DETAILS
+-------------------
+Subject: CN=*.harbourcitycapital.co.nz, O=Harbour City Capital Ltd
+Issuer: DigiCert TLS RSA SHA256 2020 CA1
+Serial: 0a3f7c2e1b9d4f6a8c0e2b4d6f8a1c3e5
+Valid From: 2024-08-15
+Valid To: 2026-08-16
+Key Size: 2048-bit RSA
+Thumbprint: a7f2c4e91b3d5f7a9c0e2b4d6f8a1c3e5b7d9f0a2c4e6b8d0f2a4c6e8b0d2f4
+
+CHAIN OF TRUST
+--------------
+  1. DigiCert Root CA (Root)
+  2. DigiCert TLS RSA SHA256 2020 CA1 (Intermediate)
+  3. *.harbourcitycapital.co.nz (Leaf - Escrowed)
+
+ASSOCIATED CERTIFICATES
+----------------------
+  HCC-Signing-2024-001 | Code Signing | Renewal: 2025-09-01
+  HCC-SMIME-2024-003   | Email Encryption | Renewal: 2025-11-15
+  HCC-EV-2024-001      | Extended Validation | Renewal: 2026-02-20
+
+PRIVATE KEY CUSTODY
+-------------------
+  Format: PKCS#12 (password protected)
+  Key Backup: HSM-encrypted copy in vault
+  Recovery: Requires 2-of-3 authorized signatories
+
+RENEWAL SCHEDULE
+----------------
+  Primary TLS: 2026-06-16 (90-day advance renewal)
+  Code Signing: 2025-07-01
+  Next Audit: 2025-08-25
+
+--------------------------------------------------------------------------------
+Release Conditions: Certificate compromise, Provider failure, Business sale
+================================================================================

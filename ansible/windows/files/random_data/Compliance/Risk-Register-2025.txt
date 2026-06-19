@@ -1,0 +1,115 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    RISK REGISTER 2025
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Version: 2.3 | Last Updated: 1 October 2025
+Owner: Sophie Patel, Risk & Internal Audit
+Review Cycle: Quarterly | Next Review: 1 January 2026
+================================================================================
+
+RISK ASSESSMENT SCALES
+----------------------
+Likelihood: 1=Rare, 2=Unlikely, 3=Possible, 4=Likely, 5=Almost Certain
+Impact: 1=Negligible, 2=Minor, 3=Moderate, 4=Major, 5=Severe
+Risk Score: L x I (1-4 = Low, 5-9 = Medium, 10-15 = High, 16-25 = Critical)
+
+
+RISK REGISTER
+================================================================================
+
+ID    Risk Description              L   I   Score  Owner         Mitigation
+--------------------------------------------------------------------------------
+R001  Data breach - unauthorised    4   5   20     Henry Ngata   MFA, encryption,
+      access to vault contents              CRIT  Jennifer Li   access reviews,
+      or client escrow materials                                   SIEM monitoring
+
+R002  Vault physical security      2   5   10     Henry Ngata   Dual-control,
+      compromise - forced entry             HIGH  ben           biometrics, 24/7
+      or insider-assisted theft                                    monitoring, insurance
+
+R003  Key person dependency -      4   4   16     Daniel Kemp   Cross-training,
+      Chief Custodian Officer                CRIT  Kate          documented procedures,
+      unavailable during release                                   deputy designation
+      event
+
+R004  Regulatory change - NZ        3   4   12     Sarah Wang    Legal monitoring,
+      Privacy Act amendments                 HIGH  Lisa Liu      compliance program,
+      or new data localisation                                     external counsel
+      requirements
+
+R005  Natural disaster - Wellington 3  5   15     Kate          DR site (Auckland),
+      earthquake damages HQ                 CRIT  Jennifer Li   offsite backups,
+      or primary vault                                            tested recovery
+
+R006  Supply chain compromise -    3   4   12     Jennifer Li   Supplier assessments,
+      compromise of AWS, Datacom,            HIGH  Lisa Liu      contract security
+      or Microsoft infrastructure                                 clauses, monitoring
+
+R007  Insider threat - malicious    3   5   15     Henry Ngata   Background checks,
+      employee exfiltrates client            CRIT  Sophie Patel  least privilege,
+      data or vault contents                                      DLP, access logging
+
+R008  Ransomware or destructive    4   4   16     Jennifer Li   Backups, EDR,
+      malware on SSN platform                CRIT  David Nair    incident response,
+      or vault systems                                            tabletop exercises
+
+R009  Third-party developer        3   4   12     David Nair    Contract NDA,
+      exposes SSN source code               HIGH  Sarah Wang    code review, limited
+      or client integration                                         access, audit rights
+
+R010  Business continuity -        3   3   9      Kate          BCP documentation,
+      prolonged outage of primary           MED   Jennifer Li   multi-site capability,
+      Wellington operations                                       client communication
+
+R011  Reputational damage -        3   4   12     Daniel Kemp   Incident response,
+      client data breach or                 HIGH  Sarah Wang    insurance, PR plan,
+      escrow release failure                                       client contracts
+
+R012  AML/CFT compliance failure    2   4   8      Sarah Wang    CDD procedures,
+      - inadequate customer                 MED   Lisa Liu      ongoing monitoring,
+      due diligence for new clients                               compliance training
+
+R013  Key management failure -      2   5   10     Henry Ngata   HSM, key ceremony
+      loss or compromise of                 HIGH  David Nair    documentation,
+      encryption keys for vault                                    split knowledge
+
+R014  Legal/contractual -           2   4   8      Sarah Wang    Legal review,
+      unfavourable escrow release           MED   Lisa Liu      clear release
+      dispute or liability                                         conditions, insurance
+
+R015  Talent retention - loss of   3   3   9      Kate          Competitive comp,
+      critical security or custody          MED   Daniel Kemp   succession planning,
+      personnel                                                    knowledge transfer
+
+R016  Singapore regulatory -        3   3   9      Sarah Wang    MAS engagement,
+      PDPA or licensing                     MED   Lisa Liu      local legal counsel,
+      non-compliance                                                 compliance mapping
+
+R017  Audit failure - ISO 27001    2   4   8      Lisa Liu      Corrective actions,
+      or SOC 2 certification                MED   Sophie Patel  internal audits,
+      lapse or major finding                                       management focus
+
+
+RISK TREATMENT SUMMARY
+--------------------------------------------------------------------------------
+Critical (16-25): 5 risks  | High (10-15): 6 risks | Medium (5-9): 6 risks
+Accept: 0 | Mitigate: 17 | Transfer: 0 | Avoid: 0
+
+
+ESCALATION THRESHOLDS
+--------------------------------------------------------------------------------
+- Risk score increase of 3+ points: Report to CEO and Board
+- New Critical risk: Immediate Executive Committee review
+- Mitigation failure (2 consecutive quarters): Escalate to Kate (COO)
+
+
+APPROVAL
+--------------------------------------------------------------------------------
+Risk Register Owner: Sophie Patel _____________ Date: 01/10/2025
+Reviewed by: Daniel Kemp, CEO _________________ Date: _______________
+Reviewed by: Kate, COO ________________________ Date: _______________
+
+================================================================================
+Document Control: TSG-RISK-2025-002 | Confidential - Internal Use
+================================================================================

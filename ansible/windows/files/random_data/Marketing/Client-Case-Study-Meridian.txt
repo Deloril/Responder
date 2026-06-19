@@ -1,0 +1,77 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+                    CLIENT CASE STUDY
+                    Meridian Financial Group
+================================================================================
+Document Classification: Marketing - Approved for External Use
+Prepared by: Ava Phan, Client Success Manager
+Date: November 2025
+================================================================================
+
+CLIENT PROFILE
+--------------
+Company: Meridian Financial Group
+Industry: Financial Services (Asset Management)
+Headquarters: Auckland, New Zealand
+AUM: NZD 4.2 billion
+Employees: 180
+
+THE CHALLENGE
+-------------
+Meridian Financial Group relied on a third-party portfolio management platform
+for their core investment operations. The vendor, a mid-sized software company,
+held exclusive custody of the source code. Meridian's board identified critical
+vendor concentration risk: in the event of vendor insolvency, acquisition, or
+dispute, they would lose access to the system underpinning their entire
+investment process.
+
+Regulatory pressure compounded the issue. Reserve Bank of New Zealand
+guidelines and FMA expectations required documented continuity arrangements
+for material outsourced systems. Meridian's auditors had flagged the absence
+of escrow as a control deficiency for two consecutive years.
+
+"Our board was uncomfortable with the exposure. We had no leverage, no
+visibility, and no fallback if things went wrong." - Meridian CTO
+
+THE SOLUTION
+------------
+TSG designed a three-party escrow arrangement involving Meridian (licensee),
+the software vendor (depositor), and TSG (escrow agent). Key elements:
+
+• Source Code Escrow: Full repository including build scripts, dependencies,
+  and documentation deposited quarterly with TSG's Wellington vault
+• Verification Events: Annual independent verification by TSG to confirm
+  completeness and buildability of deposited materials
+• Release Conditions: Clear triggers (insolvency, material breach, failure
+  to support) with 30-day cure period and independent arbitration provision
+• Multi-Region Backup: Replicated custody in Sydney for business continuity
+
+TSG's SSN platform provided Meridian with real-time deposit status visibility
+and audit trails, satisfying their compliance requirements. The arrangement
+was negotiated within 90 days with full vendor cooperation.
+
+THE RESULTS
+-----------
+• Vendor risk reduced: Meridian now has contractual assurance of source code
+  access under defined release conditions
+• Audit finding resolved: FMA and external auditors accepted the arrangement
+  as adequate control for outsourced system continuity
+• Board confidence: Escrow became a template for other critical vendor
+  relationships
+• Implementation timeline: 90 days from engagement to first deposit
+
+"TSG understood our regulatory context immediately. They didn't try to sell us
+a standard product - they worked with our vendor to design something that
+worked for everyone. The verification process gave us real confidence."
+- Sarah Chen, Chief Risk Officer, Meridian Financial Group
+
+LESSONS LEARNT
+--------------
+• Early vendor engagement accelerates implementation
+• Verification frequency should match system criticality
+• Clear release conditions prevent disputes
+• Multi-region custody addresses business continuity concerns
+
+================================================================================
+                    For more information: sales@thesecretsgroup.co.nz
+================================================================================

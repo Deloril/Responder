@@ -1,0 +1,53 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0312
+Deposit Date: 2025-03-15
+Client: Ministry of Primary Industries (MPI)
+Agreement: MPI-Biosecurity-Escrow-2024-041
+Deposit Type: Biosecurity System Escrow
+Classification: RESTRICTED - Government Critical Infrastructure
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: e2f7a4c9b1d6e3f8a5c0b7d4e1f9a6c3b0d7e4f1a8c5b2d9e6f3a0c7b4d1e8
+Deposit Verified: 2025-03-15 08:45:22 NZDT
+Custodian: K. Te Rangi (TSG Government Services Officer)
+
+BIOSECURITY SYSTEM COMPONENTS
+-----------------------------
+System: MPI Biosecurity Risk Management Platform (BRMP)
+Version: 3.2.1
+Deployment: On-premises + Azure Government
+
+ESCROWED ASSETS
+---------------
+  - BRMP-Core source code (7 repositories)
+  - Pest & disease database schema
+  - Border clearance integration credentials
+  - MPI-Net API keys (quarantine declaration system)
+  - X-ray/scanning system interface specs
+  - Import permit generation engine
+
+REPOSITORY MANIFEST
+-------------------
+  mpi-brmp-core           | SHA-256: 7a3f1e9c5b2d8f4a0c6e2b8d4f1a7c3e9b5d1
+  mpi-permit-engine       | SHA-256: 9b4e2f0a6c3d9e5b1f7a4c0d8e2b6f3a9c5e1
+  mpi-border-integration  | SHA-256: 2c8f5a1e4b7d0c3f6a9e2b5d8c1f4a7e0b3d6
+  mpi-pest-database       | SHA-256: 5d1a8e4b2f7c0d3e6a9b2f5c8d1e4a7b0c3f6
+  mpi-reporting-module    | SHA-256: 8e2b5f1a4c7d0e3b6a9c2f5d8e1a4b7c0d3f6
+  mpi-audit-compliance    | SHA-256: 1f4a7c0d3e6b9a2f5c8d1e4b7a0c3f6d9e2b5
+  mpi-infrastructure      | SHA-256: 4b7d0e3a6c9f2b5d8e1a4c7f0b3d6e9a2c5f8
+
+CREDENTIAL REFERENCES (Encrypted)
+---------------------------------
+  MPI-Net Prod API Key: mpi_******************************9xK2
+  Border Clearance Token: bct_******************************4mP7
+  Database Admin: Documented in separate vault compartment
+
+--------------------------------------------------------------------------------
+Release Conditions: System failure, Vendor exit, National security
+Compliance: Official Information Act, MPI Security Framework
+Next Verification: 2025-06-15
+================================================================================

@@ -1,0 +1,13 @@
+
+- hosts: sql
+  gather_facts: no
+  vars_files: 
+    - ./vars/file_server.yml
+    - ./vars/domain_users_and_groups.yml
+    - ./vars/domain.yml
+    - ./vars/member_server.yml
+  roles:
+    - mssql
+  post_tasks:
+    - name: Disable update services on SQL server
+      include_tasks: tasks/disable_update_services.yml

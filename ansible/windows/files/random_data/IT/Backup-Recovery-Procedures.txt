@@ -1,0 +1,126 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+              BACKUP & RECOVERY PROCEDURES
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document: TSG-IT-BCP-003
+Version: 2.1
+Last Updated: 22 October 2025
+Owner: Li-Hoon Jones, Systems Administrator
+================================================================================
+
+1. RECOVERY OBJECTIVES
+--------------------------------------------------------------------------------
+System/Data Type              RPO (max data loss)    RTO (max downtime)
+--------------------------------------------------------------------------------
+Wellington Vault (physical)    N/A (physical)        4 hours (access)
+Vault digital data (file)      1 hour                4 hours
+SSN platform database          15 minutes            4 hours
+File server shares             1 hour                4 hours
+Domain Controller              24 hours              8 hours
+Web/Mail servers               4 hours               8 hours
+Workstation data              24 hours (OneDrive)    1 day
+--------------------------------------------------------------------------------
+
+
+2. VAULT DATA BACKUP
+--------------------------------------------------------------------------------
+Source: \\file.tsg-internal.lab\VaultData (10.0.2.6)
+        \\file.tsg-internal.lab\Escrow
+
+Schedule:
+  - Full backup: Daily 02:00 NZDT (Veeam)
+  - Incremental: Every 4 hours (02:00, 06:00, 10:00, 14:00, 18:00, 22:00)
+  - Service account: svc_backup
+
+Retention:
+  - Daily: 30 days
+  - Weekly: 12 weeks
+  - Monthly: 7 years (compliance - escrow retention)
+
+Offsite Replication:
+  - Veeam Copy Job to Azure Blob (cool tier) - daily 04:00
+  - Geo-redundant storage (GRS) enabled
+  - Encryption: AES-256 (key in Azure Key Vault)
+
+
+3. SQL DATABASE BACKUP
+--------------------------------------------------------------------------------
+Source: sql.tsg-internal.lab (10.0.2.7)
+        Databases: SSN_Core, SSN_Ingestion, master (system)
+
+Schedule:
+  - Full: Daily 01:00 NZDT
+  - Differential: Every 6 hours
+  - Transaction log: Every 15 minutes
+  - Service account: sql_svc (SQL Agent)
+
+Retention:
+  - Full: 30 days on disk; 7 years archive (tape/Blob)
+  - Log: 7 days
+
+Offsite:
+  - Copy to \\file\BackupShare\SQL (different volume)
+  - Weekly copy to Azure Blob
+
+
+4. FILE SHARE BACKUP
+--------------------------------------------------------------------------------
+Source: \\file\Corporate, \\file\IT, \\file\Finance
+
+Schedule:
+  - Full: Weekly Sunday 03:00
+  - Incremental: Daily 03:00
+
+Retention: 90 days
+
+
+5. ACTIVE DIRECTORY
+--------------------------------------------------------------------------------
+Source: DC01 (10.0.1.6)
+
+Schedule:
+  - System State backup: Daily 00:00 (Windows Server Backup)
+  - Retained: 30 days
+
+Note: AD objects recoverable from authoritative restore if required.
+
+
+6. TESTING CADENCE
+--------------------------------------------------------------------------------
+Test Type                    Frequency    Last Test    Owner
+--------------------------------------------------------------------------------
+Vault data restore (file)    Quarterly    15-Sep-2025  Li-Hoon Jones
+SQL database restore         Quarterly    15-Sep-2025  Liam Jones
+Full DR drill                Annual       Mar-2025     Michael Huang
+Backup verification (integrity) Weekly    Automated    svc_monitoring
+--------------------------------------------------------------------------------
+
+
+7. RECOVERY PROCEDURES (SUMMARY)
+--------------------------------------------------------------------------------
+7.1 Vault Data Recovery
+   - Mount Veeam backup; restore to alternate location if primary unavailable
+   - Verify checksums; notify Tama Thomas (Vault Custodian) for validation
+   - Document recovery in incident log
+
+7.2 SQL Recovery
+   - Restore from latest full + differential + log sequence
+   - Point-in-time recovery available within 15-min RPO
+   - Update connection strings if restored to alternate server
+
+7.3 File Server Recovery
+   - Restore from Veeam; verify share permissions
+   - Replicate from Azure if local backup corrupted
+
+
+8. CONTACTS
+--------------------------------------------------------------------------------
+Primary:    Li-Hoon Jones (li-hoon.jones@tsg-internal.lab) - Backup admin
+Secondary:  Liam Jones (liam.jones@tsg-internal.lab) - Systems
+Escalation: Michael Huang (michael.huang@tsg-internal.lab) - IT Manager
+
+
+================================================================================
+Document Control: TSG-IT-BCP-003 | Version 2.1
+================================================================================

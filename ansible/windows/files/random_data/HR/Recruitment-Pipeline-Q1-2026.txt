@@ -1,0 +1,175 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - RECRUITMENT PIPELINE
+                         Quarter 1 2026 | HR-REC-2026-Q1
+================================================================================
+                    Digital Escrow & Secret Custodianship
+                    Wellington, New Zealand | TSG-INTERNAL.LAB
+================================================================================
+
+Report Date: 15 December 2025
+Prepared by: Kate, HR Director
+Report Period: 1 January 2026 – 31 March 2026
+
+--------------------------------------------------------------------------------
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+
+Five (5) positions are currently approved for recruitment in Q1 2026. Total
+headcount impact: +5 FTE. Pipeline status indicates strong candidate interest
+in three roles; Senior Vault Technician (Singapore) and Compliance Analyst
+require additional sourcing effort.
+
+--------------------------------------------------------------------------------
+OPEN POSITIONS & PIPELINE STATUS
+--------------------------------------------------------------------------------
+
+1. SENIOR VAULT TECHNICIAN – SINGAPORE OFFICE
+   -------------------------------------------------------------------------
+   Requisition: REQ-2026-001
+   Hiring Manager: Fetu Yoon, Singapore Office Manager
+   Salary Band: SGD 65,000 – 85,000
+   Status: ACTIVE – Sourcing Phase
+
+   Requirements:
+   - 5+ years vault operations or secure facility experience
+   - ISO 27001 / SOC 2 awareness
+   - Singapore work authorisation
+   - Security clearance eligibility
+
+   Candidates in Pipeline:
+   | Name              | Stage        | Last Contact | Notes                    |
+   |-------------------|--------------|--------------|--------------------------|
+   | Rajesh Verma      | Application  | 02-Dec-2025  | Ex-DBS, strong refs      |
+   | Mei Lin Tan       | Phone Screen | 10-Dec-2025  | Awaiting clearance check |
+   | (2 applications)  | Pending      | -            | Under initial review     |
+
+   Next Steps: Conduct technical assessment for Mei Lin Tan by 20-Dec. Expand
+   LinkedIn campaign targeting Singapore security sector.
+
+
+2. CLOUD SECURITY ENGINEER – WELLINGTON
+   -------------------------------------------------------------------------
+   Requisition: REQ-2026-002
+   Hiring Manager: Henry Ngata, CTO
+   Salary Band: NZD 120,000 – 150,000
+   Status: ACTIVE – Interview Phase
+
+   Requirements:
+   - Azure/AWS security architecture
+   - Zero-trust networking, encryption at rest/transit
+   - NZ citizenship or permanent residency (clearance)
+
+   Candidates in Pipeline:
+   | Name              | Stage        | Last Contact | Notes                    |
+   |-------------------|--------------|--------------|--------------------------|
+   | Marcus Chen       | Final Round  | 12-Dec-2025  | Strong technical, refs OK|
+   | Emma Richardson   | Technical    | 14-Dec-2025  | AWS certs, awaiting result|
+   | James O'Brien     | Phone Screen | 11-Dec-2025  | Available Jan 2026       |
+   | (4 applications)  | Pending      | -            | CV review in progress    |
+
+   Next Steps: Offer to Marcus Chen pending final approval. Emma Richardson
+   technical assessment due 18-Dec.
+
+
+3. COMPLIANCE ANALYST – WELLINGTON
+   -------------------------------------------------------------------------
+   Requisition: REQ-2026-003
+   Hiring Manager: Sophie Patel, Legal & Compliance
+   Salary Band: NZD 75,000 – 95,000
+   Status: ACTIVE – Sourcing Phase
+
+   Requirements:
+   - 2-3 years compliance, audit, or risk experience
+   - Financial services or regulated industry background
+   - Familiarity with NZ AML/CFT, Privacy Act
+
+   Candidates in Pipeline:
+   | Name              | Stage        | Last Contact | Notes                    |
+   |-------------------|--------------|--------------|--------------------------|
+   | Natalie Brooks    | Application  | 08-Dec-2025  | Ex-RBNZ, good fit        |
+   | (1 application)   | Pending      | -            | Low volume – escalate    |
+
+   Next Steps: Phone screen Natalie Brooks 17-Dec. Engage recruitment agency
+   for compliance specialist sourcing. Consider internal secondment from
+   Finance (Priya Rangi has expressed interest – discuss with Lisa Liu).
+
+
+4. CLIENT RELATIONSHIP MANAGER – SYDNEY
+   -------------------------------------------------------------------------
+   Requisition: REQ-2026-004
+   Hiring Manager: Liam Jones, Head of Sales & Client Relations
+   Salary Band: AUD 95,000 – 115,000
+   Status: ACTIVE – Interview Phase
+
+   Requirements:
+   - B2B client management, escrow/custody or financial services
+   - Sydney-based, APAC client portfolio experience
+   - Strong relationship and escalation handling
+
+   Candidates in Pipeline:
+   | Name              | Stage        | Last Contact | Notes                    |
+   |-------------------|--------------|--------------|--------------------------|
+   | Rebecca Torres    | Final Round  | 13-Dec-2025  | Excellent presentation   |
+   | Andrew Kim        | Second Round | 09-Dec-2025  | Strong, decision pending |
+   | Fiona Macdonald   | Phone Screen | 11-Dec-2025  | Good initial impression  |
+   | (6 applications)  | Pending      | -            | Pipeline healthy         |
+
+   Next Steps: Debrief with Liam Jones 16-Dec. Offer to Rebecca Torres
+   contingent on reference check completion.
+
+
+5. JUNIOR DEVELOPER – SSN PLATFORM – WELLINGTON
+   -------------------------------------------------------------------------
+   Requisition: REQ-2026-005
+   Hiring Manager: Jack Zhou, Development Lead
+   Salary Band: NZD 65,000 – 80,000
+   Status: ACTIVE – Interview Phase
+
+   Requirements:
+   - 1-2 years development experience (Python, C#, or Java)
+   - Interest in secure systems, API development
+   - NZ work rights
+
+   Candidates in Pipeline:
+   | Name              | Stage        | Last Contact | Notes                    |
+   |-------------------|--------------|--------------|--------------------------|
+   | Tom Harris        | Technical    | 14-Dec-2025  | Code test strong         |
+   | Zoe Patterson     | Technical    | 14-Dec-2025  | Good problem-solving     |
+   | Isaac Lee         | Phone Screen | 12-Dec-2025  | Grad, keen learner       |
+   | (8 applications)  | Pending      | -            | Graduate pipeline good   |
+
+   Next Steps: Technical assessment results 16-Dec. Shortlist 2 for final
+   round with Jack Zhou and Ji-hoon Jones.
+
+
+--------------------------------------------------------------------------------
+PIPELINE METRICS – Q1 2026
+--------------------------------------------------------------------------------
+
+Total Open Roles:           5
+Total Candidates in Pipeline: 28
+Average Candidates per Role: 5.6
+Roles at Offer Stage:       2 (Cloud Sec Eng, CRM Sydney)
+Roles Requiring Sourcing:   2 (Senior Vault Tech, Compliance Analyst)
+
+Target Start Dates:
+- Cloud Security Engineer:   1 Feb 2026
+- CRM Sydney:                15 Feb 2026
+- Junior Developer:          1 Mar 2026
+- Compliance Analyst:        15 Mar 2026
+- Senior Vault Tech SGP:     1 Apr 2026 (stretch)
+
+
+--------------------------------------------------------------------------------
+APPROVALS & BUDGET
+--------------------------------------------------------------------------------
+
+All positions approved by Daniel Kemp (CEO) and Charlotte Mata (COO) as part
+of FY2026 headcount plan. Recruitment budget: NZD 45,000 (agencies, advertising,
+assessment tools). Internal recruiter: Ben (HR Coordinator) with Kate oversight.
+
+
+--------------------------------------------------------------------------------
+Document Control: HR-REC-2026-Q1 | Classification: Internal
+Next Report: 15 January 2026
+================================================================================

@@ -1,0 +1,11 @@
+.prettierignore
+.DS_Store
+.env
+inventory/attack*
+inventory/bastion*
+inventory/victim*
+TF_debug.log
+ansible/windows/files/WindowsSensor.exe
+ansible/linux/files/falcon-sensor_7.03.0-15805_amd64.deb
+ansible/common/files/falcon-sensor*.deb
+canvases/*.canvas.data.json

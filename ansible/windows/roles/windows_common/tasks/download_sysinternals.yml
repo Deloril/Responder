@@ -1,0 +1,32 @@
+---
+
+- name: make tools dir
+  win_file:
+    path: C:\Tools\
+    state: directory
+
+- name: Check if Sysinternals already extracted
+  win_stat:
+    path: C:\Tools\SysTools\PsExec.exe
+  register: sysinternals_present
+
+- name: Fetch SysInternals zip from bastion cache
+  win_get_url:
+    url: "http://{{ hostvars[inventory_hostname]['bastion_ip'] | default('10.0.3.8') }}:8888/SysinternalsSuite.zip"
+    dest: C:\Tools\SysinternalsSuite.zip
+  register: sysinternals_cached
+  ignore_errors: yes
+  when: not sysinternals_present.stat.exists
+
+- name: Fetch SysInternals zip from internet (fallback)
+  win_get_url:
+    url: https://download.sysinternals.com/files/SysinternalsSuite.zip
+    dest: C:\Tools\SysinternalsSuite.zip
+  when: not sysinternals_present.stat.exists and (sysinternals_cached is failed)
+
+- name: Unzip Sysinternals
+  win_unzip:
+    src: C:\Tools\SysinternalsSuite.zip
+    dest: C:\Tools\SysTools\
+    delete_archive: yes
+  when: not sysinternals_present.stat.exists

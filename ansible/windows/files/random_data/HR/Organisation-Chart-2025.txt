@@ -1,0 +1,90 @@
+================================================================================
+                    THE SECRETS GROUP (TSG) - ORGANISATION CHART
+                              As at 1 January 2025
+================================================================================
+                    Digital Escrow & Secret Custodianship
+                    Wellington, New Zealand | TSG-INTERNAL.LAB
+================================================================================
+
+                                    ┌─────────────────────┐
+                                    │   DANIEL KEMP       │
+                                    │   Chief Executive   │
+                                    │   Officer (CEO)     │
+                                    └─────────┬──────────┘
+                                              │
+              ┌───────────────────────────────┼───────────────────────────────┐
+              │                               │                               │
+              ▼                               ▼                               ▼
+    ┌─────────────────┐             ┌─────────────────┐             ┌─────────────────┐
+    │ HENRY NGATA     │             │ CHARLOTTE MATA  │             │ FETU YOON       │
+    │ Chief Technology│             │ Chief Operating │             │ Chief Custodian  │
+    │ Officer (CTO)   │             │ Officer (COO)   │             │ Officer (CCO)    │
+    └────────┬────────┘             └────────┬────────┘             └────────┬────────┘
+             │                               │                               │
+             │                               │                               │
+    ┌────────┴────────┐             ┌────────┴────────┐             ┌────────┴────────┐
+    │                 │             │                 │             │                 │
+    ▼                 ▼             ▼                 ▼             ▼                 ▼
+┌───────────┐   ┌───────────┐  ┌───────────┐   ┌───────────┐  ┌───────────┐   ┌───────────┐
+│ LUCAS KANG│   │ JACK ZHOU │  │ KATE      │   │ LISA LIU  │  │ WIREMU SIO│   │ FETU YOON │
+│ IT & Infra│   │ Dev Lead  │  │ HR Director│  │ Finance   │  │ Vault Ops │   │ Singapore │
+│ Director  │   │ SSN Plat. │  │            │  │ Director  │  │ Head      │   │ Office Mgr│
+└─────┬─────┘   └─────┬─────┘  └─────┬─────┘   └─────┬─────┘  └─────┬─────┘   └─────┬─────┘
+      │               │              │               │              │               │
+      │               │              │               │              │               │
+  ┌───┴───┐       ┌───┴───┐      ┌───┴───┐       ┌───┴───┐      ┌───┴───┐       ┌───┴───┐
+  │       │       │       │      │       │       │       │      │       │       │       │
+  ▼       ▼       ▼       ▼      ▼       ▼       ▼       ▼      ▼       ▼       ▼       ▼
+OLIVER   AVA    JI-HOON  HANA   BEN    JENNIFER DAVID  PRIYA  HEMI   MICHAEL  KAREN   SATOSHI
+ANDERSON PHAN   JONES    WANG   (HR)   LI       NAIR   RANGI  TAMA   LATU     TAVITA  TUALA
+IT Mgr   Sec Eng Dev     Dev    Coord  HR BP    Acct   Fin    Vault  Vault    Vault   Singapore
+                                    Analyst         Analyst Tech   Tech     Coord   Vault Lead
+
+--------------------------------------------------------------------------------
+EXECUTIVE TEAM REPORTING LINES
+--------------------------------------------------------------------------------
+
+CEO: Daniel Kemp
+  ├── CTO: Henry Ngata
+  │     ├── IT & Infrastructure Director: Lucas Kang
+  │     │     ├── IT Manager: Oliver Anderson
+  │     │     └── Security Engineer: Ava Phan
+  │     └── Development Lead (SSN Platform): Jack Zhou
+  │           ├── Developer: Ji-hoon Jones
+  │           └── Developer: Hana Wang
+  │
+  ├── COO: Charlotte Mata
+  │     ├── HR Director: Kate
+  │     │     ├── HR Coordinator: Ben
+  │     │     └── HR Business Partner: Jennifer Li
+  │     └── Finance Director: Lisa Liu
+  │           ├── Accountant: David Nair
+  │           └── Financial Analyst: Priya Rangi
+  │
+  └── Chief Custodian Officer: Fetu Yoon
+        ├── Head of Vault Operations: Wiremu Sio
+        │     ├── Vault Technician: Hemi Tama
+        │     ├── Vault Technician: Michael Latu
+        │     └── Vault Coordinator: Karen Tavita
+        └── Singapore Office Manager: Priya Rangi
+              └── Singapore Vault Lead: Satoshi Tuala
+
+--------------------------------------------------------------------------------
+ADDITIONAL REPORTING (MATRIX / FUNCTIONAL)
+--------------------------------------------------------------------------------
+
+Legal & Compliance: Sophie Patel (reports to COO, dotted line to CEO)
+Sales & Client Relations: Liam Jones (reports to COO)
+  └── Client Relationship Managers: Arjun Jones, Leilani Kumar, Kaimana Zhang
+
+Regional Office Heads:
+  - Auckland: Tama Thomas
+  - Christchurch: Sarah Wang
+  - Sydney: Oliver Anderson (dual role)
+  - Melbourne: Lucas Kang (dual role)
+  - Singapore: Fetu Yoon
+
+--------------------------------------------------------------------------------
+Document Control: HR-ORG-2025-001 | Classification: Internal
+Last Updated: 1 January 2025 | Next Review: 1 July 2025
+================================================================================

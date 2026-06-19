@@ -1,0 +1,106 @@
+================================================================================
+                    THE SECRETS GROUP (TSG)
+         M&A PRELIMINARY ASSESSMENT - STRICTLY CONFIDENTIAL
+                    Domain: TSG-INTERNAL.LAB
+================================================================================
+Document Ref: TSG-M&A-2025-001
+Prepared by: Charlotte Mata, COO | Kate, CFO
+Date: 18 November 2025
+Classification: STRICTLY CONFIDENTIAL - BOARD & EXECUTIVE ONLY
+Distribution: Daniel Kemp, Charlotte Mata, Henry Ngata, Fetu Yoon, Kate
+================================================================================
+
+                    *** STRICTLY CONFIDENTIAL ***
+        UNAUTHORISED DISCLOSURE PROHIBITED - ATTORNEY-CLIENT PRIVILEGE
+================================================================================
+
+
+TARGET OVERVIEW
+--------------------------------------------------------------------------------
+Target Company:     SecureVault Pacific Pty Ltd
+Headquarters:       Sydney, NSW, Australia
+Founded:            2018
+Employees:          ~28 FTE
+Primary Services:   Digital escrow, document custody, M&A escrow
+Key Markets:        Australia, New Zealand (limited)
+
+
+STRATEGIC RATIONALE
+--------------------------------------------------------------------------------
+1. Market Consolidation: SecureVault Pacific holds an estimated 12% share of the
+   Australian digital escrow market. Acquisition would immediately establish TSG
+   as the leading APAC custodian with combined NZ + AU presence.
+
+2. Client Base: Target maintains ~45 active escrow clients including several
+   ASX-listed entities. Client overlap with TSG is minimal (<5%), presenting
+   cross-sell opportunity for SSN platform and vault services.
+
+3. Regulatory Footprint: SecureVault holds Australian Financial Services Licence
+   (AFSL) and AUSTRAC registration. Acquisition would accelerate TSG's AU
+   regulatory readiness and avoid 18-24 month greenfield licensing timeline.
+
+4. Talent: Target's custody and compliance team (8 FTE) has deep AU market
+   experience. Retention would be critical to integration success.
+
+
+PRELIMINARY VALUATION
+--------------------------------------------------------------------------------
+Estimated Enterprise Value:    AUD 12,000,000 - 15,000,000
+Valuation Methodology:         EV/Revenue multiple (2.5x-3.0x), DCF sensitivity
+Revenue (FY2025E):             AUD 4.2M
+EBITDA (FY2025E):              AUD 680K (16% margin)
+
+Valuation Range Drivers:
+- Base case (AUD 12M): Conservative multiple, assumes client attrition risk
+- Upside case (AUD 15M): Premium for AFSL, clean compliance record, retention
+
+
+SYNERGIES (ANNUALISED, NZD EQUIVALENT)
+--------------------------------------------------------------------------------
+Revenue Synergies:
+  - Cross-sell SSN platform to SecureVault clients              NZD 180-250K
+  - Migrate AU clients to TSG vault network (margin improvement) NZD 90-120K
+  - Referral flow from combined sales team                      NZD 60-90K
+
+Cost Synergies:
+  - Consolidate IT infrastructure (AWS, security tools)         NZD 95-130K
+  - Shared compliance function (AU + NZ)                        NZD 70-95K
+  - Eliminate duplicate corporate overhead                      NZD 45-65K
+
+Total Annual Synergies (Year 3):                                NZD 540-750K
+
+
+RISKS & CONCERNS
+--------------------------------------------------------------------------------
+1. Client Retention: 30% of SecureVault revenue from top 3 clients. Key person
+   relationships may not transfer. Recommend earn-out structure tied to retention.
+
+2. Integration Complexity: Different tech stack (legacy on-prem vs. TSG cloud).
+   Henry Ngata estimates 9-12 month integration timeline for full consolidation.
+
+3. Regulatory: AFSL transfer requires ASIC approval. Historical compliance
+   review essential - one minor breach noted in 2023 (remediated).
+
+4. Culture: Target is family-founded; potential resistance to TSG processes.
+   Due diligence to assess cultural fit recommended.
+
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+1. Board approval to proceed with non-binding indicative offer (NBI) - Dec 2025
+2. Engage legal counsel (MinterEllison or Allens) for AU M&A - Jan 2026
+3. Financial due diligence (KPMG or EY) - Jan-Feb 2026
+4. Commercial due diligence - client contracts, pipeline - Feb 2026
+5. Technical due diligence - systems, security posture - Feb 2026
+6. Negotiate term sheet; target signing Q1 2026
+
+
+APPROVAL
+--------------------------------------------------------------------------------
+Prepared for Board consideration. Recommend in-principle support to authorise
+Phase 2 due diligence subject to confidentiality and exclusivity arrangements.
+
+================================================================================
+Document Control: TSG-M&A-2025-001 | STRICTLY CONFIDENTIAL
+Destroy or return all copies when no longer required. Do not distribute.
+================================================================================

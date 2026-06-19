@@ -1,0 +1,129 @@
+---
+#######################################
+## Install Mail Server (Postfix/Dovecot)
+#######################################
+
+- hosts: mail_server
+  gather_facts: yes
+  become: true
+  vars:
+    mail_domain: tsg-internal.lab
+    mail_users:
+      - { username: ben, password: "Kia0ra2025!" }
+      - { username: kate, password: "Wellington#1" }
+    falcon_sensor_deb: ../common/files/falcon-sensor_7.07.0-16206_amd64.deb
+  tasks:
+
+  - name: Set hostname
+    hostname:
+      name: "mail.{{ mail_domain }}"
+
+  - name: Install Postfix, Dovecot, and dependencies
+    apt:
+      update_cache: yes
+      name:
+        - postfix
+        - dovecot-core
+        - dovecot-pop3d
+        - python3-passlib
+      state: present
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+
+  # --- Postfix configuration ---
+
+  - name: Configure Postfix main.cf
+    copy:
+      dest: /etc/postfix/main.cf
+      content: |
+        smtpd_banner = $myhostname ESMTP
+        biff = no
+        append_dot_mydomain = no
+
+        myhostname = mail.{{ mail_domain }}
+        mydomain = {{ mail_domain }}
+        myorigin = $mydomain
+        mydestination = $myhostname, $mydomain, localhost.$mydomain, localhost
+        mynetworks = 10.0.0.0/8 127.0.0.0/8
+
+        relayhost =
+        inet_interfaces = all
+        inet_protocols = ipv4
+
+        mailbox_command =
+        home_mailbox = Maildir/
+
+        smtpd_recipient_restrictions = permit_mynetworks, reject_unauth_destination
+    notify: restart postfix
+
+  # --- Dovecot configuration (POP3) ---
+
+  - name: Configure Dovecot
+    copy:
+      dest: /etc/dovecot/dovecot.conf
+      content: |
+        protocols = pop3
+        listen = *
+        mail_location = maildir:~/Maildir
+        auth_username_format = %Ln
+
+        userdb {
+          driver = passwd
+        }
+
+        passdb {
+          driver = pam
+        }
+
+        service pop3-login {
+          inet_listener pop3 {
+            port = 110
+          }
+        }
+
+        ssl = no
+        disable_plaintext_auth = no
+    notify: restart dovecot
+
+  # --- Create mail user accounts ---
+
+  - name: Create mail user accounts
+    user:
+      name: "{{ item.username }}"
+      password: "{{ item.password | password_hash('sha512') }}"
+      shell: /bin/bash
+      create_home: yes
+    loop: "{{ mail_users }}"
+
+  - name: Create Maildir for each user
+    file:
+      path: "/home/{{ item.username }}/Maildir"
+      state: directory
+      owner: "{{ item.username }}"
+      group: "{{ item.username }}"
+      mode: "0700"
+    loop: "{{ mail_users }}"
+
+  - name: Ensure services are enabled and started
+    service:
+      name: "{{ item }}"
+      state: started
+      enabled: yes
+    loop:
+      - postfix
+      - dovecot
+
+  # --- CrowdStrike Falcon sensor ---
+
+  - include_tasks: ../common/tasks/install_falcon_sensor.yml
+
+  handlers:
+  - name: restart postfix
+    service:
+      name: postfix
+      state: restarted
+
+  - name: restart dovecot
+    service:
+      name: dovecot
+      state: restarted

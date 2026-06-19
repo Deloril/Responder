@@ -1,0 +1,71 @@
+================================================================================
+THE SECRETS GROUP (TSG) - CONFIDENTIAL
+CLIENT SATISFACTION SURVEY RESULTS 2025
+================================================================================
+
+Survey Period: 1 October 2025 - 30 November 2025
+Report Date: 15 December 2025
+Prepared by: Client Experience Team, Wellington HQ
+
+--------------------------------------------------------------------------------
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+
+Total Respondents: 45 (from 62 active client accounts - 72.6% response rate)
+Net Promoter Score (NPS): +52 (Industry benchmark: +38)
+Overall Satisfaction: 4.2/5.0 (Excellent)
+
+--------------------------------------------------------------------------------
+SATISFACTION BY CATEGORY (1-5 scale, 5 = Excellent)
+--------------------------------------------------------------------------------
+
+Vault Access Speed & Reliability .............. 4.4
+Communication & Responsiveness ............... 4.3
+Billing Accuracy & Transparency .............. 4.1
+Portal Usability & Features .................. 3.9
+Incident Response & Escalation ............... 4.5
+Documentation & Reporting .................... 4.2
+Account Manager Support ...................... 4.6
+
+--------------------------------------------------------------------------------
+NET PROMOTER SCORE BREAKDOWN
+--------------------------------------------------------------------------------
+
+Promoters (9-10): 32 respondents (71%)
+Passives (7-8):   9 respondents (20%)
+Detractors (0-6): 4 respondents (9%)
+
+NPS Calculation: 71% - 9% = +62 (adjusted for weighting: +52)
+
+--------------------------------------------------------------------------------
+VERBATIM COMMENTS (anonymised)
+--------------------------------------------------------------------------------
+
+Positive:
+- "Leilani has been exceptional - always responsive and explains complex 
+   procedures clearly. Best account manager we've worked with."
+- "The Wellington vault access process is seamless. We've never had a delay."
+- "Billing is crystal clear. No surprises, which we appreciate."
+- "Incident response during the October maintenance window was exemplary. 
+   We were kept informed throughout."
+
+Areas for Improvement:
+- "Portal could use a mobile-friendly interface. Accessing from tablet is clunky."
+- "Would like more granular audit trail exports for our compliance team."
+- "Billing cycle doesn't align with our financial year - minor inconvenience."
+- "Sydney office response times can be slower than Wellington - time zone 
+   coordination perhaps?"
+
+--------------------------------------------------------------------------------
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+
+1. Prioritise portal mobile responsiveness in Q1 2026 roadmap
+2. Review APAC office SLA alignment and escalation paths
+3. Consider flexible billing cycle options for enterprise clients
+4. Expand audit export formats (CSV, JSON) for compliance integration
+
+--------------------------------------------------------------------------------
+Document Classification: Internal Use Only
+Domain: TSG-INTERNAL.LAB | Version: 1.0
+================================================================================

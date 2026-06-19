@@ -1,0 +1,50 @@
+================================================================================
+THE SECRETS GROUP (TSG) - ESCROW DEPOSIT RECORD
+================================================================================
+Reference: TSG-ESC-2025-0189
+Deposit Date: 2025-02-18
+Client: Pacific Technologies Ltd
+Agreement: PTL-Key-Escrow-2024-112
+Deposit Type: Encryption Key Escrow
+================================================================================
+
+VERIFICATION
+------------
+Manifest SHA-256: b4e9d3f2c0a7e8d1b6c9f2a5e8d1b4c7f0a3e6d9b2c5f8a1e4d7b0c3f6a9
+Deposit Verified: 2025-02-18 14:42:11 UTC
+Custodian: R. Chen (TSG Key Management Specialist)
+
+KEY METADATA
+------------
+Key ID: PTL-DEK-2025-0042
+Algorithm: AES-256-GCM
+Key Purpose: Production Data Encryption
+Key Version: 3.2
+Created: 2024-11-15
+Expiry Date: 2026-11-15
+Rotation Policy: Annual
+
+WRAPPED KEY MATERIAL (KEK: PTL-KEK-MASTER-001)
+----------------------------------------------
+Wrapped Key (Hex):
+  a7f2c4e9 1b3d5f7a 9c0e2b4d 6f8a1c3e 5b7d9f0a 2c4e6b8d 0f2a4c6e 8b0d2f4a
+  6c8e0b2d 4f6a8c1e 3b5d7f9a 0c2e4b6d 8f1a3c5e 7b9d0f2a 4c6e8b1d 3f5a7c9e
+  0b2d4f6a 8c1e3b5d 7f9a0c2e 4b6d8f1a 3c5e7b9d 0f2a4c6e 8b1d3f5a 7c9e0b2d
+
+Key Fingerprint: SHA256:a3f8c2e1b9d4f7a6e0c8b5d2f1a9e7c4b6d8f0a2e5c7b9d1f3a5e7c9b0d2f4a6
+
+ASSOCIATED KEYS (Escrowed)
+--------------------------
+  PTL-SIG-2025-0012 | RSA-4096 | Expiry: 2026-03-01
+  PTL-EXCH-2025-0008 | ECDH-P256 | Expiry: 2026-06-15
+
+KEY CUSTODY CHAIN
+-----------------
+1. PTL-KEK-MASTER-001 (Root) - HSM Stored
+2. PTL-DEK-2025-0042 (Data) - This Deposit
+3. Key split: 3-of-5 Shamir threshold
+
+--------------------------------------------------------------------------------
+Release Conditions: Key compromise, Business continuity, Court order
+Next Key Audit: 2025-08-18
+================================================================================

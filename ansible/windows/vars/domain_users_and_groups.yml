@@ -1,0 +1,269 @@
+---
+## Domain Users vars
+
+# ansible
+server_ansible_username: ansible
+server_ansible_password: deployment_user_01234
+
+# Domain Administrator
+domain_admin_username: Administrator # Local Admin of DC is promoted to DA
+domain_admin_password: tsgInt3rnal
+
+domain_users:
+  - { username: 'ben', password: 'Kia0ra2025!', groups: ['TSG-users'] }
+  - { username: 'kate', password: 'Wellington#1', groups: ['TSG-users'] }
+  - { username: 'sam.hewitt', password: 'DevOps2025!', groups: ['TSG-users'] }
+  - { username: 'tama.thomas', password: 'Welcome123', groups: ['TSG-users'] }
+  - { username: 'sarah.wang', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'henry.ngata', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'fetu.yoon', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'ava.phan', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'liam.jones', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'charlotte.mata', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.jones', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'lucas.kang', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'min.mata', password: 'Work123!', groups: ['TSG-users'] }
+  - { username: 'hana.wang', password: 'Summer2025!', groups: ['TSG-users'] }
+  - { username: 'michael.latu', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'leilani.kumar', password: 'Temp1234!', groups: ['TSG-users'] }
+  - { username: 'hemi.tama', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'michael.huang', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'ava.patel', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'wiremu.sio', password: 'Secret1!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.chen', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'david.nair', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'sophie.patel', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'thi.li', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'nguyen.whare', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'liam.lee', password: 'Puppy123!', groups: ['TSG-users'] }
+  - { username: 'jennifer.li', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'matthew.mata', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'wei.wang', password: 'Login123!', groups: ['TSG-users'] }
+  - { username: 'tama.fotu', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'jack.zhou', password: 'Secret1!', groups: ['TSG-users'] }
+  - { username: 'charlotte.lee', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'leilani.choi', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.kim', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'minh.cho', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'jack.nair', password: 'Tsg2025!', groups: ['TSG-users'] }
+  - { username: 'hemi.kim', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'henry.choi', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'karen.tavita', password: 'Changeme1!', groups: ['TSG-users'] }
+  - { username: 'henry.tuitahi', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'lisa.liu', password: 'TheSecrets1!', groups: ['TSG-users'] }
+  - { username: 'hemi.wilson', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'nguyen.kang', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'charlotte.park', password: 'Qazwsx1!', groups: ['TSG-users'] }
+  - { username: 'jing.park', password: 'Login123!', groups: ['TSG-users'] }
+  - { username: 'isabella.chen', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'amelia.yoon', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'minh.chen', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'hana.sharma', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'ananya.iyer', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'michael.brown', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'isabella.kim', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'christopher.choi', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.wilson', password: 'Tsg2025!', groups: ['TSG-users'] }
+  - { username: 'wei.vu', password: 'Login123!', groups: ['TSG-users'] }
+  - { username: 'linh.chen', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'helen.smith', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'fetu.le', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'jennifer.park', password: 'Temp1234!', groups: ['TSG-users'] }
+  - { username: 'sophie.li', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'james.cho', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'ananya.faalogo', password: 'Sydney1!', groups: ['TSG-users'] }
+  - { username: 'ananya.anderson', password: 'Letmein1!', groups: ['TSG-users'] }
+  - { username: 'karen.kim', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.whare', password: 'Auckland1!', groups: ['TSG-users'] }
+  - { username: 'kiri.faalogo', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'minh.tavita', password: 'P@ssw0rd', groups: ['TSG-users'] }
+  - { username: 'james.vu', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'arjun.jones', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'kiri.fotu', password: 'Letmein1!', groups: ['TSG-users'] }
+  - { username: 'amelia.brown', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'nguyen.taylor', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'david.iyer', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'michael.le', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'william.lee', password: 'Asdf1234!', groups: ['TSG-users'] }
+  - { username: 'thi.hemi', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'linh.tuala', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'charlotte.le', password: 'Melbourne1!', groups: ['TSG-users'] }
+  - { username: 'kaimana.zhang', password: 'TheSecrets1!', groups: ['TSG-users'] }
+  - { username: 'losa.park', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'yuki.nguyen', password: 'Work123!', groups: ['TSG-users'] }
+  - { username: 'sophie.patu', password: 'Puppy123!', groups: ['TSG-users'] }
+  - { username: 'noah.huang', password: 'Welcome123', groups: ['TSG-users'] }
+  - { username: 'hana.pham', password: 'Puppy123!', groups: ['TSG-users'] }
+  - { username: 'hana.mata', password: 'Summer2025!', groups: ['TSG-users'] }
+  - { username: 'noah.kang', password: 'Changeme1!', groups: ['TSG-users'] }
+  - { username: 'henry.wilson', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'helen.huang', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'ananya.patu', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'losa.iyer', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'minh.ngata', password: 'Asdf1234!', groups: ['TSG-users'] }
+  - { username: 'amelia.mamea', password: 'Asdf1234!', groups: ['TSG-users'] }
+  - { username: 'lisa.singh', password: 'Melbourne1!', groups: ['TSG-users'] }
+  - { username: 'oliver.anderson', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'wiremu.kumar', password: 'Company1!', groups: ['TSG-users'] }
+  - { username: 'satoshi.tuala', password: 'Changeme1!', groups: ['TSG-users'] }
+  - { username: 'fetu.park', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'olivia.sharma', password: 'Temp1234!', groups: ['TSG-users'] }
+  - { username: 'lisa.tuala', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'amelia.whare', password: 'Melbourne1!', groups: ['TSG-users'] }
+  - { username: 'minh.reddy', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'hao.kereopa', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'satoshi.patu', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'yuki.latu', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'oliver.brown', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'karen.smith', password: 'Wellington1!', groups: ['TSG-users'] }
+  - { username: 'michael.sio', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'jack.singh', password: 'Qazwsx1!', groups: ['TSG-users'] }
+  - { username: 'priya.rangi', password: 'TheSecrets1!', groups: ['TSG-users'] }
+  - { username: 'olivia.hemi', password: 'Tsg2025!', groups: ['TSG-users'] }
+  - { username: 'james.patel', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'christopher.mamea', password: 'Login123!', groups: ['TSG-users'] }
+  - { username: 'tane.kumar', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'losa.kang', password: 'Qazwsx1!', groups: ['TSG-users'] }
+  - { username: 'isabella.whare', password: 'Qwerty123!', groups: ['TSG-users'] }
+  - { username: 'charlotte.brown', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'olivia.yoon', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'olivia.brown', password: 'Asdf1234!', groups: ['TSG-users'] }
+  - { username: 'ananya.sio', password: 'P@ssw0rd', groups: ['TSG-users'] }
+  - { username: 'jack.brown', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'ava.sio', password: 'Sydney1!', groups: ['TSG-users'] }
+  - { username: 'noah.vu', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'fetu.tuala', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'jing.thomas', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'hana.vu', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'soo-jin.taylor', password: 'Company1!', groups: ['TSG-users'] }
+  - { username: 'losa.phan', password: 'P@ssw0rd', groups: ['TSG-users'] }
+  - { username: 'rawiri.chen', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'rawiri.patu', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'jing.ngata', password: 'Letmein1!', groups: ['TSG-users'] }
+  - { username: 'satoshi.liu', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'james.nair', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'noah.le', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'ananya.chen', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'wiremu.wilson', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'kiri.li', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'yuki.fotu', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'soo-jin.latu', password: 'P@ssw0rd', groups: ['TSG-users'] }
+  - { username: 'james.lee', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'manaia.lee', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'william.chen', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'oliver.yoon', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'isabella.wang', password: 'Qwerty123!', groups: ['TSG-users'] }
+  - { username: 'ji-hoon.rangi', password: 'Temp1234!', groups: ['TSG-users'] }
+  - { username: 'charlotte.choi', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'aroha.sio', password: 'Changeme1!', groups: ['TSG-users'] }
+  - { username: 'ava.kim', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'karen.wang', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'james.huang', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'tama.chen', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'sarah.reddy', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'kaimana.kumar', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'james.thomas', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'leilani.tama', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'liam.fotu', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'isabella.kumar', password: 'Autumn2024!', groups: ['TSG-users'] }
+  - { username: 'liam.zhang', password: 'Trustno1!', groups: ['TSG-users'] }
+  - { username: 'christopher.tuala', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'wiremu.rangi', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'losa.anderson', password: 'Secret1!', groups: ['TSG-users'] }
+  - { username: 'jennifer.pham', password: 'Company1!', groups: ['TSG-users'] }
+  - { username: 'soo-jin.yoon', password: 'Auckland1!', groups: ['TSG-users'] }
+  - { username: 'amelia.tuala', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'lisa.latu', password: 'Sydney1!', groups: ['TSG-users'] }
+  - { username: 'min.jones', password: 'Sydney1!', groups: ['TSG-users'] }
+  - { username: 'sarah.huang', password: 'Company1!', groups: ['TSG-users'] }
+  - { username: 'lisa.lee', password: 'Max2024!', groups: ['TSG-users'] }
+  - { username: 'hemi.hemi', password: 'Winter2024!', groups: ['TSG-users'] }
+  - { username: 'wei.tuala', password: 'Password1!', groups: ['TSG-users'] }
+  - { username: 'matthew.menon', password: 'Puppy123!', groups: ['TSG-users'] }
+  - { username: 'lucas.tuitahi', password: 'Login123!', groups: ['TSG-users'] }
+  - { username: 'wiremu.zhang', password: 'Puppy123!', groups: ['TSG-users'] }
+  - { username: 'henry.jones', password: 'Melbourne1!', groups: ['TSG-users'] }
+  - { username: 'jing.huang', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'helen.wilson', password: 'Bella2025!', groups: ['TSG-users'] }
+  - { username: 'wiremu.park', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'jing.choi', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'awhina.jones', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'aroha.kereopa', password: 'Charlie1!', groups: ['TSG-users'] }
+  - { username: 'liam.anderson', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'wiremu.cho', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'hao.vu', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'aroha.williams', password: 'Office2025!', groups: ['TSG-users'] }
+  - { username: 'james.nguyen', password: 'P@ssword1', groups: ['TSG-users'] }
+  - { username: 'fetu.cho', password: 'Melbourne1!', groups: ['TSG-users'] }
+  - { username: 'kiri.kumar', password: 'TsgUser2025!', groups: ['TSG-users'] }
+  - { username: 'losa.huang', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'losa.sio', password: 'Spring2025!', groups: ['TSG-users'] }
+  - { username: 'david.zhang', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'min.liu', password: 'TheSecrets1!', groups: ['TSG-users'] }
+  - { username: 'leilani.li', password: 'Pass1234!', groups: ['TSG-users'] }
+  - { username: 'william.whare', password: 'Company1!', groups: ['TSG-users'] }
+  - { username: 'losa.patel', password: 'Sydney1!', groups: ['TSG-users'] }
+  - { username: 'soo-jin.hoang', password: 'Letmein1!', groups: ['TSG-users'] }
+  - { username: 'jing.pham', password: 'Summer2025!', groups: ['TSG-users'] }
+  - { username: 'manaia.li', password: 'Singapore1!', groups: ['TSG-users'] }
+  - { username: 'hao.mamea', password: 'Admin123!', groups: ['TSG-users'] }
+  - { username: 'satoshi.reddy', password: 'Work123!', groups: ['TSG-users'] }
+  - { username: 'fetu.rangi', password: '1qaz2wsx!', groups: ['TSG-users'] }
+  - { username: 'priya.mamea', password: 'Christchurch1!', groups: ['TSG-users'] }
+  - { username: 'losa.taylor', password: 'Qwerty123!', groups: ['TSG-users'] }
+
+domain_groups:
+  - TSG-users
+  - Desktop-Admins
+
+# Service accounts (33 new + 3 existing = 36 total; 5 have SPNs for kerberoasting)
+service_accounts:
+  - { name: 'svc_vault', password: 'V4ult_Acc3ss!', description: 'Vault operations service account', spn: 'vault/ssn-ingestion.tsg-internal.lab:8443', groups: ['Domain Admins'] }
+  - { name: 'sql_svc', password: 'MyPlainTextPassWord01', description: 'SQL Server service account', spn: 'MSSQLSvc/sql.tsg-internal.lab:1433', groups: ['Domain Users'] }
+  - { name: 'sql_agt', password: 'MyPlainTextPassWord01', description: 'SQL Agent service account', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_backup', password: 'B4ckup_S3rv1ce!', description: 'Backup operations', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_monitoring', password: 'M0nit0r_Pr0d!', description: 'Monitoring and alerting', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_ssn', password: 'SSN_Platf0rm!', description: 'SSN platform ingestion', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_web', password: 'W3b_S3rv1ce!', description: 'Web application pool', spn: 'HTTP/portal.tsg-internal.lab', groups: ['Domain Users'] }
+  - { name: 'svc_mail', password: 'M4il_R3lay!', description: 'Mail relay and transport', spn: 'exchangeMDB/mail.tsg-internal.lab', groups: ['Domain Users'] }
+  - { name: 'svc_print', password: 'Pr1nt_Sp00ler!', description: 'Print spooler service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_sccm', password: 'SCCM_D3ploy!', description: 'SCCM deployment agent', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_av', password: 'AV_Mgr_2025!', description: 'Antivirus management', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_certs', password: 'C3rt_S3rv1ce!', description: 'Certificate services', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_dfs', password: 'DFS_R3plic!', description: 'DFS replication', spn: 'CIFS/file.tsg-internal.lab', groups: ['Domain Users'] }
+  - { name: 'svc_wsus', password: 'WSUS_Upd4te!', description: 'WSUS update service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_sharepoint', password: 'SP_AppP00l!', description: 'SharePoint app pool', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_adfs', password: 'ADFS_Sts1!', description: 'AD FS token service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_reporting', password: 'R3port_S3rv!', description: 'SSRS reporting', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_scan', password: 'Sc4n_S3rv1ce!', description: 'Document scanning', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_fax', password: 'F4x_R3lay!', description: 'Fax service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_dhcp', password: 'DHCP_Le4se!', description: 'DHCP management', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_dns', password: 'DNS_Z0ne!', description: 'DNS zone management', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_ldap', password: 'LDAP_B1nd!', description: 'LDAP bind account', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_ftp', password: 'FTP_Tr4nsf3r!', description: 'FTP service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_sftp', password: 'SFTP_S3cur3!', description: 'SFTP transfer', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_redis', password: 'R3d1s_C4che!', description: 'Redis cache', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_rabbitmq', password: 'MQ_Qu3ue!', description: 'Message queue', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_elastic', password: 'El4st1c_S3arch!', description: 'Elasticsearch', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_jenkins', password: 'J3nk1ns_B1ld!', description: 'CI/CD builds', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_gitlab', password: 'G1t_R3po!', description: 'Git repository', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_nexus', password: 'N3xus_Art1fact!', description: 'Artifact repository', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_prometheus', password: 'Pr0m_M3trics!', description: 'Metrics collection', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_grafana', password: 'Gr4f4na_D4sh!', description: 'Dashboard service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_splunk', password: 'Splunk_1ngest!', description: 'Log ingestion', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_teams', password: 'T34ms_B0t!', description: 'Teams bot service', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_powerbi', password: 'P0werB1_Emb3d!', description: 'Power BI embedded', spn: '', groups: ['Domain Users'] }
+  - { name: 'svc_azure_sync', password: 'Azur3_Sync_2025!', description: 'Azure AD sync connector', spn: '', groups: ['Domain Users'] }
+
+# SQL account aliases (used by mssql role)
+# regex statements used in some steps expect the format of CONTOSO\
+# do not use @CONTOSO.com for these accounts as SQL install will fail
+mssql_sqlsvc_account: sql_svc
+mssql_sqlsvc_account_pass: MyPlainTextPassWord01
+
+mssql_agentsvc_account: sql_agt
+mssql_agentsvc_account_pass: MyPlainTextPassWord01
+
+mssql_assvc_account: "{{ mssql_sqlsvc_account }}"
+mssql_assvc_account_pass: "{{ mssql_sqlsvc_account_pass }}"
+mssql_instance_name: Test

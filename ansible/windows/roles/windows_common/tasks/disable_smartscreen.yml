@@ -1,0 +1,42 @@
+---
+- name: Disable SmartScreen for Explorer (machine-wide)
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer"
+    name: SmartScreenEnabled
+    type: string
+    data: "Off"
+
+- name: Disable SmartScreen via policy (Windows Defender SmartScreen)
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System"
+    name: EnableSmartScreen
+    type: dword
+    data: 0
+
+- name: Disable SmartScreen filter for Edge/IE
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter"
+    name: EnabledV9
+    type: dword
+    data: 0
+
+- name: Disable SmartScreen app install recommendations
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer"
+    name: AicEnabled
+    type: string
+    data: "Anywhere"
+
+- name: Disable Windows Defender SmartScreen for apps from the internet
+  win_regedit:
+    path: "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppHost"
+    name: EnableWebContentEvaluation
+    type: dword
+    data: 0
+
+- name: Disable SmartScreen for downloaded files (Attachment Manager)
+  win_regedit:
+    path: "HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments"
+    name: SaveZoneInformation
+    type: dword
+    data: 1

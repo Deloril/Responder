@@ -1,0 +1,15 @@
+---
+
+- name: Add domain group to local Remote Desktop Users group
+  win_group_membership:
+    name: Remote Desktop Users
+    members: 
+      - "TSG-users@{{ domain_name_short }}"
+    state: present
+
+- name: Add local administrator
+  win_group_membership:
+    name: Administrators
+    members: 
+      - "Desktop-Admins@{{ domain_name_short }}"
+    state: present

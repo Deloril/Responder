@@ -1,0 +1,173 @@
+================================================================================
+        THE SECRETS GROUP (TSG) - DISCIPLINARY RECORDS (SANITISED)
+                    CONFIDENTIAL – HR EYES ONLY
+================================================================================
+                    Digital Escrow & Secret Custodianship
+                    Wellington, New Zealand | TSG-INTERNAL.LAB
+================================================================================
+
+Document: HR-DISC-CONF-2025
+Classification: CONFIDENTIAL
+Access: HR Director, COO, CEO only. Legal hold applies.
+Retention: 7 years from date of final action
+
+--------------------------------------------------------------------------------
+INSTRUCTIONS FOR USE
+--------------------------------------------------------------------------------
+
+These records are maintained for employment and legal purposes. Disclosure
+outside HR and senior management requires Legal (Sophie Patel) approval.
+All names and identifying details are accurate; case summaries are sanitised
+for internal reference. Full files held in secure HR repository.
+
+--------------------------------------------------------------------------------
+RECORD 1: UNAUTHORISED ACCESS TO VAULT RECORDS
+--------------------------------------------------------------------------------
+
+Case ID:           DISC-2025-007
+Employee:          David Nair
+Employee ID:       TSG-2019-042
+Department:        Finance
+Position:          Accountant
+Manager:           Lisa Liu, Finance Director
+
+Date of Incident:  14 August 2025
+Date Reported:     16 August 2025
+Reported By:       System alert (Vault Access Log) + Wiremu Sio, Head of Vault Ops
+
+Summary:
+On 14 August 2025, David Nair accessed vault metadata records for Client
+Account #7842 (identity redacted) via the internal vault management portal.
+Mr Nair's role does not require vault record access; his access rights are
+limited to financial reconciliation data only. The access occurred outside
+business hours (22:34 NZST) from his work-issued device. No data was
+downloaded or exported. System logs confirmed single query access.
+
+Investigation:
+- Interview with David Nair conducted 18 August 2025 (Kate, Ben present)
+- Mr Nair stated he was "checking something" related to a billing query and
+  had "clicked through" to the wrong screen. He acknowledged he had not
+  completed the required Vault Access Procedures training refresh (due
+  March 2025).
+- IT (Oliver Anderson) confirmed no evidence of data exfiltration.
+- Sophie Patel (Legal) advised: policy breach, no client complaint, no
+  regulatory notification required.
+
+Outcome:
+- Formal Written Warning issued 22 August 2025
+- Mandatory re-completion of Vault Security Procedures training
+- Access rights reviewed and restricted; vault portal access revoked
+- Warning to remain on file for 12 months
+- No further action if no repeat within 12 months
+
+Employee Acknowledgment: Signed 22 August 2025
+Appeal: None lodged
+
+--------------------------------------------------------------------------------
+RECORD 2: REPEATED LATE TIMEKEEPING
+--------------------------------------------------------------------------------
+
+Case ID:           DISC-2025-012
+Employee:          Karen Tavita
+Employee ID:       TSG-2021-089
+Department:        Vault Operations
+Position:          Vault Coordinator
+Manager:           Wiremu Sio, Head of Vault Operations
+
+Date of Incidents: Multiple – June to September 2025
+Date of Meeting:   2 October 2025
+Reported By:       Wiremu Sio (manager) following informal discussions
+
+Summary:
+Karen Tavita accumulated 23 late arrivals (defined as >15 minutes after
+scheduled start) between 1 June and 30 September 2025. Vault Operations
+requires punctuality due to shift handover and security procedures. Ms
+Tavita's scheduled start is 08:00; late arrivals ranged from 08:16 to 09:45.
+No pattern (e.g. specific days) was identified. Ms Tavita had received
+informal verbal feedback from Wiremu Sio in July and August 2025. A formal
+discussion was triggered when late arrivals continued into September.
+
+Investigation:
+- Meeting held 2 October 2025: Kate (HR), Wiremu Sio, Karen Tavita
+- Ms Tavita cited childcare drop-off and traffic as contributing factors.
+  She acknowledged the impact on team handover and agreed to explore
+  flexible start (08:15) with manager approval.
+- Wiremu Sio agreed to trial 08:15 start for 3 months, subject to coverage.
+
+Outcome:
+- First Written Warning issued 5 October 2025
+- Flexible start 08:15 approved until 5 January 2026; review at that time
+- Warning to remain on file for 6 months
+- If late arrivals exceed 3 in any month during warning period, escalation
+  to Final Written Warning
+
+Employee Acknowledgment: Signed 5 October 2025
+Appeal: None lodged
+
+--------------------------------------------------------------------------------
+RECORD 3: INAPPROPRIATE USE OF COMPANY EMAIL
+--------------------------------------------------------------------------------
+
+Case ID:           DISC-2025-015
+Employee:          Arjun Jones
+Employee ID:       TSG-2020-067
+Department:        Sales & Client Relations
+Position:          Client Relationship Manager
+Manager:           Liam Jones, Head of Sales & Client Relations
+
+Date of Incident:  Multiple – July to October 2025
+Date Reported:     4 November 2025
+Reported By:       IT Security (Ava Phan) – automated policy flag
+
+Summary:
+Automated monitoring detected use of company email (arjun.jones@tsg-internal.lab)
+for personal purposes in breach of the Acceptable Use Policy. Analysis of
+flagged traffic (sample) indicated:
+- Forwarding of non-work-related content (chain emails, promotional material)
+  to personal email addresses
+- Use of work email for personal online service registrations (e.g. retail,
+  entertainment)
+- Volume of personal-use traffic estimated at 15–20% of total sent traffic
+  during the period
+
+No client data, confidential information, or vault-related content was
+involved. The breach was policy-based rather than security-compromise.
+
+Investigation:
+- Meeting held 8 November 2025: Kate (HR), Liam Jones, Arjun Jones
+- Mr Jones acknowledged he had used work email for convenience and was
+  unaware of the extent of the policy. He expressed remorse and agreed
+  to comply.
+- Ava Phan confirmed no data loss or external exposure.
+
+Outcome:
+- Formal Written Warning issued 12 November 2025
+- Mandatory completion of Acceptable Use Policy e-learning (within 7 days)
+- Warning to remain on file for 12 months
+- Reminder that company systems are monitored and further breaches may
+  result in disciplinary action up to and including termination
+
+Employee Acknowledgment: Signed 12 November 2025
+Appeal: None lodged
+
+--------------------------------------------------------------------------------
+SUMMARY TABLE
+--------------------------------------------------------------------------------
+
+| Case ID       | Employee    | Department | Violation Type              | Outcome           |
+|---------------|-------------|------------|-----------------------------|-------------------|
+| DISC-2025-007 | David Nair  | Finance    | Unauthorised vault access   | Written Warning   |
+| DISC-2025-012 | Karen Tavita| Vault Ops  | Repeated late timekeeping  | First Written Warn|
+| DISC-2025-015 | Arjun Jones | Sales/CR   | Inappropriate email use    | Written Warning   |
+
+--------------------------------------------------------------------------------
+RETENTION & DISCLOSURE
+--------------------------------------------------------------------------------
+
+These records are retained in accordance with TSG HR Policy and NZ employment
+law. Disclosure to third parties (e.g. future employers, regulators) requires
+Legal approval and is limited to what is legally required or permitted.
+
+Last Updated: 12 November 2025
+Document Owner: Kate, HR Director
+================================================================================

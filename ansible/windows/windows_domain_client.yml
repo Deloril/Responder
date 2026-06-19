@@ -1,0 +1,13 @@
+---
+
+- hosts: ms
+  gather_facts: yes
+  strategy: free
+  vars_files: 
+    - ./vars/member_server.yml
+    - ./vars/domain.yml
+    - ./vars/domain_users_and_groups.yml
+  roles:
+    - windows_common
+    - windows_domain_member
+    - windows_crowdstrike
